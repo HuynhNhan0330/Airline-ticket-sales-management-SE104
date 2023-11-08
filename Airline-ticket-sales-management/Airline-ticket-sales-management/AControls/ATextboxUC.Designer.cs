@@ -1,4 +1,6 @@
-﻿namespace Airline_ticket_sales_management.AControls
+﻿using System.Windows.Forms;
+
+namespace Airline_ticket_sales_management.AControls
 {
     partial class ATextboxUC
     {
@@ -28,38 +30,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Location = new Point(7, 7);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(236, 18);
-            textBox1.TabIndex = 0;
-            textBox1.Click += textBox1_Click;
-            textBox1.TextChanged += textBox1_TextChanged;
-            textBox1.Enter += textBox1_Enter;
-            textBox1.KeyPress += textBox1_KeyPress;
-            textBox1.Leave += textBox1_Leave;
-            textBox1.MouseEnter += textBox1_MouseEnter;
-            textBox1.MouseLeave += textBox1_MouseLeave;
+            this.SuspendLayout();
             // 
             // ATextboxUC
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            BackColor = SystemColors.Window;
-            Controls.Add(textBox1);
-            Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            ForeColor = Color.DimGray;
-            Margin = new Padding(4);
-            Name = "ATextboxUC";
-            Padding = new Padding(7);
-            Size = new Size(250, 30);
-            ResumeLayout(false);
-            PerformLayout();
+            this.Name = "ATextboxUC";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

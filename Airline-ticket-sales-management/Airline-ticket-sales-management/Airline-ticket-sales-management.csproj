@@ -64,18 +64,20 @@
     <Compile Include="AControls\AMessageBoxFrm.designer.cs">
       <DependentUpon>AMessageBoxFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AControls\APanel.cs" />
+    <Compile Include="AControls\APanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="AControls\ATextboxUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AControls\ATextboxUC.Designer.cs">
       <DependentUpon>ATextboxUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormAdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormAdminHome.Designer.cs">
+      <DependentUpon>FormAdminHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +90,9 @@
     <EmbeddedResource Include="AControls\ATextboxUC.resx">
       <DependentUpon>ATextboxUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminHome.resx">
+      <DependentUpon>FormAdminHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,6 +115,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExclamationIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeAdminImg-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InformationIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoMAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Airline_ticket_sales_management
 {
-    public partial class Form1 : Form
+    public partial class FormAdminHome : Form
     {
-        public Form1()
+        public FormAdminHome()
         {
             InitializeComponent();
+        }
+
+        private void abtnPlane_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
