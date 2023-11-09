@@ -86,7 +86,9 @@
       <DependentUpon>ATextboxUC.cs</DependentUpon>
     </Compile>
     <Compile Include="DALs\RegulationsDAL.cs" />
+    <Compile Include="DALs\TicketClassDAL.cs" />
     <Compile Include="DTOs\RegulationsDTO.cs" />
+    <Compile Include="DTOs\TicketClassDTO.cs" />
     <Compile Include="FormAdminHome.cs">
       <SubType>Form</SubType>
     </Compile>

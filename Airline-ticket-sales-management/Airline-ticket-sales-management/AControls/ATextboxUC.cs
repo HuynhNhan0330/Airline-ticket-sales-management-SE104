@@ -25,8 +25,14 @@ namespace Airline_ticket_sales_management.AControls
         private int borderRadius = 0;
         private Color placeholderColor = Color.DarkGray;
         private string placeholderText = "";
-        private bool isPlaceholder = false;
         private bool isPasswordChar = false;
+
+        private bool _isPlaceholder = false;
+        public bool isPlaceholder
+        {
+            get { return _isPlaceholder; }
+            set { _isPlaceholder = value; }
+        }
 
         //Events
         public event EventHandler _TextChanged;
@@ -423,6 +429,11 @@ namespace Airline_ticket_sales_management.AControls
         }
         ///::::+
         #endregion
+
+        public void setForeColor()
+        {
+            textBox1.ForeColor = this.ForeColor;
+        }
     }
 }
 
