@@ -153,6 +153,40 @@ namespace Airline_ticket_sales_management.AControls
             }
         }
 
+        #region text align
+        public enum TextAlign
+        {
+            Left,
+            Right,
+            Center,
+        }
+
+        private TextAlign _textAlign = TextAlign.Left;
+
+        [Category("Extention")]
+        public TextAlign textAlign
+        {
+            get { return _textAlign; }
+            set
+            {
+                _textAlign = value;
+
+                switch (_textAlign)
+                {
+                    case TextAlign.Left:
+                        textBox1.TextAlign = HorizontalAlignment.Left;
+                        break;
+                    case TextAlign.Right:
+                        textBox1.TextAlign = HorizontalAlignment.Right;
+                        break;
+                    case TextAlign.Center:
+                        textBox1.TextAlign = HorizontalAlignment.Center;
+                        break;
+                }
+            }
+        }
+        #endregion
+
         [Category("Extention")]
         public int BorderRadius
         {

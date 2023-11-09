@@ -44,6 +44,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,11 +85,19 @@
     <Compile Include="AControls\ATextboxUC.Designer.cs">
       <DependentUpon>ATextboxUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="DALs\RegulationsDAL.cs" />
+    <Compile Include="DTOs\RegulationsDTO.cs" />
     <Compile Include="FormAdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAdminHome.Designer.cs">
       <DependentUpon>FormAdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAdminUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeAdminUC.Designer.cs">
+      <DependentUpon>HomeAdminUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\AIRPORT.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
@@ -115,10 +126,10 @@
     <Compile Include="Model\PLANE.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\SEAT.cs">
+    <Compile Include="Model\REGULATION.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagram.cs">
+    <Compile Include="Model\SEAT.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TICKETCLASS.cs">
@@ -126,6 +137,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingUC.Designer.cs">
+      <DependentUpon>SettingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\AirportItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\AirportItemUC.Designer.cs">
+      <DependentUpon>AirportItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\TicketClassItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\TicketClassItemUC.Designer.cs">
+      <DependentUpon>TicketClassItemUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\BaseColor.cs" />
     <Compile Include="Utils\Helper.cs" />
     <Compile Include="Utils\RoundedRectangle.cs" />
@@ -138,6 +167,9 @@
     <EmbeddedResource Include="FormAdminHome.resx">
       <DependentUpon>FormAdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HomeAdminUC.resx">
+      <DependentUpon>HomeAdminUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -148,6 +180,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SettingUC.resx">
+      <DependentUpon>SettingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\AirportItemUC.resx">
+      <DependentUpon>AirportItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\TicketClassItemUC.resx">
+      <DependentUpon>TicketClassItemUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model\FlightTicketManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FlightTicketManagement.Designer.cs</LastGenOutput>

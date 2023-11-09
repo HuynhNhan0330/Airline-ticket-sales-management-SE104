@@ -17,7 +17,7 @@ CREATE TABLE PLANE
 (
 	PlaneCode VARCHAR(20) NOT NULL,
 	PlaneName VARCHAR(255),
-	SeatCount SMALLINT,
+	SeatCount INT,
 	CONSTRAINT PK_PE PRIMARY KEY(PlaneCode)
 );
 GO
@@ -26,7 +26,7 @@ CREATE TABLE TICKETCLASS
 (
 	TicketClassCode VARCHAR(20) NOT NULL,
 	TicketClassName NVARCHAR(255),
-	PricePercentage SMALLINT,
+	PricePercentage INT,
 	CONSTRAINT PK_TC PRIMARY KEY(TicketClassCode)
 );
 GO
@@ -71,14 +71,17 @@ CREATE TABLE FLIGHTDETAIL
 GO
 
 CREATE TABLE REGULATIONS(
-  MinimumFlightTime TIME,
-  MaxDelayAirports TINYINT,
-  MinimumDelayTime TIME,
-  MaximumDelayTime TIME,
-  LatestBookingTime TIME,
-  LatestCancellationTime TIME
+  RegulationsCode INT NOT NULL,
+  MinimumFlightTime INT,
+  MaxDelayAirports INT,
+  MinimumDelayTime INT,
+  MaximumDelayTime INT,
+  LatestBookingTime INT,
+  LatestCancellationTime INT,
+  CONSTRAINT PK_RG PRIMARY KEY(RegulationsCode)
 );
 GO
+
 
 --CREATE TABLE FlightTicket (
 --  TicketID VARCHAR(255) PRIMARY KEY,

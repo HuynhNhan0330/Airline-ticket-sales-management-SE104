@@ -12,12 +12,14 @@ namespace Airline_ticket_sales_management.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class REGULATION
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public string RegulationsCode { get; set; }
+        public int MinimumFlightTime { get; set; }
+        public int MaxDelayAirports { get; set; }
+        public int MinimumDelayTime { get; set; }
+        public int MaximumDelayTime { get; set; }
+        public int LatestBookingTime { get; set; }
+        public int LatestCancellationTime { get; set; }
     }
 }

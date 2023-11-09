@@ -38,6 +38,7 @@
             this.abtnFlight = new Airline_ticket_sales_management.AControls.AButton();
             this.pcbClose = new System.Windows.Forms.PictureBox();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
+            this.pnBody = new System.Windows.Forms.Panel();
             this.pnTop.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbClose)).BeginInit();
@@ -92,6 +93,7 @@
             this.abtnSetting.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnSetting.ThinknessLine = 5;
             this.abtnSetting.UseVisualStyleBackColor = false;
+            this.abtnSetting.Click += new System.EventHandler(this.abtnSetting_Click);
             // 
             // aButton5
             // 
@@ -220,16 +222,25 @@
             this.pcbClose.Size = new System.Drawing.Size(24, 24);
             this.pcbClose.TabIndex = 1;
             this.pcbClose.TabStop = false;
+            this.pcbClose.Click += new System.EventHandler(this.pcbClose_Click);
             // 
             // pcbLogo
             // 
             this.pcbLogo.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.LogoMAT;
             this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbLogo.Location = new System.Drawing.Point(51, 38);
+            this.pcbLogo.Location = new System.Drawing.Point(50, 38);
             this.pcbLogo.Name = "pcbLogo";
             this.pcbLogo.Size = new System.Drawing.Size(100, 80);
             this.pcbLogo.TabIndex = 0;
             this.pcbLogo.TabStop = false;
+            // 
+            // pnBody
+            // 
+            this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnBody.Location = new System.Drawing.Point(0, 100);
+            this.pnBody.Name = "pnBody";
+            this.pnBody.Size = new System.Drawing.Size(1500, 750);
+            this.pnBody.TabIndex = 3;
             // 
             // FormAdminHome
             // 
@@ -237,11 +248,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1500, 850);
+            this.Controls.Add(this.pnBody);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAdminHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý vé máy bay";
+            this.Load += new System.EventHandler(this.FormAdminHome_Load);
             this.pnTop.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbClose)).EndInit();
@@ -262,6 +275,7 @@
         private AControls.AButton abtnFlight;
         private System.Windows.Forms.PictureBox pcbClose;
         private System.Windows.Forms.PictureBox pcbLogo;
+        private System.Windows.Forms.Panel pnBody;
     }
 }
 

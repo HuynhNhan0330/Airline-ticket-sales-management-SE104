@@ -22,7 +22,7 @@ namespace Airline_ticket_sales_management.Model
     
         public string TicketClassCode { get; set; }
         public string TicketClassName { get; set; }
-        public Nullable<short> PricePercentage { get; set; }
+        public Nullable<int> PricePercentage { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SEAT> SEATs { get; set; }

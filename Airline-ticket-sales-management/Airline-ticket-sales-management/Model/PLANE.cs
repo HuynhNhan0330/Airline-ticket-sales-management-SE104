@@ -23,7 +23,7 @@ namespace Airline_ticket_sales_management.Model
     
         public string PlaneCode { get; set; }
         public string PlaneName { get; set; }
-        public Nullable<short> SeatCount { get; set; }
+        public Nullable<int> SeatCount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FLIGHT> FLIGHTs { get; set; }

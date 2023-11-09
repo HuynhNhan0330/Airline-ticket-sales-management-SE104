@@ -18,5 +18,10 @@ namespace Airline_ticket_sales_management.Utils
             return String.Format(CultureInfo.InvariantCulture,
                                 "{0:#,#} ₫", money);
         }
+
+        public static string nextCode(string code, string key)
+        {
+            return "";
+        }
     }
 }
