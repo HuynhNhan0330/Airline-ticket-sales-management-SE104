@@ -19,6 +19,7 @@ namespace Airline_ticket_sales_management
 {
     public partial class SettingUC : UserControl
     {
+        #region properties
         private ObservableCollection<TicketClassDTO> _ticketClasses;
         public ObservableCollection<TicketClassDTO> ticketClasses
         {
@@ -26,7 +27,16 @@ namespace Airline_ticket_sales_management
             set { _ticketClasses = value; }
         }
 
+        private ObservableCollection<AirportDTO> _airports;
+        public ObservableCollection<AirportDTO> airports
+        {
+            get { return _airports; }
+            set { _airports = value; }
+        }
+
         private TicketClassDTO ticketClass;
+        private AirportDTO airport;
+        #endregion
 
         public SettingUC()
         {
@@ -35,27 +45,13 @@ namespace Airline_ticket_sales_management
         private void SettingUC_Load(object sender, EventArgs e)
         {
             loadRegulations();
+            getDataAirport();
             getDataTicketClass();
             pnOperationEditTicketClass.Visible = false;
-
-            //for (int i = 0; i < 20; ++i)
-            //{
-            //    AirportItemUC uc = new AirportItemUC();
-            //    pnListAirport.Controls.Add(uc);
-            //    uc.BringToFront();
-            //    uc.Dock = DockStyle.Top;
-
-            //    Panel pn = new Panel();
-            //    pnListAirport.Controls.Add(pn);
-            //    pn.Height = 2;
-            //    pn.BackColor = Color.Gray;
-            //    pn.BringToFront();
-            //    pn.Dock = DockStyle.Top;
-            //}
-
-
+            pnOperationEditAirport.Visible = false;
         }
 
+        #region regulations
         private void loadRegulations()
         {
             atbMinimumFlightTime.Texts = RegulationsDTO.Ins.MinimumFlightTime.ToString();
@@ -88,7 +84,9 @@ namespace Airline_ticket_sales_management
                 ms.ShowDialog();
             }
         }
+        #endregion
 
+        #region Ticketclass
         private async void getDataTicketClass()
         {
             (bool isGetDataTicketClass, List<TicketClassDTO> ticketClassList, string label) = await TicketClassDAL.Ins.getListTicketClass();
@@ -133,7 +131,7 @@ namespace Airline_ticket_sales_management
             }
             else if (string.IsNullOrEmpty(atxbPricePercentage.Texts.Trim()))
             {
-                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu phần trăm đơn giá", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu phần trăm đơn giá bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 atxbPricePercentage.Focus();
                 ms.ShowDialog();
             }
@@ -184,6 +182,9 @@ namespace Airline_ticket_sales_management
 
             if (isRemoveTicketClass)
             {
+                if (this.ticketClass == ticketClass)
+                    abtnCancelTicketClass_Click(abtnCancelTicketClass, EventArgs.Empty);
+
                 int indexDelete = -1;
 
                 for (int index = 0; index < pnListTicketClass.Controls.Count; ++index)
@@ -253,7 +254,7 @@ namespace Airline_ticket_sales_management
             }
             else if (string.IsNullOrEmpty(atxbPricePercentage.Texts.Trim()))
             {
-                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu phần trăm đơn giá", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu phần trăm đơn giá bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 atxbPricePercentage.Focus();
                 ms.ShowDialog();
             }
@@ -272,5 +273,213 @@ namespace Airline_ticket_sales_management
             abtnCreateTicketClass.Visible = true;
             pnOperationEditTicketClass.Visible = false;
         }
+        #endregion
+
+        #region Airport
+        private void abtnCreateAirport_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(atxbAirportName.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu tên sân bay vé bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbAirportName.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbCityName.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu tên thành phố bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbCityName.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbCountryName.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu tên đất nước bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbCountryName.Focus();
+                ms.ShowDialog();
+            }
+            else
+            {
+                AirportDTO newAirport = new AirportDTO(atxbAirportName.Texts.Trim(), atxbCityName.Texts.Trim(), atxbCountryName.Texts.Trim());
+                _ = createAirportAsync(newAirport);
+            }
+        }
+
+        private async Task createAirportAsync(AirportDTO airport)
+        {
+            (bool isCreateAirport, string label, string newCode) = await AirportDAL.Ins.createAirport(airport);
+
+            if (isCreateAirport)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                airport.AirportCode = newCode;
+                addAirportItem(airport);
+
+                ms.ShowDialog();
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+        }
+
+        private void addAirportItem(AirportDTO airport)
+        {
+            AirportItemUC uc = new AirportItemUC();
+            uc.airport = airport;
+            pnListAirport.Controls.Add(uc);
+            uc.BringToFront();
+            uc.Dock = DockStyle.Top;
+
+            Panel pn = new Panel();
+            pnListAirport.Controls.Add(pn);
+            pn.Height = 2;
+            pn.BackColor = Color.Gray;
+            pn.BringToFront();
+            pn.Dock = DockStyle.Top;
+        }
+
+        private async void getDataAirport()
+        {
+            (bool isGetDataAirport, List<AirportDTO> airportList, string label) = await AirportDAL.Ins.getListAirport();
+
+            if (isGetDataAirport)
+            {
+                this.airports = new ObservableCollection<AirportDTO>(airportList);
+
+                foreach (AirportDTO airport in this.airports)
+                    addAirportItem(airport);
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+        }
+
+        public void setTextboxAirport(AirportDTO airport)
+        {
+            this.airport = airport;
+            atxbAirportName.Texts = airport.AirportName;
+            atxbAirportName.isPlaceholder = false;
+            atxbAirportName.setForeColor();
+
+            atxbCityName.Texts = airport.CityName;
+            atxbCityName.isPlaceholder = false;
+            atxbCityName.setForeColor();
+
+            atxbCountryName.Texts = airport.CountryName;
+            atxbCountryName.isPlaceholder = false;
+            atxbCountryName.setForeColor();
+
+            abtnCreateAirport.Visible = false;
+            pnOperationEditAirport.Visible = true;
+        }
+
+        public async void removeAirport(AirportDTO airport)
+        {
+            (bool isRemoveAirport, string label) = await AirportDAL.Ins.deleteAirport(airport);
+
+            if (isRemoveAirport)
+            {
+                if (this.airport == airport)
+                    abtnCancelAirport_Click(abtnCancelAirport, EventArgs.Empty);
+
+                int indexDelete = -1;
+
+                for (int index = 0; index < pnListAirport.Controls.Count; ++index)
+                {
+                    Control apiuc = pnListAirport.Controls[index];
+
+                    if (apiuc is AirportItemUC)
+                    {
+                        if ((apiuc as AirportItemUC).airport == airport)
+                            indexDelete = index;
+                    }
+                }
+
+                if (indexDelete != -1)
+                {
+                    pnListAirport.Controls.RemoveAt(indexDelete);
+                    pnListAirport.Controls.RemoveAt(indexDelete - 1);
+                }
+
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ms.ShowDialog();
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+        }
+
+        public async void updateAirport(AirportDTO airport)
+        {
+            (bool isUpdateAirport, string label) = await AirportDAL.Ins.updateAirport(airport);
+
+            if (isUpdateAirport)
+            {
+                AirportItemUC apuc= null;
+
+                foreach (Control apiuc in pnListAirport.Controls)
+                {
+                    if (apiuc is AirportItemUC)
+                    {
+                        if ((apiuc as AirportItemUC).airport.AirportCode == airport.AirportCode)
+                            apuc = apiuc as AirportItemUC;
+                    }
+
+                    if (apuc != null)
+                        apuc.airport = airport;
+                }
+
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ms.ShowDialog();
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+        }
+
+        private void abtnUpdateAirport_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(atxbAirportName.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu tên sân bay vé bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbAirportName.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbCityName.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu tên thành phố bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbCityName.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbCountryName.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu tên đất nước bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbCountryName.Focus();
+                ms.ShowDialog();
+            }
+            else
+            {
+                AirportDTO newAirport = new AirportDTO(atxbAirportName.Texts.Trim(), atxbCityName.Texts.Trim(), atxbCountryName.Texts.Trim(), this.airport.AirportCode);
+                updateAirport(newAirport);
+            }
+        }
+
+        private void abtnCancelAirport_Click(object sender, EventArgs e)
+        {
+            atxbAirportName.Texts = "";
+            atxbCityName.Texts = "";
+            atxbCountryName.Texts = "";
+
+            abtnCreateAirport.Visible = true;
+            pnOperationEditAirport.Visible = false;
+        }
+        #endregion
     }
 }

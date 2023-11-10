@@ -37,7 +37,7 @@ namespace Airline_ticket_sales_management.Usercontrols
                 lbTicketClassName.Text = _TicketClassName;
                 lbTicketClassName.Left = (pnTicketClassName.Width - lbTicketClassName.Width) / 2;
 
-                this.Height = lbTicketClassName.Height + lbTicketClassName.Top * 2;
+                renderLabel(lbTicketClassName);
 
                 renderOperation();
             }
@@ -53,7 +53,7 @@ namespace Airline_ticket_sales_management.Usercontrols
                 lbPricePercentage.Text = _PricePercentage.ToString();
                 lbPricePercentage.Left = (pnPricePercentage.Width - lbPricePercentage.Width) / 2;
 
-                this.Height = lbPricePercentage.Height + lbPricePercentage.Top * 2;
+                renderLabel(lbPricePercentage);
 
                 renderOperation();
             }
@@ -69,6 +69,12 @@ namespace Airline_ticket_sales_management.Usercontrols
             int topNew = (this.Height - this.pibEdit.Height) / 2;
             this.pibEdit.Top = topNew;
             this.pibDelete.Top = topNew;
+        }
+
+        private void renderLabel(Label lb)
+        {
+            this.Height = Math.Max(this.Height, lb.Height + lb.Top * 2);
+            lb.Top = (this.Height - lb.Height) / 2;
         }
 
         private void pibEdit_Click(object sender, EventArgs e)

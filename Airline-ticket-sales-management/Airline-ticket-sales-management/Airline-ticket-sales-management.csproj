@@ -85,8 +85,10 @@
     <Compile Include="AControls\ATextboxUC.Designer.cs">
       <DependentUpon>ATextboxUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="DALs\AirportDAL.cs" />
     <Compile Include="DALs\RegulationsDAL.cs" />
     <Compile Include="DALs\TicketClassDAL.cs" />
+    <Compile Include="DTOs\AirportDTO.cs" />
     <Compile Include="DTOs\RegulationsDTO.cs" />
     <Compile Include="DTOs\TicketClassDTO.cs" />
     <Compile Include="FormAdminHome.cs">
