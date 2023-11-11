@@ -192,7 +192,9 @@
     <Compile Include="View\Admin\Flight\FlightListUC.Designer.cs">
       <DependentUpon>FlightListUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\Flight\FlightUC.cs" />
+    <Compile Include="View\Admin\Flight\FlightUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="View\Admin\Flight\FlightUC.Designer.cs">
       <DependentUpon>FlightUC.cs</DependentUpon>
     </Compile>

@@ -1,4 +1,7 @@
-﻿namespace Airline_ticket_sales_management.Usercontrols
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Airline_ticket_sales_management.Usercontrols
 {
     partial class PlaneSeatItemUC
     {

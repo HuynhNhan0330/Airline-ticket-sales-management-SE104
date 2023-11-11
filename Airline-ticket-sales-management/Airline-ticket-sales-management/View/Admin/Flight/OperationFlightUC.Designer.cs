@@ -1,4 +1,7 @@
-﻿namespace Airline_ticket_sales_management
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Airline_ticket_sales_management
 {
     partial class OperationFlightUC
     {
@@ -33,13 +36,10 @@
             aDateTimePicker1 = new AControls.ADateTimePicker();
             panel4 = new Panel();
             label3 = new Label();
-            aComboBox3 = new AControls.AComboBox();
             panel3 = new Panel();
             label2 = new Label();
-            aComboBox2 = new AControls.AComboBox();
             panel2 = new Panel();
             label1 = new Label();
-            aComboBox1 = new AControls.AComboBox();
             panel1 = new Panel();
             aTextboxuc4 = new AControls.ATextboxUC();
             aButton1 = new AControls.AButton();
@@ -95,7 +95,6 @@
             // panel4
             // 
             panel4.Controls.Add(label3);
-            panel4.Controls.Add(aComboBox3);
             panel4.Location = new Point(50, 125);
             panel4.Name = "panel4";
             panel4.Size = new Size(250, 68);
@@ -111,29 +110,9 @@
             label3.TabIndex = 1;
             label3.Text = "Mã máy bay";
             // 
-            // aComboBox3
-            // 
-            aComboBox3.BackColor = Color.WhiteSmoke;
-            aComboBox3.BorderColor = Color.FromArgb(3, 4, 94);
-            aComboBox3.BorderSize = 2;
-            aComboBox3.DropDownStyle = ComboBoxStyle.DropDown;
-            aComboBox3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            aComboBox3.ForeColor = Color.Black;
-            aComboBox3.IconColor = Color.FromArgb(3, 4, 94);
-            aComboBox3.ListBackColor = Color.FromArgb(3, 4, 94);
-            aComboBox3.ListTextColor = Color.White;
-            aComboBox3.Location = new Point(0, 30);
-            aComboBox3.MinimumSize = new Size(200, 30);
-            aComboBox3.Name = "aComboBox3";
-            aComboBox3.Padding = new Padding(2);
-            aComboBox3.Size = new Size(250, 38);
-            aComboBox3.TabIndex = 0;
-            aComboBox3.Texts = "";
-            // 
             // panel3
             // 
             panel3.Controls.Add(label2);
-            panel3.Controls.Add(aComboBox2);
             panel3.Location = new Point(325, 30);
             panel3.Name = "panel3";
             panel3.Size = new Size(250, 68);
@@ -149,29 +128,9 @@
             label2.TabIndex = 1;
             label2.Text = "Sân bay đến";
             // 
-            // aComboBox2
-            // 
-            aComboBox2.BackColor = Color.WhiteSmoke;
-            aComboBox2.BorderColor = Color.FromArgb(3, 4, 94);
-            aComboBox2.BorderSize = 2;
-            aComboBox2.DropDownStyle = ComboBoxStyle.DropDown;
-            aComboBox2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            aComboBox2.ForeColor = Color.Black;
-            aComboBox2.IconColor = Color.FromArgb(3, 4, 94);
-            aComboBox2.ListBackColor = Color.FromArgb(3, 4, 94);
-            aComboBox2.ListTextColor = Color.White;
-            aComboBox2.Location = new Point(0, 30);
-            aComboBox2.MinimumSize = new Size(200, 30);
-            aComboBox2.Name = "aComboBox2";
-            aComboBox2.Padding = new Padding(2);
-            aComboBox2.Size = new Size(250, 38);
-            aComboBox2.TabIndex = 0;
-            aComboBox2.Texts = "";
-            // 
             // panel2
             // 
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(aComboBox1);
             panel2.Location = new Point(50, 30);
             panel2.Name = "panel2";
             panel2.Size = new Size(250, 68);
@@ -186,25 +145,6 @@
             label1.Size = new Size(95, 22);
             label1.TabIndex = 1;
             label1.Text = "Sân bay đi";
-            // 
-            // aComboBox1
-            // 
-            aComboBox1.BackColor = Color.WhiteSmoke;
-            aComboBox1.BorderColor = Color.FromArgb(3, 4, 94);
-            aComboBox1.BorderSize = 2;
-            aComboBox1.DropDownStyle = ComboBoxStyle.DropDown;
-            aComboBox1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            aComboBox1.ForeColor = Color.Black;
-            aComboBox1.IconColor = Color.FromArgb(3, 4, 94);
-            aComboBox1.ListBackColor = Color.FromArgb(3, 4, 94);
-            aComboBox1.ListTextColor = Color.White;
-            aComboBox1.Location = new Point(0, 30);
-            aComboBox1.MinimumSize = new Size(200, 30);
-            aComboBox1.Name = "aComboBox1";
-            aComboBox1.Padding = new Padding(2);
-            aComboBox1.Size = new Size(250, 38);
-            aComboBox1.TabIndex = 0;
-            aComboBox1.Texts = "";
             // 
             // panel1
             // 
@@ -285,16 +225,13 @@
         }
 
         #endregion
-        private AControls.AComboBox aComboBox1;
         private Panel panel2;
         private Label label1;
         private AControls.ADateTimePicker aDateTimePicker1;
         private Panel panel4;
         private Label label3;
-        private AControls.AComboBox aComboBox3;
         private Panel panel3;
         private Label label2;
-        private AControls.AComboBox aComboBox2;
         private Panel panel5;
         private AControls.ATextboxUC aTextboxuc3;
         private Panel panel1;

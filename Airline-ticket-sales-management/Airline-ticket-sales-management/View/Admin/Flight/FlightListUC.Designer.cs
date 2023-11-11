@@ -1,4 +1,7 @@
-﻿namespace Airline_ticket_sales_management
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Airline_ticket_sales_management
 {
     partial class FlightListUC
     {
