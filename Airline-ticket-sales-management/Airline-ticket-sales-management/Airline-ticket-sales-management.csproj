@@ -153,6 +153,30 @@
     <Compile Include="Usercontrols\AirportItemUC.Designer.cs">
       <DependentUpon>AirportItemUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrols\FlightItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\FlightItemUC.Designer.cs">
+      <DependentUpon>FlightItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PlaneItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PlaneItemUC.Designer.cs">
+      <DependentUpon>PlaneItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PlaneSeatItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PlaneSeatItemUC.Designer.cs">
+      <DependentUpon>PlaneSeatItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PlaneTicketClassItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PlaneTicketClassItemUC.Designer.cs">
+      <DependentUpon>PlaneTicketClassItemUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrols\TicketClassItemUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,6 +186,40 @@
     <Compile Include="Utils\BaseColor.cs" />
     <Compile Include="Utils\Helper.cs" />
     <Compile Include="Utils\RoundedRectangle.cs" />
+    <Compile Include="View\Admin\Flight\FlightListUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Flight\FlightListUC.Designer.cs">
+      <DependentUpon>FlightListUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Flight\FlightUC.cs" />
+    <Compile Include="View\Admin\Flight\FlightUC.Designer.cs">
+      <DependentUpon>FlightUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Flight\OperationFlightUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Flight\OperationFlightUC.Designer.cs">
+      <DependentUpon>OperationFlightUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Plane\OperationPlaneUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Plane\OperationPlaneUC.Designer.cs">
+      <DependentUpon>OperationPlaneUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Plane\PlaneListUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Plane\PlaneListUC.Designer.cs">
+      <DependentUpon>PlaneListUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Plane\PlaneUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Plane\PlaneUC.Designer.cs">
+      <DependentUpon>PlaneUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AControls\AMessageBoxFrm.resx">
       <DependentUpon>AMessageBoxFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,8 +248,38 @@
     <EmbeddedResource Include="Usercontrols\AirportItemUC.resx">
       <DependentUpon>AirportItemUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\FlightItemUC.resx">
+      <DependentUpon>FlightItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PlaneItemUC.resx">
+      <DependentUpon>PlaneItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PlaneSeatItemUC.resx">
+      <DependentUpon>PlaneSeatItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PlaneTicketClassItemUC.resx">
+      <DependentUpon>PlaneTicketClassItemUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\TicketClassItemUC.resx">
       <DependentUpon>TicketClassItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Flight\FlightListUC.resx">
+      <DependentUpon>FlightListUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Flight\FlightUC.resx">
+      <DependentUpon>FlightUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Flight\OperationFlightUC.resx">
+      <DependentUpon>OperationFlightUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Plane\OperationPlaneUC.resx">
+      <DependentUpon>OperationPlaneUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Plane\PlaneListUC.resx">
+      <DependentUpon>PlaneListUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Plane\PlaneUC.resx">
+      <DependentUpon>PlaneUC.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\FlightTicketManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
