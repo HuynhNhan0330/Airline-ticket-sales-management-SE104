@@ -12,14 +12,20 @@ namespace Airline_ticket_sales_management.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class FLIGHTDETAIL
+    public partial class FLIGHT_TICKET
     {
-        public string AirportCode { get; set; }
-        public string FlightCode { get; set; }
-        public Nullable<System.TimeSpan> DelayTime { get; set; }
-        public string Notes { get; set; }
+        public string FlightTicketID { get; set; }
+        public string FlightID { get; set; }
+        public string TicketClassID { get; set; }
+        public decimal Price { get; set; }
+        public string FullName { get; set; }
+        public string IDCard { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public string SeatID { get; set; }
+        public string FlightStatus { get; set; }
     
-        public virtual AIRPORT AIRPORT { get; set; }
         public virtual FLIGHT FLIGHT { get; set; }
+        public virtual TICKET_CLASS TICKET_CLASS { get; set; }
     }
 }

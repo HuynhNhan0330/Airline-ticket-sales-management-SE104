@@ -34,12 +34,12 @@ namespace Airline_ticket_sales_management.DALs
                     if (findAirport != null)
                         return (false, "Tên sân bay đã tồn tại", null);
 
-                    string currentMaxCode = await context.AIRPORTs.MaxAsync(ap => ap.AirportCode);
+                    string currentMaxCode = await context.AIRPORTs.MaxAsync(ap => ap.AirportID);
                     string newCode = Helper.nextCode(currentMaxCode, "AP");
 
                     AIRPORT newAirport = new AIRPORT
                     {
-                        AirportCode = newCode,
+                        AirportID = newCode,
                         AirportName = airport.AirportName,
                         CountryName = airport.CountryName,
                         CityName = airport.CityName
@@ -67,7 +67,7 @@ namespace Airline_ticket_sales_management.DALs
                     var AirportList = (from airport in context.AIRPORTs
                                            select new AirportDTO
                                            {
-                                               AirportCode = airport.AirportCode,
+                                               AirportID = airport.AirportID,
                                                AirportName= airport.AirportName,
                                                CityName= airport.CityName,
                                                CountryName= airport.CountryName,
@@ -88,7 +88,7 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    AIRPORT airportDelete = context.AIRPORTs.FirstOrDefault(ap => ap.AirportCode == airport.AirportCode);
+                    AIRPORT airportDelete = context.AIRPORTs.FirstOrDefault(ap => ap.AirportID == airport.AirportID);
 
                     context.AIRPORTs.Remove(airportDelete);
                     context.SaveChanges();
@@ -108,11 +108,11 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    AIRPORT findAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportName== airport.AirportName && ap.AirportCode!= airport.AirportCode);
+                    AIRPORT findAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportName== airport.AirportName && ap.AirportID != airport.AirportID);
                     if (findAirport != null)
                         return (false, "Tên sân bay đã tồn tại");
 
-                    AIRPORT currentAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportCode == airport.AirportCode);
+                    AIRPORT currentAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportID == airport.AirportID);
                     currentAirport.AirportName = airport.AirportName;
                     currentAirport.CityName = airport.CityName;
                     currentAirport.CountryName = airport.CountryName;

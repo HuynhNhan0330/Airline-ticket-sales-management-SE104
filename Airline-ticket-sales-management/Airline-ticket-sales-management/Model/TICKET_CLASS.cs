@@ -12,26 +12,25 @@ namespace Airline_ticket_sales_management.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class AIRPORT
+    public partial class TICKET_CLASS
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AIRPORT()
+        public TICKET_CLASS()
         {
-            this.FLIGHTs = new HashSet<FLIGHT>();
-            this.FLIGHTs1 = new HashSet<FLIGHT>();
-            this.FLIGHT_DETAIL = new HashSet<FLIGHT_DETAIL>();
+            this.FLIGHT_TICKET = new HashSet<FLIGHT_TICKET>();
+            this.FLIGHT_TICKET_CLASS_DETAIL = new HashSet<FLIGHT_TICKET_CLASS_DETAIL>();
+            this.SEATs = new HashSet<SEAT>();
         }
     
-        public string AirportID { get; set; }
-        public string AirportName { get; set; }
-        public string CityName { get; set; }
-        public string CountryName { get; set; }
+        public string TicketClassID { get; set; }
+        public string TicketClassName { get; set; }
+        public int PricePercentage { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FLIGHT> FLIGHTs { get; set; }
+        public virtual ICollection<FLIGHT_TICKET> FLIGHT_TICKET { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FLIGHT> FLIGHTs1 { get; set; }
+        public virtual ICollection<FLIGHT_TICKET_CLASS_DETAIL> FLIGHT_TICKET_CLASS_DETAIL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FLIGHT_DETAIL> FLIGHT_DETAIL { get; set; }
+        public virtual ICollection<SEAT> SEATs { get; set; }
     }
 }

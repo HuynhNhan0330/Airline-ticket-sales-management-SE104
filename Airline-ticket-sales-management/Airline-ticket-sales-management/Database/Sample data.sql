@@ -4,17 +4,17 @@ GO
 SET DATEFORMAT dmy
 GO
 
-INSERT INTO REGULATIONS (RegulationsCode, MinimumFlightTime, MaxDelayAirports, MinimumDelayTime, MaximumDelayTime, LatestBookingTime, LatestCancellationTime)
-VALUES ('R0001', 30, 2, 10, 20, 1, 1);
+INSERT INTO Parameters (ParametersID, MinimumFlightTime, MaxPreventiveAirports, MinimumStopoverTime, MaximumStopoverTime, EarliestBookingTime, LatestBookingCancellationTime)
+VALUES ('PA', 30, 2, 10, 20, 1, 1);
 GO
 
-INSERT INTO TICKETCLASS (TicketClassCode, TicketClassName, PricePercentage)
+INSERT INTO TICKET_CLASS (TicketClassID, TicketClassName, PricePercentage)
 VALUES 
     ('TC0001', N'Phổ thông', 100),
     ('TC0002', N'Thương gia', 105)
 GO
 
-INSERT INTO AIRPORT (AirportCode, AirportName, CityName, CountryName)
+INSERT INTO AIRPORT (AirportID, AirportName, CityName, CountryName)
 VALUES
 	('AP0001', N'Sân bay Quốc tế Tân Sơn Nhất', N'Thành phố Hồ Chí Minh', N'Việt Nam'),
 	('AP0002', N'Sân bay Quốc tế Nội Bài', N'Hà Nội', N'Việt Nam'),
@@ -27,6 +27,3 @@ VALUES
 	('AP0009', N'Sân bay Suvarnabhumi', N'Bangkok', N'Thái Lan'),
 	('AP0010', N'Sân bay Changi', N'Singapore', N'Singapore')
 GO
-
-DELETE FROM AIRPORT
-SELECT * FROM AIRPORT

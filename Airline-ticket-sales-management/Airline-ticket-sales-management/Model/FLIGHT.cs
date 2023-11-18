@@ -17,21 +17,30 @@ namespace Airline_ticket_sales_management.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FLIGHT()
         {
-            this.FLIGHTDETAILs = new HashSet<FLIGHTDETAIL>();
+            this.DETAILED_MONTHLY_REVENUE_REPORT = new HashSet<DETAILED_MONTHLY_REVENUE_REPORT>();
+            this.FLIGHT_DETAIL = new HashSet<FLIGHT_DETAIL>();
+            this.FLIGHT_TICKET = new HashSet<FLIGHT_TICKET>();
+            this.FLIGHT_TICKET_CLASS_DETAIL = new HashSet<FLIGHT_TICKET_CLASS_DETAIL>();
         }
     
-        public string FlightCode { get; set; }
+        public string FlightID { get; set; }
+        public string PlaneID { get; set; }
         public string DepartureAirportCode { get; set; }
-        public string DestinationAirportCode { get; set; }
-        public string PlaneCode { get; set; }
-        public Nullable<decimal> TicketPrice { get; set; }
-        public Nullable<System.DateTime> DateTimeScheduled { get; set; }
-        public Nullable<System.TimeSpan> FlightDuration { get; set; }
+        public string ArrivalAirportCode { get; set; }
+        public decimal TicketPrice { get; set; }
+        public System.DateTime DepartureDateTime { get; set; }
+        public int FlightDuration { get; set; }
     
         public virtual AIRPORT AIRPORT { get; set; }
         public virtual AIRPORT AIRPORT1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DETAILED_MONTHLY_REVENUE_REPORT> DETAILED_MONTHLY_REVENUE_REPORT { get; set; }
         public virtual PLANE PLANE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FLIGHTDETAIL> FLIGHTDETAILs { get; set; }
+        public virtual ICollection<FLIGHT_DETAIL> FLIGHT_DETAIL { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FLIGHT_TICKET> FLIGHT_TICKET { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FLIGHT_TICKET_CLASS_DETAIL> FLIGHT_TICKET_CLASS_DETAIL { get; set; }
     }
 }

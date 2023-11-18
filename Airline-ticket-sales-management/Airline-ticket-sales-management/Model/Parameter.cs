@@ -12,13 +12,14 @@ namespace Airline_ticket_sales_management.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class SEAT
+    public partial class Parameter
     {
-        public string SeatID { get; set; }
-        public string PlaneID { get; set; }
-        public string TicketClassID { get; set; }
-    
-        public virtual PLANE PLANE { get; set; }
-        public virtual TICKET_CLASS TICKET_CLASS { get; set; }
+        public string ParametersID { get; set; }
+        public int MinimumFlightTime { get; set; }
+        public int MaxPreventiveAirports { get; set; }
+        public int MinimumStopoverTime { get; set; }
+        public int MaximumStopoverTime { get; set; }
+        public int EarliestBookingTime { get; set; }
+        public int LatestBookingCancellationTime { get; set; }
     }
 }

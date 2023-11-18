@@ -12,22 +12,22 @@ namespace Airline_ticket_sales_management.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class PLANE
+    public partial class DETAILED_ANNUAL_REVENUE_REPORT
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PLANE()
+        public DETAILED_ANNUAL_REVENUE_REPORT()
         {
-            this.FLIGHTs = new HashSet<FLIGHT>();
-            this.SEATs = new HashSet<SEAT>();
+            this.DETAILED_MONTHLY_REVENUE_REPORT = new HashSet<DETAILED_MONTHLY_REVENUE_REPORT>();
         }
     
-        public string PlaneID { get; set; }
-        public string PlaneName { get; set; }
-        public int SeatCount { get; set; }
+        public int Years { get; set; }
+        public int Months { get; set; }
+        public int FlightCount { get; set; }
+        public decimal Revenue { get; set; }
+        public decimal Ratio { get; set; }
     
+        public virtual ANNUAL_REVENUE_REPORT ANNUAL_REVENUE_REPORT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FLIGHT> FLIGHTs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SEAT> SEATs { get; set; }
+        public virtual ICollection<DETAILED_MONTHLY_REVENUE_REPORT> DETAILED_MONTHLY_REVENUE_REPORT { get; set; }
     }
 }

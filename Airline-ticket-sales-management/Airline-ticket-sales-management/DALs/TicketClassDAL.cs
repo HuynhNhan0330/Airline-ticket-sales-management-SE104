@@ -31,10 +31,10 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    var TicketClassList = (from ticketclass in context.TICKETCLASSes
+                    var TicketClassList = (from ticketclass in context.TICKET_CLASS
                                            select new TicketClassDTO
                                            {
-                                               TicketClassCode = ticketclass.TicketClassCode,
+                                               TicketClassID = ticketclass.TicketClassID,
                                                TicketClassName = ticketclass.TicketClassName,
                                                PricePercentage = (int)ticketclass.PricePercentage
                                            }).ToListAsync();
@@ -54,21 +54,21 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    TICKETCLASS findTicketClass = context.TICKETCLASSes.FirstOrDefault(tc => tc.TicketClassName == _ticketClass.TicketClassName);
+                    TICKET_CLASS findTicketClass = context.TICKET_CLASS.FirstOrDefault(tc => tc.TicketClassName == _ticketClass.TicketClassName);
                     if (findTicketClass != null)
                         return (false, "Tên hạng vé đã tồn tại", null);
 
-                    string currentMaxCode = await context.TICKETCLASSes.MaxAsync(tc => tc.TicketClassCode);
+                    string currentMaxCode = await context.TICKET_CLASS.MaxAsync(tc => tc.TicketClassID);
                     string newCode = Helper.nextCode(currentMaxCode, "TC");
 
-                    TICKETCLASS newTicketClass = new TICKETCLASS
+                    TICKET_CLASS newTicketClass = new TICKET_CLASS
                     {
-                        TicketClassCode = newCode,
+                        TicketClassID = newCode,
                         TicketClassName = _ticketClass.TicketClassName,
                         PricePercentage = _ticketClass.PricePercentage
                     };
 
-                    context.TICKETCLASSes.Add(newTicketClass);
+                    context.TICKET_CLASS.Add(newTicketClass);
 
                     context.SaveChanges();
 
@@ -87,9 +87,9 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    TICKETCLASS ticketClass = context.TICKETCLASSes.FirstOrDefault(tc => tc.TicketClassCode == _ticketClass.TicketClassCode);
+                    TICKET_CLASS ticketClass = context.TICKET_CLASS.FirstOrDefault(tc => tc.TicketClassID == _ticketClass.TicketClassID);
 
-                    context.TICKETCLASSes.Remove(ticketClass);
+                    context.TICKET_CLASS.Remove(ticketClass);
                     context.SaveChanges();
 
                     return (true, "Xoá thành công");
@@ -107,11 +107,11 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    TICKETCLASS findTicketClass = context.TICKETCLASSes.FirstOrDefault(tc => tc.TicketClassName == _ticketClass.TicketClassName && tc.TicketClassCode != _ticketClass.TicketClassCode);
+                    TICKET_CLASS findTicketClass = context.TICKET_CLASS.FirstOrDefault(tc => tc.TicketClassName == _ticketClass.TicketClassName && tc.TicketClassID != _ticketClass.TicketClassID);
                     if (findTicketClass != null)
                         return (false, "Tên hạng vé đã tồn tại");
 
-                    TICKETCLASS currentTicketClass = context.TICKETCLASSes.FirstOrDefault(tc => tc.TicketClassCode == _ticketClass.TicketClassCode);
+                    TICKET_CLASS currentTicketClass = context.TICKET_CLASS.FirstOrDefault(tc => tc.TicketClassID == _ticketClass.TicketClassID);
                     currentTicketClass.TicketClassName = _ticketClass.TicketClassName;
                     currentTicketClass.PricePercentage = _ticketClass.PricePercentage;
 

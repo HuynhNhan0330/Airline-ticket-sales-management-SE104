@@ -12,14 +12,16 @@ namespace Airline_ticket_sales_management.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class REGULATION
+    public partial class DETAILED_MONTHLY_REVENUE_REPORT
     {
-        public string RegulationsCode { get; set; }
-        public int MinimumFlightTime { get; set; }
-        public int MaxDelayAirports { get; set; }
-        public int MinimumDelayTime { get; set; }
-        public int MaximumDelayTime { get; set; }
-        public int LatestBookingTime { get; set; }
-        public int LatestCancellationTime { get; set; }
+        public int Years { get; set; }
+        public int Months { get; set; }
+        public string FlightID { get; set; }
+        public int TicketSold { get; set; }
+        public decimal Revenue { get; set; }
+        public decimal Ratio { get; set; }
+    
+        public virtual DETAILED_ANNUAL_REVENUE_REPORT DETAILED_ANNUAL_REVENUE_REPORT { get; set; }
+        public virtual FLIGHT FLIGHT { get; set; }
     }
 }

@@ -86,10 +86,10 @@
       <DependentUpon>ATextboxUC.cs</DependentUpon>
     </Compile>
     <Compile Include="DALs\AirportDAL.cs" />
-    <Compile Include="DALs\RegulationsDAL.cs" />
+    <Compile Include="DALs\ParametersDAL.cs" />
     <Compile Include="DALs\TicketClassDAL.cs" />
     <Compile Include="DTOs\AirportDTO.cs" />
-    <Compile Include="DTOs\RegulationsDTO.cs" />
+    <Compile Include="DTOs\ParametersDTO.cs" />
     <Compile Include="DTOs\TicketClassDTO.cs" />
     <Compile Include="FormAdminHome.cs">
       <SubType>Form</SubType>
@@ -106,10 +106,16 @@
     <Compile Include="Model\AIRPORT.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\FLIGHT.cs">
+    <Compile Include="Model\ANNUAL_REVENUE_REPORT.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\FLIGHTDETAIL.cs">
+    <Compile Include="Model\DETAILED_ANNUAL_REVENUE_REPORT.cs">
+      <DependentUpon>FlightTicketManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DETAILED_MONTHLY_REVENUE_REPORT.cs">
+      <DependentUpon>FlightTicketManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FLIGHT.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\FlightTicketManagement.Context.cs">
@@ -127,16 +133,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FlightTicketManagement.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\PLANE.cs">
+    <Compile Include="Model\FLIGHT_DETAIL.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\REGULATION.cs">
+    <Compile Include="Model\FLIGHT_TICKET.cs">
+      <DependentUpon>FlightTicketManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FLIGHT_TICKET_CLASS_DETAIL.cs">
+      <DependentUpon>FlightTicketManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Parameter.cs">
+      <DependentUpon>FlightTicketManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PLANE.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\SEAT.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TICKETCLASS.cs">
+    <Compile Include="Model\TICKET_CLASS.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -352,6 +367,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Database\FlightTicketManagement.sql" />
+    <Content Include="Database\Sample data.sql" />
     <Content Include="Model\FlightTicketManagement.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FlightTicketManagement.Context.cs</LastGenOutput>

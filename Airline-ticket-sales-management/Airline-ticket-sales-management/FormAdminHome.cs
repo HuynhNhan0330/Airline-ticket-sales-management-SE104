@@ -89,7 +89,7 @@ namespace Airline_ticket_sales_management
 
         private void FormAdminHome_Load(object sender, EventArgs e)
         {
-            RegulationsDAL.Ins.getRegulations();
+            _ = ParametersDAL.Ins.getParameters();
         }
     }
 }

@@ -12,19 +12,18 @@ namespace Airline_ticket_sales_management.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class TICKETCLASS
+    public partial class ANNUAL_REVENUE_REPORT
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TICKETCLASS()
+        public ANNUAL_REVENUE_REPORT()
         {
-            this.SEATs = new HashSet<SEAT>();
+            this.DETAILED_ANNUAL_REVENUE_REPORT = new HashSet<DETAILED_ANNUAL_REVENUE_REPORT>();
         }
     
-        public string TicketClassCode { get; set; }
-        public string TicketClassName { get; set; }
-        public Nullable<int> PricePercentage { get; set; }
+        public int Years { get; set; }
+        public decimal TotalRevenue { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SEAT> SEATs { get; set; }
+        public virtual ICollection<DETAILED_ANNUAL_REVENUE_REPORT> DETAILED_ANNUAL_REVENUE_REPORT { get; set; }
     }
 }

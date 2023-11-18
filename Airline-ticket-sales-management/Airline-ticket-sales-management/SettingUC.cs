@@ -54,23 +54,23 @@ namespace Airline_ticket_sales_management
         #region regulations
         private void loadRegulations()
         {
-            atbMinimumFlightTime.Texts = RegulationsDTO.Ins.MinimumFlightTime.ToString();
-            atbMaxDelayAirports.Texts = RegulationsDTO.Ins.MaxDelayAirports.ToString();
-            atbMinimumDelayTime.Texts = RegulationsDTO.Ins.MinimumDelayTime.ToString();
-            atbMaximumDelayTime.Texts = RegulationsDTO.Ins.MaximumDelayTime.ToString();
-            atbLatestBookingTime.Texts = RegulationsDTO.Ins.LatestBookingTime.ToString();
-            atbLatestCancellationTime.Texts = RegulationsDTO.Ins.LatestCancellationTime.ToString();
+            atbMinimumFlightTime.Texts = ParametersDTO.Ins.MinimumFlightTime.ToString();
+            atbMaxPreventiveAirports.Texts = ParametersDTO.Ins.MaxPreventiveAirports.ToString();
+            atbMinimumStopoverTime.Texts = ParametersDTO.Ins.MinimumStopoverTime.ToString();
+            atbMaximumStopoverTime.Texts = ParametersDTO.Ins.MaximumStopoverTime.ToString();
+            atbEarliestBookingTime.Texts = ParametersDTO.Ins.EarliestBookingTime.ToString();
+            atbLatestBookingCancellationTime.Texts = ParametersDTO.Ins.LatestBookingCancellationTime.ToString();
         }
 
         private async void abtnSaveRegulations_Click(object sender, EventArgs e)
         {
-            (bool isSaveRegulations, string label) = await RegulationsDAL.Ins.updateRegulations(
+            (bool isSaveRegulations, string label) = await ParametersDAL.Ins.updateRegulations(
                     int.Parse(atbMinimumFlightTime.Texts),
-                    int.Parse(atbMaxDelayAirports.Texts),
-                    int.Parse(atbMinimumDelayTime.Texts),
-                    int.Parse(atbMaximumDelayTime.Texts),
-                    int.Parse(atbLatestBookingTime.Texts),
-                    int.Parse(atbLatestCancellationTime.Texts)
+                    int.Parse(atbMaxPreventiveAirports.Texts),
+                    int.Parse(atbMinimumStopoverTime.Texts),
+                    int.Parse(atbMaximumStopoverTime.Texts),
+                    int.Parse(atbEarliestBookingTime.Texts),
+                    int.Parse(atbLatestBookingCancellationTime.Texts)
                 );
 
             if (isSaveRegulations)
@@ -149,7 +149,7 @@ namespace Airline_ticket_sales_management
             {
                 AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                newTicketClass.TicketClassCode = newCode;
+                newTicketClass.TicketClassID = newCode;
                 addTicketClassItem(newTicketClass);
 
                 ms.ShowDialog();
@@ -226,7 +226,7 @@ namespace Airline_ticket_sales_management
                 {
                     if (tciuc is TicketClassItemUC)
                     {
-                        if ((tciuc as TicketClassItemUC).TicketClass.TicketClassCode == ticketClass.TicketClassCode)
+                        if ((tciuc as TicketClassItemUC).TicketClass.TicketClassID == ticketClass.TicketClassID)
                             tcuc = tciuc as TicketClassItemUC;
                     }
 
@@ -260,7 +260,7 @@ namespace Airline_ticket_sales_management
             }
             else
             {
-                TicketClassDTO currentTicket = new TicketClassDTO(atxbTicketClassName.Texts.Trim(), int.Parse(atxbPricePercentage.Texts.Trim()), this.ticketClass.TicketClassCode);
+                TicketClassDTO currentTicket = new TicketClassDTO(atxbTicketClassName.Texts.Trim(), int.Parse(atxbPricePercentage.Texts.Trim()), this.ticketClass.TicketClassID);
                 updateTicketClassItem(currentTicket);
             }
         }
@@ -311,7 +311,7 @@ namespace Airline_ticket_sales_management
             {
                 AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                airport.AirportCode = newCode;
+                airport.AirportID = newCode;
                 addAirportItem(airport);
 
                 ms.ShowDialog();
@@ -426,7 +426,7 @@ namespace Airline_ticket_sales_management
                 {
                     if (apiuc is AirportItemUC)
                     {
-                        if ((apiuc as AirportItemUC).airport.AirportCode == airport.AirportCode)
+                        if ((apiuc as AirportItemUC).airport.AirportID == airport.AirportID)
                             apuc = apiuc as AirportItemUC;
                     }
 
@@ -466,7 +466,7 @@ namespace Airline_ticket_sales_management
             }
             else
             {
-                AirportDTO newAirport = new AirportDTO(atxbAirportName.Texts.Trim(), atxbCityName.Texts.Trim(), atxbCountryName.Texts.Trim(), this.airport.AirportCode);
+                AirportDTO newAirport = new AirportDTO(atxbAirportName.Texts.Trim(), atxbCityName.Texts.Trim(), atxbCountryName.Texts.Trim(), this.airport.AirportID);
                 updateAirport(newAirport);
             }
         }

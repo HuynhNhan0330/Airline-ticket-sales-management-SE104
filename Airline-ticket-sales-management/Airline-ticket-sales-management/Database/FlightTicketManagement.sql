@@ -1,95 +1,132 @@
-CREATE DATABASE FlightTicketManagement
-GO
+﻿CREATE DATABASE FlightTicketManagement
 
 USE FlightTicketManagement
-GO
+
+CREATE TABLE FLIGHT (
+    FlightID VARCHAR(20) PRIMARY KEY NOT NULL,
+    PlaneID VARCHAR(20) NOT NULL,
+    DepartureAirportCode VARCHAR(20) NOT NULL,
+    ArrivalAirportCode VARCHAR(20) NOT NULL,
+    TicketPrice DECIMAL(10, 2) NOT NULL,
+    DepartureDateTime SMALLDATETIME NOT NULL,
+    FlightDuration INT NOT NULL
+);
+
+CREATE TABLE PLANE (
+    PlaneID VARCHAR(20) primary KEY NOT NULL,
+    PlaneName NVARCHAR(255) NOT NULL,
+    SeatCount INT NOT NULL
+);
 
 CREATE TABLE AIRPORT (
-  AirportCode VARCHAR(20) NOT NULL,
-  AirportName NVARCHAR(255),
-  CityName NVARCHAR(255),
-  CountryName NVARCHAR(255),
-  CONSTRAINT PK_AP PRIMARY KEY(AirportCode)
+    AirportID VARCHAR(20) PRIMARY KEY NOT NULL,
+    AirportName NVARCHAR(255) NOT NULL,
+    CityName NVARCHAR(255) NOT NULL,
+    CountryName NVARCHAR(255) NOT NULL
 );
-GO
 
-CREATE TABLE PLANE
-(
-	PlaneCode VARCHAR(20) NOT NULL,
-	PlaneName VARCHAR(255),
-	SeatCount INT,
-	CONSTRAINT PK_PE PRIMARY KEY(PlaneCode)
+CREATE TABLE FLIGHT_TICKET (
+    FlightTicketID VARCHAR(20) PRIMARY KEY NOT NULL,
+    FlightID VARCHAR(20) NOT NULL,
+    TicketClassID VARCHAR(20) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    FullName NVARCHAR(255) NOT NULL,
+    IDCard VARCHAR(20) NOT NULL,
+    PhoneNumber VARCHAR(50) NOT NULL,
+    Email NVARCHAR(255) NOT NULL,
+    SeatID VARCHAR(20),
+    FlightStatus NVARCHAR(255) NOT NULL
 );
-GO
 
-CREATE TABLE TICKETCLASS
-(
-	TicketClassCode VARCHAR(20) NOT NULL,
-	TicketClassName NVARCHAR(255),
-	PricePercentage INT,
-		CONSTRAINT PK_TC PRIMARY KEY(TicketClassCode)
+
+CREATE TABLE FLIGHT_DETAIL (
+    PreventiveAirportID VARCHAR(20) NOT NULL,
+    FlightID VARCHAR(20) NOT NULL,
+    StopoverDuration INT NOT NULL,
+    Note NVARCHAR(255) NOT NULL,
+    PRIMARY KEY (PreventiveAirportID, FlightID)
 );
-GO
 
-CREATE TABLE SEAT
-(
-	SeatCode VARCHAR(20) NOT NULL,
-	PlaneCode VARCHAR(20) NOT NULL,
-	TicketClassCode VARCHAR(20),
-	CONSTRAINT PK_ST PRIMARY KEY(SeatCode, PlaneCode),
-	CONSTRAINT FK_ST_TC FOREIGN KEY (TicketClassCode) REFERENCES TICKETCLASS(TicketClassCode),
-	CONSTRAINT FK_ST_PE FOREIGN KEY (PlaneCode) REFERENCES PLANE(PlaneCode)
+CREATE TABLE SEAT (
+    SeatID VARCHAR(20) NOT NULL,
+    PlaneID VARCHAR(20) NOT NULL,
+    TicketClassID VARCHAR(20) NOT NULL,
+    PRIMARY KEY (SeatID, PlaneID)
 );
-GO
 
-CREATE TABLE FLIGHT
-(
-  FlightCode VARCHAR(20) NOT NULL,
-  DepartureAirportCode VARCHAR(20),
-  DestinationAirportCode VARCHAR(20),
-  PlaneCode VARCHAR(20),
-  TicketPrice DECIMAL(10, 2),
-  DateTimeScheduled SMALLDATETIME,
-  FlightDuration TIME,
-  CONSTRAINT PK_FL PRIMARY KEY(FlightCode),
-  CONSTRAINT FK_FL_AP1 FOREIGN KEY (DepartureAirportCode) REFERENCES AIRPORT(AirportCode),
-  CONSTRAINT FK_FL_AP2 FOREIGN KEY (DestinationAirportCode) REFERENCES AIRPORT(AirportCode),
-  CONSTRAINT FK_FL_PE FOREIGN KEY (PlaneCode) REFERENCES PLANE(PlaneCode),
+CREATE TABLE TICKET_CLASS (
+    TicketClassID VARCHAR(20) PRIMARY KEY NOT NULL,
+    TicketClassName NVARCHAR(255) NOT NULL,
+    PricePercentage INT NOT NULL
 );
-GO
 
-CREATE TABLE FLIGHTDETAIL
-(
-  AirportCode VARCHAR(20) not null,
-  FlightCode VARCHAR(20) not null,
-  DelayTime TIME,
-  Notes NVARCHAR(255),
-  CONSTRAINT PK_FLD PRIMARY KEY(AirportCode),
-  CONSTRAINT FK_FLD_AP FOREIGN KEY (AirportCode) REFERENCES AIRPORT(AirportCode),
-  CONSTRAINT FK_FLD_FL FOREIGN KEY (FlightCode) REFERENCES FLIGHT(FlightCode)
+CREATE TABLE FLIGHT_TICKET_CLASS_DETAIL (
+	FlightID VARCHAR(20) NOT NULL,
+    TicketClassID VARCHAR(20) NOT NULL,
+    Fare DECIMAL(10, 2) NOT NULL,
+    SeatCapacity INT NOT NULL,
+    TicketSold INT NOT NULL,
+    SeatRemaining INT NOT NULL,
+    PRIMARY KEY (FlightID, TicketClassID)
 );
-GO
 
-CREATE TABLE REGULATIONS(
-  RegulationsCode VARCHAR(20) NOT NULL,
+CREATE TABLE ANNUAL_REVENUE_REPORT (
+	Years INT PRIMARY KEY NOT NULL,
+    TotalRevenue DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE DETAILED_ANNUAL_REVENUE_REPORT (
+	Years INT NOT NULL,
+    Months INT NOT NULL,
+    FlightCount INT NOT NULL,
+    Revenue DECIMAL(10, 2) NOT NULL,
+    Ratio DECIMAL(10, 2) NOT NULL,
+    PRIMARY KEY(Years, Months) 
+);
+
+CREATE TABLE DETAILED_MONTHLY_REVENUE_REPORT (
+	Years INT NOT NULL,
+    Months INT NOT NULL, 
+    FlightID VARCHAR(20) NOT NULL,
+    TicketSold INT NOT NULL,
+    Revenue DECIMAL(10, 2) NOT NULL,
+    Ratio DECIMAL(10, 2) NOT NULL,
+    PRIMARY KEY(Years, Months, FlightID)
+);
+
+CREATE TABLE Parameters (
+  ParametersID VARCHAR(20) PRIMARY KEY NOT NULL,
   MinimumFlightTime INT NOT NULL,
-  MaxDelayAirports INT NOT NULL,
-  MinimumDelayTime INT NOT NULL,
-  MaximumDelayTime INT NOT NULL,
-  LatestBookingTime INT NOT NULL,
-  LatestCancellationTime INT NOT NULL,
-  CONSTRAINT PK_RG PRIMARY KEY(RegulationsCode)
+  MaxPreventiveAirports INT NOT NULL,
+  MinimumStopoverTime INT NOT NULL,
+  MaximumStopoverTime INT NOT NULL,
+  EarliestBookingTime INT NOT NULL,
+  LatestBookingCancellationTime INT NOT NULL
 );
-GO
 
---CREATE TABLE FlightTicket (
---  TicketID VARCHAR(255) PRIMARY KEY,
---  FlightCode VARCHAR(255),
---  CustomerID VARCHAR(255),
---  TicketCompany VARCHAR(255),
---  TicketPrice DECIMAL(10, 2),
---  FullName NVARCHAR(255),
---  IdentificationNumber VARCHAR(255),
---  PhoneNumber VARCHAR(255)
---);
---GO
+/*Khoa ngoại*/
+--alter table FLIGHT_TICKET add foreign key (SeatID) references SEAT(SeatID); // Không thực hiện được
+alter table FLIGHT_TICKET add foreign key (FlightID) references FLIGHT(FlightID);
+alter table FLIGHT_TICKET add foreign key (TicketClassID) references TICKET_CLASS(TicketClassID);
+
+alter table FLIGHT_DETAIL add foreign key (PreventiveAirportID) references AIRPORT(AirportID);
+alter table FLIGHT_DETAIL add foreign key (FlightID) references FLIGHT(FlightID);
+
+alter table FLIGHT add foreign key (DepartureAirportCode) references AIRPORT(AirportID);
+alter table FLIGHT add foreign key (ArrivalAirportCode) references AIRPORT(AirportID);
+alter table FLIGHT add foreign key (PlaneID) references Plane(PlaneID);
+
+alter table Seat add foreign key (PlaneID) references Plane(PlaneID);
+alter table Seat add foreign key (TicketClassID) references TICKET_CLASS(TicketClassID);
+
+alter table FLIGHT_TICKET_CLASS_DETAIL add foreign key (TicketClassID) references TICKET_CLASS(TicketClassID);
+alter table FLIGHT_TICKET_CLASS_DETAIL add foreign key (FlightID) references FLIGHT(FlightID);
+
+alter table DETAILED_MONTHLY_REVENUE_REPORT add foreign key (FlightID) references FLIGHT(FlightID);
+
+ALTER TABLE DETAILED_MONTHLY_REVENUE_REPORT 
+ADD FOREIGN KEY (Years, Months) 
+REFERENCES DETAILED_ANNUAL_REVENUE_REPORT(Years, Months);
+
+alter table  DETAILED_ANNUAL_REVENUE_REPORT add foreign key (Years) references ANNUAL_REVENUE_REPORT(Years);
+
