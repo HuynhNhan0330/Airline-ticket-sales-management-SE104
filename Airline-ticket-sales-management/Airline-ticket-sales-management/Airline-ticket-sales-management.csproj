@@ -87,9 +87,13 @@
     </Compile>
     <Compile Include="DALs\AirportDAL.cs" />
     <Compile Include="DALs\ParametersDAL.cs" />
+    <Compile Include="DALs\PlaneDAL.cs" />
+    <Compile Include="DALs\SeatDAL.cs" />
     <Compile Include="DALs\TicketClassDAL.cs" />
     <Compile Include="DTOs\AirportDTO.cs" />
     <Compile Include="DTOs\ParametersDTO.cs" />
+    <Compile Include="DTOs\PlaneDTO.cs" />
+    <Compile Include="DTOs\SeatDTO.cs" />
     <Compile Include="DTOs\TicketClassDTO.cs" />
     <Compile Include="FormAdminHome.cs">
       <SubType>Form</SubType>

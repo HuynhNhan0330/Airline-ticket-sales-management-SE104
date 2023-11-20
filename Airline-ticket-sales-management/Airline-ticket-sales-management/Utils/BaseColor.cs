@@ -16,10 +16,10 @@ namespace Airline_ticket_sales_management.Utils
 
     public class ColorCodes
     {
-        public static List<String> ColorList = new List<string>
+        public static List<string> ColorList = new List<string>
             {
                 "#83DBEC",
-                "#4FCBE3",
+                "#2BC0DE",
                 "#1EA7C2",
                 "#19889F",
             };

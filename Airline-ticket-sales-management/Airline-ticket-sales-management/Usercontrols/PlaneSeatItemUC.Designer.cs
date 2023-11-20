@@ -31,102 +31,116 @@ namespace Airline_ticket_sales_management.Usercontrols
         /// </summary>
         private void InitializeComponent()
         {
-            pn1 = new Panel();
-            pn2 = new Panel();
-            pn3 = new Panel();
-            pn4 = new Panel();
-            pn5 = new Panel();
-            pn6 = new Panel();
-            panel1 = new Panel();
-            label1 = new Label();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.pn1 = new System.Windows.Forms.Panel();
+            this.pn2 = new System.Windows.Forms.Panel();
+            this.pn3 = new System.Windows.Forms.Panel();
+            this.pn4 = new System.Windows.Forms.Panel();
+            this.pn5 = new System.Windows.Forms.Panel();
+            this.pn6 = new System.Windows.Forms.Panel();
+            this.pnSTT = new System.Windows.Forms.Panel();
+            this.lbText = new System.Windows.Forms.Label();
+            this.pnSTT.SuspendLayout();
+            this.SuspendLayout();
             // 
             // pn1
             // 
-            pn1.BackColor = Color.Gray;
-            pn1.Location = new Point(0, 0);
-            pn1.Name = "pn1";
-            pn1.Size = new Size(100, 100);
-            pn1.TabIndex = 0;
+            this.pn1.BackColor = System.Drawing.Color.Gray;
+            this.pn1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pn1.Location = new System.Drawing.Point(0, 0);
+            this.pn1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn1.Name = "pn1";
+            this.pn1.Size = new System.Drawing.Size(100, 80);
+            this.pn1.TabIndex = 0;
             // 
             // pn2
             // 
-            pn2.BackColor = Color.Gray;
-            pn2.Location = new Point(125, 0);
-            pn2.Name = "pn2";
-            pn2.Size = new Size(100, 100);
-            pn2.TabIndex = 1;
+            this.pn2.BackColor = System.Drawing.Color.Gray;
+            this.pn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pn2.Location = new System.Drawing.Point(125, 0);
+            this.pn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn2.Name = "pn2";
+            this.pn2.Size = new System.Drawing.Size(100, 80);
+            this.pn2.TabIndex = 1;
             // 
             // pn3
             // 
-            pn3.BackColor = Color.Gray;
-            pn3.Location = new Point(250, 0);
-            pn3.Name = "pn3";
-            pn3.Size = new Size(100, 100);
-            pn3.TabIndex = 2;
+            this.pn3.BackColor = System.Drawing.Color.Gray;
+            this.pn3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pn3.Location = new System.Drawing.Point(250, 0);
+            this.pn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn3.Name = "pn3";
+            this.pn3.Size = new System.Drawing.Size(100, 80);
+            this.pn3.TabIndex = 2;
             // 
             // pn4
             // 
-            pn4.BackColor = Color.Gray;
-            pn4.Location = new Point(450, 0);
-            pn4.Name = "pn4";
-            pn4.Size = new Size(100, 100);
-            pn4.TabIndex = 3;
+            this.pn4.BackColor = System.Drawing.Color.Gray;
+            this.pn4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pn4.Location = new System.Drawing.Point(450, 0);
+            this.pn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn4.Name = "pn4";
+            this.pn4.Size = new System.Drawing.Size(100, 80);
+            this.pn4.TabIndex = 3;
             // 
             // pn5
             // 
-            pn5.BackColor = Color.Gray;
-            pn5.Location = new Point(575, 0);
-            pn5.Name = "pn5";
-            pn5.Size = new Size(100, 100);
-            pn5.TabIndex = 1;
+            this.pn5.BackColor = System.Drawing.Color.Gray;
+            this.pn5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pn5.Location = new System.Drawing.Point(575, 0);
+            this.pn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn5.Name = "pn5";
+            this.pn5.Size = new System.Drawing.Size(100, 80);
+            this.pn5.TabIndex = 1;
             // 
             // pn6
             // 
-            pn6.BackColor = Color.Gray;
-            pn6.Location = new Point(700, 0);
-            pn6.Name = "pn6";
-            pn6.Size = new Size(100, 100);
-            pn6.TabIndex = 1;
+            this.pn6.BackColor = System.Drawing.Color.Gray;
+            this.pn6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pn6.Location = new System.Drawing.Point(700, 0);
+            this.pn6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn6.Name = "pn6";
+            this.pn6.Size = new System.Drawing.Size(100, 80);
+            this.pn6.TabIndex = 1;
             // 
-            // panel1
+            // pnSTT
             // 
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(350, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(100, 100);
-            panel1.TabIndex = 4;
+            this.pnSTT.Controls.Add(this.lbText);
+            this.pnSTT.Location = new System.Drawing.Point(350, 0);
+            this.pnSTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnSTT.Name = "pnSTT";
+            this.pnSTT.Size = new System.Drawing.Size(100, 80);
+            this.pnSTT.TabIndex = 4;
             // 
-            // label1
+            // lbText
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(38, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(23, 22);
-            label1.TabIndex = 0;
-            label1.Text = "A";
+            this.lbText.AutoSize = true;
+            this.lbText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbText.ForeColor = System.Drawing.Color.Black;
+            this.lbText.Location = new System.Drawing.Point(38, 31);
+            this.lbText.Name = "lbText";
+            this.lbText.Size = new System.Drawing.Size(23, 22);
+            this.lbText.TabIndex = 0;
+            this.lbText.Text = "A";
             // 
             // PlaneSeatItemUC
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Controls.Add(panel1);
-            Controls.Add(pn6);
-            Controls.Add(pn5);
-            Controls.Add(pn4);
-            Controls.Add(pn3);
-            Controls.Add(pn2);
-            Controls.Add(pn1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "PlaneSeatItemUC";
-            Size = new Size(820, 100);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pnSTT);
+            this.Controls.Add(this.pn6);
+            this.Controls.Add(this.pn5);
+            this.Controls.Add(this.pn4);
+            this.Controls.Add(this.pn3);
+            this.Controls.Add(this.pn2);
+            this.Controls.Add(this.pn1);
+            this.Name = "PlaneSeatItemUC";
+            this.Size = new System.Drawing.Size(820, 80);
+            this.Load += new System.EventHandler(this.PlaneSeatItemUC_Load);
+            this.pnSTT.ResumeLayout(false);
+            this.pnSTT.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -137,7 +151,7 @@ namespace Airline_ticket_sales_management.Usercontrols
         private Panel pn4;
         private Panel pn5;
         private Panel pn6;
-        private Panel panel1;
-        private Label label1;
+        private Panel pnSTT;
+        private Label lbText;
     }
 }

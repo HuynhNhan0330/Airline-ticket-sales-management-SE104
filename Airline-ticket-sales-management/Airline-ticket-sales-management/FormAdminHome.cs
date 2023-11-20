@@ -27,6 +27,11 @@ namespace Airline_ticket_sales_management
             loadBody(new HomeAdminUC());
         }
 
+        private void FormAdminHome_Load(object sender, EventArgs e)
+        {
+            _ = ParametersDAL.Ins.getParameters();
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -53,6 +58,7 @@ namespace Airline_ticket_sales_management
             oldBody = uc;
         }
 
+        #region Menu
         private void doActivateButton(AButton abtn)
         {
             abtn.ForeColor = BaseColor.XanhDam;
@@ -69,27 +75,29 @@ namespace Airline_ticket_sales_management
 
         private void abtnPlane_Click(object sender, EventArgs e)
         {
+            if (currentButton != abtnPlane)
+            {
+                if (currentButton != null)
+                    doDeactivateButton(currentButton);
 
+                currentButton = abtnPlane;
+                doActivateButton(currentButton);
+                loadBody(new PlaneUC());
+            }
         }
 
         private void abtnSetting_Click(object sender, EventArgs e)
         {
-            if (currentButton != abtnPlane)
+            if (currentButton != abtnSetting)
             {
                 if (currentButton != null)
-                {
                     doDeactivateButton(currentButton);
-                }
 
                 currentButton = abtnSetting;
                 doActivateButton(currentButton);
                 loadBody(new SettingUC());
             }
         }
-
-        private void FormAdminHome_Load(object sender, EventArgs e)
-        {
-            _ = ParametersDAL.Ins.getParameters();
-        }
+        #endregion
     }
 }

@@ -22,6 +22,14 @@ namespace Airline_ticket_sales_management
             currentAbtn = this.abtnPlaneList;
         }
 
+        private void loadBody(UserControl uc)
+        {
+            pnBodyPlane.Controls.Clear();
+            pnBodyPlane.Controls.Add(uc);
+        }
+
+
+        #region menu
         private void doActivateAbtn(AButton abtn)
         {
             abtn.BackgroundColor = BaseColor.XanhDam;
@@ -32,12 +40,6 @@ namespace Airline_ticket_sales_management
         {
             abtn.BackgroundColor = Color.Transparent;
             abtn.ForeColor = BaseColor.XanhDam;
-        }
-
-        private void loadBody(UserControl uc)
-        {
-            pnBodyPlane.Controls.Clear();
-            pnBodyPlane.Controls.Add(uc);
         }
 
         private void abtnPlaneList_Click(object sender, EventArgs e)
@@ -75,5 +77,6 @@ namespace Airline_ticket_sales_management
                 loadBody(new OperationPlaneUC());
             }
         }
+        #endregion
     }
 }

@@ -125,5 +125,24 @@ namespace Airline_ticket_sales_management.DALs
                 return (false, ex.Message);
             }
         }
+
+        public async Task<TicketClassDTO> getFirst()
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    TICKET_CLASS findTicketClass = context.TICKET_CLASS.FirstOrDefault();
+
+                    TicketClassDTO ticketClass = new TicketClassDTO(findTicketClass.TicketClassName, findTicketClass.PricePercentage, findTicketClass.TicketClassID);
+
+                    return ticketClass;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

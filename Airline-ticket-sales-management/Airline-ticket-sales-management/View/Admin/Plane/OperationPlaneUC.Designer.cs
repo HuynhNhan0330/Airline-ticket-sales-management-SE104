@@ -31,289 +31,345 @@ namespace Airline_ticket_sales_management
         /// </summary>
         private void InitializeComponent()
         {
-            aTextboxUC1 = new AControls.ATextboxUC();
-            aPanel1 = new AControls.APanel();
-            pnHeader = new Panel();
-            panel7 = new Panel();
-            label7 = new Label();
-            panel6 = new Panel();
-            label6 = new Label();
-            panel5 = new Panel();
-            label5 = new Label();
-            panel4 = new Panel();
-            label4 = new Label();
-            panel2 = new Panel();
-            label3 = new Label();
-            panel3 = new Panel();
-            label2 = new Label();
-            pnSeat = new Panel();
-            pnTicketClass = new Panel();
-            label1 = new Label();
-            aButton1 = new AControls.AButton();
-            aPanel1.SuspendLayout();
-            pnHeader.SuspendLayout();
-            panel7.SuspendLayout();
-            panel6.SuspendLayout();
-            panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            SuspendLayout();
+            this.atbPlaneName = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
+            this.pnHeader = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnSeat = new System.Windows.Forms.Panel();
+            this.pnTicketClass = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.abtnCreatePlane = new Airline_ticket_sales_management.AControls.AButton();
+            this.atbSeatCount = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.lbReloadSeat = new System.Windows.Forms.Label();
+            this.aPanel1.SuspendLayout();
+            this.pnHeader.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // aTextboxUC1
+            // atbPlaneName
             // 
-            aTextboxUC1.BackColor = Color.White;
-            aTextboxUC1.BorderColor = Color.FromArgb(3, 4, 94);
-            aTextboxUC1.BorderFocusColor = Color.FromArgb(0, 138, 184);
-            aTextboxUC1.BorderRadius = 5;
-            aTextboxUC1.BorderSize = 2;
-            aTextboxUC1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            aTextboxUC1.ForeColor = Color.DimGray;
-            aTextboxUC1.Location = new Point(50, 30);
-            aTextboxUC1.Margin = new Padding(4, 5, 4, 5);
-            aTextboxUC1.Multiline = false;
-            aTextboxUC1.Name = "aTextboxUC1";
-            aTextboxUC1.Padding = new Padding(7, 9, 7, 9);
-            aTextboxUC1.PasswordChar = false;
-            aTextboxUC1.PlaceholderColor = Color.DarkGray;
-            aTextboxUC1.PlaceholderText = "Tên máy bay";
-            aTextboxUC1.RoundType = AControls.ATextboxUC.RoundStyles.Full;
-            aTextboxUC1.Size = new Size(200, 41);
-            aTextboxUC1.TabIndex = 0;
-            aTextboxUC1.Texts = "";
-            aTextboxUC1.UnderlinedStyle = false;
+            this.atbPlaneName.BackColor = System.Drawing.Color.White;
+            this.atbPlaneName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atbPlaneName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atbPlaneName.BorderRadius = 5;
+            this.atbPlaneName.BorderSize = 2;
+            this.atbPlaneName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.atbPlaneName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.atbPlaneName.isPlaceholder = true;
+            this.atbPlaneName.Location = new System.Drawing.Point(50, 64);
+            this.atbPlaneName.Margin = new System.Windows.Forms.Padding(4);
+            this.atbPlaneName.Multiline = false;
+            this.atbPlaneName.Name = "atbPlaneName";
+            this.atbPlaneName.Padding = new System.Windows.Forms.Padding(7);
+            this.atbPlaneName.PasswordChar = false;
+            this.atbPlaneName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atbPlaneName.PlaceholderText = "Tên máy bay";
+            this.atbPlaneName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atbPlaneName.Size = new System.Drawing.Size(200, 37);
+            this.atbPlaneName.TabIndex = 0;
+            this.atbPlaneName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atbPlaneName.Texts = "";
+            this.atbPlaneName.UnderlinedStyle = false;
             // 
             // aPanel1
             // 
-            aPanel1.BackColor = Color.Transparent;
-            aPanel1.BackgroundColor = Color.Transparent;
-            aPanel1.BorderColor = Color.FromArgb(153, 187, 255);
-            aPanel1.BorderRadius = 30;
-            aPanel1.BorderSize = 5;
-            aPanel1.Controls.Add(pnHeader);
-            aPanel1.Controls.Add(pnSeat);
-            aPanel1.ForeColor = Color.White;
-            aPanel1.Location = new Point(580, 30);
-            aPanel1.Name = "aPanel1";
-            aPanel1.RoundType = AControls.APanel.RoundStyles.Top;
-            aPanel1.Size = new Size(870, 660);
-            aPanel1.TabIndex = 1;
-            aPanel1.TextColor = Color.White;
+            this.aPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.aPanel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.aPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(187)))), ((int)(((byte)(255)))));
+            this.aPanel1.BorderRadius = 30;
+            this.aPanel1.BorderSize = 5;
+            this.aPanel1.Controls.Add(this.pnHeader);
+            this.aPanel1.Controls.Add(this.pnSeat);
+            this.aPanel1.ForeColor = System.Drawing.Color.White;
+            this.aPanel1.Location = new System.Drawing.Point(580, 25);
+            this.aPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.aPanel1.Name = "aPanel1";
+            this.aPanel1.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Top;
+            this.aPanel1.Size = new System.Drawing.Size(870, 615);
+            this.aPanel1.TabIndex = 1;
+            this.aPanel1.TextColor = System.Drawing.Color.White;
             // 
             // pnHeader
             // 
-            pnHeader.Controls.Add(panel7);
-            pnHeader.Controls.Add(panel6);
-            pnHeader.Controls.Add(panel5);
-            pnHeader.Controls.Add(panel4);
-            pnHeader.Controls.Add(panel2);
-            pnHeader.Controls.Add(panel3);
-            pnHeader.Location = new Point(25, 9);
-            pnHeader.Name = "pnHeader";
-            pnHeader.Size = new Size(820, 40);
-            pnHeader.TabIndex = 1;
+            this.pnHeader.Controls.Add(this.panel7);
+            this.pnHeader.Controls.Add(this.panel6);
+            this.pnHeader.Controls.Add(this.panel5);
+            this.pnHeader.Controls.Add(this.panel4);
+            this.pnHeader.Controls.Add(this.panel2);
+            this.pnHeader.Controls.Add(this.panel3);
+            this.pnHeader.Location = new System.Drawing.Point(25, 7);
+            this.pnHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnHeader.Name = "pnHeader";
+            this.pnHeader.Size = new System.Drawing.Size(820, 32);
+            this.pnHeader.TabIndex = 1;
             // 
             // panel7
             // 
-            panel7.Controls.Add(label7);
-            panel7.Location = new Point(700, 0);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(100, 40);
-            panel7.TabIndex = 5;
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Location = new System.Drawing.Point(700, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(100, 32);
+            this.panel7.TabIndex = 5;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(40, 9);
-            label7.Name = "label7";
-            label7.Size = new Size(20, 22);
-            label7.TabIndex = 0;
-            label7.Text = "6";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(40, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 22);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "6";
             // 
             // panel6
             // 
-            panel6.Controls.Add(label6);
-            panel6.Location = new Point(575, 0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(100, 40);
-            panel6.TabIndex = 4;
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Location = new System.Drawing.Point(575, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(100, 32);
+            this.panel6.TabIndex = 4;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(40, 9);
-            label6.Name = "label6";
-            label6.Size = new Size(20, 22);
-            label6.TabIndex = 0;
-            label6.Text = "5";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(40, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 22);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "5";
             // 
             // panel5
             // 
-            panel5.Controls.Add(label5);
-            panel5.Location = new Point(450, 0);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(100, 40);
-            panel5.TabIndex = 3;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Location = new System.Drawing.Point(450, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(100, 32);
+            this.panel5.TabIndex = 3;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(40, 9);
-            label5.Name = "label5";
-            label5.Size = new Size(20, 22);
-            label5.TabIndex = 0;
-            label5.Text = "4";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(40, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 22);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "4";
             // 
             // panel4
             // 
-            panel4.Controls.Add(label4);
-            panel4.Location = new Point(250, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(100, 40);
-            panel4.TabIndex = 2;
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(250, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(100, 32);
+            this.panel4.TabIndex = 2;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(40, 9);
-            label4.Name = "label4";
-            label4.Size = new Size(20, 22);
-            label4.TabIndex = 0;
-            label4.Text = "3";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(40, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 22);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "3";
             // 
             // panel2
             // 
-            panel2.Controls.Add(label3);
-            panel2.Location = new Point(125, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(100, 40);
-            panel2.TabIndex = 1;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(125, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(100, 32);
+            this.panel2.TabIndex = 1;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(40, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(20, 22);
-            label3.TabIndex = 0;
-            label3.Text = "2";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(40, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 22);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "2";
             // 
             // panel3
             // 
-            panel3.Controls.Add(label2);
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(100, 40);
-            panel3.TabIndex = 0;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(100, 32);
+            this.panel3.TabIndex = 0;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(40, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(20, 22);
-            label2.TabIndex = 0;
-            label2.Text = "1";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(40, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "1";
             // 
             // pnSeat
             // 
-            pnSeat.AutoScroll = true;
-            pnSeat.Location = new Point(25, 50);
-            pnSeat.Name = "pnSeat";
-            pnSeat.Size = new Size(820, 600);
-            pnSeat.TabIndex = 0;
+            this.pnSeat.AutoScroll = true;
+            this.pnSeat.Location = new System.Drawing.Point(25, 40);
+            this.pnSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnSeat.Name = "pnSeat";
+            this.pnSeat.Size = new System.Drawing.Size(820, 560);
+            this.pnSeat.TabIndex = 0;
             // 
             // pnTicketClass
             // 
-            pnTicketClass.AutoScroll = true;
-            pnTicketClass.Location = new Point(370, 80);
-            pnTicketClass.Name = "pnTicketClass";
-            pnTicketClass.Size = new Size(120, 610);
-            pnTicketClass.TabIndex = 2;
+            this.pnTicketClass.AutoScroll = true;
+            this.pnTicketClass.Location = new System.Drawing.Point(300, 64);
+            this.pnTicketClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnTicketClass.Name = "pnTicketClass";
+            this.pnTicketClass.Size = new System.Drawing.Size(230, 576);
+            this.pnTicketClass.TabIndex = 2;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(398, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(64, 20);
-            label1.TabIndex = 3;
-            label1.Text = "Hạng vé";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(358, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 29);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Hạng vé";
             // 
-            // aButton1
+            // abtnCreatePlane
             // 
-            aButton1.BackColor = Color.FromArgb(3, 4, 94);
-            aButton1.BackgroundColor = Color.FromArgb(3, 4, 94);
-            aButton1.BorderColor = Color.PaleVioletRed;
-            aButton1.BorderRadius = 20;
-            aButton1.BorderSize = 0;
-            aButton1.FlatAppearance.BorderSize = 0;
-            aButton1.FlatStyle = FlatStyle.Flat;
-            aButton1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aButton1.ForeColor = Color.White;
-            aButton1.LineType = AControls.AButton.LineStyles.None;
-            aButton1.Location = new Point(50, 92);
-            aButton1.Name = "aButton1";
-            aButton1.RoundType = AControls.AButton.RoundStyles.Full;
-            aButton1.Size = new Size(200, 50);
-            aButton1.TabIndex = 4;
-            aButton1.Text = "Tạo máy bay";
-            aButton1.TextColor = Color.White;
-            aButton1.ThinknessLine = 0;
-            aButton1.UseVisualStyleBackColor = false;
+            this.abtnCreatePlane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreatePlane.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreatePlane.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnCreatePlane.BorderRadius = 20;
+            this.abtnCreatePlane.BorderSize = 0;
+            this.abtnCreatePlane.FlatAppearance.BorderSize = 0;
+            this.abtnCreatePlane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnCreatePlane.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnCreatePlane.ForeColor = System.Drawing.Color.White;
+            this.abtnCreatePlane.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnCreatePlane.Location = new System.Drawing.Point(50, 600);
+            this.abtnCreatePlane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnCreatePlane.Name = "abtnCreatePlane";
+            this.abtnCreatePlane.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnCreatePlane.Size = new System.Drawing.Size(200, 40);
+            this.abtnCreatePlane.TabIndex = 4;
+            this.abtnCreatePlane.Text = "Tạo máy bay";
+            this.abtnCreatePlane.TextColor = System.Drawing.Color.White;
+            this.abtnCreatePlane.ThinknessLine = 0;
+            this.abtnCreatePlane.UseVisualStyleBackColor = false;
+            this.abtnCreatePlane.Click += new System.EventHandler(this.abtnCreatePlane_Click);
+            // 
+            // atbSeatCount
+            // 
+            this.atbSeatCount.BackColor = System.Drawing.Color.White;
+            this.atbSeatCount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atbSeatCount.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atbSeatCount.BorderRadius = 5;
+            this.atbSeatCount.BorderSize = 2;
+            this.atbSeatCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.atbSeatCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.atbSeatCount.isPlaceholder = true;
+            this.atbSeatCount.Location = new System.Drawing.Point(50, 130);
+            this.atbSeatCount.Margin = new System.Windows.Forms.Padding(4);
+            this.atbSeatCount.Multiline = false;
+            this.atbSeatCount.Name = "atbSeatCount";
+            this.atbSeatCount.Padding = new System.Windows.Forms.Padding(7);
+            this.atbSeatCount.PasswordChar = false;
+            this.atbSeatCount.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atbSeatCount.PlaceholderText = "Số lượng ghế";
+            this.atbSeatCount.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atbSeatCount.Size = new System.Drawing.Size(200, 37);
+            this.atbSeatCount.TabIndex = 5;
+            this.atbSeatCount.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atbSeatCount.Texts = "";
+            this.atbSeatCount.UnderlinedStyle = false;
+            // 
+            // lbReloadSeat
+            // 
+            this.lbReloadSeat.AutoSize = true;
+            this.lbReloadSeat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbReloadSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lbReloadSeat.Location = new System.Drawing.Point(110, 180);
+            this.lbReloadSeat.Name = "lbReloadSeat";
+            this.lbReloadSeat.Size = new System.Drawing.Size(144, 17);
+            this.lbReloadSeat.TabIndex = 6;
+            this.lbReloadSeat.Text = "Tải lại danh sách ghế";
+            this.lbReloadSeat.Click += new System.EventHandler(this.lbReloadSeat_Click);
             // 
             // OperationPlaneUC
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 245, 248);
-            Controls.Add(aButton1);
-            Controls.Add(label1);
-            Controls.Add(pnTicketClass);
-            Controls.Add(aPanel1);
-            Controls.Add(aTextboxUC1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "OperationPlaneUC";
-            Size = new Size(1500, 720);
-            Load += OperationPlaneUC_Load;
-            aPanel1.ResumeLayout(false);
-            pnHeader.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.lbReloadSeat);
+            this.Controls.Add(this.atbSeatCount);
+            this.Controls.Add(this.abtnCreatePlane);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pnTicketClass);
+            this.Controls.Add(this.aPanel1);
+            this.Controls.Add(this.atbPlaneName);
+            this.Name = "OperationPlaneUC";
+            this.Size = new System.Drawing.Size(1500, 665);
+            this.Load += new System.EventHandler(this.OperationPlaneUC_Load);
+            this.aPanel1.ResumeLayout(false);
+            this.pnHeader.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private AControls.ATextboxUC aTextboxUC1;
+        private AControls.ATextboxUC atbPlaneName;
         private AControls.APanel aPanel1;
         private Panel pnSeat;
         private Panel pnTicketClass;
         private Label label1;
-        private AControls.AButton aButton1;
+        private AControls.AButton abtnCreatePlane;
         private Panel pnHeader;
         private Panel panel7;
         private Label label7;
@@ -327,5 +383,7 @@ namespace Airline_ticket_sales_management
         private Label label3;
         private Panel panel3;
         private Label label2;
+        private AControls.ATextboxUC atbSeatCount;
+        private Label lbReloadSeat;
     }
 }

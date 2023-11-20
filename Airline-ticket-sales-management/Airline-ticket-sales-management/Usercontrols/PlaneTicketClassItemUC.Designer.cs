@@ -31,36 +31,41 @@ namespace Airline_ticket_sales_management.Usercontrols
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            SuspendLayout();
+            this.lbText = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
-            // label1
+            // lbText
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(4, 39);
-            label1.MaximumSize = new Size(100, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(92, 22);
-            label1.TabIndex = 0;
-            label1.Text = "Phổ thông";
+            this.lbText.AutoSize = true;
+            this.lbText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbText.ForeColor = System.Drawing.Color.Black;
+            this.lbText.Location = new System.Drawing.Point(4, 31);
+            this.lbText.MaximumSize = new System.Drawing.Size(100, 0);
+            this.lbText.Name = "lbText";
+            this.lbText.Size = new System.Drawing.Size(92, 22);
+            this.lbText.TabIndex = 0;
+            this.lbText.Text = "Phổ thông";
             // 
             // PlaneTicketClassItemUC
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Controls.Add(label1);
-            ForeColor = Color.White;
-            Name = "PlaneTicketClassItemUC";
-            Size = new Size(100, 100);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lbText);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "PlaneTicketClassItemUC";
+            this.Size = new System.Drawing.Size(230, 80);
+            this.Load += new System.EventHandler(this.PlaneTicketClassItemUC_Load);
+            this.Click += new System.EventHandler(this.PlaneTicketClassItemUC_Click);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Label label1;
+        private Label lbText;
     }
 }
