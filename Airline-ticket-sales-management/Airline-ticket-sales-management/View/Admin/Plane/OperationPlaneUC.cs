@@ -4,6 +4,7 @@ using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Usercontrols;
 using Airline_ticket_sales_management.Utils;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
@@ -146,12 +147,33 @@ namespace Airline_ticket_sales_management
         private async Task createPlaneAsync()
         {
             PlaneDTO plane = new PlaneDTO(atbPlaneName.Texts.Trim(), int.Parse(atbSeatCount.Texts.Trim()));
-            (bool isCreatePlane, string label) = await PlaneDAL.Ins.createPlane(plane);
+            (bool isCreatePlane, string label, string newID) = await PlaneDAL.Ins.createPlane(plane);
 
             if (isCreatePlane)
             {
-                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ms.ShowDialog();
+                List<SeatDTO> listSeat = new List<SeatDTO>();
+
+                foreach (Control ctr in pnSeat.Controls)
+                {
+                    if (ctr is PlaneSeatItemUC)
+                    {
+                        PlaneSeatItemUC ctrPlaneSeatItemUC = ctr as PlaneSeatItemUC;
+                        listSeat.AddRange(ctrPlaneSeatItemUC.Seats);
+                    }
+                }
+
+                (bool isCreateSeat, string label1) = await SeatDAL.Ins.createSeats(listSeat, newID);
+
+                if (isCreateSeat)
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ms.ShowDialog();
+                }
+                else
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label1, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
             }
             else
             {

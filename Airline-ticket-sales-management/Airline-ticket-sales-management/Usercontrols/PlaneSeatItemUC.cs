@@ -17,7 +17,13 @@ namespace Airline_ticket_sales_management.Usercontrols
 {
     public partial class PlaneSeatItemUC : UserControl
     {
-        private ObservableCollection<SeatDTO> seats = new ObservableCollection<SeatDTO>();
+        private ObservableCollection<SeatDTO> _seats = new ObservableCollection<SeatDTO>();
+        public ObservableCollection<SeatDTO> Seats
+        {
+            get { return _seats; }
+            set { _seats = value; }
+        }
+
         private string type;
 
         private string _stt;
@@ -42,16 +48,15 @@ namespace Airline_ticket_sales_management.Usercontrols
             TicketClassDTO first = await TicketClassDAL.Ins.getFirst();
             first.ColorTicketClass = ColorTranslator.FromHtml(ColorCodes.ColorList[0]);
 
-            SeatDTO seat = new SeatDTO();
-            seat.TicketClass = first;
-
             foreach (Control ctr in this.Controls)
             {
                 if (ctr is Panel && ctr.Name != "pnSTT")
                 {
+                    SeatDTO seat = new SeatDTO();
+                    seat.TicketClass = first;
                     seat.SeatID = stt + ctr.Name.Substring(2);
                     ctr.BackColor = seat.TicketClass.ColorTicketClass;
-                    seats.Add(seat);
+                    Seats.Add(seat);
                     ctr.Click += setTicketClassInPlane;
                 }
             }
@@ -73,7 +78,7 @@ namespace Airline_ticket_sales_management.Usercontrols
 
                 int sttList = int.Parse(panel.Name.Substring(2)) - 1;
 
-                seats[sttList].TicketClass = ctrParent.SelectedTicketClass;
+                Seats[5 - sttList].TicketClass = ctrParent.SelectedTicketClass;
             }
             else
             {

@@ -1,6 +1,10 @@
-﻿using Airline_ticket_sales_management.Usercontrols;
+﻿using Airline_ticket_sales_management.AControls;
+using Airline_ticket_sales_management.DALs;
+using Airline_ticket_sales_management.DTOs;
+using Airline_ticket_sales_management.Usercontrols;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -13,6 +17,8 @@ namespace Airline_ticket_sales_management
 {
     public partial class PlaneListUC : UserControl
     {
+        private ObservableCollection<PlaneDTO> planes;
+
         public PlaneListUC()
         {
             InitializeComponent();
@@ -20,9 +26,14 @@ namespace Airline_ticket_sales_management
 
         private void PlaneListUC_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
+            loadListPlane();
+        }
+
+        private void loadPanelListPlane()
+        {
+            foreach (PlaneDTO plane in planes) 
             {
-                PlaneItemUC uc = new PlaneItemUC();
+                PlaneItemUC uc = new PlaneItemUC(plane);
                 pnFlightList.Controls.Add(uc);
                 uc.BringToFront();
                 uc.Dock = DockStyle.Top;
@@ -33,6 +44,21 @@ namespace Airline_ticket_sales_management
                 pn.BackColor = Color.Gray;
                 pn.BringToFront();
                 pn.Dock = DockStyle.Top;
+            }
+        }
+
+        private async void loadListPlane()
+        {
+            (bool isGet, List<PlaneDTO> listPlane, string label) = await PlaneDAL.Ins.getListPlane();
+            if (isGet)
+            {
+                planes = new ObservableCollection<PlaneDTO>(listPlane);
+                loadPanelListPlane();
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("label", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
             }
         }
     }

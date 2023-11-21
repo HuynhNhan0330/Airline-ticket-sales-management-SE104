@@ -24,7 +24,7 @@ namespace Airline_ticket_sales_management.DALs
             private set => _ins = value;
         }
 
-        public async Task<(bool, string)> createPlane(PlaneDTO plane)
+        public async Task<(bool, string, string)> createPlane(PlaneDTO plane)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace Airline_ticket_sales_management.DALs
                 {
                     PLANE findPlane = context.PLANEs.FirstOrDefault(pe => pe.PlaneName == plane.PlaneName);
                     if (findPlane != null)
-                        return (false, "Tên máy bay đã tồn tại");
+                        return (false, "Tên máy bay đã tồn tại", null);
 
                     string currentMaxCode = await context.PLANEs.MaxAsync(pe => pe.PlaneID);
                     string newCode = Helper.nextCode(currentMaxCode, "PE");
@@ -48,12 +48,12 @@ namespace Airline_ticket_sales_management.DALs
 
                     context.SaveChanges();
 
-                    return (true, "Tạo máy bay thành công!");
+                    return (true, "Tạo máy bay thành công!", newCode);
                 }
             }
             catch (Exception ex)
             {
-                return (false, ex.Message);
+                return (false, ex.Message, null);
             }
         }
 

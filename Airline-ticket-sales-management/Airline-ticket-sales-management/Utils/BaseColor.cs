@@ -19,7 +19,6 @@ namespace Airline_ticket_sales_management.Utils
         public static List<string> ColorList = new List<string>
             {
                 "#83DBEC",
-                "#2BC0DE",
                 "#1EA7C2",
                 "#19889F",
             };
