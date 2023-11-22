@@ -79,6 +79,8 @@ namespace Airline_ticket_sales_management.Usercontrols
                 int sttList = int.Parse(panel.Name.Substring(2)) - 1;
 
                 Seats[5 - sttList].TicketClass = ctrParent.SelectedTicketClass;
+
+                ctrParent.reloadDetailTicketClass();
             }
             else
             {
@@ -97,6 +99,37 @@ namespace Airline_ticket_sales_management.Usercontrols
 
                 case "2":
                     break;
+            }
+        }
+
+        private void lbText_Click(object sender, EventArgs e)
+        {
+            Panel panel = sender as Panel;
+
+            Control ctr = this.Parent;
+            while (!(ctr is OperationPlaneUC))
+                ctr = ctr.Parent;
+
+            OperationPlaneUC ctrParent = ctr as OperationPlaneUC;
+
+            if (ctrParent.SelectedTicketClass != null)
+            {
+                foreach (SeatDTO s in Seats)
+                    s.TicketClass = ctrParent.SelectedTicketClass;
+
+                pn1.BackColor = ctrParent.SelectedTicketClass.ColorTicketClass;
+                pn2.BackColor = ctrParent.SelectedTicketClass.ColorTicketClass;
+                pn3.BackColor = ctrParent.SelectedTicketClass.ColorTicketClass;
+                pn4.BackColor = ctrParent.SelectedTicketClass.ColorTicketClass;
+                pn5.BackColor = ctrParent.SelectedTicketClass.ColorTicketClass;
+                pn6.BackColor = ctrParent.SelectedTicketClass.ColorTicketClass;
+
+                ctrParent.reloadDetailTicketClass();
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Vui lòng chọn loại hạng vé", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
             }
         }
     }

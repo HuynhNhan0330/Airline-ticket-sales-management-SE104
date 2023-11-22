@@ -38,15 +38,15 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.pnPlaneID = new System.Windows.Forms.Panel();
             this.lbPlaneID = new System.Windows.Forms.Label();
             this.pnControl = new System.Windows.Forms.Panel();
-            this.aButton1 = new Airline_ticket_sales_management.AControls.AButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.abtnViewDetail = new Airline_ticket_sales_management.AControls.AButton();
+            this.pibEdit = new System.Windows.Forms.PictureBox();
+            this.pibDelete = new System.Windows.Forms.PictureBox();
             this.pnSeatCount.SuspendLayout();
             this.pnPlaneName.SuspendLayout();
             this.pnPlaneID.SuspendLayout();
             this.pnControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // pnSeatCount
@@ -113,59 +113,59 @@ namespace Airline_ticket_sales_management.Usercontrols
             // 
             // pnControl
             // 
-            this.pnControl.Controls.Add(this.aButton1);
-            this.pnControl.Controls.Add(this.pictureBox1);
-            this.pnControl.Controls.Add(this.pictureBox2);
+            this.pnControl.Controls.Add(this.abtnViewDetail);
+            this.pnControl.Controls.Add(this.pibEdit);
+            this.pnControl.Controls.Add(this.pibDelete);
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnControl.Location = new System.Drawing.Point(1000, 0);
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(400, 56);
             this.pnControl.TabIndex = 23;
             // 
-            // aButton1
+            // abtnViewDetail
             // 
-            this.aButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aButton1.BorderRadius = 5;
-            this.aButton1.BorderSize = 0;
-            this.aButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.aButton1.FlatAppearance.BorderSize = 0;
-            this.aButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton1.Font = new System.Drawing.Font("Arial", 12F);
-            this.aButton1.ForeColor = System.Drawing.Color.White;
-            this.aButton1.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton1.Location = new System.Drawing.Point(20, 8);
-            this.aButton1.Name = "aButton1";
-            this.aButton1.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton1.Size = new System.Drawing.Size(200, 40);
-            this.aButton1.TabIndex = 16;
-            this.aButton1.Text = "Xem chi tiết";
-            this.aButton1.TextColor = System.Drawing.Color.White;
-            this.aButton1.ThinknessLine = 0;
-            this.aButton1.UseVisualStyleBackColor = false;
+            this.abtnViewDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnViewDetail.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnViewDetail.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnViewDetail.BorderRadius = 5;
+            this.abtnViewDetail.BorderSize = 0;
+            this.abtnViewDetail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abtnViewDetail.FlatAppearance.BorderSize = 0;
+            this.abtnViewDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnViewDetail.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnViewDetail.ForeColor = System.Drawing.Color.White;
+            this.abtnViewDetail.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnViewDetail.Location = new System.Drawing.Point(20, 8);
+            this.abtnViewDetail.Name = "abtnViewDetail";
+            this.abtnViewDetail.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnViewDetail.Size = new System.Drawing.Size(200, 40);
+            this.abtnViewDetail.TabIndex = 16;
+            this.abtnViewDetail.Text = "Xem chi tiết";
+            this.abtnViewDetail.TextColor = System.Drawing.Color.White;
+            this.abtnViewDetail.ThinknessLine = 0;
+            this.abtnViewDetail.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pibEdit
             // 
-            this.pictureBox1.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.EditIcon;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(240, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 40);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.pibEdit.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.EditIcon;
+            this.pibEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pibEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibEdit.Location = new System.Drawing.Point(240, 8);
+            this.pibEdit.Name = "pibEdit";
+            this.pibEdit.Size = new System.Drawing.Size(50, 40);
+            this.pibEdit.TabIndex = 18;
+            this.pibEdit.TabStop = false;
             // 
-            // pictureBox2
+            // pibDelete
             // 
-            this.pictureBox2.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.DeleteIcon;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(300, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 40);
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            this.pibDelete.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.DeleteIcon;
+            this.pibDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pibDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibDelete.Location = new System.Drawing.Point(300, 8);
+            this.pibDelete.Name = "pibDelete";
+            this.pibDelete.Size = new System.Drawing.Size(50, 40);
+            this.pibDelete.TabIndex = 19;
+            this.pibDelete.TabStop = false;
             // 
             // PlaneItemUC
             // 
@@ -185,8 +185,8 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.pnPlaneID.ResumeLayout(false);
             this.pnPlaneID.PerformLayout();
             this.pnControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibDelete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,8 +199,8 @@ namespace Airline_ticket_sales_management.Usercontrols
         private Panel pnPlaneID;
         private Label lbPlaneID;
         private Panel pnControl;
-        private AControls.AButton aButton1;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
+        private AControls.AButton abtnViewDetail;
+        private PictureBox pibEdit;
+        private PictureBox pibDelete;
     }
 }

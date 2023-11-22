@@ -73,6 +73,7 @@ namespace Airline_ticket_sales_management.Usercontrols
 
             OperationPlaneUC ctrOperationPlaneUC = ctrParent as OperationPlaneUC;
             ctrOperationPlaneUC.SelectedTicketClass = this.TicketClass;
+            ctrOperationPlaneUC.setCurrentTicketClass();
         }
 
         private void loadEventClick(EventHandler evh)

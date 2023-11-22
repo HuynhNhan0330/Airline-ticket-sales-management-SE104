@@ -1,6 +1,7 @@
 ﻿using Airline_ticket_sales_management.AControls;
 using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
+using Airline_ticket_sales_management.Model;
 using Airline_ticket_sales_management.Usercontrols;
 using Airline_ticket_sales_management.Utils;
 using System;
@@ -35,6 +36,7 @@ namespace Airline_ticket_sales_management
         private void OperationPlaneUC_Load(object sender, EventArgs e)
         {
             loadTicketClass();
+            setCurrentTicketClass();
         }
 
         private void addTicketClassItem(TicketClassDTO ticketClass, int colorPosition)
@@ -97,24 +99,70 @@ namespace Airline_ticket_sales_management
                 }
                 else
                 {
-                    pnSeat.Controls.Clear();
-
-                    for (int stt = 0; stt < intValue / 6; ++stt)
+                    // Add
+                    if (intValue > pnSeat.Controls.Count * 6 / 2)
                     {
-                        PlaneSeatItemUC uc = new PlaneSeatItemUC("Plane");
-                        uc.stt = ((char)('A' + stt)).ToString();
-                        pnSeat.Controls.Add(uc);
-                        uc.BringToFront();
-                        uc.Dock = DockStyle.Top;
+                        for (int stt = pnSeat.Controls.Count / 2; stt < intValue / 6; ++stt)
+                        {
+                            PlaneSeatItemUC uc = new PlaneSeatItemUC("Plane");
+                            uc.stt = ((char)('A' + stt)).ToString();
+                            pnSeat.Controls.Add(uc);
+                            uc.BringToFront();
+                            uc.Dock = DockStyle.Top;
 
-                        Panel pn = new Panel();
-                        pnSeat.Controls.Add(pn);
-                        pn.Height = 5;
-                        pn.BackColor = Color.Transparent;
-                        pn.BringToFront();
-                        pn.Dock = DockStyle.Top;
+                            Panel pn = new Panel();
+                            pnSeat.Controls.Add(pn);
+                            pn.Height = 5;
+                            pn.BackColor = Color.Transparent;
+                            pn.BringToFront();
+                            pn.Dock = DockStyle.Top;
+                        }
+                    }
+                    // remove
+                    else if (intValue < pnSeat.Controls.Count * 6 / 2)
+                    {
+                        for (int valueRemove = (pnSeat.Controls.Count / 2 - intValue / 6) * 2 - 1; valueRemove >= 0; --valueRemove)
+                            pnSeat.Controls.RemoveAt(valueRemove);
+
                     }
                 }
+
+                reloadDetailTicketClass();
+            }
+        }
+
+        public void reloadDetailTicketClass()
+        {
+            Dictionary<string, int> ticketClassCounts = new Dictionary<string, int>();
+
+            foreach (Control ctr in pnSeat.Controls)
+                if (ctr is PlaneSeatItemUC)
+                {
+                    PlaneSeatItemUC ctrSeat = ctr as PlaneSeatItemUC;
+                    foreach(SeatDTO seat in ctrSeat.Seats)
+                        if (ticketClassCounts.ContainsKey(seat.TicketClass.TicketClassName))
+                            ticketClassCounts[seat.TicketClass.TicketClassName] += 1;
+                        else ticketClassCounts.Add(seat.TicketClass.TicketClassName, 1);
+                }
+
+            pnTicketClassDetail.Controls.Clear();
+
+            foreach (KeyValuePair<string, int> kvp in ticketClassCounts)
+            {
+                DetailTicketClassUC uc = new DetailTicketClassUC();
+                uc.NameTicketClass = kvp.Key;
+                uc.SeatCount = kvp.Value;
+                uc.render();
+                pnTicketClassDetail.Controls.Add(uc);
+                uc.BringToFront();
+                uc.Dock = DockStyle.Top;
+
+                Panel pn = new Panel();
+                pnTicketClassDetail.Controls.Add(pn);
+                pn.Height = 2;
+                pn.BackColor = Color.Gray;
+                pn.BringToFront();
+                pn.Dock = DockStyle.Top;
             }
         }
 
@@ -135,6 +183,12 @@ namespace Airline_ticket_sales_management
             else if (int.Parse(atbSeatCount.Texts.Trim()) % 6 != 0)
             {
                 AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu số lượng ghế phải chia hết cho 6", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atbSeatCount.Focus();
+                ms.ShowDialog();
+            }
+            else if (int.Parse(atbSeatCount.Texts.Trim()) != pnSeat.Controls.Count * 6 / 2)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu số lượng ghế chưa đồng nhất vui lòng tải lại danh sách ghế", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 atbSeatCount.Focus();
                 ms.ShowDialog();
             }
@@ -180,6 +234,20 @@ namespace Airline_ticket_sales_management
                 AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
+        }
+
+        public void setCurrentTicketClass()
+        {
+            if (SelectedTicketClass != null)
+            {
+                lbTextTicketClass.ForeColor = BaseColor.Den;
+                lbTextTicketClass.Text = SelectedTicketClass.TicketClassName;
+                pnCurrentTicketClass.BackColor = SelectedTicketClass.ColorTicketClass;
+            }
+
+            lbTextTicketClass.MaximumSize = new Size(pnCurrentTicketClass.Width - 10 * 2 - 10, 0);
+            lbTextTicketClass.Left = (pnCurrentTicketClass.Width - 10 - lbTextTicketClass.Width) / 2;
+            lbTextTicketClass.Top = (pnCurrentTicketClass.Height - lbTextTicketClass.Height) / 2;
         }
     }
 }

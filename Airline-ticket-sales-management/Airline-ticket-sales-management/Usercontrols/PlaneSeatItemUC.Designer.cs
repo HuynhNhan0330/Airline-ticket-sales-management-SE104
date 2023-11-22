@@ -105,15 +105,18 @@ namespace Airline_ticket_sales_management.Usercontrols
             // pnSTT
             // 
             this.pnSTT.Controls.Add(this.lbText);
+            this.pnSTT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnSTT.Location = new System.Drawing.Point(350, 0);
             this.pnSTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnSTT.Name = "pnSTT";
             this.pnSTT.Size = new System.Drawing.Size(100, 80);
             this.pnSTT.TabIndex = 4;
+            this.pnSTT.Click += new System.EventHandler(this.lbText_Click);
             // 
             // lbText
             // 
             this.lbText.AutoSize = true;
+            this.lbText.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbText.ForeColor = System.Drawing.Color.Black;
             this.lbText.Location = new System.Drawing.Point(38, 31);
@@ -121,6 +124,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.lbText.Size = new System.Drawing.Size(23, 22);
             this.lbText.TabIndex = 0;
             this.lbText.Text = "A";
+            this.lbText.Click += new System.EventHandler(this.lbText_Click);
             // 
             // PlaneSeatItemUC
             // 
