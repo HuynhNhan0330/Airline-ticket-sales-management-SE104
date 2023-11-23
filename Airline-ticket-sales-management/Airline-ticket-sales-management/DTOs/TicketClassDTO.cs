@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Airline_ticket_sales_management.Model;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations.Builders;
 using System.Drawing;
 using System.Linq;
 using System.Text;

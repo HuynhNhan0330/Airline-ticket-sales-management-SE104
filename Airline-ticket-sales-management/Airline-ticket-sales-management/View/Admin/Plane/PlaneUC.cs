@@ -22,7 +22,7 @@ namespace Airline_ticket_sales_management
             currentAbtn = this.abtnPlaneList;
         }
 
-        private void loadBody(UserControl uc)
+        public void loadBody(UserControl uc)
         {
             pnBodyPlane.Controls.Clear();
             pnBodyPlane.Controls.Add(uc);
@@ -42,7 +42,7 @@ namespace Airline_ticket_sales_management
             abtn.ForeColor = BaseColor.XanhDam;
         }
 
-        private void abtnPlaneList_Click(object sender, EventArgs e)
+        public void abtnPlaneList_Click(object sender, EventArgs e)
         {
             if (currentAbtn != abtnPlaneList) 
             {
@@ -66,7 +66,7 @@ namespace Airline_ticket_sales_management
             }
         }
 
-        private void abtnDetailPlane_Click(object sender, EventArgs e)
+        public void abtnDetailPlane_Click(object sender, EventArgs e)
         {
             if (currentAbtn != abtnDetailPlane)
             {

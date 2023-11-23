@@ -9,6 +9,7 @@ using System.CodeDom;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
+using System.Linq;
 using System.Reflection.Emit;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,7 @@ namespace Airline_ticket_sales_management
     {
         private ObservableCollection<TicketClassDTO> ticketClasses;
         private TicketClassDTO _ticketClassSelected = null;
+        private PlaneDTO plane = null;
         public TicketClassDTO SelectedTicketClass
         {
             get { return _ticketClassSelected; }
@@ -28,22 +30,79 @@ namespace Airline_ticket_sales_management
             }
         }
 
-        public OperationPlaneUC()
+        public OperationPlaneUC(PlaneDTO plane = null)
         {
             InitializeComponent();
+            this.plane = plane;
+
+            
+        }
+
+        private async void loadSeat()
+        {
+            (bool isGetSeats, List<SeatDTO> seats, string label) = await SeatDAL.Ins.getSeats(plane);
+
+            if (isGetSeats)
+            {
+                for (int index1 = 0; index1 < seats.Count / 6; ++index1)
+                {
+                    PlaneSeatItemUC uc = new PlaneSeatItemUC("");
+
+                    for (int index2 = 0; index2 < 6; ++index2)
+                    {
+                        seats[index1 * 6 + index2].TicketClass.ColorTicketClass = this.ticketClasses.First(tc => tc.TicketClassID == seats[index1 * 6 + index2].TicketClass.TicketClassID).ColorTicketClass;
+                        uc.Seats.Add(seats[index1 * 6 + index2]);
+                    }
+
+                    uc.stt = seats[index1 * 6].SeatID[0].ToString();
+                    uc.loadColor();
+                    pnSeat.Controls.Add(uc);
+                    uc.BringToFront();
+                    uc.Dock = DockStyle.Top;
+
+                    Panel pn = new Panel();
+                    pnSeat.Controls.Add(pn);
+                    pn.Height = 5;
+                    pn.BackColor = Color.Transparent;
+                    pn.BringToFront();
+                    pn.Dock = DockStyle.Top;
+                }
+
+                reloadDetailTicketClass();
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
         }
 
         private void OperationPlaneUC_Load(object sender, EventArgs e)
         {
             loadTicketClass();
             setCurrentTicketClass();
+
+            if (plane == null) pnEdit.Visible = false;
+            else
+            {
+                atbPlaneName.Texts = plane.PlaneName;
+                atbPlaneName.isPlaceholder = false;
+                atbPlaneName.setForeColor();
+
+                atbSeatCount.Texts = plane.SeatCount.ToString();
+                atbSeatCount.isPlaceholder = false;
+                atbSeatCount.setForeColor();
+
+                loadSeat();
+            }
         }
 
         private void addTicketClassItem(TicketClassDTO ticketClass, int colorPosition)
         {
             PlaneTicketClassItemUC uc = new PlaneTicketClassItemUC();
             uc.TicketClass = ticketClass;
-            uc._BackgroundColor = ColorTranslator.FromHtml(ColorCodes.ColorList[colorPosition]);
+            ticketClass.ColorTicketClass = ColorTranslator.FromHtml(ColorCodes.ColorList[colorPosition]);
+            uc._BackgroundColor = ticketClass.ColorTicketClass;
             pnTicketClass.Controls.Add(uc);
             uc.BringToFront();
             uc.Dock = DockStyle.Top;
@@ -248,6 +307,87 @@ namespace Airline_ticket_sales_management
             lbTextTicketClass.MaximumSize = new Size(pnCurrentTicketClass.Width - 10 * 2 - 10, 0);
             lbTextTicketClass.Left = (pnCurrentTicketClass.Width - 10 - lbTextTicketClass.Width) / 2;
             lbTextTicketClass.Top = (pnCurrentTicketClass.Height - lbTextTicketClass.Height) / 2;
+        }
+
+        private void abtnCancel_Click(object sender, EventArgs e)
+        {
+            Control ctr = this;
+            while (!(ctr is PlaneUC))
+                ctr = ctr.Parent;
+
+            PlaneUC ctrParent = ctr as PlaneUC;
+            ctrParent.abtnPlaneList_Click(sender, e);
+        }
+
+        private void abtnUpdatePlane_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(atbPlaneName.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu tên máy bay bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atbPlaneName.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atbSeatCount.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu số lượng ghế bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atbSeatCount.Focus();
+                ms.ShowDialog();
+            }
+            else if (int.Parse(atbSeatCount.Texts.Trim()) % 6 != 0)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu số lượng ghế phải chia hết cho 6", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atbSeatCount.Focus();
+                ms.ShowDialog();
+            }
+            else if (int.Parse(atbSeatCount.Texts.Trim()) != pnSeat.Controls.Count * 6 / 2)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu số lượng ghế chưa đồng nhất vui lòng tải lại danh sách ghế", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atbSeatCount.Focus();
+                ms.ShowDialog();
+            }
+            else
+            {
+                updatePlane();
+            }
+        }
+
+        private async void updatePlane()
+        {
+            PlaneDTO newPlane = new PlaneDTO(atbPlaneName.Texts.Trim(), int.Parse(atbSeatCount.Texts.Trim()), plane.PlaneID);
+
+            (bool isUpdatePlane, string label) = await PlaneDAL.Ins.updatePlane(newPlane);
+
+            if (isUpdatePlane)
+            {
+                List<SeatDTO> listSeat = new List<SeatDTO>();
+
+                foreach (Control ctr in pnSeat.Controls)
+                {
+                    if (ctr is PlaneSeatItemUC)
+                    {
+                        PlaneSeatItemUC ctrPlaneSeatItemUC = ctr as PlaneSeatItemUC;
+                        listSeat.AddRange(ctrPlaneSeatItemUC.Seats);
+                    }
+                }
+
+                (bool isUpdateSeat, string label1) = await SeatDAL.Ins.updateSeats(plane, listSeat);
+
+                if (isUpdateSeat)
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ms.ShowDialog();
+                }
+                else
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label1, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
         }
     }
 }

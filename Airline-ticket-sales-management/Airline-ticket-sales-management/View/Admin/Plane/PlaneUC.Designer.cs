@@ -84,7 +84,6 @@ namespace Airline_ticket_sales_management
             this.abtnDetailPlane.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnDetailPlane.ThinknessLine = 0;
             this.abtnDetailPlane.UseVisualStyleBackColor = false;
-            this.abtnDetailPlane.Click += new System.EventHandler(this.abtnDetailPlane_Click);
             // 
             // abtnCreatePlane
             // 

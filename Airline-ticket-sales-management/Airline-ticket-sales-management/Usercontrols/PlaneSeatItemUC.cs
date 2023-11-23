@@ -89,6 +89,33 @@ namespace Airline_ticket_sales_management.Usercontrols
             }
         }
 
+        private void setTicketClassInPlane1(object sender, EventArgs e)
+        {
+            Panel panel = sender as Panel;
+
+            Control ctr = this.Parent;
+            while (!(ctr is OperationPlaneUC))
+                ctr = ctr.Parent;
+
+            OperationPlaneUC ctrParent = ctr as OperationPlaneUC;
+
+            if (ctrParent.SelectedTicketClass != null)
+            {
+                panel.BackColor = ctrParent.SelectedTicketClass.ColorTicketClass;
+
+                int sttList = int.Parse(panel.Name.Substring(2)) - 1;
+
+                Seats[sttList].TicketClass = ctrParent.SelectedTicketClass;
+
+                ctrParent.reloadDetailTicketClass();
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Vui lòng chọn loại hạng vé", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+        }
+
         private void PlaneSeatItemUC_Load(object sender, EventArgs e)
         {
             switch (type)
@@ -97,7 +124,10 @@ namespace Airline_ticket_sales_management.Usercontrols
                     loadColorItemBasicAsync();
                     break;
 
-                case "2":
+                case "Ticket flight":
+                    break;
+
+                default:
                     break;
             }
         }
@@ -130,6 +160,20 @@ namespace Airline_ticket_sales_management.Usercontrols
             {
                 AMessageBoxFrm ms = new AMessageBoxFrm("Vui lòng chọn loại hạng vé", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
+            }
+        }
+
+        public void loadColor()
+        {
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr is Panel && ctr.Name != "pnSTT")
+                {
+                    Panel panel = ctr as Panel;
+                    int sttList = int.Parse(panel.Name.Substring(2)) - 1;
+                    ctr.BackColor = Seats[sttList].TicketClass.ColorTicketClass;
+                    ctr.Click += setTicketClassInPlane1;
+                }
             }
         }
     }

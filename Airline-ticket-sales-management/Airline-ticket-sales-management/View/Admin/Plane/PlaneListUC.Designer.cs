@@ -40,7 +40,7 @@ namespace Airline_ticket_sales_management
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.pnFlightList = new System.Windows.Forms.Panel();
+            this.pnPlaneList = new System.Windows.Forms.Panel();
             this.aTextboxUC1 = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -140,13 +140,13 @@ namespace Airline_ticket_sales_management
             this.pnHeader.Size = new System.Drawing.Size(1400, 40);
             this.pnHeader.TabIndex = 6;
             // 
-            // pnFlightList
+            // pnPlaneList
             // 
-            this.pnFlightList.AutoScroll = true;
-            this.pnFlightList.Location = new System.Drawing.Point(50, 112);
-            this.pnFlightList.Name = "pnFlightList";
-            this.pnFlightList.Size = new System.Drawing.Size(1400, 440);
-            this.pnFlightList.TabIndex = 12;
+            this.pnPlaneList.AutoScroll = true;
+            this.pnPlaneList.Location = new System.Drawing.Point(50, 112);
+            this.pnPlaneList.Name = "pnPlaneList";
+            this.pnPlaneList.Size = new System.Drawing.Size(1400, 440);
+            this.pnPlaneList.TabIndex = 12;
             // 
             // aTextboxUC1
             // 
@@ -179,7 +179,7 @@ namespace Airline_ticket_sales_management
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
             this.Controls.Add(this.pnHeader);
-            this.Controls.Add(this.pnFlightList);
+            this.Controls.Add(this.pnPlaneList);
             this.Controls.Add(this.aTextboxUC1);
             this.Name = "PlaneListUC";
             this.Size = new System.Drawing.Size(1500, 576);
@@ -207,7 +207,7 @@ namespace Airline_ticket_sales_management
         private Panel panel3;
         private Panel panel2;
         private Panel pnHeader;
-        private Panel pnFlightList;
+        private Panel pnPlaneList;
         private AControls.ATextboxUC aTextboxUC1;
     }
 }

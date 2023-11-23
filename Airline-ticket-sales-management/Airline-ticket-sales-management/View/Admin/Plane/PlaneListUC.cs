@@ -34,12 +34,12 @@ namespace Airline_ticket_sales_management
             foreach (PlaneDTO plane in planes) 
             {
                 PlaneItemUC uc = new PlaneItemUC(plane);
-                pnFlightList.Controls.Add(uc);
+                pnPlaneList.Controls.Add(uc);
                 uc.BringToFront();
                 uc.Dock = DockStyle.Top;
 
                 Panel pn = new Panel();
-                pnFlightList.Controls.Add(pn);
+                pnPlaneList.Controls.Add(pn);
                 pn.Height = 2;
                 pn.BackColor = Color.Gray;
                 pn.BringToFront();
@@ -60,6 +60,14 @@ namespace Airline_ticket_sales_management
                 AMessageBoxFrm ms = new AMessageBoxFrm("label", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
+        }
+    
+        public void removePlane(PlaneItemUC planeItemUC)
+        {
+            int indexRemove = pnPlaneList.Controls.IndexOf(planeItemUC);
+
+            pnPlaneList.Controls.RemoveAt(indexRemove);
+            pnPlaneList.Controls.RemoveAt(indexRemove - 1);
         }
     }
 }

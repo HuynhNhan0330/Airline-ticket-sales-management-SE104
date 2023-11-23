@@ -3,6 +3,7 @@ using Airline_ticket_sales_management.Model;
 using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,72 +51,99 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, List<PlaneDTO>, string)> getListPlane()
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            var PlaneList = (from plane in context.PLANEs
-        //                             select new PlaneDTO
-        //                             {
-        //                                 PlaneID = plane.PlaneID,
-        //                                 PlaneName = plane.PlaneName,
-        //                                 SeatCount = plane.SeatCount
-        //                             }).ToListAsync();
+        public async Task<(bool, List<SeatDTO>, string)> getSeats(PlaneDTO plane)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var SeatList = (from seat in context.SEATs
+                                    join ticketClass in context.TICKET_CLASS 
+                                    on seat.TicketClassID equals ticketClass.TicketClassID
+                                    where seat.PlaneID == plane.PlaneID
+                                     select new SeatDTO
+                                     {
+                                         SeatID = seat.SeatID,
+                                         PlaneID = seat.PlaneID,
+                                         TicketClass = new TicketClassDTO
+                                         {
+                                             TicketClassID = ticketClass.TicketClassID,
+                                             TicketClassName = ticketClass.TicketClassName,
+                                             PricePercentage = ticketClass.PricePercentage
+                                         }
+                                     }).ToListAsync();
 
-        //            return (true, await PlaneList, "Lấy danh sách máy bay thành công!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, null, ex.Message);
-        //    }
-        //}
+                    return (true, await SeatList, "Lấy danh sách ghế thành công!");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, null, ex.Message);
+            }
+        }
 
-        //public async Task<(bool, string)> deletePlane(PlaneDTO plane)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            PLANE planeDelete = context.PLANEs.FirstOrDefault(pe => pe.PlaneID == plane.PlaneID);
+        public async Task<(bool, string)> deleteSeats(PlaneDTO plane)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var seatsDelete = context.SEATs.Where(s => s.PlaneID == plane.PlaneID);
 
-        //            context.PLANEs.Remove(planeDelete);
-        //            context.SaveChanges();
+                    context.SEATs.RemoveRange(seatsDelete);
+                    context.SaveChanges();
 
-        //            return (true, "Xoá thành công");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message);
-        //    }
-        //}
+                    return (true, "Xoá thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
 
-        //public async Task<(bool, string)> updatePlane(PlaneDTO plane)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            PLANE findPlane = context.PLANEs.FirstOrDefault(pe => pe.PlaneName == plane.PlaneName && pe.PlaneID != plane.PlaneID);
-        //            if (findPlane != null)
-        //                return (false, "Tên máy bay đã tồn tại");
+        public async Task<(bool, string)> updateSeats(PlaneDTO plane, List<SeatDTO> seats)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    // Cập nhật
+                    foreach (var seat in seats)
+                    {
+                        var existingSeat = await context.SEATs.FirstOrDefaultAsync(s => s.SeatID == seat.SeatID && s.PlaneID == plane.PlaneID);
+                        if (existingSeat != null)
+                        {
+                            // Cập nhật thông tin ghế
+                            existingSeat.TicketClassID = seat.TicketClass.TicketClassID;
+                        }
+                        else
+                        {
+                            // Thêm mới ghế
+                            var newSeat = new SEAT
+                            {
+                                SeatID = seat.SeatID,
+                                PlaneID = plane.PlaneID,
+                                TicketClassID = seat.TicketClass.TicketClassID
+                            };
+                            context.SEATs.Add(newSeat);
+                        }
+                    }
 
-        //            PLANE currentPlane = context.PLANEs.FirstOrDefault(pe => pe.PlaneID == plane.PlaneID);
-        //            currentPlane.PlaneName = plane.PlaneName;
-        //            currentPlane.SeatCount = plane.SeatCount;
+                    // Xoá
+                    var seatIds = seats.Select(s => s.SeatID);
+                    var seatsToDelete = await context.SEATs.Where(s => s.PlaneID == plane.PlaneID && !seatIds.Contains(s.SeatID)).ToListAsync();
+                    context.SEATs.RemoveRange(seatsToDelete);
 
-        //            context.SaveChanges();
+                    context.SaveChanges();
 
-        //            return (true, "Cập nhật thành công");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message);
-        //    }
-        //}
+                    return (true, "Cập nhật thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
     }
 }

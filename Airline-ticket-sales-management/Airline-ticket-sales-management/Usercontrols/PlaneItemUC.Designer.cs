@@ -144,6 +144,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.abtnViewDetail.TextColor = System.Drawing.Color.White;
             this.abtnViewDetail.ThinknessLine = 0;
             this.abtnViewDetail.UseVisualStyleBackColor = false;
+            this.abtnViewDetail.Click += new System.EventHandler(this.pibEdit_Click);
             // 
             // pibEdit
             // 
@@ -155,6 +156,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.pibEdit.Size = new System.Drawing.Size(50, 40);
             this.pibEdit.TabIndex = 18;
             this.pibEdit.TabStop = false;
+            this.pibEdit.Click += new System.EventHandler(this.pibEdit_Click);
             // 
             // pibDelete
             // 
@@ -166,6 +168,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.pibDelete.Size = new System.Drawing.Size(50, 40);
             this.pibDelete.TabIndex = 19;
             this.pibDelete.TabStop = false;
+            this.pibDelete.Click += new System.EventHandler(this.pibDelete_Click);
             // 
             // PlaneItemUC
             // 
