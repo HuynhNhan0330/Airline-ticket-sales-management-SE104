@@ -22,7 +22,7 @@ namespace Airline_ticket_sales_management
 
         private void loadDataFlight()
         {
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10; i++)
             {
                 FlightItemUC uc = new FlightItemUC();
                 pnFlightList.Controls.Add(uc);

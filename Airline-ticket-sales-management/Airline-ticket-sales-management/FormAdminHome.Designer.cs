@@ -210,6 +210,7 @@
             this.abtnFlight.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnFlight.ThinknessLine = 5;
             this.abtnFlight.UseVisualStyleBackColor = false;
+            this.abtnFlight.Click += new System.EventHandler(this.abtnFlight_Click);
             // 
             // pcbClose
             // 

@@ -127,5 +127,35 @@ namespace Airline_ticket_sales_management.DALs
                 return (false, ex.Message);
             }
         }
+
+        public async Task<(AirportDTO, string)> findAirport(string name)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    AIRPORT findAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportName == name || 
+                        ap.CityName + " (" + ap.CountryName + ")" == name);
+
+                    if (findAirport != null)
+                    {
+                        AirportDTO airportDTO = new AirportDTO();
+                        airportDTO.AirportID = findAirport.AirportID;
+                        airportDTO.AirportName = findAirport.AirportName;
+                        airportDTO.CountryName = findAirport.CountryName;
+                        airportDTO.CityName = findAirport.CityName;
+
+                        return (airportDTO, "Tìm kiếm thành công sân bay");
+                    }
+                     
+
+                    return (null, "Không tồn tại sân bay tìm kiếm");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (null, ex.Message);
+            }
+        }
     }
 }

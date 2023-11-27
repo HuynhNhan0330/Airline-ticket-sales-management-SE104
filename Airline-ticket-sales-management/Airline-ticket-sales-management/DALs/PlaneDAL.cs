@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Airline_ticket_sales_management.DALs
 {
@@ -122,6 +123,32 @@ namespace Airline_ticket_sales_management.DALs
             catch (Exception ex)
             {
                 return (false, ex.Message);
+            }
+        }
+
+        public async Task<(PlaneDTO, string)> findPlane(string key)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    PLANE findPlane = context.PLANEs.FirstOrDefault(pe => pe.PlaneID == key);
+
+                    if (findPlane != null)
+                    {
+                        PlaneDTO planeDTO = new PlaneDTO();
+                        planeDTO.PlaneID = findPlane.PlaneID;
+                        planeDTO.PlaneName = findPlane.PlaneName;
+                        planeDTO.SeatCount= findPlane.SeatCount;
+                        return (planeDTO, "Tìm kiếm thành công máy bay");
+                    }
+
+                    return (null, "Không tồn tại máy bay tìm kiếm");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (null, ex.Message);
             }
         }
     }

@@ -98,6 +98,19 @@ namespace Airline_ticket_sales_management
                 loadBody(new SettingUC());
             }
         }
+
+        private void abtnFlight_Click(object sender, EventArgs e)
+        {
+            if (currentButton != abtnFlight)
+            {
+                if (currentButton != null)
+                    doDeactivateButton(currentButton);
+
+                currentButton = abtnFlight;
+                doActivateButton(currentButton);
+                loadBody(new FlightUC());
+            }
+        }
         #endregion
     }
 }

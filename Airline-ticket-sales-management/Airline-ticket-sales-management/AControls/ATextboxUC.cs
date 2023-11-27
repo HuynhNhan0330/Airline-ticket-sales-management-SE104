@@ -8,10 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Airline_ticket_sales_management.AControls
 {
-    [DefaultEvent("_TextChanged")]
     public partial class ATextboxUC : UserControl
     {
         #region -> Fields
@@ -36,6 +36,7 @@ namespace Airline_ticket_sales_management.AControls
 
         //Events
         public event EventHandler _TextChanged;
+        public event EventHandler _KeyDown;
 
         #endregion
 
@@ -398,6 +399,12 @@ namespace Airline_ticket_sales_management.AControls
             if (_TextChanged != null)
                 _TextChanged.Invoke(sender, e);
         }
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (_KeyDown != null)
+                _KeyDown.Invoke(sender, e);
+        }
+
         private void textBox1_Click(object sender, EventArgs e)
         {
             this.OnClick(e);
@@ -434,6 +441,16 @@ namespace Airline_ticket_sales_management.AControls
         {
             textBox1.ForeColor = this.ForeColor;
         }
+
+        public void complete(List<string> source)
+        {
+            textBox1.AutoCompleteCustomSource = new AutoCompleteStringCollection();
+            textBox1.AutoCompleteCustomSource.AddRange(source.ToArray());
+            textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+        }
+
+        
     }
 }
 

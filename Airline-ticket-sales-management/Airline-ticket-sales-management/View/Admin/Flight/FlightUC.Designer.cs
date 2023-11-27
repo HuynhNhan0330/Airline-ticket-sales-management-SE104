@@ -31,133 +31,127 @@ namespace Airline_ticket_sales_management
         /// </summary>
         private void InitializeComponent()
         {
-            pnMenuFlight = new Panel();
-            pnLine = new Panel();
-            abtnDetailFlight = new AControls.AButton();
-            abtnCreateFlight = new AControls.AButton();
-            abtnListFlight = new AControls.AButton();
-            pnBodyFlight = new Panel();
-            pnMenuFlight.SuspendLayout();
-            SuspendLayout();
+            this.pnMenuFlight = new System.Windows.Forms.Panel();
+            this.pnLine = new System.Windows.Forms.Panel();
+            this.abtnDetailFlight = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnCreateFlight = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnListFlight = new Airline_ticket_sales_management.AControls.AButton();
+            this.pnBodyFlight = new System.Windows.Forms.Panel();
+            this.pnMenuFlight.SuspendLayout();
+            this.SuspendLayout();
             // 
             // pnMenuFlight
             // 
-            pnMenuFlight.BackColor = Color.Transparent;
-            pnMenuFlight.Controls.Add(pnLine);
-            pnMenuFlight.Controls.Add(abtnDetailFlight);
-            pnMenuFlight.Controls.Add(abtnCreateFlight);
-            pnMenuFlight.Controls.Add(abtnListFlight);
-            pnMenuFlight.Dock = DockStyle.Top;
-            pnMenuFlight.Location = new Point(0, 0);
-            pnMenuFlight.Margin = new Padding(3, 4, 3, 4);
-            pnMenuFlight.Name = "pnMenuFlight";
-            pnMenuFlight.Size = new Size(1500, 105);
-            pnMenuFlight.TabIndex = 2;
+            this.pnMenuFlight.BackColor = System.Drawing.Color.Transparent;
+            this.pnMenuFlight.Controls.Add(this.pnLine);
+            this.pnMenuFlight.Controls.Add(this.abtnDetailFlight);
+            this.pnMenuFlight.Controls.Add(this.abtnCreateFlight);
+            this.pnMenuFlight.Controls.Add(this.abtnListFlight);
+            this.pnMenuFlight.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnMenuFlight.Location = new System.Drawing.Point(0, 0);
+            this.pnMenuFlight.Name = "pnMenuFlight";
+            this.pnMenuFlight.Size = new System.Drawing.Size(1500, 85);
+            this.pnMenuFlight.TabIndex = 2;
             // 
             // pnLine
             // 
-            pnLine.BackColor = Color.FromArgb(3, 4, 94);
-            pnLine.Location = new Point(50, 103);
-            pnLine.Margin = new Padding(3, 4, 3, 4);
-            pnLine.Name = "pnLine";
-            pnLine.Size = new Size(1398, 2);
-            pnLine.TabIndex = 3;
+            this.pnLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.pnLine.Location = new System.Drawing.Point(50, 82);
+            this.pnLine.Name = "pnLine";
+            this.pnLine.Size = new System.Drawing.Size(1398, 2);
+            this.pnLine.TabIndex = 3;
             // 
             // abtnDetailFlight
             // 
-            abtnDetailFlight.BackColor = Color.Transparent;
-            abtnDetailFlight.BackgroundColor = Color.Transparent;
-            abtnDetailFlight.BorderColor = Color.FromArgb(3, 4, 94);
-            abtnDetailFlight.BorderRadius = 30;
-            abtnDetailFlight.BorderSize = 2;
-            abtnDetailFlight.FlatAppearance.BorderSize = 0;
-            abtnDetailFlight.FlatStyle = FlatStyle.Flat;
-            abtnDetailFlight.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            abtnDetailFlight.ForeColor = Color.FromArgb(3, 4, 94);
-            abtnDetailFlight.LineType = AControls.AButton.LineStyles.None;
-            abtnDetailFlight.Location = new Point(1310, 30);
-            abtnDetailFlight.Margin = new Padding(3, 4, 3, 4);
-            abtnDetailFlight.Name = "abtnDetailFlight";
-            abtnDetailFlight.RoundType = AControls.AButton.RoundStyles.Top;
-            abtnDetailFlight.Size = new Size(140, 75);
-            abtnDetailFlight.TabIndex = 2;
-            abtnDetailFlight.Text = "Chi tiết chuyến bay";
-            abtnDetailFlight.TextColor = Color.FromArgb(3, 4, 94);
-            abtnDetailFlight.ThinknessLine = 0;
-            abtnDetailFlight.UseVisualStyleBackColor = false;
-            abtnDetailFlight.Click += abtnDetailFlight_Click;
+            this.abtnDetailFlight.BackColor = System.Drawing.Color.Transparent;
+            this.abtnDetailFlight.BackgroundColor = System.Drawing.Color.Transparent;
+            this.abtnDetailFlight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnDetailFlight.BorderRadius = 30;
+            this.abtnDetailFlight.BorderSize = 2;
+            this.abtnDetailFlight.FlatAppearance.BorderSize = 0;
+            this.abtnDetailFlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnDetailFlight.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnDetailFlight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnDetailFlight.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnDetailFlight.Location = new System.Drawing.Point(1270, 25);
+            this.abtnDetailFlight.Name = "abtnDetailFlight";
+            this.abtnDetailFlight.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Top;
+            this.abtnDetailFlight.Size = new System.Drawing.Size(180, 60);
+            this.abtnDetailFlight.TabIndex = 2;
+            this.abtnDetailFlight.Text = "Chi tiết\r\nchuyến bay";
+            this.abtnDetailFlight.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnDetailFlight.ThinknessLine = 0;
+            this.abtnDetailFlight.UseVisualStyleBackColor = false;
+            this.abtnDetailFlight.Click += new System.EventHandler(this.abtnDetailFlight_Click);
             // 
             // abtnCreateFlight
             // 
-            abtnCreateFlight.BackColor = Color.Transparent;
-            abtnCreateFlight.BackgroundColor = Color.Transparent;
-            abtnCreateFlight.BorderColor = Color.FromArgb(3, 4, 94);
-            abtnCreateFlight.BorderRadius = 30;
-            abtnCreateFlight.BorderSize = 2;
-            abtnCreateFlight.FlatAppearance.BorderSize = 0;
-            abtnCreateFlight.FlatStyle = FlatStyle.Flat;
-            abtnCreateFlight.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            abtnCreateFlight.ForeColor = Color.FromArgb(3, 4, 94);
-            abtnCreateFlight.LineType = AControls.AButton.LineStyles.None;
-            abtnCreateFlight.Location = new Point(235, 30);
-            abtnCreateFlight.Margin = new Padding(3, 4, 3, 4);
-            abtnCreateFlight.Name = "abtnCreateFlight";
-            abtnCreateFlight.RoundType = AControls.AButton.RoundStyles.Top;
-            abtnCreateFlight.Size = new Size(150, 75);
-            abtnCreateFlight.TabIndex = 1;
-            abtnCreateFlight.Text = "Tạo chuyến bay mới";
-            abtnCreateFlight.TextColor = Color.FromArgb(3, 4, 94);
-            abtnCreateFlight.ThinknessLine = 0;
-            abtnCreateFlight.UseVisualStyleBackColor = false;
-            abtnCreateFlight.Click += abtnCreateFlight_Click;
+            this.abtnCreateFlight.BackColor = System.Drawing.Color.Transparent;
+            this.abtnCreateFlight.BackgroundColor = System.Drawing.Color.Transparent;
+            this.abtnCreateFlight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreateFlight.BorderRadius = 30;
+            this.abtnCreateFlight.BorderSize = 2;
+            this.abtnCreateFlight.FlatAppearance.BorderSize = 0;
+            this.abtnCreateFlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnCreateFlight.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnCreateFlight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreateFlight.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnCreateFlight.Location = new System.Drawing.Point(280, 25);
+            this.abtnCreateFlight.Name = "abtnCreateFlight";
+            this.abtnCreateFlight.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Top;
+            this.abtnCreateFlight.Size = new System.Drawing.Size(180, 60);
+            this.abtnCreateFlight.TabIndex = 1;
+            this.abtnCreateFlight.Text = "Tạo chuyến\r\nbay mới";
+            this.abtnCreateFlight.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreateFlight.ThinknessLine = 0;
+            this.abtnCreateFlight.UseVisualStyleBackColor = false;
+            this.abtnCreateFlight.Click += new System.EventHandler(this.abtnCreateFlight_Click);
             // 
             // abtnListFlight
             // 
-            abtnListFlight.BackColor = Color.FromArgb(3, 4, 94);
-            abtnListFlight.BackgroundColor = Color.FromArgb(3, 4, 94);
-            abtnListFlight.BorderColor = Color.FromArgb(3, 4, 94);
-            abtnListFlight.BorderRadius = 30;
-            abtnListFlight.BorderSize = 2;
-            abtnListFlight.FlatAppearance.BorderSize = 0;
-            abtnListFlight.FlatStyle = FlatStyle.Flat;
-            abtnListFlight.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            abtnListFlight.ForeColor = Color.White;
-            abtnListFlight.LineType = AControls.AButton.LineStyles.None;
-            abtnListFlight.Location = new Point(50, 30);
-            abtnListFlight.Margin = new Padding(3, 4, 3, 4);
-            abtnListFlight.Name = "abtnListFlight";
-            abtnListFlight.RoundType = AControls.AButton.RoundStyles.Top;
-            abtnListFlight.Size = new Size(160, 75);
-            abtnListFlight.TabIndex = 0;
-            abtnListFlight.Text = "Danh sách chuyến bay";
-            abtnListFlight.TextColor = Color.White;
-            abtnListFlight.ThinknessLine = 0;
-            abtnListFlight.UseVisualStyleBackColor = false;
-            abtnListFlight.Click += abtnListFlight_Click;
+            this.abtnListFlight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnListFlight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnListFlight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnListFlight.BorderRadius = 30;
+            this.abtnListFlight.BorderSize = 2;
+            this.abtnListFlight.FlatAppearance.BorderSize = 0;
+            this.abtnListFlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnListFlight.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnListFlight.ForeColor = System.Drawing.Color.White;
+            this.abtnListFlight.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnListFlight.Location = new System.Drawing.Point(50, 25);
+            this.abtnListFlight.Name = "abtnListFlight";
+            this.abtnListFlight.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Top;
+            this.abtnListFlight.Size = new System.Drawing.Size(180, 60);
+            this.abtnListFlight.TabIndex = 0;
+            this.abtnListFlight.Text = "Danh sách\r\nchuyến bay";
+            this.abtnListFlight.TextColor = System.Drawing.Color.White;
+            this.abtnListFlight.ThinknessLine = 0;
+            this.abtnListFlight.UseVisualStyleBackColor = false;
+            this.abtnListFlight.Click += new System.EventHandler(this.abtnListFlight_Click);
             // 
             // pnBodyFlight
             // 
-            pnBodyFlight.BackColor = Color.Transparent;
-            pnBodyFlight.Dock = DockStyle.Fill;
-            pnBodyFlight.Location = new Point(0, 105);
-            pnBodyFlight.Margin = new Padding(3, 4, 3, 4);
-            pnBodyFlight.Name = "pnBodyFlight";
-            pnBodyFlight.Size = new Size(1500, 720);
-            pnBodyFlight.TabIndex = 3;
+            this.pnBodyFlight.BackColor = System.Drawing.Color.Transparent;
+            this.pnBodyFlight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnBodyFlight.Location = new System.Drawing.Point(0, 85);
+            this.pnBodyFlight.Name = "pnBodyFlight";
+            this.pnBodyFlight.Size = new System.Drawing.Size(1500, 665);
+            this.pnBodyFlight.TabIndex = 3;
             // 
             // FlightUC
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 245, 248);
-            Controls.Add(pnBodyFlight);
-            Controls.Add(pnMenuFlight);
-            ForeColor = Color.FromArgb(1, 2, 39);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "FlightUC";
-            Size = new Size(1500, 825);
-            pnMenuFlight.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.pnBodyFlight);
+            this.Controls.Add(this.pnMenuFlight);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.Name = "FlightUC";
+            this.Size = new System.Drawing.Size(1500, 750);
+            this.pnMenuFlight.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
