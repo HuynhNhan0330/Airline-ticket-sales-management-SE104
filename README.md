@@ -63,7 +63,7 @@
 <div id="Muctieu"></div>
 
 ### 4. Mục tiêu
-#### Đang cập nhật
+#### Đang cập nhật.
 
 <div id="Tinhnang"></div>
 
