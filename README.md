@@ -42,7 +42,7 @@
 <div id="Ytuong"></div>
 
 ### 1. Ý tưởng
-#### Đang cập nhật
+#### Đang cập nhật.
 
 <div id="Congnghe"></div>
 
