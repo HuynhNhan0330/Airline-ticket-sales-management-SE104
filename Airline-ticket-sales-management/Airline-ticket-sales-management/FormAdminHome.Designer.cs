@@ -164,6 +164,7 @@
             this.abtnReport.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnReport.ThinknessLine = 5;
             this.abtnReport.UseVisualStyleBackColor = false;
+            this.abtnReport.Click += new System.EventHandler(this.abtnReport_Click);
             // 
             // abtnFlightTicket
             // 

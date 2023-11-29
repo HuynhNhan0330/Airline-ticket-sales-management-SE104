@@ -47,6 +47,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -213,6 +214,18 @@
     <Compile Include="Usercontrols\PreventiveAirportItemUC.Designer.cs">
       <DependentUpon>PreventiveAirportItemUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrols\ReportByMonthItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ReportByMonthItemUC.Designer.cs">
+      <DependentUpon>ReportByMonthItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ReportByYearItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ReportByYearItemUC.Designer.cs">
+      <DependentUpon>ReportByYearItemUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrols\TicketClassItemUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,6 +270,24 @@
     </Compile>
     <Compile Include="View\Admin\Plane\PlaneUC.Designer.cs">
       <DependentUpon>PlaneUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Report\ReportByMonthUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Report\ReportByMonthUC.Designer.cs">
+      <DependentUpon>ReportByMonthUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Report\ReportByYearUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Report\ReportByYearUC.Designer.cs">
+      <DependentUpon>ReportByYearUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Report\ReportUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Report\ReportUC.Designer.cs">
+      <DependentUpon>ReportUC.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AControls\AMessageBoxFrm.resx">
       <DependentUpon>AMessageBoxFrm.cs</DependentUpon>
@@ -304,6 +335,12 @@
     <EmbeddedResource Include="Usercontrols\PreventiveAirportItemUC.resx">
       <DependentUpon>PreventiveAirportItemUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\ReportByMonthItemUC.resx">
+      <DependentUpon>ReportByMonthItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\ReportByYearItemUC.resx">
+      <DependentUpon>ReportByYearItemUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\TicketClassItemUC.resx">
       <DependentUpon>TicketClassItemUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,6 +361,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Admin\Plane\PlaneUC.resx">
       <DependentUpon>PlaneUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Report\ReportByMonthUC.resx">
+      <DependentUpon>ReportByMonthUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Report\ReportByYearUC.resx">
+      <DependentUpon>ReportByYearUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Report\ReportUC.resx">
+      <DependentUpon>ReportUC.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\FlightTicketManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -405,6 +451,9 @@
       <DependentUpon>FlightTicketManagement.edmx</DependentUpon>
       <LastGenOutput>FlightTicketManagement.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\TicketIcon.png" />
+    <None Include="Resources\PlaneFlightIcon.png" />
+    <None Include="Resources\MoneyIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
