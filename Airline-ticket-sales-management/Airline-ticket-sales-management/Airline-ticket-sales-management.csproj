@@ -89,6 +89,7 @@
     <Compile Include="DALs\FlightDAL.cs" />
     <Compile Include="DALs\ParametersDAL.cs" />
     <Compile Include="DALs\PlaneDAL.cs" />
+    <Compile Include="DALs\PreventiveAirportDAL.cs" />
     <Compile Include="DALs\SeatDAL.cs" />
     <Compile Include="DALs\TicketClassDAL.cs" />
     <Compile Include="DTOs\AirportDTO.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="Model\PLANE.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTOs\PreventiveAirportDTO.cs" />
     <Compile Include="Model\SEAT.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>
@@ -204,6 +206,12 @@
     </Compile>
     <Compile Include="Usercontrols\PlaneTicketClassItemUC.Designer.cs">
       <DependentUpon>PlaneTicketClassItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PreventiveAirportItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PreventiveAirportItemUC.Designer.cs">
+      <DependentUpon>PreventiveAirportItemUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Usercontrols\TicketClassItemUC.cs">
       <SubType>UserControl</SubType>
@@ -292,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\PlaneTicketClassItemUC.resx">
       <DependentUpon>PlaneTicketClassItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PreventiveAirportItemUC.resx">
+      <DependentUpon>PreventiveAirportItemUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\TicketClassItemUC.resx">
       <DependentUpon>TicketClassItemUC.cs</DependentUpon>

@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,8 @@ namespace Airline_ticket_sales_management
 {
     public partial class OperationFlightUC : UserControl
     {
+        private List<string> airportComplete = new List<string>();
+
         public OperationFlightUC()
         {
             InitializeComponent();
@@ -37,8 +40,6 @@ namespace Airline_ticket_sales_management
             {
                 if (isGetPlane)
                 {
-                    List<string> airportComplete = new List<string>();
-
                     foreach (AirportDTO airport in airports)
                         airportComplete.Add(airport.CityName + " (" + airport.CountryName + ")");
 
@@ -134,11 +135,45 @@ namespace Airline_ticket_sales_management
 
         private async void createFlight(FlightDTO flight)
         {
-            (bool isCreate, int type, string label) = await FlightService.Ins.createFlight(flight);
+            (bool isCreateFlight, int type, string label, string flightID) = await FlightService.Ins.createFlight(flight);
 
-            if (isCreate)
+            if (isCreateFlight)
             {
+                bool isCreatePreventive = true;
+                
+                List<PreventiveAirportDTO> preventiveAirports = new List<PreventiveAirportDTO>();
 
+                for (int index = pnPreventiveAirport.Controls.Count - 1; index >= 0; --index)
+                {
+                    PreventiveAirportItemUC ctr = pnPreventiveAirport.Controls[index] as PreventiveAirportItemUC;
+
+                    PreventiveAirportDTO preventiveAirportDTO = await ctr.getPreventiveAirport();
+                    if (preventiveAirportDTO == null)
+                    {
+                        ctr.Focus();
+                        isCreatePreventive = false;
+                        AMessageBoxFrm ms1 = new AMessageBoxFrm("Lỗi tại sân bay trung gian thứ " + ctr.stt.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ms1.ShowDialog();
+                    }
+                    else
+                        preventiveAirports.Add(preventiveAirportDTO);
+                }
+
+                if (isCreatePreventive)
+                {
+                    (bool isCreateDetailFlight, string label1) = await PreventiveAirportDAL.Ins.createFlightDetail(preventiveAirports, flightID);
+
+                    if (isCreateDetailFlight)
+                    {
+                        AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ms.ShowDialog();
+                    }
+                    else
+                    {
+                        AMessageBoxFrm ms = new AMessageBoxFrm(label1, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ms.ShowDialog();
+                    }
+                }
             }
             else
             {
@@ -210,6 +245,32 @@ namespace Airline_ticket_sales_management
                     }
                 }
             }
+            else
+                pnTicketClassDetail.Controls.Clear();
+        }
+
+        private void abtnAddPreventiveAirport_Click(object sender, EventArgs e)
+        {
+            if (pnPreventiveAirport.Controls.Count < ParametersDTO.Ins.MaxPreventiveAirports)
+            {
+                PreventiveAirportItemUC uc = new PreventiveAirportItemUC();
+                uc.stt = pnPreventiveAirport.Controls.Count + 1;
+                uc.setCompletePlaneID(airportComplete);
+                pnPreventiveAirport.Controls.Add(uc);
+                uc.BringToFront();
+                uc.Dock = DockStyle.Top;
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Số lượng máy bay trung gian đã đạt tối đa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+        }
+
+        private void abtnRemovePreventiveAirport_Click(object sender, EventArgs e)
+        {
+            if (pnPreventiveAirport.Controls.Count > 0)
+                pnPreventiveAirport.Controls.RemoveAt(0);
         }
     }
 }

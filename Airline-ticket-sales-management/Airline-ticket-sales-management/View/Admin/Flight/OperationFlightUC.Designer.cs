@@ -32,11 +32,11 @@ namespace Airline_ticket_sales_management
         private void InitializeComponent()
         {
             this.pnTicketClassDetail = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnPreventiveAirport = new System.Windows.Forms.Panel();
             this.atxbMinute = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.atxbHour = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.aButton3 = new Airline_ticket_sales_management.AControls.AButton();
-            this.aButton2 = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnRemovePreventiveAirport = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnAddPreventiveAirport = new Airline_ticket_sales_management.AControls.AButton();
             this.atxbPlaneID = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.atxbArrivalAirport = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.atxbDepartureAirport = new Airline_ticket_sales_management.AControls.ATextboxUC();
@@ -44,6 +44,13 @@ namespace Airline_ticket_sales_management
             this.atxbTicketPrice = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.atxbFlightDuration = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.adtpDepartureDateTime = new Airline_ticket_sales_management.AControls.ADateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTicketClassDetail
@@ -55,14 +62,14 @@ namespace Airline_ticket_sales_management
             this.pnTicketClassDetail.Size = new System.Drawing.Size(200, 500);
             this.pnTicketClassDetail.TabIndex = 6;
             // 
-            // panel1
+            // pnPreventiveAirport
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(600, 100);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 540);
-            this.panel1.TabIndex = 9;
+            this.pnPreventiveAirport.BackColor = System.Drawing.Color.Transparent;
+            this.pnPreventiveAirport.Location = new System.Drawing.Point(600, 145);
+            this.pnPreventiveAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnPreventiveAirport.Name = "pnPreventiveAirport";
+            this.pnPreventiveAirport.Size = new System.Drawing.Size(850, 482);
+            this.pnPreventiveAirport.TabIndex = 9;
             // 
             // atxbMinute
             // 
@@ -116,51 +123,53 @@ namespace Airline_ticket_sales_management
             this.atxbHour.Texts = "";
             this.atxbHour.UnderlinedStyle = false;
             // 
-            // aButton3
+            // abtnRemovePreventiveAirport
             // 
-            this.aButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aButton3.BorderRadius = 20;
-            this.aButton3.BorderSize = 0;
-            this.aButton3.FlatAppearance.BorderSize = 0;
-            this.aButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton3.Font = new System.Drawing.Font("Arial", 12F);
-            this.aButton3.ForeColor = System.Drawing.Color.White;
-            this.aButton3.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton3.Location = new System.Drawing.Point(725, 25);
-            this.aButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.aButton3.Name = "aButton3";
-            this.aButton3.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton3.Size = new System.Drawing.Size(100, 50);
-            this.aButton3.TabIndex = 16;
-            this.aButton3.Text = "-";
-            this.aButton3.TextColor = System.Drawing.Color.White;
-            this.aButton3.ThinknessLine = 0;
-            this.aButton3.UseVisualStyleBackColor = false;
+            this.abtnRemovePreventiveAirport.BackColor = System.Drawing.Color.Gray;
+            this.abtnRemovePreventiveAirport.BackgroundColor = System.Drawing.Color.Gray;
+            this.abtnRemovePreventiveAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnRemovePreventiveAirport.BorderRadius = 20;
+            this.abtnRemovePreventiveAirport.BorderSize = 0;
+            this.abtnRemovePreventiveAirport.FlatAppearance.BorderSize = 0;
+            this.abtnRemovePreventiveAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnRemovePreventiveAirport.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnRemovePreventiveAirport.ForeColor = System.Drawing.Color.White;
+            this.abtnRemovePreventiveAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnRemovePreventiveAirport.Location = new System.Drawing.Point(725, 25);
+            this.abtnRemovePreventiveAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnRemovePreventiveAirport.Name = "abtnRemovePreventiveAirport";
+            this.abtnRemovePreventiveAirport.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnRemovePreventiveAirport.Size = new System.Drawing.Size(100, 50);
+            this.abtnRemovePreventiveAirport.TabIndex = 16;
+            this.abtnRemovePreventiveAirport.Text = "-";
+            this.abtnRemovePreventiveAirport.TextColor = System.Drawing.Color.White;
+            this.abtnRemovePreventiveAirport.ThinknessLine = 0;
+            this.abtnRemovePreventiveAirport.UseVisualStyleBackColor = false;
+            this.abtnRemovePreventiveAirport.Click += new System.EventHandler(this.abtnRemovePreventiveAirport_Click);
             // 
-            // aButton2
+            // abtnAddPreventiveAirport
             // 
-            this.aButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aButton2.BorderRadius = 20;
-            this.aButton2.BorderSize = 0;
-            this.aButton2.FlatAppearance.BorderSize = 0;
-            this.aButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton2.Font = new System.Drawing.Font("Arial", 12F);
-            this.aButton2.ForeColor = System.Drawing.Color.White;
-            this.aButton2.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton2.Location = new System.Drawing.Point(600, 25);
-            this.aButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.aButton2.Name = "aButton2";
-            this.aButton2.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton2.Size = new System.Drawing.Size(100, 50);
-            this.aButton2.TabIndex = 15;
-            this.aButton2.Text = "+";
-            this.aButton2.TextColor = System.Drawing.Color.White;
-            this.aButton2.ThinknessLine = 0;
-            this.aButton2.UseVisualStyleBackColor = false;
+            this.abtnAddPreventiveAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnAddPreventiveAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnAddPreventiveAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnAddPreventiveAirport.BorderRadius = 20;
+            this.abtnAddPreventiveAirport.BorderSize = 0;
+            this.abtnAddPreventiveAirport.FlatAppearance.BorderSize = 0;
+            this.abtnAddPreventiveAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnAddPreventiveAirport.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnAddPreventiveAirport.ForeColor = System.Drawing.Color.White;
+            this.abtnAddPreventiveAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnAddPreventiveAirport.Location = new System.Drawing.Point(600, 25);
+            this.abtnAddPreventiveAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnAddPreventiveAirport.Name = "abtnAddPreventiveAirport";
+            this.abtnAddPreventiveAirport.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnAddPreventiveAirport.Size = new System.Drawing.Size(100, 50);
+            this.abtnAddPreventiveAirport.TabIndex = 15;
+            this.abtnAddPreventiveAirport.Text = "+";
+            this.abtnAddPreventiveAirport.TextColor = System.Drawing.Color.White;
+            this.abtnAddPreventiveAirport.ThinknessLine = 0;
+            this.abtnAddPreventiveAirport.UseVisualStyleBackColor = false;
+            this.abtnAddPreventiveAirport.Click += new System.EventHandler(this.abtnAddPreventiveAirport_Click);
             // 
             // atxbPlaneID
             // 
@@ -333,21 +342,86 @@ namespace Airline_ticket_sales_management
             this.adtpDepartureDateTime.TabIndex = 4;
             this.adtpDepartureDateTime.TextColor = System.Drawing.Color.Black;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Location = new System.Drawing.Point(600, 100);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(850, 40);
+            this.panel2.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label2.Location = new System.Drawing.Point(605, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 22);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Ghi chú";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label1.Location = new System.Drawing.Point(338, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 22);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Thời gian dừng";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label10.Location = new System.Drawing.Point(140, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(110, 22);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Tên sân bay";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(922, 66);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(243, 29);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Sân bay trung gian";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label3.Location = new System.Drawing.Point(3, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 22);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "STT";
+            // 
             // OperationFlightUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.atxbMinute);
             this.Controls.Add(this.atxbHour);
-            this.Controls.Add(this.aButton3);
-            this.Controls.Add(this.aButton2);
+            this.Controls.Add(this.abtnRemovePreventiveAirport);
+            this.Controls.Add(this.abtnAddPreventiveAirport);
             this.Controls.Add(this.atxbPlaneID);
             this.Controls.Add(this.atxbArrivalAirport);
             this.Controls.Add(this.atxbDepartureAirport);
             this.Controls.Add(this.abtnCreateFlight);
             this.Controls.Add(this.atxbTicketPrice);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnPreventiveAirport);
             this.Controls.Add(this.atxbFlightDuration);
             this.Controls.Add(this.pnTicketClassDetail);
             this.Controls.Add(this.adtpDepartureDateTime);
@@ -355,7 +429,10 @@ namespace Airline_ticket_sales_management
             this.Name = "OperationFlightUC";
             this.Size = new System.Drawing.Size(1500, 665);
             this.Load += new System.EventHandler(this.OperationFlightUC_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -365,13 +442,19 @@ namespace Airline_ticket_sales_management
         private AControls.ATextboxUC atxbFlightDuration;
         private AControls.ATextboxUC atxbTicketPrice;
         private AControls.AButton abtnCreateFlight;
-        private Panel panel1;
+        private Panel pnPreventiveAirport;
         private AControls.ATextboxUC atxbDepartureAirport;
         private AControls.ATextboxUC atxbArrivalAirport;
         private AControls.ATextboxUC atxbPlaneID;
-        private AControls.AButton aButton2;
-        private AControls.AButton aButton3;
+        private AControls.AButton abtnAddPreventiveAirport;
+        private AControls.AButton abtnRemovePreventiveAirport;
         private AControls.ATextboxUC atxbHour;
         private AControls.ATextboxUC atxbMinute;
+        private Panel panel2;
+        private Label label10;
+        private Label label14;
+        private Label label2;
+        private Label label1;
+        private Label label3;
     }
 }
