@@ -34,25 +34,38 @@ namespace Airline_ticket_sales_management
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
+            this.atbLatestBookingCancellationTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.label21 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
+            this.atbMaximumStopoverTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.atbMinimumFlightTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
+            this.atbMinimumStopoverTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.label17 = new System.Windows.Forms.Label();
+            this.abtnSaveRegulations = new Airline_ticket_sales_management.AControls.AButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.atbMaxPreventiveAirports = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.atbEarliestBookingTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.label6 = new System.Windows.Forms.Label();
             this.pnAirport = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.pnOperationEditAirport = new System.Windows.Forms.Panel();
+            this.abtnCancelAirport = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnUpdateAirport = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnCreateAirport = new Airline_ticket_sales_management.AControls.AButton();
+            this.atxbCountryName = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.atxbAirportName = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.atxbCityName = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pnListAirport = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -69,6 +82,11 @@ namespace Airline_ticket_sales_management
             this.pnTicketClass = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.pnOperationEditTicketClass = new System.Windows.Forms.Panel();
+            this.abtnCancelTicketClass = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnUpdateTicketClass = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnCreateTicketClass = new Airline_ticket_sales_management.AControls.AButton();
+            this.atxbPricePercentage = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.atxbTicketClassName = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.pnTableTicketClass = new System.Windows.Forms.Panel();
             this.pnListTicketClass = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -80,24 +98,6 @@ namespace Airline_ticket_sales_management
             this.label13 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.abtnCancelTicketClass = new Airline_ticket_sales_management.AControls.AButton();
-            this.abtnUpdateTicketClass = new Airline_ticket_sales_management.AControls.AButton();
-            this.abtnCreateTicketClass = new Airline_ticket_sales_management.AControls.AButton();
-            this.atxbPricePercentage = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.atxbTicketClassName = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.abtnCancelAirport = new Airline_ticket_sales_management.AControls.AButton();
-            this.abtnUpdateAirport = new Airline_ticket_sales_management.AControls.AButton();
-            this.abtnCreateAirport = new Airline_ticket_sales_management.AControls.AButton();
-            this.atxbCountryName = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.atxbAirportName = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.atxbCityName = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.atbLatestBookingCancellationTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.atbMaximumStopoverTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.atbMinimumFlightTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.atbMinimumStopoverTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.abtnSaveRegulations = new Airline_ticket_sales_management.AControls.AButton();
-            this.atbMaxPreventiveAirports = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.atbEarliestBookingTime = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -162,6 +162,32 @@ namespace Airline_ticket_sales_management
             this.label20.TabIndex = 7;
             this.label20.Text = "Ngày";
             // 
+            // atbLatestBookingCancellationTime
+            // 
+            this.atbLatestBookingCancellationTime.BackColor = System.Drawing.Color.White;
+            this.atbLatestBookingCancellationTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atbLatestBookingCancellationTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atbLatestBookingCancellationTime.BorderRadius = 8;
+            this.atbLatestBookingCancellationTime.BorderSize = 2;
+            this.atbLatestBookingCancellationTime.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atbLatestBookingCancellationTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atbLatestBookingCancellationTime.ForeColor = System.Drawing.Color.Black;
+            this.atbLatestBookingCancellationTime.isPlaceholder = false;
+            this.atbLatestBookingCancellationTime.Location = new System.Drawing.Point(300, 0);
+            this.atbLatestBookingCancellationTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atbLatestBookingCancellationTime.Multiline = false;
+            this.atbLatestBookingCancellationTime.Name = "atbLatestBookingCancellationTime";
+            this.atbLatestBookingCancellationTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atbLatestBookingCancellationTime.PasswordChar = false;
+            this.atbLatestBookingCancellationTime.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atbLatestBookingCancellationTime.PlaceholderText = "";
+            this.atbLatestBookingCancellationTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atbLatestBookingCancellationTime.Size = new System.Drawing.Size(100, 33);
+            this.atbLatestBookingCancellationTime.TabIndex = 1;
+            this.atbLatestBookingCancellationTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
+            this.atbLatestBookingCancellationTime.Texts = "";
+            this.atbLatestBookingCancellationTime.UnderlinedStyle = false;
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -192,6 +218,32 @@ namespace Airline_ticket_sales_management
             this.label18.Size = new System.Drawing.Size(47, 22);
             this.label18.TabIndex = 7;
             this.label18.Text = "Phút";
+            // 
+            // atbMaximumStopoverTime
+            // 
+            this.atbMaximumStopoverTime.BackColor = System.Drawing.Color.White;
+            this.atbMaximumStopoverTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atbMaximumStopoverTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atbMaximumStopoverTime.BorderRadius = 8;
+            this.atbMaximumStopoverTime.BorderSize = 2;
+            this.atbMaximumStopoverTime.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atbMaximumStopoverTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atbMaximumStopoverTime.ForeColor = System.Drawing.Color.Black;
+            this.atbMaximumStopoverTime.isPlaceholder = false;
+            this.atbMaximumStopoverTime.Location = new System.Drawing.Point(300, 0);
+            this.atbMaximumStopoverTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atbMaximumStopoverTime.Multiline = false;
+            this.atbMaximumStopoverTime.Name = "atbMaximumStopoverTime";
+            this.atbMaximumStopoverTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atbMaximumStopoverTime.PasswordChar = false;
+            this.atbMaximumStopoverTime.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atbMaximumStopoverTime.PlaceholderText = "";
+            this.atbMaximumStopoverTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atbMaximumStopoverTime.Size = new System.Drawing.Size(100, 33);
+            this.atbMaximumStopoverTime.TabIndex = 1;
+            this.atbMaximumStopoverTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
+            this.atbMaximumStopoverTime.Texts = "";
+            this.atbMaximumStopoverTime.UnderlinedStyle = false;
             // 
             // label19
             // 
@@ -224,6 +276,32 @@ namespace Airline_ticket_sales_management
             this.label1.TabIndex = 7;
             this.label1.Text = "Phút";
             // 
+            // atbMinimumFlightTime
+            // 
+            this.atbMinimumFlightTime.BackColor = System.Drawing.Color.White;
+            this.atbMinimumFlightTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atbMinimumFlightTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atbMinimumFlightTime.BorderRadius = 8;
+            this.atbMinimumFlightTime.BorderSize = 2;
+            this.atbMinimumFlightTime.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atbMinimumFlightTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atbMinimumFlightTime.ForeColor = System.Drawing.Color.Black;
+            this.atbMinimumFlightTime.isPlaceholder = false;
+            this.atbMinimumFlightTime.Location = new System.Drawing.Point(300, 0);
+            this.atbMinimumFlightTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atbMinimumFlightTime.Multiline = false;
+            this.atbMinimumFlightTime.Name = "atbMinimumFlightTime";
+            this.atbMinimumFlightTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atbMinimumFlightTime.PasswordChar = false;
+            this.atbMinimumFlightTime.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atbMinimumFlightTime.PlaceholderText = "";
+            this.atbMinimumFlightTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atbMinimumFlightTime.Size = new System.Drawing.Size(100, 33);
+            this.atbMinimumFlightTime.TabIndex = 1;
+            this.atbMinimumFlightTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
+            this.atbMinimumFlightTime.Texts = "";
+            this.atbMinimumFlightTime.UnderlinedStyle = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -255,6 +333,32 @@ namespace Airline_ticket_sales_management
             this.label16.TabIndex = 7;
             this.label16.Text = "Phút";
             // 
+            // atbMinimumStopoverTime
+            // 
+            this.atbMinimumStopoverTime.BackColor = System.Drawing.Color.White;
+            this.atbMinimumStopoverTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atbMinimumStopoverTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atbMinimumStopoverTime.BorderRadius = 8;
+            this.atbMinimumStopoverTime.BorderSize = 2;
+            this.atbMinimumStopoverTime.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atbMinimumStopoverTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atbMinimumStopoverTime.ForeColor = System.Drawing.Color.Black;
+            this.atbMinimumStopoverTime.isPlaceholder = false;
+            this.atbMinimumStopoverTime.Location = new System.Drawing.Point(300, 0);
+            this.atbMinimumStopoverTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atbMinimumStopoverTime.Multiline = false;
+            this.atbMinimumStopoverTime.Name = "atbMinimumStopoverTime";
+            this.atbMinimumStopoverTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atbMinimumStopoverTime.PasswordChar = false;
+            this.atbMinimumStopoverTime.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atbMinimumStopoverTime.PlaceholderText = "";
+            this.atbMinimumStopoverTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atbMinimumStopoverTime.Size = new System.Drawing.Size(100, 33);
+            this.atbMinimumStopoverTime.TabIndex = 1;
+            this.atbMinimumStopoverTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
+            this.atbMinimumStopoverTime.Texts = "";
+            this.atbMinimumStopoverTime.UnderlinedStyle = false;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -264,6 +368,32 @@ namespace Airline_ticket_sales_management
             this.label17.Size = new System.Drawing.Size(198, 22);
             this.label17.TabIndex = 0;
             this.label17.Text = "Thời gian dừng tối thiểu";
+            // 
+            // abtnSaveRegulations
+            // 
+            this.abtnSaveRegulations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnSaveRegulations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnSaveRegulations.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnSaveRegulations.BorderRadius = 20;
+            this.abtnSaveRegulations.BorderSize = 0;
+            this.abtnSaveRegulations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abtnSaveRegulations.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.abtnSaveRegulations.FlatAppearance.BorderSize = 0;
+            this.abtnSaveRegulations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnSaveRegulations.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnSaveRegulations.ForeColor = System.Drawing.Color.White;
+            this.abtnSaveRegulations.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnSaveRegulations.Location = new System.Drawing.Point(0, 240);
+            this.abtnSaveRegulations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnSaveRegulations.Name = "abtnSaveRegulations";
+            this.abtnSaveRegulations.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnSaveRegulations.Size = new System.Drawing.Size(470, 40);
+            this.abtnSaveRegulations.TabIndex = 6;
+            this.abtnSaveRegulations.Text = "Lưu";
+            this.abtnSaveRegulations.TextColor = System.Drawing.Color.White;
+            this.abtnSaveRegulations.ThinknessLine = 0;
+            this.abtnSaveRegulations.UseVisualStyleBackColor = false;
+            this.abtnSaveRegulations.Click += new System.EventHandler(this.abtnSaveRegulations_Click);
             // 
             // panel3
             // 
@@ -285,6 +415,32 @@ namespace Airline_ticket_sales_management
             this.label4.Size = new System.Drawing.Size(42, 22);
             this.label4.TabIndex = 7;
             this.label4.Text = "Sân";
+            // 
+            // atbMaxPreventiveAirports
+            // 
+            this.atbMaxPreventiveAirports.BackColor = System.Drawing.Color.White;
+            this.atbMaxPreventiveAirports.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atbMaxPreventiveAirports.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atbMaxPreventiveAirports.BorderRadius = 8;
+            this.atbMaxPreventiveAirports.BorderSize = 2;
+            this.atbMaxPreventiveAirports.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atbMaxPreventiveAirports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atbMaxPreventiveAirports.ForeColor = System.Drawing.Color.Black;
+            this.atbMaxPreventiveAirports.isPlaceholder = false;
+            this.atbMaxPreventiveAirports.Location = new System.Drawing.Point(300, 0);
+            this.atbMaxPreventiveAirports.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atbMaxPreventiveAirports.Multiline = false;
+            this.atbMaxPreventiveAirports.Name = "atbMaxPreventiveAirports";
+            this.atbMaxPreventiveAirports.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atbMaxPreventiveAirports.PasswordChar = false;
+            this.atbMaxPreventiveAirports.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atbMaxPreventiveAirports.PlaceholderText = "";
+            this.atbMaxPreventiveAirports.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atbMaxPreventiveAirports.Size = new System.Drawing.Size(100, 33);
+            this.atbMaxPreventiveAirports.TabIndex = 1;
+            this.atbMaxPreventiveAirports.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
+            this.atbMaxPreventiveAirports.Texts = "";
+            this.atbMaxPreventiveAirports.UnderlinedStyle = false;
             // 
             // label5
             // 
@@ -316,6 +472,32 @@ namespace Airline_ticket_sales_management
             this.label2.Size = new System.Drawing.Size(52, 22);
             this.label2.TabIndex = 7;
             this.label2.Text = "Ngày";
+            // 
+            // atbEarliestBookingTime
+            // 
+            this.atbEarliestBookingTime.BackColor = System.Drawing.Color.White;
+            this.atbEarliestBookingTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atbEarliestBookingTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atbEarliestBookingTime.BorderRadius = 8;
+            this.atbEarliestBookingTime.BorderSize = 2;
+            this.atbEarliestBookingTime.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atbEarliestBookingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atbEarliestBookingTime.ForeColor = System.Drawing.Color.Black;
+            this.atbEarliestBookingTime.isPlaceholder = false;
+            this.atbEarliestBookingTime.Location = new System.Drawing.Point(300, 0);
+            this.atbEarliestBookingTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atbEarliestBookingTime.Multiline = false;
+            this.atbEarliestBookingTime.Name = "atbEarliestBookingTime";
+            this.atbEarliestBookingTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atbEarliestBookingTime.PasswordChar = false;
+            this.atbEarliestBookingTime.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atbEarliestBookingTime.PlaceholderText = "";
+            this.atbEarliestBookingTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atbEarliestBookingTime.Size = new System.Drawing.Size(100, 33);
+            this.atbEarliestBookingTime.TabIndex = 1;
+            this.atbEarliestBookingTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
+            this.atbEarliestBookingTime.Texts = "";
+            this.atbEarliestBookingTime.UnderlinedStyle = false;
             // 
             // label6
             // 
@@ -360,6 +542,153 @@ namespace Airline_ticket_sales_management
             this.pnOperationEditAirport.Name = "pnOperationEditAirport";
             this.pnOperationEditAirport.Size = new System.Drawing.Size(450, 40);
             this.pnOperationEditAirport.TabIndex = 8;
+            // 
+            // abtnCancelAirport
+            // 
+            this.abtnCancelAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
+            this.abtnCancelAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
+            this.abtnCancelAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnCancelAirport.BorderRadius = 20;
+            this.abtnCancelAirport.BorderSize = 0;
+            this.abtnCancelAirport.FlatAppearance.BorderSize = 0;
+            this.abtnCancelAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnCancelAirport.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.abtnCancelAirport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.abtnCancelAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnCancelAirport.Location = new System.Drawing.Point(250, 0);
+            this.abtnCancelAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnCancelAirport.Name = "abtnCancelAirport";
+            this.abtnCancelAirport.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnCancelAirport.Size = new System.Drawing.Size(200, 40);
+            this.abtnCancelAirport.TabIndex = 9;
+            this.abtnCancelAirport.Text = "Huỷ";
+            this.abtnCancelAirport.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.abtnCancelAirport.ThinknessLine = 0;
+            this.abtnCancelAirport.UseVisualStyleBackColor = false;
+            this.abtnCancelAirport.Click += new System.EventHandler(this.abtnCancelAirport_Click);
+            // 
+            // abtnUpdateAirport
+            // 
+            this.abtnUpdateAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnUpdateAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnUpdateAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnUpdateAirport.BorderRadius = 20;
+            this.abtnUpdateAirport.BorderSize = 0;
+            this.abtnUpdateAirport.FlatAppearance.BorderSize = 0;
+            this.abtnUpdateAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnUpdateAirport.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.abtnUpdateAirport.ForeColor = System.Drawing.Color.White;
+            this.abtnUpdateAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnUpdateAirport.Location = new System.Drawing.Point(0, 0);
+            this.abtnUpdateAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnUpdateAirport.Name = "abtnUpdateAirport";
+            this.abtnUpdateAirport.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnUpdateAirport.Size = new System.Drawing.Size(200, 40);
+            this.abtnUpdateAirport.TabIndex = 8;
+            this.abtnUpdateAirport.Text = "Xác nhận";
+            this.abtnUpdateAirport.TextColor = System.Drawing.Color.White;
+            this.abtnUpdateAirport.ThinknessLine = 0;
+            this.abtnUpdateAirport.UseVisualStyleBackColor = false;
+            this.abtnUpdateAirport.Click += new System.EventHandler(this.abtnUpdateAirport_Click);
+            // 
+            // abtnCreateAirport
+            // 
+            this.abtnCreateAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreateAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreateAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnCreateAirport.BorderRadius = 20;
+            this.abtnCreateAirport.BorderSize = 0;
+            this.abtnCreateAirport.FlatAppearance.BorderSize = 0;
+            this.abtnCreateAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnCreateAirport.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.abtnCreateAirport.ForeColor = System.Drawing.Color.White;
+            this.abtnCreateAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnCreateAirport.Location = new System.Drawing.Point(25, 267);
+            this.abtnCreateAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnCreateAirport.Name = "abtnCreateAirport";
+            this.abtnCreateAirport.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnCreateAirport.Size = new System.Drawing.Size(450, 40);
+            this.abtnCreateAirport.TabIndex = 5;
+            this.abtnCreateAirport.Text = "Tạo sân bay";
+            this.abtnCreateAirport.TextColor = System.Drawing.Color.White;
+            this.abtnCreateAirport.ThinknessLine = 0;
+            this.abtnCreateAirport.UseVisualStyleBackColor = false;
+            this.abtnCreateAirport.Click += new System.EventHandler(this.abtnCreateAirport_Click);
+            // 
+            // atxbCountryName
+            // 
+            this.atxbCountryName.BackColor = System.Drawing.Color.White;
+            this.atxbCountryName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atxbCountryName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atxbCountryName.BorderRadius = 5;
+            this.atxbCountryName.BorderSize = 2;
+            this.atxbCountryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbCountryName.ForeColor = System.Drawing.Color.Black;
+            this.atxbCountryName.isPlaceholder = true;
+            this.atxbCountryName.Location = new System.Drawing.Point(25, 148);
+            this.atxbCountryName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbCountryName.Multiline = false;
+            this.atxbCountryName.Name = "atxbCountryName";
+            this.atxbCountryName.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbCountryName.PasswordChar = false;
+            this.atxbCountryName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbCountryName.PlaceholderText = "Tên đất nước";
+            this.atxbCountryName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbCountryName.Size = new System.Drawing.Size(450, 33);
+            this.atxbCountryName.TabIndex = 4;
+            this.atxbCountryName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbCountryName.Texts = "";
+            this.atxbCountryName.UnderlinedStyle = false;
+            // 
+            // atxbAirportName
+            // 
+            this.atxbAirportName.BackColor = System.Drawing.Color.White;
+            this.atxbAirportName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atxbAirportName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atxbAirportName.BorderRadius = 5;
+            this.atxbAirportName.BorderSize = 2;
+            this.atxbAirportName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbAirportName.ForeColor = System.Drawing.Color.Black;
+            this.atxbAirportName.isPlaceholder = true;
+            this.atxbAirportName.Location = new System.Drawing.Point(25, 44);
+            this.atxbAirportName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbAirportName.Multiline = false;
+            this.atxbAirportName.Name = "atxbAirportName";
+            this.atxbAirportName.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbAirportName.PasswordChar = false;
+            this.atxbAirportName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbAirportName.PlaceholderText = "Tên sân bay";
+            this.atxbAirportName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbAirportName.Size = new System.Drawing.Size(450, 33);
+            this.atxbAirportName.TabIndex = 2;
+            this.atxbAirportName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbAirportName.Texts = "";
+            this.atxbAirportName.UnderlinedStyle = false;
+            // 
+            // atxbCityName
+            // 
+            this.atxbCityName.BackColor = System.Drawing.Color.White;
+            this.atxbCityName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atxbCityName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atxbCityName.BorderRadius = 5;
+            this.atxbCityName.BorderSize = 2;
+            this.atxbCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbCityName.ForeColor = System.Drawing.Color.Black;
+            this.atxbCityName.isPlaceholder = true;
+            this.atxbCityName.Location = new System.Drawing.Point(25, 96);
+            this.atxbCityName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbCityName.Multiline = false;
+            this.atxbCityName.Name = "atxbCityName";
+            this.atxbCityName.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbCityName.PasswordChar = false;
+            this.atxbCityName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbCityName.PlaceholderText = "Tên thành phố";
+            this.atxbCityName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbCityName.Size = new System.Drawing.Size(450, 33);
+            this.atxbCityName.TabIndex = 3;
+            this.atxbCityName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbCityName.Texts = "";
+            this.atxbCityName.UnderlinedStyle = false;
             // 
             // panel10
             // 
@@ -529,119 +858,6 @@ namespace Airline_ticket_sales_management
             this.pnOperationEditTicketClass.Size = new System.Drawing.Size(300, 40);
             this.pnOperationEditTicketClass.TabIndex = 7;
             // 
-            // pnTableTicketClass
-            // 
-            this.pnTableTicketClass.Controls.Add(this.pnListTicketClass);
-            this.pnTableTicketClass.Controls.Add(this.panel17);
-            this.pnTableTicketClass.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnTableTicketClass.Location = new System.Drawing.Point(0, 40);
-            this.pnTableTicketClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnTableTicketClass.Name = "pnTableTicketClass";
-            this.pnTableTicketClass.Size = new System.Drawing.Size(500, 240);
-            this.pnTableTicketClass.TabIndex = 1;
-            // 
-            // pnListTicketClass
-            // 
-            this.pnListTicketClass.AutoScroll = true;
-            this.pnListTicketClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnListTicketClass.Location = new System.Drawing.Point(0, 40);
-            this.pnListTicketClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnListTicketClass.Name = "pnListTicketClass";
-            this.pnListTicketClass.Size = new System.Drawing.Size(500, 200);
-            this.pnListTicketClass.TabIndex = 2;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.panel15);
-            this.panel17.Controls.Add(this.panel19);
-            this.panel17.Controls.Add(this.panel20);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(500, 40);
-            this.panel17.TabIndex = 0;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label15);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(400, 0);
-            this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(100, 40);
-            this.panel15.TabIndex = 2;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label15.Location = new System.Drawing.Point(9, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(81, 22);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Thao tác";
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.label12);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel19.Location = new System.Drawing.Point(250, 0);
-            this.panel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(150, 40);
-            this.panel19.TabIndex = 1;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label12.Location = new System.Drawing.Point(29, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 22);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Phần trăm";
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.label13);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(250, 40);
-            this.panel20.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label13.Location = new System.Drawing.Point(69, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 22);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Tên hạng vé";
-            // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.label14);
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(850, 40);
-            this.panel21.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(368, 5);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 29);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Hạng vé";
-            // 
             // abtnCancelTicketClass
             // 
             this.abtnCancelTicketClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
@@ -764,334 +980,118 @@ namespace Airline_ticket_sales_management
             this.atxbTicketClassName.Texts = "";
             this.atxbTicketClassName.UnderlinedStyle = false;
             // 
-            // abtnCancelAirport
+            // pnTableTicketClass
             // 
-            this.abtnCancelAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
-            this.abtnCancelAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
-            this.abtnCancelAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnCancelAirport.BorderRadius = 20;
-            this.abtnCancelAirport.BorderSize = 0;
-            this.abtnCancelAirport.FlatAppearance.BorderSize = 0;
-            this.abtnCancelAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnCancelAirport.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.abtnCancelAirport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
-            this.abtnCancelAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnCancelAirport.Location = new System.Drawing.Point(250, 0);
-            this.abtnCancelAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.abtnCancelAirport.Name = "abtnCancelAirport";
-            this.abtnCancelAirport.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnCancelAirport.Size = new System.Drawing.Size(200, 40);
-            this.abtnCancelAirport.TabIndex = 9;
-            this.abtnCancelAirport.Text = "Huỷ";
-            this.abtnCancelAirport.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
-            this.abtnCancelAirport.ThinknessLine = 0;
-            this.abtnCancelAirport.UseVisualStyleBackColor = false;
-            this.abtnCancelAirport.Click += new System.EventHandler(this.abtnCancelAirport_Click);
+            this.pnTableTicketClass.Controls.Add(this.pnListTicketClass);
+            this.pnTableTicketClass.Controls.Add(this.panel17);
+            this.pnTableTicketClass.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnTableTicketClass.Location = new System.Drawing.Point(0, 40);
+            this.pnTableTicketClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnTableTicketClass.Name = "pnTableTicketClass";
+            this.pnTableTicketClass.Size = new System.Drawing.Size(500, 240);
+            this.pnTableTicketClass.TabIndex = 1;
             // 
-            // abtnUpdateAirport
+            // pnListTicketClass
             // 
-            this.abtnUpdateAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnUpdateAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnUpdateAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnUpdateAirport.BorderRadius = 20;
-            this.abtnUpdateAirport.BorderSize = 0;
-            this.abtnUpdateAirport.FlatAppearance.BorderSize = 0;
-            this.abtnUpdateAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnUpdateAirport.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.abtnUpdateAirport.ForeColor = System.Drawing.Color.White;
-            this.abtnUpdateAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnUpdateAirport.Location = new System.Drawing.Point(0, 0);
-            this.abtnUpdateAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.abtnUpdateAirport.Name = "abtnUpdateAirport";
-            this.abtnUpdateAirport.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnUpdateAirport.Size = new System.Drawing.Size(200, 40);
-            this.abtnUpdateAirport.TabIndex = 8;
-            this.abtnUpdateAirport.Text = "Xác nhận";
-            this.abtnUpdateAirport.TextColor = System.Drawing.Color.White;
-            this.abtnUpdateAirport.ThinknessLine = 0;
-            this.abtnUpdateAirport.UseVisualStyleBackColor = false;
-            this.abtnUpdateAirport.Click += new System.EventHandler(this.abtnUpdateAirport_Click);
+            this.pnListTicketClass.AutoScroll = true;
+            this.pnListTicketClass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnListTicketClass.Location = new System.Drawing.Point(0, 40);
+            this.pnListTicketClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnListTicketClass.Name = "pnListTicketClass";
+            this.pnListTicketClass.Size = new System.Drawing.Size(500, 200);
+            this.pnListTicketClass.TabIndex = 2;
             // 
-            // abtnCreateAirport
+            // panel17
             // 
-            this.abtnCreateAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnCreateAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnCreateAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnCreateAirport.BorderRadius = 20;
-            this.abtnCreateAirport.BorderSize = 0;
-            this.abtnCreateAirport.FlatAppearance.BorderSize = 0;
-            this.abtnCreateAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnCreateAirport.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.abtnCreateAirport.ForeColor = System.Drawing.Color.White;
-            this.abtnCreateAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnCreateAirport.Location = new System.Drawing.Point(25, 267);
-            this.abtnCreateAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.abtnCreateAirport.Name = "abtnCreateAirport";
-            this.abtnCreateAirport.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnCreateAirport.Size = new System.Drawing.Size(450, 40);
-            this.abtnCreateAirport.TabIndex = 5;
-            this.abtnCreateAirport.Text = "Tạo sân bay";
-            this.abtnCreateAirport.TextColor = System.Drawing.Color.White;
-            this.abtnCreateAirport.ThinknessLine = 0;
-            this.abtnCreateAirport.UseVisualStyleBackColor = false;
-            this.abtnCreateAirport.Click += new System.EventHandler(this.abtnCreateAirport_Click);
+            this.panel17.Controls.Add(this.panel15);
+            this.panel17.Controls.Add(this.panel19);
+            this.panel17.Controls.Add(this.panel20);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(500, 40);
+            this.panel17.TabIndex = 0;
             // 
-            // atxbCountryName
+            // panel15
             // 
-            this.atxbCountryName.BackColor = System.Drawing.Color.White;
-            this.atxbCountryName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atxbCountryName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atxbCountryName.BorderRadius = 5;
-            this.atxbCountryName.BorderSize = 2;
-            this.atxbCountryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atxbCountryName.ForeColor = System.Drawing.Color.Black;
-            this.atxbCountryName.isPlaceholder = true;
-            this.atxbCountryName.Location = new System.Drawing.Point(25, 148);
-            this.atxbCountryName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atxbCountryName.Multiline = false;
-            this.atxbCountryName.Name = "atxbCountryName";
-            this.atxbCountryName.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atxbCountryName.PasswordChar = false;
-            this.atxbCountryName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atxbCountryName.PlaceholderText = "Tên đất nước";
-            this.atxbCountryName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atxbCountryName.Size = new System.Drawing.Size(450, 33);
-            this.atxbCountryName.TabIndex = 4;
-            this.atxbCountryName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.atxbCountryName.Texts = "";
-            this.atxbCountryName.UnderlinedStyle = false;
+            this.panel15.Controls.Add(this.label15);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(400, 0);
+            this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(100, 40);
+            this.panel15.TabIndex = 2;
             // 
-            // atxbAirportName
+            // label15
             // 
-            this.atxbAirportName.BackColor = System.Drawing.Color.White;
-            this.atxbAirportName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atxbAirportName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atxbAirportName.BorderRadius = 5;
-            this.atxbAirportName.BorderSize = 2;
-            this.atxbAirportName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atxbAirportName.ForeColor = System.Drawing.Color.Black;
-            this.atxbAirportName.isPlaceholder = true;
-            this.atxbAirportName.Location = new System.Drawing.Point(25, 44);
-            this.atxbAirportName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atxbAirportName.Multiline = false;
-            this.atxbAirportName.Name = "atxbAirportName";
-            this.atxbAirportName.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atxbAirportName.PasswordChar = false;
-            this.atxbAirportName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atxbAirportName.PlaceholderText = "Tên sân bay";
-            this.atxbAirportName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atxbAirportName.Size = new System.Drawing.Size(450, 33);
-            this.atxbAirportName.TabIndex = 2;
-            this.atxbAirportName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.atxbAirportName.Texts = "";
-            this.atxbAirportName.UnderlinedStyle = false;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label15.Location = new System.Drawing.Point(9, 9);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(81, 22);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Thao tác";
             // 
-            // atxbCityName
+            // panel19
             // 
-            this.atxbCityName.BackColor = System.Drawing.Color.White;
-            this.atxbCityName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atxbCityName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atxbCityName.BorderRadius = 5;
-            this.atxbCityName.BorderSize = 2;
-            this.atxbCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atxbCityName.ForeColor = System.Drawing.Color.Black;
-            this.atxbCityName.isPlaceholder = true;
-            this.atxbCityName.Location = new System.Drawing.Point(25, 96);
-            this.atxbCityName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atxbCityName.Multiline = false;
-            this.atxbCityName.Name = "atxbCityName";
-            this.atxbCityName.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atxbCityName.PasswordChar = false;
-            this.atxbCityName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atxbCityName.PlaceholderText = "Tên thành phố";
-            this.atxbCityName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atxbCityName.Size = new System.Drawing.Size(450, 33);
-            this.atxbCityName.TabIndex = 3;
-            this.atxbCityName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.atxbCityName.Texts = "";
-            this.atxbCityName.UnderlinedStyle = false;
+            this.panel19.Controls.Add(this.label12);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel19.Location = new System.Drawing.Point(250, 0);
+            this.panel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(150, 40);
+            this.panel19.TabIndex = 1;
             // 
-            // atbLatestBookingCancellationTime
+            // label12
             // 
-            this.atbLatestBookingCancellationTime.BackColor = System.Drawing.Color.White;
-            this.atbLatestBookingCancellationTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atbLatestBookingCancellationTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atbLatestBookingCancellationTime.BorderRadius = 8;
-            this.atbLatestBookingCancellationTime.BorderSize = 2;
-            this.atbLatestBookingCancellationTime.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atbLatestBookingCancellationTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atbLatestBookingCancellationTime.ForeColor = System.Drawing.Color.Black;
-            this.atbLatestBookingCancellationTime.isPlaceholder = false;
-            this.atbLatestBookingCancellationTime.Location = new System.Drawing.Point(300, 0);
-            this.atbLatestBookingCancellationTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atbLatestBookingCancellationTime.Multiline = false;
-            this.atbLatestBookingCancellationTime.Name = "atbLatestBookingCancellationTime";
-            this.atbLatestBookingCancellationTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atbLatestBookingCancellationTime.PasswordChar = false;
-            this.atbLatestBookingCancellationTime.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atbLatestBookingCancellationTime.PlaceholderText = "";
-            this.atbLatestBookingCancellationTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atbLatestBookingCancellationTime.Size = new System.Drawing.Size(100, 33);
-            this.atbLatestBookingCancellationTime.TabIndex = 1;
-            this.atbLatestBookingCancellationTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
-            this.atbLatestBookingCancellationTime.Texts = "";
-            this.atbLatestBookingCancellationTime.UnderlinedStyle = false;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label12.Location = new System.Drawing.Point(29, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(92, 22);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Phần trăm";
             // 
-            // atbMaximumStopoverTime
+            // panel20
             // 
-            this.atbMaximumStopoverTime.BackColor = System.Drawing.Color.White;
-            this.atbMaximumStopoverTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atbMaximumStopoverTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atbMaximumStopoverTime.BorderRadius = 8;
-            this.atbMaximumStopoverTime.BorderSize = 2;
-            this.atbMaximumStopoverTime.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atbMaximumStopoverTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atbMaximumStopoverTime.ForeColor = System.Drawing.Color.Black;
-            this.atbMaximumStopoverTime.isPlaceholder = false;
-            this.atbMaximumStopoverTime.Location = new System.Drawing.Point(300, 0);
-            this.atbMaximumStopoverTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atbMaximumStopoverTime.Multiline = false;
-            this.atbMaximumStopoverTime.Name = "atbMaximumStopoverTime";
-            this.atbMaximumStopoverTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atbMaximumStopoverTime.PasswordChar = false;
-            this.atbMaximumStopoverTime.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atbMaximumStopoverTime.PlaceholderText = "";
-            this.atbMaximumStopoverTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atbMaximumStopoverTime.Size = new System.Drawing.Size(100, 33);
-            this.atbMaximumStopoverTime.TabIndex = 1;
-            this.atbMaximumStopoverTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
-            this.atbMaximumStopoverTime.Texts = "";
-            this.atbMaximumStopoverTime.UnderlinedStyle = false;
+            this.panel20.Controls.Add(this.label13);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(250, 40);
+            this.panel20.TabIndex = 0;
             // 
-            // atbMinimumFlightTime
+            // label13
             // 
-            this.atbMinimumFlightTime.BackColor = System.Drawing.Color.White;
-            this.atbMinimumFlightTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atbMinimumFlightTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atbMinimumFlightTime.BorderRadius = 8;
-            this.atbMinimumFlightTime.BorderSize = 2;
-            this.atbMinimumFlightTime.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atbMinimumFlightTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atbMinimumFlightTime.ForeColor = System.Drawing.Color.Black;
-            this.atbMinimumFlightTime.isPlaceholder = false;
-            this.atbMinimumFlightTime.Location = new System.Drawing.Point(300, 0);
-            this.atbMinimumFlightTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atbMinimumFlightTime.Multiline = false;
-            this.atbMinimumFlightTime.Name = "atbMinimumFlightTime";
-            this.atbMinimumFlightTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atbMinimumFlightTime.PasswordChar = false;
-            this.atbMinimumFlightTime.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atbMinimumFlightTime.PlaceholderText = "";
-            this.atbMinimumFlightTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atbMinimumFlightTime.Size = new System.Drawing.Size(100, 33);
-            this.atbMinimumFlightTime.TabIndex = 1;
-            this.atbMinimumFlightTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
-            this.atbMinimumFlightTime.Texts = "";
-            this.atbMinimumFlightTime.UnderlinedStyle = false;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label13.Location = new System.Drawing.Point(69, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(111, 22);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Tên hạng vé";
             // 
-            // atbMinimumStopoverTime
+            // panel21
             // 
-            this.atbMinimumStopoverTime.BackColor = System.Drawing.Color.White;
-            this.atbMinimumStopoverTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atbMinimumStopoverTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atbMinimumStopoverTime.BorderRadius = 8;
-            this.atbMinimumStopoverTime.BorderSize = 2;
-            this.atbMinimumStopoverTime.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atbMinimumStopoverTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atbMinimumStopoverTime.ForeColor = System.Drawing.Color.Black;
-            this.atbMinimumStopoverTime.isPlaceholder = false;
-            this.atbMinimumStopoverTime.Location = new System.Drawing.Point(300, 0);
-            this.atbMinimumStopoverTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atbMinimumStopoverTime.Multiline = false;
-            this.atbMinimumStopoverTime.Name = "atbMinimumStopoverTime";
-            this.atbMinimumStopoverTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atbMinimumStopoverTime.PasswordChar = false;
-            this.atbMinimumStopoverTime.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atbMinimumStopoverTime.PlaceholderText = "";
-            this.atbMinimumStopoverTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atbMinimumStopoverTime.Size = new System.Drawing.Size(100, 33);
-            this.atbMinimumStopoverTime.TabIndex = 1;
-            this.atbMinimumStopoverTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
-            this.atbMinimumStopoverTime.Texts = "";
-            this.atbMinimumStopoverTime.UnderlinedStyle = false;
+            this.panel21.Controls.Add(this.label14);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(850, 40);
+            this.panel21.TabIndex = 0;
             // 
-            // abtnSaveRegulations
+            // label14
             // 
-            this.abtnSaveRegulations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnSaveRegulations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnSaveRegulations.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnSaveRegulations.BorderRadius = 20;
-            this.abtnSaveRegulations.BorderSize = 0;
-            this.abtnSaveRegulations.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.abtnSaveRegulations.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.abtnSaveRegulations.FlatAppearance.BorderSize = 0;
-            this.abtnSaveRegulations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnSaveRegulations.Font = new System.Drawing.Font("Arial", 12F);
-            this.abtnSaveRegulations.ForeColor = System.Drawing.Color.White;
-            this.abtnSaveRegulations.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnSaveRegulations.Location = new System.Drawing.Point(0, 240);
-            this.abtnSaveRegulations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.abtnSaveRegulations.Name = "abtnSaveRegulations";
-            this.abtnSaveRegulations.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnSaveRegulations.Size = new System.Drawing.Size(470, 40);
-            this.abtnSaveRegulations.TabIndex = 6;
-            this.abtnSaveRegulations.Text = "Lưu";
-            this.abtnSaveRegulations.TextColor = System.Drawing.Color.White;
-            this.abtnSaveRegulations.ThinknessLine = 0;
-            this.abtnSaveRegulations.UseVisualStyleBackColor = false;
-            this.abtnSaveRegulations.Click += new System.EventHandler(this.abtnSaveRegulations_Click);
-            // 
-            // atbMaxPreventiveAirports
-            // 
-            this.atbMaxPreventiveAirports.BackColor = System.Drawing.Color.White;
-            this.atbMaxPreventiveAirports.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atbMaxPreventiveAirports.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atbMaxPreventiveAirports.BorderRadius = 8;
-            this.atbMaxPreventiveAirports.BorderSize = 2;
-            this.atbMaxPreventiveAirports.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atbMaxPreventiveAirports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atbMaxPreventiveAirports.ForeColor = System.Drawing.Color.Black;
-            this.atbMaxPreventiveAirports.isPlaceholder = false;
-            this.atbMaxPreventiveAirports.Location = new System.Drawing.Point(300, 0);
-            this.atbMaxPreventiveAirports.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atbMaxPreventiveAirports.Multiline = false;
-            this.atbMaxPreventiveAirports.Name = "atbMaxPreventiveAirports";
-            this.atbMaxPreventiveAirports.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atbMaxPreventiveAirports.PasswordChar = false;
-            this.atbMaxPreventiveAirports.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atbMaxPreventiveAirports.PlaceholderText = "";
-            this.atbMaxPreventiveAirports.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atbMaxPreventiveAirports.Size = new System.Drawing.Size(100, 33);
-            this.atbMaxPreventiveAirports.TabIndex = 1;
-            this.atbMaxPreventiveAirports.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
-            this.atbMaxPreventiveAirports.Texts = "";
-            this.atbMaxPreventiveAirports.UnderlinedStyle = false;
-            // 
-            // atbEarliestBookingTime
-            // 
-            this.atbEarliestBookingTime.BackColor = System.Drawing.Color.White;
-            this.atbEarliestBookingTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.atbEarliestBookingTime.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.atbEarliestBookingTime.BorderRadius = 8;
-            this.atbEarliestBookingTime.BorderSize = 2;
-            this.atbEarliestBookingTime.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atbEarliestBookingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atbEarliestBookingTime.ForeColor = System.Drawing.Color.Black;
-            this.atbEarliestBookingTime.isPlaceholder = false;
-            this.atbEarliestBookingTime.Location = new System.Drawing.Point(300, 0);
-            this.atbEarliestBookingTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atbEarliestBookingTime.Multiline = false;
-            this.atbEarliestBookingTime.Name = "atbEarliestBookingTime";
-            this.atbEarliestBookingTime.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atbEarliestBookingTime.PasswordChar = false;
-            this.atbEarliestBookingTime.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atbEarliestBookingTime.PlaceholderText = "";
-            this.atbEarliestBookingTime.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atbEarliestBookingTime.Size = new System.Drawing.Size(100, 33);
-            this.atbEarliestBookingTime.TabIndex = 1;
-            this.atbEarliestBookingTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
-            this.atbEarliestBookingTime.Texts = "";
-            this.atbEarliestBookingTime.UnderlinedStyle = false;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(368, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(114, 29);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Hạng vé";
             // 
             // SettingUC
             // 

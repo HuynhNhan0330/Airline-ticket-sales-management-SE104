@@ -188,6 +188,7 @@
             this.abtnFlightTicket.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnFlightTicket.ThinknessLine = 5;
             this.abtnFlightTicket.UseVisualStyleBackColor = false;
+            this.abtnFlightTicket.Click += new System.EventHandler(this.abtnFlightTicket_Click);
             // 
             // abtnFlight
             // 

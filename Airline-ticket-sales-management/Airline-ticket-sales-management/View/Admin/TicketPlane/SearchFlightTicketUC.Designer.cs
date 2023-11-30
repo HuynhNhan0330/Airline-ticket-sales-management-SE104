@@ -1,4 +1,7 @@
-﻿namespace Airline_ticket_sales_management
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Airline_ticket_sales_management
 {
     partial class SearchFlightTicketUC
     {
@@ -28,113 +31,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            aComboBox1 = new AControls.AComboBox();
-            aTextboxuc1 = new AControls.ATextboxUC();
-            aButton1 = new AControls.AButton();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel1.SuspendLayout();
-            SuspendLayout();
-            // 
-            // aComboBox1
-            // 
-            aComboBox1.BackColor = Color.White;
-            aComboBox1.BorderColor = Color.FromArgb(3, 4, 94);
-            aComboBox1.BorderSize = 1;
-            aComboBox1.DropDownStyle = ComboBoxStyle.DropDown;
-            aComboBox1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            aComboBox1.ForeColor = Color.Black;
-            aComboBox1.IconColor = Color.FromArgb(3, 4, 94);
-            aComboBox1.Items.AddRange(new object[] { "Theo khách hàng", "Theo mã chuyến bay" });
-            aComboBox1.ListBackColor = Color.FromArgb(3, 4, 94);
-            aComboBox1.ListTextColor = Color.White;
-            aComboBox1.Location = new Point(50, 30);
-            aComboBox1.MinimumSize = new Size(200, 30);
-            aComboBox1.Name = "aComboBox1";
-            aComboBox1.Padding = new Padding(1);
-            aComboBox1.Size = new Size(250, 38);
-            aComboBox1.TabIndex = 0;
-            aComboBox1.Texts = "";
+            this.aTextboxuc1 = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.aButton1 = new Airline_ticket_sales_management.AControls.AButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // aTextboxuc1
             // 
-            aTextboxuc1.BackColor = SystemColors.Window;
-            aTextboxuc1.BorderColor = Color.FromArgb(3, 4, 94);
-            aTextboxuc1.BorderFocusColor = Color.FromArgb(0, 138, 184);
-            aTextboxuc1.BorderRadius = 8;
-            aTextboxuc1.BorderSize = 2;
-            aTextboxuc1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            aTextboxuc1.ForeColor = Color.DimGray;
-            aTextboxuc1.Location = new Point(325, 30);
-            aTextboxuc1.Margin = new Padding(4);
-            aTextboxuc1.Multiline = false;
-            aTextboxuc1.Name = "aTextboxuc1";
-            aTextboxuc1.Padding = new Padding(7);
-            aTextboxuc1.PasswordChar = false;
-            aTextboxuc1.PlaceholderColor = Color.DarkGray;
-            aTextboxuc1.PlaceholderText = "";
-            aTextboxuc1.RoundType = AControls.ATextboxUC.RoundStyles.Full;
-            aTextboxuc1.Size = new Size(300, 37);
-            aTextboxuc1.TabIndex = 1;
-            aTextboxuc1.Texts = "";
-            aTextboxuc1.UnderlinedStyle = false;
+            this.aTextboxuc1.BackColor = System.Drawing.SystemColors.Window;
+            this.aTextboxuc1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aTextboxuc1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.aTextboxuc1.BorderRadius = 8;
+            this.aTextboxuc1.BorderSize = 2;
+            this.aTextboxuc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.aTextboxuc1.ForeColor = System.Drawing.Color.DimGray;
+            this.aTextboxuc1.isPlaceholder = false;
+            this.aTextboxuc1.Location = new System.Drawing.Point(325, 18);
+            this.aTextboxuc1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.aTextboxuc1.Multiline = false;
+            this.aTextboxuc1.Name = "aTextboxuc1";
+            this.aTextboxuc1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.aTextboxuc1.PasswordChar = false;
+            this.aTextboxuc1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.aTextboxuc1.PlaceholderText = "";
+            this.aTextboxuc1.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.aTextboxuc1.Size = new System.Drawing.Size(300, 35);
+            this.aTextboxuc1.TabIndex = 1;
+            this.aTextboxuc1.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.aTextboxuc1.Texts = "";
+            this.aTextboxuc1.UnderlinedStyle = false;
             // 
             // aButton1
             // 
-            aButton1.BackColor = Color.FromArgb(3, 4, 94);
-            aButton1.BackgroundColor = Color.FromArgb(3, 4, 94);
-            aButton1.BorderColor = Color.PaleVioletRed;
-            aButton1.BorderRadius = 20;
-            aButton1.BorderSize = 0;
-            aButton1.FlatAppearance.BorderSize = 0;
-            aButton1.FlatStyle = FlatStyle.Flat;
-            aButton1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aButton1.ForeColor = Color.White;
-            aButton1.LineType = AControls.AButton.LineStyles.None;
-            aButton1.Location = new Point(650, 30);
-            aButton1.Name = "aButton1";
-            aButton1.RoundType = AControls.AButton.RoundStyles.Full;
-            aButton1.Size = new Size(200, 38);
-            aButton1.TabIndex = 2;
-            aButton1.Text = "Tìm kiếm";
-            aButton1.TextColor = Color.White;
-            aButton1.ThinknessLine = 0;
-            aButton1.UseVisualStyleBackColor = false;
+            this.aButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.aButton1.BorderRadius = 20;
+            this.aButton1.BorderSize = 0;
+            this.aButton1.FlatAppearance.BorderSize = 0;
+            this.aButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aButton1.Font = new System.Drawing.Font("Arial", 12F);
+            this.aButton1.ForeColor = System.Drawing.Color.White;
+            this.aButton1.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.aButton1.Location = new System.Drawing.Point(650, 24);
+            this.aButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.aButton1.Name = "aButton1";
+            this.aButton1.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.aButton1.Size = new System.Drawing.Size(200, 30);
+            this.aButton1.TabIndex = 2;
+            this.aButton1.Text = "Tìm kiếm";
+            this.aButton1.TextColor = System.Drawing.Color.White;
+            this.aButton1.ThinknessLine = 0;
+            this.aButton1.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            panel1.Controls.Add(aComboBox1);
-            panel1.Controls.Add(aButton1);
-            panel1.Controls.Add(aTextboxuc1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1500, 68);
-            panel1.TabIndex = 3;
+            this.panel1.Controls.Add(this.aButton1);
+            this.panel1.Controls.Add(this.aTextboxuc1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1500, 54);
+            this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
-            panel2.Location = new Point(50, 100);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1400, 71);
-            panel2.TabIndex = 4;
+            this.panel2.Location = new System.Drawing.Point(50, 80);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1400, 57);
+            this.panel2.TabIndex = 4;
             // 
             // SearchFlightTicketUC
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 245, 248);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Name = "SearchFlightTicketUC";
-            Size = new Size(1500, 720);
-            panel1.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "SearchFlightTicketUC";
+            this.Size = new System.Drawing.Size(1500, 665);
+            this.panel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private AControls.AComboBox aComboBox1;
         private AControls.ATextboxUC aTextboxuc1;
         private AControls.AButton aButton1;
         private Panel panel1;

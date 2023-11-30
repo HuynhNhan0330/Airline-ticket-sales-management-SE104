@@ -99,16 +99,16 @@
     <Compile Include="DTOs\PlaneDTO.cs" />
     <Compile Include="DTOs\SeatDTO.cs" />
     <Compile Include="DTOs\TicketClassDTO.cs" />
-    <Compile Include="FormAdminHome.cs">
+    <Compile Include="View\Admin\FormAdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAdminHome.Designer.cs">
+    <Compile Include="View\Admin\FormAdminHome.Designer.cs">
       <DependentUpon>FormAdminHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeAdminUC.cs">
+    <Compile Include="View\Admin\HomeAdminUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomeAdminUC.Designer.cs">
+    <Compile Include="View\Admin\HomeAdminUC.Designer.cs">
       <DependentUpon>HomeAdminUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\AIRPORT.cs">
@@ -166,10 +166,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\FlightService.cs" />
-    <Compile Include="SettingUC.cs">
+    <Compile Include="View\Admin\Setting\SettingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SettingUC.Designer.cs">
+    <Compile Include="View\Admin\Setting\SettingUC.Designer.cs">
       <DependentUpon>SettingUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Usercontrols\AirportItemUC.cs">
@@ -289,16 +289,34 @@
     <Compile Include="View\Admin\Report\ReportUC.Designer.cs">
       <DependentUpon>ReportUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\TicketPlane\CreateFlightTicketUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\TicketPlane\CreateFlightTicketUC.Designer.cs">
+      <DependentUpon>CreateFlightTicketUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\TicketPlane\FlightTicketUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\TicketPlane\FlightTicketUC.Designer.cs">
+      <DependentUpon>FlightTicketUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\TicketPlane\SearchFlightTicketUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\TicketPlane\SearchFlightTicketUC.Designer.cs">
+      <DependentUpon>SearchFlightTicketUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AControls\AMessageBoxFrm.resx">
       <DependentUpon>AMessageBoxFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AControls\ATextboxUC.resx">
       <DependentUpon>ATextboxUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAdminHome.resx">
+    <EmbeddedResource Include="View\Admin\FormAdminHome.resx">
       <DependentUpon>FormAdminHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeAdminUC.resx">
+    <EmbeddedResource Include="View\Admin\HomeAdminUC.resx">
       <DependentUpon>HomeAdminUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -311,7 +329,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SettingUC.resx">
+    <EmbeddedResource Include="View\Admin\Setting\SettingUC.resx">
       <DependentUpon>SettingUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\AirportItemUC.resx">
@@ -370,6 +388,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Admin\Report\ReportUC.resx">
       <DependentUpon>ReportUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\TicketPlane\CreateFlightTicketUC.resx">
+      <DependentUpon>CreateFlightTicketUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\TicketPlane\FlightTicketUC.resx">
+      <DependentUpon>FlightTicketUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\TicketPlane\SearchFlightTicketUC.resx">
+      <DependentUpon>SearchFlightTicketUC.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\FlightTicketManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
