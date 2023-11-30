@@ -71,15 +71,16 @@ namespace Airline_ticket_sales_management
             this.abtnSearch.Font = new System.Drawing.Font("Arial", 12F);
             this.abtnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnSearch.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnSearch.Location = new System.Drawing.Point(225, 24);
+            this.abtnSearch.Location = new System.Drawing.Point(255, 24);
             this.abtnSearch.Name = "abtnSearch";
             this.abtnSearch.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Top;
-            this.abtnSearch.Size = new System.Drawing.Size(139, 60);
+            this.abtnSearch.Size = new System.Drawing.Size(150, 60);
             this.abtnSearch.TabIndex = 1;
             this.abtnSearch.Text = "Tra cứu";
             this.abtnSearch.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnSearch.ThinknessLine = 0;
             this.abtnSearch.UseVisualStyleBackColor = false;
+            this.abtnSearch.Click += new System.EventHandler(this.abtnSearch_Click);
             // 
             // abtnCreateFlightTicket
             // 
@@ -96,12 +97,13 @@ namespace Airline_ticket_sales_management
             this.abtnCreateFlightTicket.Location = new System.Drawing.Point(50, 24);
             this.abtnCreateFlightTicket.Name = "abtnCreateFlightTicket";
             this.abtnCreateFlightTicket.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Top;
-            this.abtnCreateFlightTicket.Size = new System.Drawing.Size(139, 60);
+            this.abtnCreateFlightTicket.Size = new System.Drawing.Size(180, 60);
             this.abtnCreateFlightTicket.TabIndex = 0;
             this.abtnCreateFlightTicket.Text = "Tạo vé\r\nmáy bay";
             this.abtnCreateFlightTicket.TextColor = System.Drawing.Color.White;
             this.abtnCreateFlightTicket.ThinknessLine = 0;
             this.abtnCreateFlightTicket.UseVisualStyleBackColor = false;
+            this.abtnCreateFlightTicket.Click += new System.EventHandler(this.abtnCreateFlightTicket_Click);
             // 
             // pnBodyFlightTicket
             // 
