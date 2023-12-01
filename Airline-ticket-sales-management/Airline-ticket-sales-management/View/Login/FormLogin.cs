@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Airline_ticket_sales_management
 {
-    public partial class FrmLogin : Form
+    public partial class FormLogin : Form
     {
-        public FrmLogin()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -28,15 +28,15 @@ namespace Airline_ticket_sales_management
             this.Region = new Region(path);
         }
 
-        public void pibClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         public void loadBody(UserControl uc)
         {
             apnMain.Controls.Clear();
             apnMain.Controls.Add(uc);
+        }
+
+        private void pibClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

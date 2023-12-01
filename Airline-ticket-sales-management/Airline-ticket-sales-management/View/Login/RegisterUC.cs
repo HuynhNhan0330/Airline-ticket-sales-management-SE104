@@ -16,5 +16,39 @@ namespace Airline_ticket_sales_management
         {
             InitializeComponent();
         }
+
+        private void lbLogin_Click(object sender, EventArgs e)
+        {
+            FormLogin currentForm = FindForm() as FormLogin;
+            currentForm.loadBody(new LoginUC());
+        }
+
+        private void pibHideViewPassword_Click(object sender, EventArgs e)
+        {
+            if(atxbPassword.PasswordChar)
+            {
+                atxbPassword.PasswordChar = false;
+                pibHideViewPassword.BackgroundImage = Properties.Resources.hide;
+            }
+            else
+            {
+                atxbPassword.PasswordChar = true;
+                pibHideViewPassword.BackgroundImage = Properties.Resources.view;
+            }
+        }
+
+        private void pibHideViewRePassword_Click(object sender, EventArgs e)
+        {
+            if (atxbRePassword.PasswordChar)
+            {
+                atxbRePassword.PasswordChar = false;
+                pibHideViewRePassword.BackgroundImage = Properties.Resources.hide;
+            }
+            else
+            {
+                atxbRePassword.PasswordChar = true;
+                pibHideViewRePassword.BackgroundImage = Properties.Resources.view;
+            }
+        }
     }
 }

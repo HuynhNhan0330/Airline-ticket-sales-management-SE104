@@ -30,14 +30,22 @@ namespace Airline_ticket_sales_management
 
         private void lbRegister_Click(object sender, EventArgs e)
         {
-            FrmLogin currentForm = FindForm() as FrmLogin;
+            FormLogin currentForm = FindForm() as FormLogin;
             currentForm.loadBody(new RegisterUC());
         }
 
-        private void lbForgotPassword_Click(object sender, EventArgs e)
+        private void pibHideViewPassword_Click(object sender, EventArgs e)
         {
-            FrmLogin currentForm = FindForm() as FrmLogin;
-            currentForm.loadBody(new ForgotPassword1());
+            if (atxbPassword.PasswordChar)
+            {
+                atxbPassword.PasswordChar = false;
+                pibHideViewPassword.BackgroundImage = Properties.Resources.hide;
+            }
+            else
+            {
+                atxbPassword.PasswordChar = true;
+                pibHideViewPassword.BackgroundImage = Properties.Resources.view;
+            }
         }
     }
 }

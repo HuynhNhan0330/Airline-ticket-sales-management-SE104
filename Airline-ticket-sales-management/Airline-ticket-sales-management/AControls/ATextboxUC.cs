@@ -20,7 +20,13 @@ namespace Airline_ticket_sales_management.AControls
         private Color borderFocusColor = Color.HotPink;
         private int borderSize = 2;
         private bool underlinedStyle = false;
-        private bool isFocused = false;
+        
+        private bool _isFocused = false;
+        public bool isFocused
+        {
+            get { return _isFocused; }
+            set { _isFocused = value; }
+        }
 
         private int borderRadius = 0;
         private Color placeholderColor = Color.DarkGray;
@@ -337,11 +343,10 @@ namespace Airline_ticket_sales_management.AControls
                 textBox1.ForeColor = placeholderColor;
                 if (isPasswordChar)
                     textBox1.UseSystemPasswordChar = false;
-
             }
 
         }
-        private void RemovePlaceholder()
+        public void RemovePlaceholder()
         {
             if (isPlaceholder && placeholderText != "")
             {
@@ -450,7 +455,14 @@ namespace Airline_ticket_sales_management.AControls
             textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
         }
 
-        
+        public void focusTextbox()
+        {
+            textBox1.Focus();
+
+            isFocused = true;
+            this.Invalidate();
+            RemovePlaceholder();
+        }
     }
 }
 

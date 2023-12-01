@@ -55,9 +55,13 @@ namespace Airline_ticket_sales_management.Usercontrols
             }
         }
 
-        public PlaneTicketClassItemUC()
+        private string type;
+
+        public PlaneTicketClassItemUC(string type = "")
         {
             InitializeComponent();
+
+            this.type = type;
         }
 
         private void PlaneTicketClassItemUC_Load(object sender, EventArgs e)
@@ -67,6 +71,11 @@ namespace Airline_ticket_sales_management.Usercontrols
 
         private void PlaneTicketClassItemUC_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(this.type))
+            {
+                return;
+            }
+
             Control ctrParent = this.Parent;
             while (!(ctrParent is OperationPlaneUC))
                 ctrParent = ctrParent.Parent;

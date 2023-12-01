@@ -19,7 +19,7 @@ namespace Airline_ticket_sales_management
 
         private void abtnSubmit_Click(object sender, EventArgs e)
         {
-            FrmLogin currentForm = FindForm() as FrmLogin;
+            FormLogin currentForm = FindForm() as FormLogin;
             currentForm.loadBody(new LoginUC());
         }
     }

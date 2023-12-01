@@ -50,7 +50,7 @@ namespace Airline_ticket_sales_management
 
         private void addTicketClassItem(TicketClassDTO ticketClass, int colorPosition)
         {
-            PlaneTicketClassItemUC uc = new PlaneTicketClassItemUC();
+            PlaneTicketClassItemUC uc = new PlaneTicketClassItemUC("TicketFlight");
             uc.TicketClass = ticketClass;
             ticketClass.ColorTicketClass = ColorTranslator.FromHtml(ColorCodes.ColorList[colorPosition]);
             uc._BackgroundColor = ticketClass.ColorTicketClass;

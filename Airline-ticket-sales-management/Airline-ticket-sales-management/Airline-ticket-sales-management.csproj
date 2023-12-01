@@ -99,6 +99,12 @@
     <Compile Include="DTOs\PlaneDTO.cs" />
     <Compile Include="DTOs\SeatDTO.cs" />
     <Compile Include="DTOs\TicketClassDTO.cs" />
+    <Compile Include="View\Login\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\FormAdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,12 +331,6 @@
     <Compile Include="View\Login\ForgotPassword3.Designer.cs">
       <DependentUpon>ForgotPassword3.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Login\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Login\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Login\LoginUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -348,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AControls\ATextboxUC.resx">
       <DependentUpon>ATextboxUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Admin\FormAdminHome.resx">
       <DependentUpon>FormAdminHome.cs</DependentUpon>
@@ -442,9 +445,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login\ForgotPassword3.resx">
       <DependentUpon>ForgotPassword3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Login\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login\LoginUC.resx">
       <DependentUpon>LoginUC.cs</DependentUpon>
