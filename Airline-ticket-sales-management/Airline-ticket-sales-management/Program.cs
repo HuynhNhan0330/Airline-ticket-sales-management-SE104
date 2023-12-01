@@ -13,7 +13,7 @@ namespace Airline_ticket_sales_management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAdminHome());
+            Application.Run(new FrmLogin());
         }
     }
 }

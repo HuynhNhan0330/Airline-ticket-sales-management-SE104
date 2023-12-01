@@ -307,6 +307,42 @@
     <Compile Include="View\Admin\TicketPlane\SearchFlightTicketUC.Designer.cs">
       <DependentUpon>SearchFlightTicketUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Login\ForgotPassword1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Login\ForgotPassword1.Designer.cs">
+      <DependentUpon>ForgotPassword1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\ForgotPassword2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Login\ForgotPassword2.Designer.cs">
+      <DependentUpon>ForgotPassword2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\ForgotPassword3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Login\ForgotPassword3.Designer.cs">
+      <DependentUpon>ForgotPassword3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\LoginUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Login\LoginUC.Designer.cs">
+      <DependentUpon>LoginUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\RegisterUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Login\RegisterUC.Designer.cs">
+      <DependentUpon>RegisterUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AControls\AMessageBoxFrm.resx">
       <DependentUpon>AMessageBoxFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +434,24 @@
     <EmbeddedResource Include="View\Admin\TicketPlane\SearchFlightTicketUC.resx">
       <DependentUpon>SearchFlightTicketUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\ForgotPassword1.resx">
+      <DependentUpon>ForgotPassword1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\ForgotPassword2.resx">
+      <DependentUpon>ForgotPassword2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\ForgotPassword3.resx">
+      <DependentUpon>ForgotPassword3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\LoginUC.resx">
+      <DependentUpon>LoginUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\RegisterUC.resx">
+      <DependentUpon>RegisterUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model\FlightTicketManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FlightTicketManagement.Designer.cs</LastGenOutput>
@@ -478,6 +532,7 @@
       <DependentUpon>FlightTicketManagement.edmx</DependentUpon>
       <LastGenOutput>FlightTicketManagement.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\flight.jpg" />
     <None Include="Resources\TicketIcon.png" />
     <None Include="Resources\PlaneFlightIcon.png" />
     <None Include="Resources\MoneyIcon.png" />
