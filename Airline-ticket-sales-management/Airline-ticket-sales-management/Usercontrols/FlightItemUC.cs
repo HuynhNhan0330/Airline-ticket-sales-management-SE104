@@ -1,5 +1,7 @@
-﻿using Airline_ticket_sales_management.DALs;
+﻿using Airline_ticket_sales_management.AControls;
+using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
+using Airline_ticket_sales_management.Service;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -100,6 +102,38 @@ namespace Airline_ticket_sales_management.Usercontrols
             {
                 EmptySeat += ftcd.SeatRemaining;
                 ReservedSeat += ftcd.TicketSold;
+            }
+        }
+
+        private void lbFlightDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pibEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pibDelete_Click(object sender, EventArgs e)
+        {
+            AMessageBoxFrm ms = new AMessageBoxFrm("Xác nhận xoá", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ms.ShowDialog() == DialogResult.Yes)
+                deleteFlight();
+        }
+
+        private async void deleteFlight()
+        {
+            (bool isDelete, string label) = await FlightService.Ins.deleteFlight(flight.FlightID);
+            if (isDelete)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ms.ShowDialog();
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
             }
         }
     }

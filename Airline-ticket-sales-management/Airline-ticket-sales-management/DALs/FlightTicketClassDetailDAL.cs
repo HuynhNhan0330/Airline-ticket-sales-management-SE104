@@ -90,25 +90,25 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, string)> deleteAirport(AirportDTO airport)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            AIRPORT airportDelete = context.AIRPORTs.FirstOrDefault(ap => ap.AirportID == airport.AirportID);
+        public async Task<(bool, string)> deleteFlightTicketClassDetail(string flightID)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var flightTicketClassDetailDelete = context.FLIGHT_TICKET_CLASS_DETAIL.Where(ftcd => ftcd.FlightID == flightID).ToList();
 
-        //            context.AIRPORTs.Remove(airportDelete);
-        //            context.SaveChanges();
+                    context.FLIGHT_TICKET_CLASS_DETAIL.RemoveRange(flightTicketClassDetailDelete);
+                    context.SaveChanges();
 
-        //            return (true, "Xoá thành công");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message);
-        //    }
-        //}
+                    return (true, "Xoá thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
 
         //public async Task<(bool, string)> updateAirport(AirportDTO airport)
         //{

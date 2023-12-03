@@ -228,6 +228,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.lbFlightDetail.Size = new System.Drawing.Size(118, 16);
             this.lbFlightDetail.TabIndex = 17;
             this.lbFlightDetail.Text = "Chi tiết chuyến bay";
+            this.lbFlightDetail.Click += new System.EventHandler(this.lbFlightDetail_Click);
             // 
             // pibDelete
             // 
@@ -239,6 +240,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.pibDelete.Size = new System.Drawing.Size(40, 40);
             this.pibDelete.TabIndex = 19;
             this.pibDelete.TabStop = false;
+            this.pibDelete.Click += new System.EventHandler(this.pibDelete_Click);
             // 
             // pibEdit
             // 
@@ -250,6 +252,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.pibEdit.Size = new System.Drawing.Size(40, 40);
             this.pibEdit.TabIndex = 18;
             this.pibEdit.TabStop = false;
+            this.pibEdit.Click += new System.EventHandler(this.pibEdit_Click);
             // 
             // pnReservedSeat
             // 

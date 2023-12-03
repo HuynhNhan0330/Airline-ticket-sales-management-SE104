@@ -1,6 +1,7 @@
 ﻿using Airline_ticket_sales_management.AControls;
 using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
+using Airline_ticket_sales_management.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,24 @@ namespace Airline_ticket_sales_management.Service
                 return (true, -1, label, newID);
             else
                 return (false, -1, label, null);
+        }
+
+        public async Task<(bool, string)> deleteFlight(string flightID)
+        {
+            (bool isDeleteFlightTicketClassDetail, string label) = await FlightTicketClassDetailDAL.Ins.deleteFlightTicketClassDetail(flightID);
+            if (isDeleteFlightTicketClassDetail)
+            {
+                (bool isDeleteFlightDetail, string label1) = await PreventiveAirportDAL.Ins.deletePreventiveAirport(flightID);
+                if (isDeleteFlightDetail)
+                {
+                    (bool isDeleteFlight, string label2) = await FlightDAL.Ins.deleteFlight(flightID);
+                    return (isDeleteFlight, label2);
+                }
+                else
+                    return (isDeleteFlightDetail, label1);
+            }
+            else
+                return (isDeleteFlightTicketClassDetail, label);
         }
     }
 }
