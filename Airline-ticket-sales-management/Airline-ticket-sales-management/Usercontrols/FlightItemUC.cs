@@ -127,6 +127,14 @@ namespace Airline_ticket_sales_management.Usercontrols
             (bool isDelete, string label) = await FlightService.Ins.deleteFlight(flight.FlightID);
             if (isDelete)
             {
+                Control uc = this.Parent;
+                
+                while (!(uc is FlightListUC))
+                    uc = uc.Parent;
+
+                FlightListUC flightListUC = uc as FlightListUC;
+                flightListUC.deleteFlightItem(this);
+
                 AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ms.ShowDialog();
             }

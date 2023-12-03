@@ -55,5 +55,13 @@ namespace Airline_ticket_sales_management
         {
             loadDataFlight();
         }
+
+        public void deleteFlightItem(Control uc)
+        {
+            int indexRemove = pnFlightList.Controls.IndexOf(uc);
+
+            pnFlightList.Controls.RemoveAt(indexRemove);
+            pnFlightList.Controls.RemoveAt(indexRemove - 1);
+        }
     }
 }
