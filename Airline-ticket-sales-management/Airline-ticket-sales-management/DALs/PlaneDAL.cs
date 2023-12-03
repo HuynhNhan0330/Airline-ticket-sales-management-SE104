@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Airline_ticket_sales_management.DALs
 {
@@ -144,6 +145,51 @@ namespace Airline_ticket_sales_management.DALs
                     }
 
                     return (null, "Không tồn tại máy bay tìm kiếm");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (null, ex.Message);
+            }
+        }
+
+        public async Task<(List<PlaneTicketClassDetailDTO>, string)> getPlaneTicketClassDetail(string planeID)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    (bool isGetSeat, List<SeatDTO> seats, string label) = await SeatDAL.Ins.getSeats(planeID);
+
+                    List <PlaneTicketClassDetailDTO> PlaneTicketClassDetails = new List<PlaneTicketClassDetailDTO>();
+
+                    if (isGetSeat)
+                    {
+                        foreach (SeatDTO seat in seats)
+                        {
+                            PlaneTicketClassDetailDTO PlaneTicketClassDetail = PlaneTicketClassDetails.FirstOrDefault(ptcd => ptcd.TicketClass.TicketClassID == seat.TicketClass.TicketClassID);
+
+                            if (PlaneTicketClassDetail == null)
+                            {
+                                PlaneTicketClassDetail = new PlaneTicketClassDetailDTO
+                                {
+                                    PlaneID = planeID,
+                                    TicketClass = seat.TicketClass,
+                                    Quantity = 1
+                                };
+
+                                PlaneTicketClassDetails.Add(PlaneTicketClassDetail);
+                            }
+                            else
+                                ++PlaneTicketClassDetail.Quantity;
+                        }
+
+                        return (PlaneTicketClassDetails, "Lấy danh sách chi tiết hạng vé máy bay thành công!");
+                    }
+                    else
+                    {
+                        return (null, label);
+                    }
                 }
             }
             catch (Exception ex)

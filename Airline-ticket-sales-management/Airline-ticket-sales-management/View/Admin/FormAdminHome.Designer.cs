@@ -68,7 +68,7 @@
             this.pnMenu.Controls.Add(this.abtnFlight);
             this.pnMenu.Location = new System.Drawing.Point(200, 52);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(900, 48);
+            this.pnMenu.Size = new System.Drawing.Size(998, 48);
             this.pnMenu.TabIndex = 3;
             // 
             // abtnSetting
@@ -84,7 +84,7 @@
             this.abtnSetting.Font = new System.Drawing.Font("Arial", 12F);
             this.abtnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnSetting.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnSetting.Location = new System.Drawing.Point(750, 0);
+            this.abtnSetting.Location = new System.Drawing.Point(825, 0);
             this.abtnSetting.Name = "abtnSetting";
             this.abtnSetting.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
             this.abtnSetting.Size = new System.Drawing.Size(150, 48);
@@ -111,9 +111,9 @@
             this.aButton5.Location = new System.Drawing.Point(600, 0);
             this.aButton5.Name = "aButton5";
             this.aButton5.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton5.Size = new System.Drawing.Size(150, 48);
+            this.aButton5.Size = new System.Drawing.Size(225, 48);
             this.aButton5.TabIndex = 8;
-            this.aButton5.Text = "Liên hệ";
+            this.aButton5.Text = "Tài khoản và quyền";
             this.aButton5.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.aButton5.ThinknessLine = 5;
             this.aButton5.UseVisualStyleBackColor = false;

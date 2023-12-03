@@ -53,7 +53,6 @@ namespace Airline_ticket_sales_management
             this.label1 = new System.Windows.Forms.Label();
             this.aTextboxUC3 = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.aTextboxUC2 = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.aTextboxUC1 = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.aButton1 = new Airline_ticket_sales_management.AControls.AButton();
             this.aDateTimePicker1 = new Airline_ticket_sales_management.AControls.ADateTimePicker();
             this.pnHeader.SuspendLayout();
@@ -73,7 +72,7 @@ namespace Airline_ticket_sales_management
             this.pnFlightList.AutoScroll = true;
             this.pnFlightList.Location = new System.Drawing.Point(50, 120);
             this.pnFlightList.Name = "pnFlightList";
-            this.pnFlightList.Size = new System.Drawing.Size(1400, 432);
+            this.pnFlightList.Size = new System.Drawing.Size(1400, 520);
             this.pnFlightList.TabIndex = 5;
             // 
             // pnHeader
@@ -96,16 +95,16 @@ namespace Airline_ticket_sales_management
             // 
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(1030, 0);
+            this.panel1.Location = new System.Drawing.Point(1110, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 48);
+            this.panel1.Size = new System.Drawing.Size(290, 48);
             this.panel1.TabIndex = 8;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label9.Location = new System.Drawing.Point(143, 12);
+            this.label9.Location = new System.Drawing.Point(101, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 24);
             this.label9.TabIndex = 1;
@@ -116,19 +115,19 @@ namespace Airline_ticket_sales_management
             // 
             this.panel9.Controls.Add(this.label8);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(960, 0);
+            this.panel9.Location = new System.Drawing.Point(990, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(70, 48);
+            this.panel9.Size = new System.Drawing.Size(120, 48);
             this.panel9.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label8.Location = new System.Drawing.Point(3, 5);
-            this.label8.MaximumSize = new System.Drawing.Size(65, 0);
+            this.label8.Location = new System.Drawing.Point(8, 12);
+            this.label8.MaximumSize = new System.Drawing.Size(200, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 48);
+            this.label8.Size = new System.Drawing.Size(104, 24);
             this.label8.TabIndex = 1;
             this.label8.Text = "Ghế đã đặt";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,17 +138,17 @@ namespace Airline_ticket_sales_management
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(890, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(70, 48);
+            this.panel8.Size = new System.Drawing.Size(100, 48);
             this.panel8.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label7.Location = new System.Drawing.Point(9, 6);
-            this.label7.MaximumSize = new System.Drawing.Size(60, 0);
+            this.label7.Location = new System.Drawing.Point(5, 12);
+            this.label7.MaximumSize = new System.Drawing.Size(100, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 44);
+            this.label7.Size = new System.Drawing.Size(90, 22);
             this.label7.TabIndex = 1;
             this.label7.Text = "Ghế trống";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,12 +282,13 @@ namespace Airline_ticket_sales_management
             this.aTextboxUC3.BorderSize = 2;
             this.aTextboxUC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.aTextboxUC3.ForeColor = System.Drawing.Color.DimGray;
+            this.aTextboxUC3.isFocused = false;
             this.aTextboxUC3.isPlaceholder = true;
-            this.aTextboxUC3.Location = new System.Drawing.Point(675, 24);
-            this.aTextboxUC3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aTextboxUC3.Location = new System.Drawing.Point(725, 25);
+            this.aTextboxUC3.Margin = new System.Windows.Forms.Padding(4);
             this.aTextboxUC3.Multiline = false;
             this.aTextboxUC3.Name = "aTextboxUC3";
-            this.aTextboxUC3.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.aTextboxUC3.Padding = new System.Windows.Forms.Padding(7);
             this.aTextboxUC3.PasswordChar = false;
             this.aTextboxUC3.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.aTextboxUC3.PlaceholderText = "Nơi hạ cánh";
@@ -308,12 +308,13 @@ namespace Airline_ticket_sales_management
             this.aTextboxUC2.BorderSize = 2;
             this.aTextboxUC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.aTextboxUC2.ForeColor = System.Drawing.Color.DimGray;
+            this.aTextboxUC2.isFocused = false;
             this.aTextboxUC2.isPlaceholder = true;
-            this.aTextboxUC2.Location = new System.Drawing.Point(467, 24);
-            this.aTextboxUC2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aTextboxUC2.Location = new System.Drawing.Point(500, 25);
+            this.aTextboxUC2.Margin = new System.Windows.Forms.Padding(4);
             this.aTextboxUC2.Multiline = false;
             this.aTextboxUC2.Name = "aTextboxUC2";
-            this.aTextboxUC2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.aTextboxUC2.Padding = new System.Windows.Forms.Padding(7);
             this.aTextboxUC2.PasswordChar = false;
             this.aTextboxUC2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.aTextboxUC2.PlaceholderText = "Nơi cất cánh";
@@ -324,37 +325,12 @@ namespace Airline_ticket_sales_management
             this.aTextboxUC2.Texts = "";
             this.aTextboxUC2.UnderlinedStyle = false;
             // 
-            // aTextboxUC1
-            // 
-            this.aTextboxUC1.BackColor = System.Drawing.Color.White;
-            this.aTextboxUC1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aTextboxUC1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.aTextboxUC1.BorderRadius = 5;
-            this.aTextboxUC1.BorderSize = 2;
-            this.aTextboxUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.aTextboxUC1.ForeColor = System.Drawing.Color.DimGray;
-            this.aTextboxUC1.isPlaceholder = true;
-            this.aTextboxUC1.Location = new System.Drawing.Point(50, 25);
-            this.aTextboxUC1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.aTextboxUC1.Multiline = false;
-            this.aTextboxUC1.Name = "aTextboxUC1";
-            this.aTextboxUC1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.aTextboxUC1.PasswordChar = false;
-            this.aTextboxUC1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.aTextboxUC1.PlaceholderText = "Mã chuyến bay";
-            this.aTextboxUC1.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.aTextboxUC1.Size = new System.Drawing.Size(200, 37);
-            this.aTextboxUC1.TabIndex = 0;
-            this.aTextboxUC1.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.aTextboxUC1.Texts = "";
-            this.aTextboxUC1.UnderlinedStyle = false;
-            // 
             // aButton1
             // 
             this.aButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.aButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.aButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aButton1.BorderRadius = 10;
+            this.aButton1.BorderRadius = 15;
             this.aButton1.BorderSize = 0;
             this.aButton1.FlatAppearance.BorderSize = 0;
             this.aButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -365,7 +341,7 @@ namespace Airline_ticket_sales_management
             this.aButton1.Location = new System.Drawing.Point(1330, 24);
             this.aButton1.Name = "aButton1";
             this.aButton1.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton1.Size = new System.Drawing.Size(120, 33);
+            this.aButton1.Size = new System.Drawing.Size(120, 37);
             this.aButton1.TabIndex = 4;
             this.aButton1.Text = "Tìm kiếm";
             this.aButton1.TextColor = System.Drawing.Color.White;
@@ -377,13 +353,13 @@ namespace Airline_ticket_sales_management
             this.aDateTimePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.aDateTimePicker1.BorderSize = 2;
             this.aDateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.aDateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.aDateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.aDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.aDateTimePicker1.Location = new System.Drawing.Point(260, 26);
+            this.aDateTimePicker1.Location = new System.Drawing.Point(275, 25);
             this.aDateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.aDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.aDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 30);
             this.aDateTimePicker1.Name = "aDateTimePicker1";
-            this.aDateTimePicker1.Size = new System.Drawing.Size(200, 35);
+            this.aDateTimePicker1.Size = new System.Drawing.Size(200, 30);
             this.aDateTimePicker1.SkinColor = System.Drawing.Color.White;
             this.aDateTimePicker1.TabIndex = 6;
             this.aDateTimePicker1.TextColor = System.Drawing.Color.Black;
@@ -399,10 +375,10 @@ namespace Airline_ticket_sales_management
             this.Controls.Add(this.aButton1);
             this.Controls.Add(this.aTextboxUC3);
             this.Controls.Add(this.aTextboxUC2);
-            this.Controls.Add(this.aTextboxUC1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.Name = "FlightListUC";
-            this.Size = new System.Drawing.Size(1500, 576);
+            this.Size = new System.Drawing.Size(1500, 665);
+            this.Load += new System.EventHandler(this.FlightListUC_Load);
             this.pnHeader.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -427,7 +403,6 @@ namespace Airline_ticket_sales_management
         }
 
         #endregion
-        private AControls.ATextboxUC aTextboxUC1;
         private AControls.ATextboxUC aTextboxUC2;
         private AControls.ATextboxUC aTextboxUC3;
         private AControls.AButton aButton1;

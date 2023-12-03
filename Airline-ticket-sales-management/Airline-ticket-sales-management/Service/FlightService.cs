@@ -40,7 +40,7 @@ namespace Airline_ticket_sales_management.Service
             flight.DepartureAirportCode = departureAirportFind.AirportID;
             flight.ArrivalAirportCode = arrivalAirportFind.AirportID;
 
-            (bool isCreateFlight, string label, string newID) = await FlightDAL.Ins.createAirport(flight);
+            (bool isCreateFlight, string label, string newID) = await FlightDAL.Ins.createFlight(flight);
 
             if (isCreateFlight)
                 return (true, -1, label, newID);

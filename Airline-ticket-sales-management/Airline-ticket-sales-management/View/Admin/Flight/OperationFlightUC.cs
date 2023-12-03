@@ -6,10 +6,12 @@ using Airline_ticket_sales_management.Service;
 using Airline_ticket_sales_management.Usercontrols;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -135,64 +137,83 @@ namespace Airline_ticket_sales_management
 
         private async void createFlight(FlightDTO flight)
         {
-            (bool isCreateFlight, int type, string label, string flightID) = await FlightService.Ins.createFlight(flight);
+            List<PreventiveAirportDTO> preventiveAirports = await getFlightDetail();
 
-            if (isCreateFlight)
+            if (preventiveAirports != null)
             {
-                bool isCreatePreventive = true;
-                
-                List<PreventiveAirportDTO> preventiveAirports = new List<PreventiveAirportDTO>();
+                (bool isCreateFlight, int type, string label, string flightID) = await FlightService.Ins.createFlight(flight);
 
-                for (int index = pnPreventiveAirport.Controls.Count - 1; index >= 0; --index)
-                {
-                    PreventiveAirportItemUC ctr = pnPreventiveAirport.Controls[index] as PreventiveAirportItemUC;
-
-                    PreventiveAirportDTO preventiveAirportDTO = await ctr.getPreventiveAirport();
-                    if (preventiveAirportDTO == null)
-                    {
-                        ctr.Focus();
-                        isCreatePreventive = false;
-                        AMessageBoxFrm ms1 = new AMessageBoxFrm("Lỗi tại sân bay trung gian thứ " + ctr.stt.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        ms1.ShowDialog();
-                    }
-                    else
-                        preventiveAirports.Add(preventiveAirportDTO);
-                }
-
-                if (isCreatePreventive)
+                if (isCreateFlight)
                 {
                     (bool isCreateDetailFlight, string label1) = await PreventiveAirportDAL.Ins.createFlightDetail(preventiveAirports, flightID);
-
+                    
                     if (isCreateDetailFlight)
                     {
+                        flight.FlightID = flightID;
+                        createFlightTicketClassDetail(flight);
+
                         AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ms.ShowDialog();
                     }
                     else
                     {
-                        AMessageBoxFrm ms = new AMessageBoxFrm(label1, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        AMessageBoxFrm ms = new AMessageBoxFrm(label1, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         ms.ShowDialog();
                     }
                 }
-            }
-            else
-            {
-                switch (type)
+                else
                 {
-                    case 0:
-                        atxbDepartureAirport.Focus();
-                        break;
+                    switch (type)
+                    {
+                        case 0:
+                            atxbDepartureAirport.Focus();
+                            break;
 
-                    case 1:
-                        atxbArrivalAirport.Focus();
-                        break;
+                        case 1:
+                            atxbArrivalAirport.Focus();
+                            break;
 
-                    case 2:
-                        atxbPlaneID.Focus();
-                        break;
+                        case 2:
+                            atxbPlaneID.Focus();
+                            break;
+                    }
+
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
                 }
 
-                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async Task<List<PreventiveAirportDTO>> getFlightDetail()
+        {
+            List<PreventiveAirportDTO> preventiveAirports = new List<PreventiveAirportDTO>();
+
+            for (int index = pnPreventiveAirport.Controls.Count - 1; index >= 0; --index)
+            {
+                PreventiveAirportItemUC ctr = pnPreventiveAirport.Controls[index] as PreventiveAirportItemUC;
+
+                PreventiveAirportDTO preventiveAirportDTO = await ctr.getPreventiveAirport();
+                if (preventiveAirportDTO == null)
+                {
+                    ctr.Focus();
+                    AMessageBoxFrm ms1 = new AMessageBoxFrm("Lỗi tại sân bay trung gian thứ " + ctr.stt.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms1.ShowDialog();
+                    return null;
+                }
+                else
+                    preventiveAirports.Add(preventiveAirportDTO);
+            }
+
+            return preventiveAirports;
+        }
+
+        private async void createFlightTicketClassDetail(FlightDTO flight)
+        {
+            (bool isCreate, string label) = await FlightTicketClassDetailDAL.Ins.createFlgihtTicketClassDetail(flight);
+            if (!isCreate)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
         }

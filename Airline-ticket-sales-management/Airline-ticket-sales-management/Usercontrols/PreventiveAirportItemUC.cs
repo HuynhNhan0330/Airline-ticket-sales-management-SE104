@@ -66,12 +66,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             PreventiveAirportDTO preventiveAirportDTO = new PreventiveAirportDTO();
             (AirportDTO airport, string label) = await AirportDAL.Ins.findAirport(atxbPlane.Texts.Trim());
             if (airport == null)
-            {
-                AMessageBoxFrm ms = new AMessageBoxFrm("Lỗi tại sân bay trung gian thứ " + stt.ToString() + '\n' + label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ms.ShowDialog();
-                
                 return null;
-            }
             else
                 preventiveAirportDTO.PreventiveAirportID = airport.AirportID;
             

@@ -81,6 +81,37 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
+        public async Task<(bool, List<SeatDTO>, string)> getSeats(string planeID)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var SeatList = (from seat in context.SEATs
+                                    join ticketClass in context.TICKET_CLASS
+                                    on seat.TicketClassID equals ticketClass.TicketClassID
+                                    where seat.PlaneID == planeID
+                                    select new SeatDTO
+                                    {
+                                        SeatID = seat.SeatID,
+                                        PlaneID = seat.PlaneID,
+                                        TicketClass = new TicketClassDTO
+                                        {
+                                            TicketClassID = ticketClass.TicketClassID,
+                                            TicketClassName = ticketClass.TicketClassName,
+                                            PricePercentage = ticketClass.PricePercentage
+                                        }
+                                    }).ToListAsync();
+
+                    return (true, await SeatList, "Lấy danh sách ghế thành công!");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, null, ex.Message);
+            }
+        }
+
         public async Task<(bool, string)> deleteSeats(PlaneDTO plane)
         {
             try

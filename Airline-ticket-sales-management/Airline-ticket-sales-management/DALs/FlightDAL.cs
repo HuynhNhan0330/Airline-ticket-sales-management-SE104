@@ -24,7 +24,7 @@ namespace Airline_ticket_sales_management.DALs
             private set => _ins = value;
         }
 
-        public async Task<(bool, string, string)> createAirport(FlightDTO flight)
+        public async Task<(bool, string, string)> createFlight(FlightDTO flight)
         {
             try
             {
@@ -57,29 +57,40 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, List<AirportDTO>, string)> getListAirport()
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            var AirportList = (from airport in context.AIRPORTs
-        //                               select new AirportDTO
-        //                               {
-        //                                   AirportID = airport.AirportID,
-        //                                   AirportName = airport.AirportName,
-        //                                   CityName = airport.CityName,
-        //                                   CountryName = airport.CountryName,
-        //                               }).ToListAsync();
+        public async Task<(bool, List<FlightDTO>, string)> getListFlight()
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var FlightList = (from flight in context.FLIGHTs
+                                      join departureAirport in context.AIRPORTs 
+                                      on flight.DepartureAirportCode equals departureAirport.AirportID
+                                      join arrivalAirport in context.AIRPORTs 
+                                      on flight.ArrivalAirportCode equals arrivalAirport.AirportID
+                                      select new FlightDTO
+                                       {
+                                           FlightID = flight.FlightID,
+                                           PlaneID = flight.PlaneID,
+                                           DepartureAirportCode = flight.DepartureAirportCode,
+                                           DepartureAirportName = departureAirport.AirportName,
+                                           DepartureCityName = departureAirport.CityName,
+                                           ArrivalAirportCode = flight.ArrivalAirportCode,
+                                           ArrivalAirportName = arrivalAirport.AirportName,
+                                           ArrivalCityName = arrivalAirport.CityName,
+                                           TicketPrice = flight.TicketPrice,
+                                           DepartureDateTime = flight.DepartureDateTime,
+                                           FlightDuration = flight.FlightDuration,
+                                       }).ToListAsync();
 
-        //            return (true, await AirportList, "Lấy danh sách sân bay thành công!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, null, ex.Message);
-        //    }
-        //}
+                    return (true, await FlightList, "Lấy danh sách chuyến bay thành công!");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, null, ex.Message);
+            }
+        }
 
         //public async Task<(bool, string)> deleteAirport(AirportDTO airport)
         //{
