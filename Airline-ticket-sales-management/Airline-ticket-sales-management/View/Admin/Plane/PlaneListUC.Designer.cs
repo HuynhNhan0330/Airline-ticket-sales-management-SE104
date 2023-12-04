@@ -41,7 +41,7 @@ namespace Airline_ticket_sales_management
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.pnPlaneList = new System.Windows.Forms.Panel();
-            this.aTextboxUC1 = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.atxbSearch = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -148,30 +148,32 @@ namespace Airline_ticket_sales_management
             this.pnPlaneList.Size = new System.Drawing.Size(1400, 440);
             this.pnPlaneList.TabIndex = 12;
             // 
-            // aTextboxUC1
+            // atxbSearch
             // 
-            this.aTextboxUC1.BackColor = System.Drawing.Color.White;
-            this.aTextboxUC1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aTextboxUC1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.aTextboxUC1.BorderRadius = 5;
-            this.aTextboxUC1.BorderSize = 2;
-            this.aTextboxUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.aTextboxUC1.ForeColor = System.Drawing.Color.DimGray;
-            this.aTextboxUC1.isPlaceholder = true;
-            this.aTextboxUC1.Location = new System.Drawing.Point(50, 24);
-            this.aTextboxUC1.Margin = new System.Windows.Forms.Padding(4);
-            this.aTextboxUC1.Multiline = false;
-            this.aTextboxUC1.Name = "aTextboxUC1";
-            this.aTextboxUC1.Padding = new System.Windows.Forms.Padding(7);
-            this.aTextboxUC1.PasswordChar = false;
-            this.aTextboxUC1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.aTextboxUC1.PlaceholderText = "Mã máy bay";
-            this.aTextboxUC1.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.aTextboxUC1.Size = new System.Drawing.Size(200, 37);
-            this.aTextboxUC1.TabIndex = 7;
-            this.aTextboxUC1.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.aTextboxUC1.Texts = "";
-            this.aTextboxUC1.UnderlinedStyle = false;
+            this.atxbSearch.BackColor = System.Drawing.Color.White;
+            this.atxbSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.atxbSearch.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.atxbSearch.BorderRadius = 5;
+            this.atxbSearch.BorderSize = 2;
+            this.atxbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.atxbSearch.ForeColor = System.Drawing.Color.Black;
+            this.atxbSearch.isFocused = false;
+            this.atxbSearch.isPlaceholder = true;
+            this.atxbSearch.Location = new System.Drawing.Point(50, 24);
+            this.atxbSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.atxbSearch.Multiline = false;
+            this.atxbSearch.Name = "atxbSearch";
+            this.atxbSearch.Padding = new System.Windows.Forms.Padding(7);
+            this.atxbSearch.PasswordChar = false;
+            this.atxbSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbSearch.PlaceholderText = "Mã máy bay hoặc tên máy bay";
+            this.atxbSearch.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbSearch.Size = new System.Drawing.Size(300, 37);
+            this.atxbSearch.TabIndex = 7;
+            this.atxbSearch.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbSearch.Texts = "";
+            this.atxbSearch.UnderlinedStyle = false;
+            this.atxbSearch._TextChanged += new System.EventHandler(this.atxbSearch__TextChanged);
             // 
             // PlaneListUC
             // 
@@ -180,7 +182,7 @@ namespace Airline_ticket_sales_management
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
             this.Controls.Add(this.pnHeader);
             this.Controls.Add(this.pnPlaneList);
-            this.Controls.Add(this.aTextboxUC1);
+            this.Controls.Add(this.atxbSearch);
             this.Name = "PlaneListUC";
             this.Size = new System.Drawing.Size(1500, 576);
             this.Load += new System.EventHandler(this.PlaneListUC_Load);
@@ -208,6 +210,6 @@ namespace Airline_ticket_sales_management
         private Panel panel2;
         private Panel pnHeader;
         private Panel pnPlaneList;
-        private AControls.ATextboxUC aTextboxUC1;
+        private AControls.ATextboxUC atxbSearch;
     }
 }

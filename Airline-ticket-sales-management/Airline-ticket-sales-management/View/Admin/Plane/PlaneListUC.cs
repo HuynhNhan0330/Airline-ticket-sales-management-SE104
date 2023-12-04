@@ -17,6 +17,7 @@ namespace Airline_ticket_sales_management
 {
     public partial class PlaneListUC : UserControl
     {
+        private ObservableCollection<PlaneDTO> _planes;
         private ObservableCollection<PlaneDTO> planes;
 
         public PlaneListUC()
@@ -31,6 +32,8 @@ namespace Airline_ticket_sales_management
 
         private void loadPanelListPlane()
         {
+            pnPlaneList.Controls.Clear();
+
             foreach (PlaneDTO plane in planes) 
             {
                 PlaneItemUC uc = new PlaneItemUC(plane);
@@ -52,6 +55,7 @@ namespace Airline_ticket_sales_management
             (bool isGet, List<PlaneDTO> listPlane, string label) = await PlaneDAL.Ins.getListPlane();
             if (isGet)
             {
+                _planes = new ObservableCollection<PlaneDTO>(listPlane);
                 planes = new ObservableCollection<PlaneDTO>(listPlane);
                 loadPanelListPlane();
             }
@@ -68,6 +72,19 @@ namespace Airline_ticket_sales_management
 
             pnPlaneList.Controls.RemoveAt(indexRemove);
             pnPlaneList.Controls.RemoveAt(indexRemove - 1);
+        }
+
+        private void atxbSearch__TextChanged(object sender, EventArgs e)
+        {
+            planes.Clear();
+            foreach (PlaneDTO plane in _planes)
+            {
+                if (plane.PlaneName.IndexOf(atxbSearch.Texts, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    plane.PlaneID.IndexOf(atxbSearch.Texts, StringComparison.OrdinalIgnoreCase) >= 0)
+                    planes.Add(plane);
+            }
+
+            loadPanelListPlane();
         }
     }
 }
