@@ -62,7 +62,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             lbArrivalAirport.Left = (pnArrivalAirport.Width - lbArrivalAirport.Width) / 2;
             this.Height = Math.Max(this.Height, lbArrivalAirport.Height + margintb * 2);
 
-            lbArrival.Text = flight.DepartureCityName;
+            lbArrival.Text = flight.ArrivalCityName;
             lbArrival.Left = (pnArrival.Width - lbArrival.Width) / 2;
             this.Height = Math.Max(this.Height, lbArrival.Height + margintb * 2);
 

@@ -51,10 +51,10 @@ namespace Airline_ticket_sales_management
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.aButton1 = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnSearchFlight = new Airline_ticket_sales_management.AControls.AButton();
             this.aDateTimePicker1 = new Airline_ticket_sales_management.AControls.ADateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbDepatureAirport = new System.Windows.Forms.ComboBox();
+            this.cbArrivalAirport = new System.Windows.Forms.ComboBox();
             this.pnHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -273,28 +273,29 @@ namespace Airline_ticket_sales_management
             this.label1.Text = "Mã chuyến bay";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // aButton1
+            // abtnSearchFlight
             // 
-            this.aButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aButton1.BorderRadius = 15;
-            this.aButton1.BorderSize = 0;
-            this.aButton1.FlatAppearance.BorderSize = 0;
-            this.aButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton1.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.aButton1.ForeColor = System.Drawing.Color.White;
-            this.aButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.aButton1.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton1.Location = new System.Drawing.Point(1330, 24);
-            this.aButton1.Name = "aButton1";
-            this.aButton1.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton1.Size = new System.Drawing.Size(120, 37);
-            this.aButton1.TabIndex = 4;
-            this.aButton1.Text = "Tìm kiếm";
-            this.aButton1.TextColor = System.Drawing.Color.White;
-            this.aButton1.ThinknessLine = 0;
-            this.aButton1.UseVisualStyleBackColor = false;
+            this.abtnSearchFlight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnSearchFlight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnSearchFlight.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnSearchFlight.BorderRadius = 15;
+            this.abtnSearchFlight.BorderSize = 0;
+            this.abtnSearchFlight.FlatAppearance.BorderSize = 0;
+            this.abtnSearchFlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnSearchFlight.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.abtnSearchFlight.ForeColor = System.Drawing.Color.White;
+            this.abtnSearchFlight.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.abtnSearchFlight.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnSearchFlight.Location = new System.Drawing.Point(1330, 24);
+            this.abtnSearchFlight.Name = "abtnSearchFlight";
+            this.abtnSearchFlight.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnSearchFlight.Size = new System.Drawing.Size(120, 37);
+            this.abtnSearchFlight.TabIndex = 4;
+            this.abtnSearchFlight.Text = "Tìm kiếm";
+            this.abtnSearchFlight.TextColor = System.Drawing.Color.White;
+            this.abtnSearchFlight.ThinknessLine = 0;
+            this.abtnSearchFlight.UseVisualStyleBackColor = false;
+            this.abtnSearchFlight.Click += new System.EventHandler(this.abtnSearchFlight_Click);
             // 
             // aDateTimePicker1
             // 
@@ -312,37 +313,37 @@ namespace Airline_ticket_sales_management
             this.aDateTimePicker1.TabIndex = 6;
             this.aDateTimePicker1.TextColor = System.Drawing.Color.Black;
             // 
-            // comboBox1
+            // cbDepatureAirport
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(300, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 30);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "Sân bay đi";
+            this.cbDepatureAirport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cbDepatureAirport.FormattingEnabled = true;
+            this.cbDepatureAirport.Location = new System.Drawing.Point(300, 25);
+            this.cbDepatureAirport.Name = "cbDepatureAirport";
+            this.cbDepatureAirport.Size = new System.Drawing.Size(200, 30);
+            this.cbDepatureAirport.TabIndex = 7;
+            this.cbDepatureAirport.Text = "Nơi cất cánh";
             // 
-            // comboBox2
+            // cbArrivalAirport
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(550, 25);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 30);
-            this.comboBox2.TabIndex = 8;
-            this.comboBox2.Text = "Sân bay đến";
+            this.cbArrivalAirport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cbArrivalAirport.FormattingEnabled = true;
+            this.cbArrivalAirport.Location = new System.Drawing.Point(550, 25);
+            this.cbArrivalAirport.Name = "cbArrivalAirport";
+            this.cbArrivalAirport.Size = new System.Drawing.Size(200, 30);
+            this.cbArrivalAirport.TabIndex = 8;
+            this.cbArrivalAirport.Text = "Nơi hạ cánh";
             // 
             // FlightListUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbArrivalAirport);
+            this.Controls.Add(this.cbDepatureAirport);
             this.Controls.Add(this.aDateTimePicker1);
             this.Controls.Add(this.pnHeader);
             this.Controls.Add(this.pnFlightList);
-            this.Controls.Add(this.aButton1);
+            this.Controls.Add(this.abtnSearchFlight);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.Name = "FlightListUC";
             this.Size = new System.Drawing.Size(1500, 665);
@@ -371,7 +372,7 @@ namespace Airline_ticket_sales_management
         }
 
         #endregion
-        private AControls.AButton aButton1;
+        private AControls.AButton abtnSearchFlight;
         private Panel pnFlightList;
         private Panel pnHeader;
         private Panel panel6;
@@ -393,7 +394,7 @@ namespace Airline_ticket_sales_management
         private Label label3;
         private Label label2;
         private AControls.ADateTimePicker aDateTimePicker1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cbDepatureAirport;
+        private ComboBox cbArrivalAirport;
     }
 }
