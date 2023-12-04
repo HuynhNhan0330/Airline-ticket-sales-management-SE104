@@ -91,6 +91,8 @@ namespace Airline_ticket_sales_management.Usercontrols
             pibDelete.Top = (this.Height - abtnBookTicket.Height) / 2;
             pibEdit.Top = (this.Height - abtnBookTicket.Height) / 2;
             lbFlightDetail.Top = abtnBookTicket.Top + abtnBookTicket.Height + 5;
+
+            this.Height = Math.Max(this.Height, lbFlightDetail.Height + lbFlightDetail.Top + 5);
         }
 
         private async Task setFlightTicketClassDetail()
@@ -105,14 +107,17 @@ namespace Airline_ticket_sales_management.Usercontrols
             }
         }
 
-        private void lbFlightDetail_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pibEdit_Click(object sender, EventArgs e)
         {
+            Control uc = this;
 
+            while (!(uc is FlightUC))
+                uc = uc.Parent;
+
+            FlightUC ucFlight = uc as FlightUC;
+
+            ucFlight.abtnDetailFlight_Click(sender, e);
+            ucFlight.loadBody(new OperationFlightUC(this.flight));
         }
 
         private void pibDelete_Click(object sender, EventArgs e)

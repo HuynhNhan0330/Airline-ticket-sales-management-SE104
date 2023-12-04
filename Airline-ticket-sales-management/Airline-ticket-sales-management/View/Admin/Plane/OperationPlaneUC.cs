@@ -34,8 +34,6 @@ namespace Airline_ticket_sales_management
         {
             InitializeComponent();
             this.plane = plane;
-
-            
         }
 
         private async void loadSeat()

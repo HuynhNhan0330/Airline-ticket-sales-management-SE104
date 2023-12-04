@@ -19,7 +19,7 @@ namespace Airline_ticket_sales_management
             loadBody(new FlightListUC());
         }
 
-        private void loadBody(UserControl uc)
+        public void loadBody(UserControl uc)
         {
             pnBodyFlight.Controls.Clear();
             pnBodyFlight.Controls.Add(uc);
@@ -49,7 +49,7 @@ namespace Airline_ticket_sales_management
             }
         }
 
-        private void abtnListFlight_Click(object sender, EventArgs e)
+        public void abtnListFlight_Click(object sender, EventArgs e)
         {
             if (currentAbtn != abtnListFlight)
             {
@@ -61,7 +61,7 @@ namespace Airline_ticket_sales_management
             }
         }
 
-        private void abtnDetailFlight_Click(object sender, EventArgs e)
+        public void abtnDetailFlight_Click(object sender, EventArgs e)
         {
             if (currentAbtn != abtnDetailFlight)
             {
@@ -69,7 +69,7 @@ namespace Airline_ticket_sales_management
                 currentAbtn = abtnDetailFlight;
 
                 doActivateAbtn(currentAbtn);
-                loadBody(new OperationFlightUC());
+                //loadBody(new OperationFlightUC());
             }
         }
     }

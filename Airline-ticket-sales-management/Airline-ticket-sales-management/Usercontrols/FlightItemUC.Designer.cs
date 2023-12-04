@@ -223,12 +223,12 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.lbFlightDetail.AutoSize = true;
             this.lbFlightDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbFlightDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.lbFlightDetail.Location = new System.Drawing.Point(32, 53);
+            this.lbFlightDetail.Location = new System.Drawing.Point(26, 53);
             this.lbFlightDetail.Name = "lbFlightDetail";
             this.lbFlightDetail.Size = new System.Drawing.Size(118, 16);
             this.lbFlightDetail.TabIndex = 17;
             this.lbFlightDetail.Text = "Chi tiết chuyến bay";
-            this.lbFlightDetail.Click += new System.EventHandler(this.lbFlightDetail_Click);
+            this.lbFlightDetail.Click += new System.EventHandler(this.pibEdit_Click);
             // 
             // pibDelete
             // 

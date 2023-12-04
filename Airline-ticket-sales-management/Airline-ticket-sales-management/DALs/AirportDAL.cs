@@ -135,7 +135,7 @@ namespace Airline_ticket_sales_management.DALs
                 using (var context = new FlightTicketManagementEntities())
                 {
                     AIRPORT findAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportName == name || 
-                        ap.CityName + " (" + ap.CountryName + ")" == name);
+                        ap.AirportName + " (" + ap.CityName + ")" == name);
 
                     if (findAirport != null)
                     {

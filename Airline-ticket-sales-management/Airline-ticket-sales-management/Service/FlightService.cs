@@ -66,5 +66,46 @@ namespace Airline_ticket_sales_management.Service
             else
                 return (isDeleteFlightTicketClassDetail, label);
         }
+
+        public async Task<(bool, int, string)> updateFlight(FlightDTO flight, List<PreventiveAirportDTO> preventiveAirport)
+        {
+            (AirportDTO departureAirportFind, string label1) = await AirportDAL.Ins.findAirport(flight.DepartureAirportName);
+            if (departureAirportFind == null)
+                return (false, 0, label1);
+
+            (AirportDTO arrivalAirportFind, string label2) = await AirportDAL.Ins.findAirport(flight.ArrivalAirportName);
+            if (arrivalAirportFind == null)
+                return (false, 1, label2);
+
+            (PlaneDTO plane, string label3) = await PlaneDAL.Ins.findPlane(flight.PlaneID);
+            if (plane == null)
+                return (false, 2, label3);
+
+            flight.DepartureAirportCode = departureAirportFind.AirportID;
+            flight.ArrivalAirportCode = arrivalAirportFind.AirportID;
+
+            (bool isCreateFlight, string label) = await FlightDAL.Ins.updateFlight(flight);
+
+            if (isCreateFlight)
+            {
+                (bool isDeletePreventiveAirport, string label4) = await PreventiveAirportDAL.Ins.deletePreventiveAirport(flight.FlightID);
+                (bool isDeleteFlightTicketClassDetail, string label5) = await FlightTicketClassDetailDAL.Ins.deleteFlightTicketClassDetail(flight.FlightID);
+
+                if (isDeletePreventiveAirport && isDeleteFlightTicketClassDetail)
+                {
+                    (bool isCreatePreventiveAirport, string label6) = await PreventiveAirportDAL.Ins.createFlightDetail(preventiveAirport, flight.FlightID);
+                    (bool isCreateFlightTicketClassDetail, string label7) = await FlightTicketClassDetailDAL.Ins.createFlgihtTicketClassDetail(flight);
+
+                    if (isCreatePreventiveAirport && isCreateFlightTicketClassDetail)
+                        return (true, -1, label);
+
+                    return (false, -1, label);
+                }
+
+                return (false, -1, label);
+            }
+            else
+                return (false, -1, label);
+        }
     }
 }

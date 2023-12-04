@@ -6,6 +6,7 @@ using Airline_ticket_sales_management.Service;
 using Airline_ticket_sales_management.Usercontrols;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
@@ -22,15 +23,76 @@ namespace Airline_ticket_sales_management
     public partial class OperationFlightUC : UserControl
     {
         private List<string> airportComplete = new List<string>();
+        private FlightDTO flight;
 
-        public OperationFlightUC()
+        public OperationFlightUC(FlightDTO flight = null)
         {
             InitializeComponent();
+            this.flight = flight;
         }
 
         private void OperationFlightUC_Load(object sender, EventArgs e)
         {
             loadComplete();
+            loadForm();
+        }
+
+        private async void loadForm()
+        {
+            if (flight != null)
+            {
+                (bool isGetPreventive, List<PreventiveAirportDTO> preventiveAirport, string label) = await PreventiveAirportDAL.Ins.getListPreventiveAirport(flight.FlightID);
+
+                if (!isGetPreventive)
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
+
+                atxbDepartureAirport.Texts = flight.DepartureAirportName + " (" + flight.DepartureCityName + ")";
+                atxbDepartureAirport.isPlaceholder = false;
+                atxbDepartureAirport.setForeColor();
+
+                atxbArrivalAirport.Texts = flight.ArrivalAirportName + " (" + flight.ArrivalCityName + ")";
+                atxbArrivalAirport.isPlaceholder = false;
+                atxbArrivalAirport.setForeColor();
+
+                atxbPlaneID.Texts = flight.PlaneID;
+                atxbPlaneID.isPlaceholder = false;
+                atxbPlaneID.setForeColor();
+                atxbPlaneID__TextChanged(atxbPlaneID, EventArgs.Empty);
+
+                adtpDepartureDateTime.Value = flight.DepartureDateTime;
+
+                atxbHour.Texts = flight.DepartureDateTime.Hour.ToString();
+                atxbHour.isPlaceholder = false;
+                atxbHour.setForeColor();
+
+                atxbMinute.Texts = flight.DepartureDateTime.Minute.ToString();
+                atxbMinute.isPlaceholder = false;
+                atxbMinute.setForeColor();
+
+                atxbFlightDuration.Texts = flight.FlightDuration.ToString();
+                atxbFlightDuration.isPlaceholder = false;
+                atxbFlightDuration.setForeColor();
+
+                atxbTicketPrice.Texts = flight.TicketPrice.ToString();
+                atxbTicketPrice.isPlaceholder = false;
+                atxbTicketPrice.setForeColor();
+
+                for (int index = 0; index < preventiveAirport.Count; ++index)
+                {
+                    PreventiveAirportItemUC uc = new PreventiveAirportItemUC();
+                    uc.PreventiveAirport = preventiveAirport[index];
+                    uc.stt = index + 1;
+                    uc.setCompletePlaneID(airportComplete);
+                    pnPreventiveAirport.Controls.Add(uc);
+                    uc.BringToFront();
+                    uc.Dock = DockStyle.Top;
+                }
+            }
+            else
+                pnEdit.Visible = false;
         }
 
         private async void loadComplete()
@@ -43,7 +105,7 @@ namespace Airline_ticket_sales_management
                 if (isGetPlane)
                 {
                     foreach (AirportDTO airport in airports)
-                        airportComplete.Add(airport.CityName + " (" + airport.CountryName + ")");
+                        airportComplete.Add(airport.AirportName + " (" + airport.CityName+ ")");
 
                     atxbDepartureAirport.complete(airportComplete);
                     atxbArrivalAirport.complete(airportComplete);
@@ -292,6 +354,124 @@ namespace Airline_ticket_sales_management
         {
             if (pnPreventiveAirport.Controls.Count > 0)
                 pnPreventiveAirport.Controls.RemoveAt(0);
+        }
+
+        private void abtnCancel_Click(object sender, EventArgs e)
+        {
+            Control ctr = this;
+            while (!(ctr is FlightUC))
+                ctr = ctr.Parent;
+
+            FlightUC ctrParent = ctr as FlightUC;
+            ctrParent.abtnListFlight_Click(sender, e);
+        }
+
+        private void abtnUpdateFlight_Click(object sender, EventArgs e)
+        {
+            // chỉ được thay đổi khi chưa bay và chưa có ai mua vé
+            // update sau
+
+            FlightDTO flight = new FlightDTO();
+            flight.DepartureAirportName = atxbDepartureAirport.Texts.Trim();
+            flight.ArrivalAirportName = atxbArrivalAirport.Texts.Trim();
+            flight.PlaneID = atxbPlaneID.Texts.Trim();
+
+
+            if (string.IsNullOrEmpty(flight.DepartureAirportName))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu của sân bay đi bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbDepartureAirport.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(flight.ArrivalAirportName))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu của sân bay đến bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbArrivalAirport.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(flight.PlaneID))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu của mã máy bay bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbPlaneID.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbHour.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu của giờ bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbHour.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbMinute.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu của phút bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbMinute.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbFlightDuration.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu của thời gian bay bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbFlightDuration.Focus();
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbTicketPrice.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu của giá vé bị trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                atxbTicketPrice.Focus();
+                ms.ShowDialog();
+            }
+            else
+            {
+                flight.TicketPrice = decimal.Parse(atxbTicketPrice.Texts.Trim());
+                flight.FlightDuration = int.Parse(atxbFlightDuration.Texts.Trim());
+
+                int hour = int.Parse(atxbHour.Texts.Trim());
+                int minute = int.Parse(atxbMinute.Texts.Trim());
+
+                flight.DepartureDateTime = new DateTime(adtpDepartureDateTime.Value.Year,
+                    adtpDepartureDateTime.Value.Month,
+                    adtpDepartureDateTime.Value.Day,
+                    hour, minute, 0);
+
+                flight.FlightID = this.flight.FlightID;
+                updateFlight(flight);
+            }
+        }
+
+        private async void updateFlight(FlightDTO flight)
+        {
+            List<PreventiveAirportDTO> preventiveAirports = await getFlightDetail();
+
+            if (preventiveAirports != null)
+            {
+                (bool isUpdateFlight, int type, string label) = await FlightService.Ins.updateFlight(flight, preventiveAirports);
+
+                if (isUpdateFlight)
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ms.ShowDialog();
+                }
+                else
+                {
+                    switch (type)
+                    {
+                        case 0:
+                            atxbDepartureAirport.Focus();
+                            break;
+
+                        case 1:
+                            atxbArrivalAirport.Focus();
+                            break;
+
+                        case 2:
+                            atxbPlaneID.Focus();
+                            break;
+                    }
+
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
+
+            }
         }
     }
 }

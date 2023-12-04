@@ -112,30 +112,29 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, string)> updateAirport(AirportDTO airport)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            AIRPORT findAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportName == airport.AirportName && ap.AirportID != airport.AirportID);
-        //            if (findAirport != null)
-        //                return (false, "Tên sân bay đã tồn tại");
+        public async Task<(bool, string)> updateFlight(FlightDTO flight)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    FLIGHT currentFlight = context.FLIGHTs.FirstOrDefault(fl => fl.FlightID == flight.FlightID);
+                    currentFlight.PlaneID = flight.PlaneID;
+                    currentFlight.DepartureAirportCode = flight.DepartureAirportCode;
+                    currentFlight.ArrivalAirportCode = flight.ArrivalAirportCode;
+                    currentFlight.DepartureDateTime = flight.DepartureDateTime;
+                    currentFlight.FlightDuration = flight.FlightDuration;
+                    currentFlight.TicketPrice = flight.TicketPrice;
 
-        //            AIRPORT currentAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportID == airport.AirportID);
-        //            currentAirport.AirportName = airport.AirportName;
-        //            currentAirport.CityName = airport.CityName;
-        //            currentAirport.CountryName = airport.CountryName;
+                    context.SaveChanges();
 
-        //            context.SaveChanges();
-
-        //            return (true, "Cập nhật thành công");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message);
-        //    }
-        //}
+                    return (true, "Cập nhật thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
     }
 }

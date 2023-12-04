@@ -26,6 +26,20 @@ namespace Airline_ticket_sales_management.Usercontrols
             }
         }
 
+        private PreventiveAirportDTO _preventiveAirport;
+        public PreventiveAirportDTO PreventiveAirport
+        {
+            get { return _preventiveAirport; }
+            set
+            {
+                _preventiveAirport = value;
+
+                atxbPlane.Texts = PreventiveAirport.AirportName + " (" + PreventiveAirport.CityName + ")";
+                atxbStopoverDuration.Texts = PreventiveAirport.StopoverDuration.ToString();
+                atxbNote.Texts = PreventiveAirport.Note;
+            }
+        }
+
         public PreventiveAirportItemUC()
         {
             InitializeComponent();

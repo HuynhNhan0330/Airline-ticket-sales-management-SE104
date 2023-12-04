@@ -54,6 +54,7 @@ namespace Airline_ticket_sales_management
             this.aButton1 = new Airline_ticket_sales_management.AControls.AButton();
             this.aDateTimePicker1 = new Airline_ticket_sales_management.AControls.ADateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.pnHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -313,17 +314,30 @@ namespace Airline_ticket_sales_management
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(277, 24);
+            this.comboBox1.Location = new System.Drawing.Point(300, 25);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(200, 30);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.Text = "Sân bay đi";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(550, 25);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 30);
+            this.comboBox2.TabIndex = 8;
+            this.comboBox2.Text = "Sân bay đến";
             // 
             // FlightListUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.aDateTimePicker1);
             this.Controls.Add(this.pnHeader);
@@ -380,5 +394,6 @@ namespace Airline_ticket_sales_management
         private Label label2;
         private AControls.ADateTimePicker aDateTimePicker1;
         private ComboBox comboBox1;
+        private ComboBox comboBox2;
     }
 }

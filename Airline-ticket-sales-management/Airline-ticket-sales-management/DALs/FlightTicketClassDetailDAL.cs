@@ -109,31 +109,5 @@ namespace Airline_ticket_sales_management.DALs
                 return (false, ex.Message);
             }
         }
-
-        //public async Task<(bool, string)> updateAirport(AirportDTO airport)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            AIRPORT findAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportName == airport.AirportName && ap.AirportID != airport.AirportID);
-        //            if (findAirport != null)
-        //                return (false, "Tên sân bay đã tồn tại");
-
-        //            AIRPORT currentAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportID == airport.AirportID);
-        //            currentAirport.AirportName = airport.AirportName;
-        //            currentAirport.CityName = airport.CityName;
-        //            currentAirport.CountryName = airport.CountryName;
-
-        //            context.SaveChanges();
-
-        //            return (true, "Cập nhật thành công");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message);
-        //    }
-        //}
     }
 }
