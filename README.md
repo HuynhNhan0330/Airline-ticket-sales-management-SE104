@@ -51,7 +51,7 @@
 * UI Framework: Winform
 * Mô hình MVVM
 * IDE: Visual Studio 2022
-* Database: SQL Server
+* Database: MySQL
 * Công cụ quản lý sourcecode: Git, GitHub
 * Khác: Office365, OneDrive, Microsoft Teams, Facebook
 
