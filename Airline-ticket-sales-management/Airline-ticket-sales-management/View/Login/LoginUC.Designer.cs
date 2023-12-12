@@ -31,34 +31,20 @@ namespace Airline_ticket_sales_management
         /// </summary>
         private void InitializeComponent()
         {
-            this.pibHideViewPassword = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbRegister = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbForgotPassword = new System.Windows.Forms.Label();
-            this.atxbPassword = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.abtnLogin = new Airline_ticket_sales_management.AControls.AButton();
-            this.atxbUsername = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
             this.aPanel2 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbPassword = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.pibHideViewPassword = new System.Windows.Forms.PictureBox();
+            this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbUsername = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.abtnLogin = new Airline_ticket_sales_management.AControls.AButton();
+            this.aPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).BeginInit();
             this.aPanel1.SuspendLayout();
-            this.aPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pibHideViewPassword
-            // 
-            this.pibHideViewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
-            this.pibHideViewPassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.view;
-            this.pibHideViewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pibHideViewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pibHideViewPassword.Location = new System.Drawing.Point(271, 7);
-            this.pibHideViewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pibHideViewPassword.Name = "pibHideViewPassword";
-            this.pibHideViewPassword.Size = new System.Drawing.Size(22, 22);
-            this.pibHideViewPassword.TabIndex = 25;
-            this.pibHideViewPassword.TabStop = false;
-            this.pibHideViewPassword.Click += new System.EventHandler(this.pibHideViewPassword_Click);
             // 
             // label4
             // 
@@ -83,6 +69,7 @@ namespace Airline_ticket_sales_management
             this.lbRegister.Size = new System.Drawing.Size(69, 18);
             this.lbRegister.TabIndex = 26;
             this.lbRegister.Text = "Đăng ký";
+            this.lbRegister.Visible = false;
             this.lbRegister.Click += new System.EventHandler(this.lbRegister_Click);
             // 
             // label2
@@ -95,6 +82,7 @@ namespace Airline_ticket_sales_management
             this.label2.Size = new System.Drawing.Size(136, 18);
             this.label2.TabIndex = 24;
             this.label2.Text = "Chưa có tài khoản?";
+            this.label2.Visible = false;
             // 
             // lbForgotPassword
             // 
@@ -107,6 +95,24 @@ namespace Airline_ticket_sales_management
             this.lbForgotPassword.Size = new System.Drawing.Size(132, 22);
             this.lbForgotPassword.TabIndex = 30;
             this.lbForgotPassword.Text = "Quên mật khẩu";
+            this.lbForgotPassword.Click += new System.EventHandler(this.lbForgotPassword_Click);
+            // 
+            // aPanel2
+            // 
+            this.aPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.aPanel2.BorderRadius = 10;
+            this.aPanel2.BorderSize = 0;
+            this.aPanel2.Controls.Add(this.atxbPassword);
+            this.aPanel2.Controls.Add(this.pibHideViewPassword);
+            this.aPanel2.ForeColor = System.Drawing.Color.White;
+            this.aPanel2.Location = new System.Drawing.Point(50, 200);
+            this.aPanel2.Name = "aPanel2";
+            this.aPanel2.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel2.Size = new System.Drawing.Size(300, 37);
+            this.aPanel2.TabIndex = 32;
+            this.aPanel2.TextColor = System.Drawing.Color.White;
             // 
             // atxbPassword
             // 
@@ -135,30 +141,35 @@ namespace Airline_ticket_sales_management
             this.atxbPassword.Texts = "";
             this.atxbPassword.UnderlinedStyle = false;
             // 
-            // abtnLogin
+            // pibHideViewPassword
             // 
-            this.abtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
-            this.abtnLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
-            this.abtnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnLogin.BorderRadius = 15;
-            this.abtnLogin.BorderSize = 0;
-            this.abtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.abtnLogin.FlatAppearance.BorderSize = 0;
-            this.abtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnLogin.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.abtnLogin.ForeColor = System.Drawing.Color.White;
-            this.abtnLogin.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnLogin.Location = new System.Drawing.Point(50, 302);
-            this.abtnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.abtnLogin.Name = "abtnLogin";
-            this.abtnLogin.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnLogin.Size = new System.Drawing.Size(300, 40);
-            this.abtnLogin.TabIndex = 27;
-            this.abtnLogin.Text = "Đăng nhập";
-            this.abtnLogin.TextColor = System.Drawing.Color.White;
-            this.abtnLogin.ThinknessLine = 0;
-            this.abtnLogin.UseVisualStyleBackColor = false;
-            this.abtnLogin.Click += new System.EventHandler(this.abtnLogin_Click);
+            this.pibHideViewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.pibHideViewPassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.view;
+            this.pibHideViewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pibHideViewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibHideViewPassword.Location = new System.Drawing.Point(271, 7);
+            this.pibHideViewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pibHideViewPassword.Name = "pibHideViewPassword";
+            this.pibHideViewPassword.Size = new System.Drawing.Size(22, 22);
+            this.pibHideViewPassword.TabIndex = 25;
+            this.pibHideViewPassword.TabStop = false;
+            this.pibHideViewPassword.Click += new System.EventHandler(this.pibHideViewPassword_Click);
+            // 
+            // aPanel1
+            // 
+            this.aPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.aPanel1.BorderRadius = 10;
+            this.aPanel1.BorderSize = 0;
+            this.aPanel1.Controls.Add(this.atxbUsername);
+            this.aPanel1.ForeColor = System.Drawing.Color.White;
+            this.aPanel1.Location = new System.Drawing.Point(50, 136);
+            this.aPanel1.Name = "aPanel1";
+            this.aPanel1.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel1.Size = new System.Drawing.Size(300, 37);
+            this.aPanel1.TabIndex = 31;
+            this.aPanel1.TextColor = System.Drawing.Color.White;
             // 
             // atxbUsername
             // 
@@ -187,38 +198,30 @@ namespace Airline_ticket_sales_management
             this.atxbUsername.Texts = "";
             this.atxbUsername.UnderlinedStyle = false;
             // 
-            // aPanel1
+            // abtnLogin
             // 
-            this.aPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
-            this.aPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
-            this.aPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aPanel1.BorderRadius = 10;
-            this.aPanel1.BorderSize = 0;
-            this.aPanel1.Controls.Add(this.atxbUsername);
-            this.aPanel1.ForeColor = System.Drawing.Color.White;
-            this.aPanel1.Location = new System.Drawing.Point(50, 136);
-            this.aPanel1.Name = "aPanel1";
-            this.aPanel1.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
-            this.aPanel1.Size = new System.Drawing.Size(300, 37);
-            this.aPanel1.TabIndex = 31;
-            this.aPanel1.TextColor = System.Drawing.Color.White;
-            // 
-            // aPanel2
-            // 
-            this.aPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
-            this.aPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
-            this.aPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aPanel2.BorderRadius = 10;
-            this.aPanel2.BorderSize = 0;
-            this.aPanel2.Controls.Add(this.atxbPassword);
-            this.aPanel2.Controls.Add(this.pibHideViewPassword);
-            this.aPanel2.ForeColor = System.Drawing.Color.White;
-            this.aPanel2.Location = new System.Drawing.Point(50, 200);
-            this.aPanel2.Name = "aPanel2";
-            this.aPanel2.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
-            this.aPanel2.Size = new System.Drawing.Size(300, 37);
-            this.aPanel2.TabIndex = 32;
-            this.aPanel2.TextColor = System.Drawing.Color.White;
+            this.abtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
+            this.abtnLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
+            this.abtnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnLogin.BorderRadius = 15;
+            this.abtnLogin.BorderSize = 0;
+            this.abtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abtnLogin.FlatAppearance.BorderSize = 0;
+            this.abtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnLogin.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.abtnLogin.ForeColor = System.Drawing.Color.White;
+            this.abtnLogin.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnLogin.Location = new System.Drawing.Point(50, 302);
+            this.abtnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnLogin.Name = "abtnLogin";
+            this.abtnLogin.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnLogin.Size = new System.Drawing.Size(300, 40);
+            this.abtnLogin.TabIndex = 27;
+            this.abtnLogin.Text = "Đăng nhập";
+            this.abtnLogin.TextColor = System.Drawing.Color.White;
+            this.abtnLogin.ThinknessLine = 0;
+            this.abtnLogin.UseVisualStyleBackColor = false;
+            this.abtnLogin.Click += new System.EventHandler(this.abtnLogin_Click);
             // 
             // LoginUC
             // 
@@ -235,9 +238,9 @@ namespace Airline_ticket_sales_management
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginUC";
             this.Size = new System.Drawing.Size(400, 500);
+            this.aPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).EndInit();
             this.aPanel1.ResumeLayout(false);
-            this.aPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

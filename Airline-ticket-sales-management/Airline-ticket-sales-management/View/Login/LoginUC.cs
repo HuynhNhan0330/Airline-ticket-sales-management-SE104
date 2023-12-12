@@ -78,5 +78,11 @@ namespace Airline_ticket_sales_management
                 currentForm.Show();
             }
         }
+
+        private void lbForgotPassword_Click(object sender, EventArgs e)
+        {
+            FormLogin currentForm = FindForm() as FormLogin;
+            currentForm.addBody(new ForgotPassword1());
+        }
     }
 }

@@ -558,6 +558,7 @@
       <DependentUpon>FlightTicketManagement.edmx</DependentUpon>
       <LastGenOutput>FlightTicketManagement.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\return.png" />
     <None Include="Resources\flight.jpg" />
     <None Include="Resources\TicketIcon.png" />
     <None Include="Resources\PlaneFlightIcon.png" />

@@ -31,217 +31,234 @@ namespace Airline_ticket_sales_management
         /// </summary>
         private void InitializeComponent()
         {
-            aTextboxuc3 = new AControls.ATextboxUC();
-            pictureBox1 = new PictureBox();
-            aTextboxuc4 = new AControls.ATextboxUC();
-            atxbPassword2 = new AControls.ATextboxUC();
-            pibHideViewPassword = new PictureBox();
-            abtnSubmit = new AControls.AButton();
-            atxbPassword1 = new AControls.ATextboxUC();
-            label1 = new Label();
-            label4 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pibHideViewPassword).BeginInit();
-            SuspendLayout();
-            // 
-            // aTextboxuc3
-            // 
-            aTextboxuc3.BackColor = Color.FromArgb(217, 221, 252);
-            aTextboxuc3.BorderColor = Color.Transparent;
-            aTextboxuc3.BorderFocusColor = Color.FromArgb(217, 221, 252);
-            aTextboxuc3.BorderRadius = 0;
-            aTextboxuc3.BorderSize = 2;
-            aTextboxuc3.Cursor = Cursors.IBeam;
-            aTextboxuc3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            aTextboxuc3.ForeColor = Color.Black;
-            aTextboxuc3.Location = new Point(110, 343);
-            aTextboxuc3.Margin = new Padding(4);
-            aTextboxuc3.Multiline = false;
-            aTextboxuc3.Name = "aTextboxuc3";
-            aTextboxuc3.Padding = new Padding(7);
-            aTextboxuc3.PasswordChar = true;
-            aTextboxuc3.PlaceholderColor = Color.DarkGray;
-            aTextboxuc3.PlaceholderText = "Nhập lại mật khẩu";
-            aTextboxuc3.RoundType = AControls.ATextboxUC.RoundStyles.Full;
-            aTextboxuc3.Size = new Size(250, 35);
-            aTextboxuc3.TabIndex = 28;
-            aTextboxuc3.Texts = "";
-            aTextboxuc3.UnderlinedStyle = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.FromArgb(217, 221, 252);
-            pictureBox1.BackgroundImage = Properties.Resources.hide;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Location = new Point(361, 346);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(32, 32);
-            pictureBox1.TabIndex = 27;
-            pictureBox1.TabStop = false;
-            // 
-            // aTextboxuc4
-            // 
-            aTextboxuc4.BackColor = Color.FromArgb(217, 221, 252);
-            aTextboxuc4.BorderColor = Color.FromArgb(217, 221, 252);
-            aTextboxuc4.BorderFocusColor = Color.FromArgb(217, 221, 252);
-            aTextboxuc4.BorderRadius = 10;
-            aTextboxuc4.BorderSize = 2;
-            aTextboxuc4.Cursor = Cursors.IBeam;
-            aTextboxuc4.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            aTextboxuc4.ForeColor = Color.Black;
-            aTextboxuc4.Location = new Point(100, 342);
-            aTextboxuc4.Margin = new Padding(4);
-            aTextboxuc4.Multiline = false;
-            aTextboxuc4.Name = "aTextboxuc4";
-            aTextboxuc4.Padding = new Padding(7);
-            aTextboxuc4.PasswordChar = true;
-            aTextboxuc4.PlaceholderColor = Color.DarkGray;
-            aTextboxuc4.PlaceholderText = "";
-            aTextboxuc4.RoundType = AControls.ATextboxUC.RoundStyles.Full;
-            aTextboxuc4.Size = new Size(300, 37);
-            aTextboxuc4.TabIndex = 26;
-            aTextboxuc4.Texts = "";
-            aTextboxuc4.UnderlinedStyle = false;
-            // 
-            // atxbPassword2
-            // 
-            atxbPassword2.BackColor = Color.FromArgb(217, 221, 252);
-            atxbPassword2.BorderColor = Color.Transparent;
-            atxbPassword2.BorderFocusColor = Color.FromArgb(217, 221, 252);
-            atxbPassword2.BorderRadius = 0;
-            atxbPassword2.BorderSize = 2;
-            atxbPassword2.Cursor = Cursors.IBeam;
-            atxbPassword2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            atxbPassword2.ForeColor = Color.Black;
-            atxbPassword2.Location = new Point(110, 293);
-            atxbPassword2.Margin = new Padding(4);
-            atxbPassword2.Multiline = false;
-            atxbPassword2.Name = "atxbPassword2";
-            atxbPassword2.Padding = new Padding(7);
-            atxbPassword2.PasswordChar = true;
-            atxbPassword2.PlaceholderColor = Color.DarkGray;
-            atxbPassword2.PlaceholderText = "Mật khẩu";
-            atxbPassword2.RoundType = AControls.ATextboxUC.RoundStyles.Full;
-            atxbPassword2.Size = new Size(250, 35);
-            atxbPassword2.TabIndex = 25;
-            atxbPassword2.Texts = "";
-            atxbPassword2.UnderlinedStyle = false;
-            // 
-            // pibHideViewPassword
-            // 
-            pibHideViewPassword.BackColor = Color.FromArgb(217, 221, 252);
-            pibHideViewPassword.BackgroundImage = Properties.Resources.hide;
-            pibHideViewPassword.BackgroundImageLayout = ImageLayout.Stretch;
-            pibHideViewPassword.Cursor = Cursors.Hand;
-            pibHideViewPassword.Location = new Point(361, 296);
-            pibHideViewPassword.Name = "pibHideViewPassword";
-            pibHideViewPassword.Size = new Size(32, 32);
-            pibHideViewPassword.TabIndex = 23;
-            pibHideViewPassword.TabStop = false;
-            // 
-            // abtnSubmit
-            // 
-            abtnSubmit.BackColor = Color.FromArgb(128, 152, 249);
-            abtnSubmit.BackgroundColor = Color.FromArgb(128, 152, 249);
-            abtnSubmit.BorderColor = Color.PaleVioletRed;
-            abtnSubmit.BorderRadius = 20;
-            abtnSubmit.BorderSize = 0;
-            abtnSubmit.Cursor = Cursors.Hand;
-            abtnSubmit.FlatAppearance.BorderSize = 0;
-            abtnSubmit.FlatStyle = FlatStyle.Flat;
-            abtnSubmit.Font = new Font("Arial", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            abtnSubmit.ForeColor = Color.White;
-            abtnSubmit.LineType = AControls.AButton.LineStyles.None;
-            abtnSubmit.Location = new Point(100, 392);
-            abtnSubmit.Name = "abtnSubmit";
-            abtnSubmit.RoundType = AControls.AButton.RoundStyles.Full;
-            abtnSubmit.Size = new Size(300, 37);
-            abtnSubmit.TabIndex = 24;
-            abtnSubmit.Text = "Gửi";
-            abtnSubmit.TextColor = Color.White;
-            abtnSubmit.ThinknessLine = 0;
-            abtnSubmit.UseVisualStyleBackColor = false;
-            abtnSubmit.Click += abtnSubmit_Click;
-            // 
-            // atxbPassword1
-            // 
-            atxbPassword1.BackColor = Color.FromArgb(217, 221, 252);
-            atxbPassword1.BorderColor = Color.FromArgb(217, 221, 252);
-            atxbPassword1.BorderFocusColor = Color.FromArgb(217, 221, 252);
-            atxbPassword1.BorderRadius = 10;
-            atxbPassword1.BorderSize = 2;
-            atxbPassword1.Cursor = Cursors.IBeam;
-            atxbPassword1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            atxbPassword1.ForeColor = Color.Black;
-            atxbPassword1.Location = new Point(100, 292);
-            atxbPassword1.Margin = new Padding(4);
-            atxbPassword1.Multiline = false;
-            atxbPassword1.Name = "atxbPassword1";
-            atxbPassword1.Padding = new Padding(7);
-            atxbPassword1.PasswordChar = true;
-            atxbPassword1.PlaceholderColor = Color.DarkGray;
-            atxbPassword1.PlaceholderText = "";
-            atxbPassword1.RoundType = AControls.ATextboxUC.RoundStyles.Full;
-            atxbPassword1.Size = new Size(300, 37);
-            atxbPassword1.TabIndex = 22;
-            atxbPassword1.Texts = "";
-            atxbPassword1.UnderlinedStyle = false;
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pibReturn = new System.Windows.Forms.PictureBox();
+            this.aPanel5 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbRePassword = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.pibHideViewRePassword = new System.Windows.Forms.PictureBox();
+            this.aPanel4 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbPassword = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.pibHideViewPassword = new System.Windows.Forms.PictureBox();
+            this.abtnSubmit = new Airline_ticket_sales_management.AControls.AButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pibReturn)).BeginInit();
+            this.aPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibHideViewRePassword)).BeginInit();
+            this.aPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(113, 113, 122);
-            label1.Location = new Point(104, 262);
-            label1.Name = "label1";
-            label1.Size = new Size(303, 18);
-            label1.TabIndex = 30;
-            label1.Text = "Hoàn thành việc khôi phục mật khẩu của bạn";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
+            this.label1.Location = new System.Drawing.Point(39, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(303, 18);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Hoàn thành việc khôi phục mật khẩu của bạn";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(100, 224);
-            label4.MaximumSize = new Size(330, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(292, 35);
-            label4.TabIndex = 29;
-            label4.Text = "Nhập mật khẩu mới";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(54, 50);
+            this.label4.MaximumSize = new System.Drawing.Size(330, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(292, 35);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Nhập mật khẩu mới";
+            // 
+            // pibReturn
+            // 
+            this.pibReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pibReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibReturn.Image = global::Airline_ticket_sales_management.Properties.Resources._return;
+            this.pibReturn.Location = new System.Drawing.Point(20, 20);
+            this.pibReturn.Name = "pibReturn";
+            this.pibReturn.Size = new System.Drawing.Size(32, 32);
+            this.pibReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pibReturn.TabIndex = 39;
+            this.pibReturn.TabStop = false;
+            this.pibReturn.Click += new System.EventHandler(this.pibReturn_Click);
+            // 
+            // aPanel5
+            // 
+            this.aPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.aPanel5.BorderRadius = 10;
+            this.aPanel5.BorderSize = 0;
+            this.aPanel5.Controls.Add(this.atxbRePassword);
+            this.aPanel5.Controls.Add(this.pibHideViewRePassword);
+            this.aPanel5.ForeColor = System.Drawing.Color.White;
+            this.aPanel5.Location = new System.Drawing.Point(50, 203);
+            this.aPanel5.Name = "aPanel5";
+            this.aPanel5.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel5.Size = new System.Drawing.Size(300, 37);
+            this.aPanel5.TabIndex = 38;
+            this.aPanel5.TextColor = System.Drawing.Color.White;
+            // 
+            // atxbRePassword
+            // 
+            this.atxbRePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.atxbRePassword.BorderColor = System.Drawing.Color.Transparent;
+            this.atxbRePassword.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.atxbRePassword.BorderRadius = 0;
+            this.atxbRePassword.BorderSize = 2;
+            this.atxbRePassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atxbRePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbRePassword.ForeColor = System.Drawing.Color.Black;
+            this.atxbRePassword.isFocused = false;
+            this.atxbRePassword.isPlaceholder = true;
+            this.atxbRePassword.Location = new System.Drawing.Point(19, 2);
+            this.atxbRePassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbRePassword.Multiline = false;
+            this.atxbRePassword.Name = "atxbRePassword";
+            this.atxbRePassword.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbRePassword.PasswordChar = true;
+            this.atxbRePassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbRePassword.PlaceholderText = "Nhập lại mật khẩu";
+            this.atxbRePassword.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbRePassword.Size = new System.Drawing.Size(245, 33);
+            this.atxbRePassword.TabIndex = 29;
+            this.atxbRePassword.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbRePassword.Texts = "";
+            this.atxbRePassword.UnderlinedStyle = false;
+            // 
+            // pibHideViewRePassword
+            // 
+            this.pibHideViewRePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.pibHideViewRePassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.hide;
+            this.pibHideViewRePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pibHideViewRePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibHideViewRePassword.Location = new System.Drawing.Point(271, 7);
+            this.pibHideViewRePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pibHideViewRePassword.Name = "pibHideViewRePassword";
+            this.pibHideViewRePassword.Size = new System.Drawing.Size(22, 22);
+            this.pibHideViewRePassword.TabIndex = 25;
+            this.pibHideViewRePassword.TabStop = false;
+            this.pibHideViewRePassword.Click += new System.EventHandler(this.pibHideViewRePassword_Click);
+            // 
+            // aPanel4
+            // 
+            this.aPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.aPanel4.BorderRadius = 10;
+            this.aPanel4.BorderSize = 0;
+            this.aPanel4.Controls.Add(this.atxbPassword);
+            this.aPanel4.Controls.Add(this.pibHideViewPassword);
+            this.aPanel4.ForeColor = System.Drawing.Color.White;
+            this.aPanel4.Location = new System.Drawing.Point(50, 153);
+            this.aPanel4.Name = "aPanel4";
+            this.aPanel4.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel4.Size = new System.Drawing.Size(300, 37);
+            this.aPanel4.TabIndex = 37;
+            this.aPanel4.TextColor = System.Drawing.Color.White;
+            // 
+            // atxbPassword
+            // 
+            this.atxbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.atxbPassword.BorderColor = System.Drawing.Color.Transparent;
+            this.atxbPassword.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.atxbPassword.BorderRadius = 0;
+            this.atxbPassword.BorderSize = 2;
+            this.atxbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atxbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbPassword.ForeColor = System.Drawing.Color.Black;
+            this.atxbPassword.isFocused = false;
+            this.atxbPassword.isPlaceholder = true;
+            this.atxbPassword.Location = new System.Drawing.Point(19, 2);
+            this.atxbPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbPassword.Multiline = false;
+            this.atxbPassword.Name = "atxbPassword";
+            this.atxbPassword.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbPassword.PasswordChar = true;
+            this.atxbPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbPassword.PlaceholderText = "Mật khẩu";
+            this.atxbPassword.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbPassword.Size = new System.Drawing.Size(245, 33);
+            this.atxbPassword.TabIndex = 29;
+            this.atxbPassword.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbPassword.Texts = "";
+            this.atxbPassword.UnderlinedStyle = false;
+            // 
+            // pibHideViewPassword
+            // 
+            this.pibHideViewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.pibHideViewPassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.hide;
+            this.pibHideViewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pibHideViewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibHideViewPassword.Location = new System.Drawing.Point(271, 7);
+            this.pibHideViewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pibHideViewPassword.Name = "pibHideViewPassword";
+            this.pibHideViewPassword.Size = new System.Drawing.Size(22, 22);
+            this.pibHideViewPassword.TabIndex = 25;
+            this.pibHideViewPassword.TabStop = false;
+            this.pibHideViewPassword.Click += new System.EventHandler(this.pibHideViewPassword_Click);
+            // 
+            // abtnSubmit
+            // 
+            this.abtnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
+            this.abtnSubmit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
+            this.abtnSubmit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnSubmit.BorderRadius = 20;
+            this.abtnSubmit.BorderSize = 0;
+            this.abtnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abtnSubmit.FlatAppearance.BorderSize = 0;
+            this.abtnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnSubmit.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.abtnSubmit.ForeColor = System.Drawing.Color.White;
+            this.abtnSubmit.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnSubmit.Location = new System.Drawing.Point(52, 267);
+            this.abtnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnSubmit.Name = "abtnSubmit";
+            this.abtnSubmit.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnSubmit.Size = new System.Drawing.Size(300, 40);
+            this.abtnSubmit.TabIndex = 24;
+            this.abtnSubmit.Text = "Xác nhận";
+            this.abtnSubmit.TextColor = System.Drawing.Color.White;
+            this.abtnSubmit.ThinknessLine = 0;
+            this.abtnSubmit.UseVisualStyleBackColor = false;
+            this.abtnSubmit.Click += new System.EventHandler(this.abtnSubmit_Click_1);
             // 
             // ForgotPassword3
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Controls.Add(label1);
-            Controls.Add(label4);
-            Controls.Add(aTextboxuc3);
-            Controls.Add(pictureBox1);
-            Controls.Add(aTextboxuc4);
-            Controls.Add(atxbPassword2);
-            Controls.Add(pibHideViewPassword);
-            Controls.Add(abtnSubmit);
-            Controls.Add(atxbPassword1);
-            Name = "ForgotPassword3";
-            Size = new Size(500, 668);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pibHideViewPassword).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pibReturn);
+            this.Controls.Add(this.aPanel5);
+            this.Controls.Add(this.aPanel4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.abtnSubmit);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "ForgotPassword3";
+            this.Size = new System.Drawing.Size(400, 500);
+            ((System.ComponentModel.ISupportInitialize)(this.pibReturn)).EndInit();
+            this.aPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pibHideViewRePassword)).EndInit();
+            this.aPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
-
-        private AControls.ATextboxUC aTextboxuc3;
-        private PictureBox pictureBox1;
-        private AControls.ATextboxUC aTextboxuc4;
-        private AControls.ATextboxUC atxbPassword2;
-        private PictureBox pibHideViewPassword;
         private AControls.AButton abtnSubmit;
-        private AControls.ATextboxUC atxbPassword1;
         private Label label1;
         private Label label4;
+        private AControls.APanel aPanel5;
+        private AControls.ATextboxUC atxbRePassword;
+        private PictureBox pibHideViewRePassword;
+        private AControls.APanel aPanel4;
+        private AControls.ATextboxUC atxbPassword;
+        private PictureBox pibHideViewPassword;
+        private PictureBox pibReturn;
     }
 }

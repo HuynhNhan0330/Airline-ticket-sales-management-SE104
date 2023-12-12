@@ -57,6 +57,34 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
+        public async Task<AccountDTO> findAccountByEmail(string email)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    AccountDTO account = (from ac in context.ACCOUNTs
+                                          where ac.Email == email
+                                          select new AccountDTO
+                                          {
+                                              AccountID = ac.AccountID,
+                                              Name = ac.Name,
+                                              Email = ac.Email,
+                                              Phone = ac.Phone,
+                                              Password = ac.Password,
+                                              Created = DateTime.Now,
+                                              RoleID = ac.RoleID,
+                                          }).FirstOrDefault();
+
+                    return account;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         //public async Task<(bool, string, string)> createFlight(FlightDTO flight)
         //{
         //    try
@@ -145,29 +173,28 @@ namespace Airline_ticket_sales_management.DALs
         //    }
         //}
 
-        //public async Task<(bool, string)> updateFlight(FlightDTO flight)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            FLIGHT currentFlight = context.FLIGHTs.FirstOrDefault(fl => fl.FlightID == flight.FlightID);
-        //            currentFlight.PlaneID = flight.PlaneID;
-        //            currentFlight.DepartureAirportCode = flight.DepartureAirportCode;
-        //            currentFlight.ArrivalAirportCode = flight.ArrivalAirportCode;
-        //            currentFlight.DepartureDateTime = flight.DepartureDateTime;
-        //            currentFlight.FlightDuration = flight.FlightDuration;
-        //            currentFlight.TicketPrice = flight.TicketPrice;
+        public async Task<(bool, string)> updateAccount(AccountDTO account)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    ACCOUNT currentAccount = context.ACCOUNTs.FirstOrDefault(ac => ac.AccountID == account.AccountID);
+                    currentAccount.Name = account.Name;
+                    currentAccount.Password = account.Password;
+                    currentAccount.Email = account.Email;
+                    currentAccount.Phone = account.Phone;
+                    currentAccount.RoleID = account.RoleID;
 
-        //            context.SaveChanges();
+                    context.SaveChanges();
 
-        //            return (true, "Cập nhật thành công");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message);
-        //    }
-        //}
+                    return (true, "Cập nhật thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
     }
 }

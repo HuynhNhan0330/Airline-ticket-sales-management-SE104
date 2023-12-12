@@ -31,144 +31,162 @@ namespace Airline_ticket_sales_management
         /// </summary>
         private void InitializeComponent()
         {
-            lbReturn = new Label();
-            label1 = new Label();
-            aTextboxuc2 = new AControls.ATextboxUC();
-            label4 = new Label();
-            abtnGetOTP = new AControls.AButton();
-            label2 = new Label();
-            label3 = new Label();
-            SuspendLayout();
-            // 
-            // lbReturn
-            // 
-            lbReturn.AutoSize = true;
-            lbReturn.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbReturn.ForeColor = Color.FromArgb(113, 113, 122);
-            lbReturn.Location = new Point(100, 434);
-            lbReturn.Name = "lbReturn";
-            lbReturn.Size = new Size(61, 18);
-            lbReturn.TabIndex = 27;
-            lbReturn.Text = "Quay lại";
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.abtnAccept = new Airline_ticket_sales_management.AControls.AButton();
+            this.lbGetOTP = new System.Windows.Forms.Label();
+            this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbOTP = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.pibReturn = new System.Windows.Forms.PictureBox();
+            this.aPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibReturn)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(113, 113, 122);
-            label1.Location = new Point(100, 279);
-            label1.Name = "label1";
-            label1.Size = new Size(138, 18);
-            label1.TabIndex = 26;
-            label1.Text = "Đã gửi mã OTP vào";
-            // 
-            // aTextboxuc2
-            // 
-            aTextboxuc2.BackColor = Color.FromArgb(217, 221, 252);
-            aTextboxuc2.BorderColor = Color.FromArgb(217, 221, 252);
-            aTextboxuc2.BorderFocusColor = Color.FromArgb(217, 221, 252);
-            aTextboxuc2.BorderRadius = 10;
-            aTextboxuc2.BorderSize = 2;
-            aTextboxuc2.Cursor = Cursors.IBeam;
-            aTextboxuc2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            aTextboxuc2.ForeColor = Color.Black;
-            aTextboxuc2.Location = new Point(100, 310);
-            aTextboxuc2.Margin = new Padding(4);
-            aTextboxuc2.Multiline = false;
-            aTextboxuc2.Name = "aTextboxuc2";
-            aTextboxuc2.Padding = new Padding(7);
-            aTextboxuc2.PasswordChar = false;
-            aTextboxuc2.PlaceholderColor = Color.DarkGray;
-            aTextboxuc2.PlaceholderText = "Mã OTP";
-            aTextboxuc2.RoundType = AControls.ATextboxUC.RoundStyles.Full;
-            aTextboxuc2.Size = new Size(300, 37);
-            aTextboxuc2.TabIndex = 25;
-            aTextboxuc2.Texts = "";
-            aTextboxuc2.UnderlinedStyle = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
+            this.label1.Location = new System.Drawing.Point(134, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 18);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Đã gửi mã OTP";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(96, 241);
-            label4.MaximumSize = new Size(330, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(210, 35);
-            label4.TabIndex = 24;
-            label4.Text = "Nhập mã OTP";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(95, 50);
+            this.label4.MaximumSize = new System.Drawing.Size(330, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(210, 35);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Nhập mã OTP";
             // 
-            // abtnGetOTP
+            // abtnAccept
             // 
-            abtnGetOTP.BackColor = Color.FromArgb(128, 152, 249);
-            abtnGetOTP.BackgroundColor = Color.FromArgb(128, 152, 249);
-            abtnGetOTP.BorderColor = Color.PaleVioletRed;
-            abtnGetOTP.BorderRadius = 20;
-            abtnGetOTP.BorderSize = 0;
-            abtnGetOTP.Cursor = Cursors.Hand;
-            abtnGetOTP.FlatAppearance.BorderSize = 0;
-            abtnGetOTP.FlatStyle = FlatStyle.Flat;
-            abtnGetOTP.Font = new Font("Arial", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            abtnGetOTP.ForeColor = Color.White;
-            abtnGetOTP.LineType = AControls.AButton.LineStyles.None;
-            abtnGetOTP.Location = new Point(100, 360);
-            abtnGetOTP.Name = "abtnGetOTP";
-            abtnGetOTP.RoundType = AControls.AButton.RoundStyles.Full;
-            abtnGetOTP.Size = new Size(300, 37);
-            abtnGetOTP.TabIndex = 23;
-            abtnGetOTP.Text = "Gửi";
-            abtnGetOTP.TextColor = Color.White;
-            abtnGetOTP.ThinknessLine = 0;
-            abtnGetOTP.UseVisualStyleBackColor = false;
-            abtnGetOTP.Click += abtnGetOTP_Click;
+            this.abtnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
+            this.abtnAccept.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
+            this.abtnAccept.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnAccept.BorderRadius = 20;
+            this.abtnAccept.BorderSize = 0;
+            this.abtnAccept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abtnAccept.FlatAppearance.BorderSize = 0;
+            this.abtnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnAccept.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.abtnAccept.ForeColor = System.Drawing.Color.White;
+            this.abtnAccept.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnAccept.Location = new System.Drawing.Point(50, 220);
+            this.abtnAccept.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnAccept.Name = "abtnAccept";
+            this.abtnAccept.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnAccept.Size = new System.Drawing.Size(300, 40);
+            this.abtnAccept.TabIndex = 23;
+            this.abtnAccept.Text = "Xác nhận";
+            this.abtnAccept.TextColor = System.Drawing.Color.White;
+            this.abtnAccept.ThinknessLine = 0;
+            this.abtnAccept.UseVisualStyleBackColor = false;
+            this.abtnAccept.Click += new System.EventHandler(this.abtnAccept_Click);
             // 
-            // label2
+            // lbGetOTP
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(128, 152, 249);
-            label2.Location = new Point(234, 279);
-            label2.Name = "label2";
-            label2.Size = new Size(138, 18);
-            label2.TabIndex = 28;
-            label2.Text = "nhan@gmail.com";
+            this.lbGetOTP.AutoSize = true;
+            this.lbGetOTP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbGetOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.lbGetOTP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(152)))), ((int)(((byte)(249)))));
+            this.lbGetOTP.Location = new System.Drawing.Point(266, 180);
+            this.lbGetOTP.Name = "lbGetOTP";
+            this.lbGetOTP.Size = new System.Drawing.Size(95, 18);
+            this.lbGetOTP.TabIndex = 29;
+            this.lbGetOTP.Text = "Gửi lại OTP";
+            this.lbGetOTP.Click += new System.EventHandler(this.lbGetOTP_Click);
             // 
-            // label3
+            // aPanel1
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(128, 152, 249);
-            label3.Location = new Point(211, 409);
-            label3.Name = "label3";
-            label3.Size = new Size(84, 18);
-            label3.TabIndex = 29;
-            label3.Text = "Gửi lại mã";
+            this.aPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.aPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.aPanel1.BorderRadius = 10;
+            this.aPanel1.BorderSize = 0;
+            this.aPanel1.Controls.Add(this.atxbOTP);
+            this.aPanel1.ForeColor = System.Drawing.Color.White;
+            this.aPanel1.Location = new System.Drawing.Point(50, 136);
+            this.aPanel1.Name = "aPanel1";
+            this.aPanel1.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel1.Size = new System.Drawing.Size(300, 37);
+            this.aPanel1.TabIndex = 32;
+            this.aPanel1.TextColor = System.Drawing.Color.White;
+            // 
+            // atxbOTP
+            // 
+            this.atxbOTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.atxbOTP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.atxbOTP.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
+            this.atxbOTP.BorderRadius = 0;
+            this.atxbOTP.BorderSize = 2;
+            this.atxbOTP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atxbOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbOTP.ForeColor = System.Drawing.Color.Black;
+            this.atxbOTP.isFocused = false;
+            this.atxbOTP.isPlaceholder = true;
+            this.atxbOTP.Location = new System.Drawing.Point(19, 2);
+            this.atxbOTP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbOTP.Multiline = false;
+            this.atxbOTP.Name = "atxbOTP";
+            this.atxbOTP.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbOTP.PasswordChar = false;
+            this.atxbOTP.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbOTP.PlaceholderText = "Mã OTP";
+            this.atxbOTP.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbOTP.Size = new System.Drawing.Size(267, 33);
+            this.atxbOTP.TabIndex = 22;
+            this.atxbOTP.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbOTP.Texts = "";
+            this.atxbOTP.UnderlinedStyle = false;
+            // 
+            // pibReturn
+            // 
+            this.pibReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pibReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibReturn.Image = global::Airline_ticket_sales_management.Properties.Resources._return;
+            this.pibReturn.Location = new System.Drawing.Point(25, 25);
+            this.pibReturn.Name = "pibReturn";
+            this.pibReturn.Size = new System.Drawing.Size(32, 32);
+            this.pibReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pibReturn.TabIndex = 34;
+            this.pibReturn.TabStop = false;
+            this.pibReturn.Click += new System.EventHandler(this.pibReturn_Click);
             // 
             // ForgotPassword2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(lbReturn);
-            Controls.Add(label1);
-            Controls.Add(aTextboxuc2);
-            Controls.Add(label4);
-            Controls.Add(abtnGetOTP);
-            Name = "ForgotPassword2";
-            Size = new Size(500, 668);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pibReturn);
+            this.Controls.Add(this.aPanel1);
+            this.Controls.Add(this.lbGetOTP);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.abtnAccept);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "ForgotPassword2";
+            this.Size = new System.Drawing.Size(400, 500);
+            this.aPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pibReturn)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
-
-        private Label lbReturn;
         private Label label1;
-        private AControls.ATextboxUC aTextboxuc2;
         private Label label4;
-        private AControls.AButton abtnGetOTP;
-        private Label label2;
-        private Label label3;
+        private AControls.AButton abtnAccept;
+        private Label lbGetOTP;
+        private AControls.APanel aPanel1;
+        private AControls.ATextboxUC atxbOTP;
+        private PictureBox pibReturn;
     }
 }
