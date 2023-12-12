@@ -31,7 +31,10 @@
         <AssociationConnector Association="FlightTicketManagementModel.FK__FLIGHT_TI__Ticke__5535A963" />
         <AssociationConnector Association="FlightTicketManagementModel.FK__SEAT__PlaneID__534D60F1" />
         <AssociationConnector Association="FlightTicketManagementModel.FK__SEAT__TicketClas__5441852A" />
-      </Diagram>
+        <EntityTypeShape EntityType="FlightTicketManagementModel.ACCOUNT" Width="1.5" PointX="12.625" PointY="1" />
+        <EntityTypeShape EntityType="FlightTicketManagementModel.PERMISSION" Width="1.5" PointX="10.375" PointY="1.375" />
+        <AssociationConnector Association="FlightTicketManagementModel.FK__ACCOUNT__RoleID__74AE54BC" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

@@ -115,6 +115,7 @@ namespace Airline_ticket_sales_management
             this.abtnRegsiter.TextColor = System.Drawing.Color.White;
             this.abtnRegsiter.ThinknessLine = 0;
             this.abtnRegsiter.UseVisualStyleBackColor = false;
+            this.abtnRegsiter.Click += new System.EventHandler(this.abtnRegsiter_Click);
             // 
             // aPanel1
             // 

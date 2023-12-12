@@ -86,6 +86,7 @@
     <Compile Include="AControls\ATextboxUC.Designer.cs">
       <DependentUpon>ATextboxUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="DALs\AccountDAL.cs" />
     <Compile Include="DALs\AirportDAL.cs" />
     <Compile Include="DALs\FlightDAL.cs" />
     <Compile Include="DALs\FlightTicketClassDetailDAL.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="DALs\PreventiveAirportDAL.cs" />
     <Compile Include="DALs\SeatDAL.cs" />
     <Compile Include="DALs\TicketClassDAL.cs" />
+    <Compile Include="DTOs\AccountDTO.cs" />
     <Compile Include="DTOs\AirportDTO.cs" />
     <Compile Include="DTOs\FlightDTO.cs" />
     <Compile Include="DTOs\FlightTicketClassDetailDTO.cs" />
@@ -102,11 +104,23 @@
     <Compile Include="DTOs\PlaneTicketClassDetailDTO.cs" />
     <Compile Include="DTOs\SeatDTO.cs" />
     <Compile Include="DTOs\TicketClassDTO.cs" />
+    <Compile Include="Model\ACCOUNT.cs">
+      <DependentUpon>FlightTicketManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PERMISSION.cs">
+      <DependentUpon>FlightTicketManagement.tt</DependentUpon>
+    </Compile>
     <Compile Include="Test\FormTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Test\FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\AccountAndPermission\AccountAndPermissionUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\AccountAndPermission\AccountAndPermissionUC.Designer.cs">
+      <DependentUpon>AccountAndPermissionUC.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login\FormLogin.cs">
       <SubType>Form</SubType>

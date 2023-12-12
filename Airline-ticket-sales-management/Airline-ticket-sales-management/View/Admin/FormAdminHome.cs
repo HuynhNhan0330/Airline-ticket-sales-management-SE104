@@ -1,5 +1,6 @@
 ﻿using Airline_ticket_sales_management.AControls;
 using Airline_ticket_sales_management.DALs;
+using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Model;
 using Airline_ticket_sales_management.Utils;
 using System;
@@ -18,6 +19,7 @@ namespace Airline_ticket_sales_management
 {
     public partial class FormAdminHome : Form
     {
+        private AccountDTO account;
         private AButton currentButton = null;
         private UserControl oldBody = null;
 
@@ -25,6 +27,42 @@ namespace Airline_ticket_sales_management
         {
             InitializeComponent();
             loadBody(new HomeAdminUC());
+        }
+
+        public FormAdminHome(AccountDTO account)
+        {
+            InitializeComponent();
+            loadBody(new HomeAdminUC());
+            
+            this.account = account;
+
+            for (int i = 0; i < account.PermissionCode.Length; ++i)
+            {
+                if (account.PermissionCode[i] == '0')
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            abtnFlight.Visible = false;
+                            break;
+                        case 1:
+                            abtnFlightTicket.Visible = false;
+                            break;
+                        case 2:
+                            abtnReport.Visible = false;
+                            break;
+                        case 3:
+                            abtnPlane.Visible = false;
+                            break;
+                        case 4:
+                            abtnAccountAndPermission.Visible = false;
+                            break;
+                        case 5:
+                            abtnSetting.Visible = false;
+                            break;
+                    }
+                }
+            }
         }
 
         private void FormAdminHome_Load(object sender, EventArgs e)

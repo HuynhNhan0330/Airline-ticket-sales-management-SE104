@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Airline_ticket_sales_management.AControls;
+using Airline_ticket_sales_management.DALs;
+using Airline_ticket_sales_management.DTOs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,13 +22,20 @@ namespace Airline_ticket_sales_management
 
         private void abtnLogin_Click(object sender, EventArgs e)
         {
-            var currentForm = FindForm();
-            currentForm.Hide();
-
-            FormAdminHome frmHome = new FormAdminHome();
-            frmHome.ShowDialog();
-
-            currentForm.Show();
+            if (string.IsNullOrEmpty(atxbUsername.Texts.Trim())) 
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Tài khoản không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+            else if (string.IsNullOrEmpty(atxbPassword.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Mật khẩu không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+            else
+            {
+                login(atxbUsername.Texts.Trim(), atxbPassword.Texts.Trim());
+            }
         }
 
         private void lbRegister_Click(object sender, EventArgs e)
@@ -45,6 +55,27 @@ namespace Airline_ticket_sales_management
             {
                 atxbPassword.PasswordChar = true;
                 pibHideViewPassword.BackgroundImage = Properties.Resources.view;
+            }
+        }
+
+        private async void login(string username, string password)
+        {
+            (AccountDTO account, string label) = await AccountDAL.Ins.login(username, password);
+
+            if (account == null)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+            else
+            {
+                var currentForm = FindForm();
+                currentForm.Hide();
+
+                FormAdminHome frmHome = new FormAdminHome(account);
+                frmHome.ShowDialog();
+
+                currentForm.Show();
             }
         }
     }

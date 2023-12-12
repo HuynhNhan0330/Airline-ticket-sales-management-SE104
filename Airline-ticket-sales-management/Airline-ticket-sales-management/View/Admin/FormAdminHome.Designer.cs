@@ -31,7 +31,7 @@
             this.pnTop = new System.Windows.Forms.Panel();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.abtnSetting = new Airline_ticket_sales_management.AControls.AButton();
-            this.aButton5 = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnAccountAndPermission = new Airline_ticket_sales_management.AControls.AButton();
             this.abtnPlane = new Airline_ticket_sales_management.AControls.AButton();
             this.abtnReport = new Airline_ticket_sales_management.AControls.AButton();
             this.abtnFlightTicket = new Airline_ticket_sales_management.AControls.AButton();
@@ -61,14 +61,14 @@
             // 
             this.pnMenu.BackColor = System.Drawing.Color.Transparent;
             this.pnMenu.Controls.Add(this.abtnSetting);
-            this.pnMenu.Controls.Add(this.aButton5);
+            this.pnMenu.Controls.Add(this.abtnAccountAndPermission);
             this.pnMenu.Controls.Add(this.abtnPlane);
             this.pnMenu.Controls.Add(this.abtnReport);
             this.pnMenu.Controls.Add(this.abtnFlightTicket);
             this.pnMenu.Controls.Add(this.abtnFlight);
             this.pnMenu.Location = new System.Drawing.Point(200, 52);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(998, 48);
+            this.pnMenu.Size = new System.Drawing.Size(1192, 48);
             this.pnMenu.TabIndex = 3;
             // 
             // abtnSetting
@@ -95,28 +95,28 @@
             this.abtnSetting.UseVisualStyleBackColor = false;
             this.abtnSetting.Click += new System.EventHandler(this.abtnSetting_Click);
             // 
-            // aButton5
+            // abtnAccountAndPermission
             // 
-            this.aButton5.BackColor = System.Drawing.Color.Transparent;
-            this.aButton5.BackgroundColor = System.Drawing.Color.Transparent;
-            this.aButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
-            this.aButton5.BorderRadius = 0;
-            this.aButton5.BorderSize = 0;
-            this.aButton5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.aButton5.FlatAppearance.BorderSize = 0;
-            this.aButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton5.Font = new System.Drawing.Font("Arial", 12F);
-            this.aButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
-            this.aButton5.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton5.Location = new System.Drawing.Point(600, 0);
-            this.aButton5.Name = "aButton5";
-            this.aButton5.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton5.Size = new System.Drawing.Size(225, 48);
-            this.aButton5.TabIndex = 8;
-            this.aButton5.Text = "Tài khoản và quyền";
-            this.aButton5.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
-            this.aButton5.ThinknessLine = 5;
-            this.aButton5.UseVisualStyleBackColor = false;
+            this.abtnAccountAndPermission.BackColor = System.Drawing.Color.Transparent;
+            this.abtnAccountAndPermission.BackgroundColor = System.Drawing.Color.Transparent;
+            this.abtnAccountAndPermission.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
+            this.abtnAccountAndPermission.BorderRadius = 0;
+            this.abtnAccountAndPermission.BorderSize = 0;
+            this.abtnAccountAndPermission.Dock = System.Windows.Forms.DockStyle.Left;
+            this.abtnAccountAndPermission.FlatAppearance.BorderSize = 0;
+            this.abtnAccountAndPermission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnAccountAndPermission.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnAccountAndPermission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
+            this.abtnAccountAndPermission.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnAccountAndPermission.Location = new System.Drawing.Point(600, 0);
+            this.abtnAccountAndPermission.Name = "abtnAccountAndPermission";
+            this.abtnAccountAndPermission.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnAccountAndPermission.Size = new System.Drawing.Size(225, 48);
+            this.abtnAccountAndPermission.TabIndex = 8;
+            this.abtnAccountAndPermission.Text = "Tài khoản và quyền";
+            this.abtnAccountAndPermission.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
+            this.abtnAccountAndPermission.ThinknessLine = 5;
+            this.abtnAccountAndPermission.UseVisualStyleBackColor = false;
             // 
             // abtnPlane
             // 
@@ -271,7 +271,7 @@
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Panel pnMenu;
         private AControls.AButton abtnSetting;
-        private AControls.AButton aButton5;
+        private AControls.AButton abtnAccountAndPermission;
         private AControls.AButton abtnPlane;
         private AControls.AButton abtnReport;
         private AControls.AButton abtnFlightTicket;

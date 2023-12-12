@@ -5,6 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="FlightTicketManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACCOUNT">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="Created" Type="smalldatetime" />
+          <Property Name="RoleID" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="AIRPORT">
           <Key>
             <PropertyRef Name="AirportID" />
@@ -106,6 +118,14 @@
           <Property Name="EarliestBookingTime" Type="int" Nullable="false" />
           <Property Name="LatestBookingCancellationTime" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="PERMISSION">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="100" />
+          <Property Name="PermissionCode" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="PLANE">
           <Key>
             <PropertyRef Name="PlaneID" />
@@ -131,6 +151,18 @@
           <Property Name="TicketClassName" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="PricePercentage" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK__ACCOUNT__RoleID__74AE54BC">
+          <End Role="PERMISSION" Type="Self.PERMISSION" Multiplicity="1" />
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERMISSION">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="ACCOUNT">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__DETAILED___Fligh__571DF1D5">
           <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="1" />
           <End Role="DETAILED_MONTHLY_REVENUE_REPORT" Type="Self.DETAILED_MONTHLY_REVENUE_REPORT" Multiplicity="*" />
@@ -302,6 +334,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="FlightTicketManagementModelStoreContainer">
+          <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AIRPORT" EntityType="Self.AIRPORT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ANNUAL_REVENUE_REPORT" EntityType="Self.ANNUAL_REVENUE_REPORT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DETAILED_ANNUAL_REVENUE_REPORT" EntityType="Self.DETAILED_ANNUAL_REVENUE_REPORT" Schema="dbo" store:Type="Tables" />
@@ -311,9 +344,14 @@
           <EntitySet Name="FLIGHT_TICKET" EntityType="Self.FLIGHT_TICKET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FLIGHT_TICKET_CLASS_DETAIL" EntityType="Self.FLIGHT_TICKET_CLASS_DETAIL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Parameters" EntityType="Self.Parameters" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERMISSION" EntityType="Self.PERMISSION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PLANE" EntityType="Self.PLANE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SEAT" EntityType="Self.SEAT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TICKET_CLASS" EntityType="Self.TICKET_CLASS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ACCOUNT__RoleID__74AE54BC" Association="Self.FK__ACCOUNT__RoleID__74AE54BC">
+            <End Role="PERMISSION" EntitySet="PERMISSION" />
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+          </AssociationSet>
           <AssociationSet Name="FK__DETAILED___Fligh__571DF1D5" Association="Self.FK__DETAILED___Fligh__571DF1D5">
             <End Role="FLIGHT" EntitySet="FLIGHT" />
             <End Role="DETAILED_MONTHLY_REVENUE_REPORT" EntitySet="DETAILED_MONTHLY_REVENUE_REPORT" />
@@ -444,7 +482,13 @@
             <End Role="TICKET_CLASS" EntitySet="TICKET_CLASS" />
             <End Role="SEAT" EntitySet="SEATs" />
           </AssociationSet>
-        </EntityContainer>
+          <EntitySet Name="ACCOUNTs" EntityType="FlightTicketManagementModel.ACCOUNT" />
+          <EntitySet Name="PERMISSIONs" EntityType="FlightTicketManagementModel.PERMISSION" />
+          <AssociationSet Name="FK__ACCOUNT__RoleID__74AE54BC" Association="FlightTicketManagementModel.FK__ACCOUNT__RoleID__74AE54BC">
+            <End Role="PERMISSION" EntitySet="PERMISSIONs" />
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+          </AssociationSet>
+          </EntityContainer>
         <EntityType Name="AIRPORT">
           <Key>
             <PropertyRef Name="AirportID" />
@@ -769,6 +813,40 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ACCOUNT">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Precision="0" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PERMISSION" Relationship="FlightTicketManagementModel.FK__ACCOUNT__RoleID__74AE54BC" FromRole="ACCOUNT" ToRole="PERMISSION" />
+        </EntityType>
+        <EntityType Name="PERMISSION">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RoleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PermissionCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ACCOUNTs" Relationship="FlightTicketManagementModel.FK__ACCOUNT__RoleID__74AE54BC" FromRole="PERMISSION" ToRole="ACCOUNT" />
+        </EntityType>
+        <Association Name="FK__ACCOUNT__RoleID__74AE54BC">
+          <End Type="FlightTicketManagementModel.PERMISSION" Role="PERMISSION" Multiplicity="1" />
+          <End Type="FlightTicketManagementModel.ACCOUNT" Role="ACCOUNT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERMISSION">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="ACCOUNT">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -907,7 +985,29 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          <EntitySetMapping Name="ACCOUNTs">
+            <EntityTypeMapping TypeName="FlightTicketManagementModel.ACCOUNT">
+              <MappingFragment StoreEntitySet="ACCOUNT">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERMISSIONs">
+            <EntityTypeMapping TypeName="FlightTicketManagementModel.PERMISSION">
+              <MappingFragment StoreEntitySet="PERMISSION">
+                <ScalarProperty Name="PermissionCode" ColumnName="PermissionCode" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

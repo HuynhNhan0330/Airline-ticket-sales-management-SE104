@@ -104,6 +104,24 @@ CREATE TABLE Parameters (
   LatestBookingCancellationTime INT NOT NULL
 );
 
+CREATE TABLE ACCOUNT (
+  AccountID VARCHAR(20) PRIMARY KEY NOT NULL,
+  Name NVARCHAR(100),
+  Phone VARCHAR(20),
+  Email NVARCHAR(100),
+  Password NVARCHAR(100),
+  Created SMALLDATETIME,
+  RoleID VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE PERMISSION (
+  RoleID VARCHAR(20) PRIMARY KEY NOT NULL,
+  RoleName NVARCHAR(100),
+  PermissionCode NVARCHAR(100)
+);
+
+alter table ACCOUNT add foreign key (RoleID) references PERMISSION(RoleID);
+
 /*Khoa ngoại*/
 --alter table FLIGHT_TICKET add foreign key (SeatID) references SEAT(SeatID); // Không thực hiện được
 alter table FLIGHT_TICKET add foreign key (FlightID) references FLIGHT(FlightID);

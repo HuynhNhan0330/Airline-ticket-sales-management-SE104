@@ -37,5 +37,7 @@ namespace Airline_ticket_sales_management.Model
         public virtual DbSet<PLANE> PLANEs { get; set; }
         public virtual DbSet<SEAT> SEATs { get; set; }
         public virtual DbSet<TICKET_CLASS> TICKET_CLASS { get; set; }
+        public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
+        public virtual DbSet<PERMISSION> PERMISSIONs { get; set; }
     }
 }
