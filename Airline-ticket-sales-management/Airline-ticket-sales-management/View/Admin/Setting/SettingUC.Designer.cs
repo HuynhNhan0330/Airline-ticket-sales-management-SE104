@@ -172,6 +172,7 @@ namespace Airline_ticket_sales_management
             this.atbLatestBookingCancellationTime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.atbLatestBookingCancellationTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atbLatestBookingCancellationTime.ForeColor = System.Drawing.Color.Black;
+            this.atbLatestBookingCancellationTime.isFocused = false;
             this.atbLatestBookingCancellationTime.isPlaceholder = false;
             this.atbLatestBookingCancellationTime.Location = new System.Drawing.Point(300, 0);
             this.atbLatestBookingCancellationTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -229,6 +230,7 @@ namespace Airline_ticket_sales_management
             this.atbMaximumStopoverTime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.atbMaximumStopoverTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atbMaximumStopoverTime.ForeColor = System.Drawing.Color.Black;
+            this.atbMaximumStopoverTime.isFocused = false;
             this.atbMaximumStopoverTime.isPlaceholder = false;
             this.atbMaximumStopoverTime.Location = new System.Drawing.Point(300, 0);
             this.atbMaximumStopoverTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -286,6 +288,7 @@ namespace Airline_ticket_sales_management
             this.atbMinimumFlightTime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.atbMinimumFlightTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atbMinimumFlightTime.ForeColor = System.Drawing.Color.Black;
+            this.atbMinimumFlightTime.isFocused = false;
             this.atbMinimumFlightTime.isPlaceholder = false;
             this.atbMinimumFlightTime.Location = new System.Drawing.Point(300, 0);
             this.atbMinimumFlightTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -343,6 +346,7 @@ namespace Airline_ticket_sales_management
             this.atbMinimumStopoverTime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.atbMinimumStopoverTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atbMinimumStopoverTime.ForeColor = System.Drawing.Color.Black;
+            this.atbMinimumStopoverTime.isFocused = false;
             this.atbMinimumStopoverTime.isPlaceholder = false;
             this.atbMinimumStopoverTime.Location = new System.Drawing.Point(300, 0);
             this.atbMinimumStopoverTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -374,7 +378,7 @@ namespace Airline_ticket_sales_management
             this.abtnSaveRegulations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnSaveRegulations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnSaveRegulations.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnSaveRegulations.BorderRadius = 20;
+            this.abtnSaveRegulations.BorderRadius = 15;
             this.abtnSaveRegulations.BorderSize = 0;
             this.abtnSaveRegulations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.abtnSaveRegulations.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -426,6 +430,7 @@ namespace Airline_ticket_sales_management
             this.atbMaxPreventiveAirports.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.atbMaxPreventiveAirports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atbMaxPreventiveAirports.ForeColor = System.Drawing.Color.Black;
+            this.atbMaxPreventiveAirports.isFocused = false;
             this.atbMaxPreventiveAirports.isPlaceholder = false;
             this.atbMaxPreventiveAirports.Location = new System.Drawing.Point(300, 0);
             this.atbMaxPreventiveAirports.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -483,6 +488,7 @@ namespace Airline_ticket_sales_management
             this.atbEarliestBookingTime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.atbEarliestBookingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atbEarliestBookingTime.ForeColor = System.Drawing.Color.Black;
+            this.atbEarliestBookingTime.isFocused = false;
             this.atbEarliestBookingTime.isPlaceholder = false;
             this.atbEarliestBookingTime.Location = new System.Drawing.Point(300, 0);
             this.atbEarliestBookingTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -548,12 +554,12 @@ namespace Airline_ticket_sales_management
             this.abtnCancelAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnCancelAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnCancelAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnCancelAirport.BorderRadius = 20;
+            this.abtnCancelAirport.BorderRadius = 15;
             this.abtnCancelAirport.BorderSize = 0;
             this.abtnCancelAirport.FlatAppearance.BorderSize = 0;
             this.abtnCancelAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.abtnCancelAirport.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.abtnCancelAirport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.abtnCancelAirport.ForeColor = System.Drawing.Color.White;
             this.abtnCancelAirport.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
             this.abtnCancelAirport.Location = new System.Drawing.Point(250, 0);
             this.abtnCancelAirport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -562,7 +568,7 @@ namespace Airline_ticket_sales_management
             this.abtnCancelAirport.Size = new System.Drawing.Size(200, 40);
             this.abtnCancelAirport.TabIndex = 9;
             this.abtnCancelAirport.Text = "Huỷ";
-            this.abtnCancelAirport.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.abtnCancelAirport.TextColor = System.Drawing.Color.White;
             this.abtnCancelAirport.ThinknessLine = 0;
             this.abtnCancelAirport.UseVisualStyleBackColor = false;
             this.abtnCancelAirport.Click += new System.EventHandler(this.abtnCancelAirport_Click);
@@ -572,7 +578,7 @@ namespace Airline_ticket_sales_management
             this.abtnUpdateAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnUpdateAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnUpdateAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnUpdateAirport.BorderRadius = 20;
+            this.abtnUpdateAirport.BorderRadius = 15;
             this.abtnUpdateAirport.BorderSize = 0;
             this.abtnUpdateAirport.FlatAppearance.BorderSize = 0;
             this.abtnUpdateAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -624,6 +630,7 @@ namespace Airline_ticket_sales_management
             this.atxbCountryName.BorderSize = 2;
             this.atxbCountryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atxbCountryName.ForeColor = System.Drawing.Color.Black;
+            this.atxbCountryName.isFocused = false;
             this.atxbCountryName.isPlaceholder = true;
             this.atxbCountryName.Location = new System.Drawing.Point(25, 148);
             this.atxbCountryName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -649,6 +656,7 @@ namespace Airline_ticket_sales_management
             this.atxbAirportName.BorderSize = 2;
             this.atxbAirportName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atxbAirportName.ForeColor = System.Drawing.Color.Black;
+            this.atxbAirportName.isFocused = false;
             this.atxbAirportName.isPlaceholder = true;
             this.atxbAirportName.Location = new System.Drawing.Point(25, 44);
             this.atxbAirportName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -674,6 +682,7 @@ namespace Airline_ticket_sales_management
             this.atxbCityName.BorderSize = 2;
             this.atxbCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atxbCityName.ForeColor = System.Drawing.Color.Black;
+            this.atxbCityName.isFocused = false;
             this.atxbCityName.isPlaceholder = true;
             this.atxbCityName.Location = new System.Drawing.Point(25, 96);
             this.atxbCityName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -863,12 +872,12 @@ namespace Airline_ticket_sales_management
             this.abtnCancelTicketClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnCancelTicketClass.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnCancelTicketClass.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnCancelTicketClass.BorderRadius = 20;
+            this.abtnCancelTicketClass.BorderRadius = 15;
             this.abtnCancelTicketClass.BorderSize = 0;
             this.abtnCancelTicketClass.FlatAppearance.BorderSize = 0;
             this.abtnCancelTicketClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.abtnCancelTicketClass.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.abtnCancelTicketClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.abtnCancelTicketClass.ForeColor = System.Drawing.Color.White;
             this.abtnCancelTicketClass.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
             this.abtnCancelTicketClass.Location = new System.Drawing.Point(175, 0);
             this.abtnCancelTicketClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -877,7 +886,7 @@ namespace Airline_ticket_sales_management
             this.abtnCancelTicketClass.Size = new System.Drawing.Size(125, 40);
             this.abtnCancelTicketClass.TabIndex = 9;
             this.abtnCancelTicketClass.Text = "Huỷ";
-            this.abtnCancelTicketClass.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.abtnCancelTicketClass.TextColor = System.Drawing.Color.White;
             this.abtnCancelTicketClass.ThinknessLine = 0;
             this.abtnCancelTicketClass.UseVisualStyleBackColor = false;
             this.abtnCancelTicketClass.Click += new System.EventHandler(this.abtnCancelTicketClass_Click);
@@ -887,7 +896,7 @@ namespace Airline_ticket_sales_management
             this.abtnUpdateTicketClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnUpdateTicketClass.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnUpdateTicketClass.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnUpdateTicketClass.BorderRadius = 20;
+            this.abtnUpdateTicketClass.BorderRadius = 15;
             this.abtnUpdateTicketClass.BorderSize = 0;
             this.abtnUpdateTicketClass.FlatAppearance.BorderSize = 0;
             this.abtnUpdateTicketClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -939,6 +948,7 @@ namespace Airline_ticket_sales_management
             this.atxbPricePercentage.BorderSize = 2;
             this.atxbPricePercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atxbPricePercentage.ForeColor = System.Drawing.Color.Black;
+            this.atxbPricePercentage.isFocused = false;
             this.atxbPricePercentage.isPlaceholder = true;
             this.atxbPricePercentage.Location = new System.Drawing.Point(25, 90);
             this.atxbPricePercentage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -964,6 +974,7 @@ namespace Airline_ticket_sales_management
             this.atxbTicketClassName.BorderSize = 2;
             this.atxbTicketClassName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.atxbTicketClassName.ForeColor = System.Drawing.Color.Black;
+            this.atxbTicketClassName.isFocused = false;
             this.atxbTicketClassName.isPlaceholder = true;
             this.atxbTicketClassName.Location = new System.Drawing.Point(25, 40);
             this.atxbTicketClassName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

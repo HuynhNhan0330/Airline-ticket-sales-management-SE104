@@ -134,7 +134,7 @@ namespace Airline_ticket_sales_management
             this.abtnRemovePreventiveAirport.BackColor = System.Drawing.Color.Gray;
             this.abtnRemovePreventiveAirport.BackgroundColor = System.Drawing.Color.Gray;
             this.abtnRemovePreventiveAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnRemovePreventiveAirport.BorderRadius = 20;
+            this.abtnRemovePreventiveAirport.BorderRadius = 15;
             this.abtnRemovePreventiveAirport.BorderSize = 0;
             this.abtnRemovePreventiveAirport.FlatAppearance.BorderSize = 0;
             this.abtnRemovePreventiveAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,7 +158,7 @@ namespace Airline_ticket_sales_management
             this.abtnAddPreventiveAirport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnAddPreventiveAirport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnAddPreventiveAirport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnAddPreventiveAirport.BorderRadius = 20;
+            this.abtnAddPreventiveAirport.BorderRadius = 15;
             this.abtnAddPreventiveAirport.BorderSize = 0;
             this.abtnAddPreventiveAirport.FlatAppearance.BorderSize = 0;
             this.abtnAddPreventiveAirport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -430,7 +430,7 @@ namespace Airline_ticket_sales_management
             this.abtnCancel.BackColor = System.Drawing.Color.Gray;
             this.abtnCancel.BackgroundColor = System.Drawing.Color.Gray;
             this.abtnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnCancel.BorderRadius = 20;
+            this.abtnCancel.BorderRadius = 15;
             this.abtnCancel.BorderSize = 0;
             this.abtnCancel.FlatAppearance.BorderSize = 0;
             this.abtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -454,7 +454,7 @@ namespace Airline_ticket_sales_management
             this.abtnUpdateFlight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnUpdateFlight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnUpdateFlight.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnUpdateFlight.BorderRadius = 20;
+            this.abtnUpdateFlight.BorderRadius = 15;
             this.abtnUpdateFlight.BorderSize = 0;
             this.abtnUpdateFlight.FlatAppearance.BorderSize = 0;
             this.abtnUpdateFlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

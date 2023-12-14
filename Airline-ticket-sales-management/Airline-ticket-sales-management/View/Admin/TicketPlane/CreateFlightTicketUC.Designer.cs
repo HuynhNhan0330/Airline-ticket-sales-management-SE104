@@ -34,10 +34,11 @@ namespace Airline_ticket_sales_management
             this.aTextboxuc1 = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.aTextboxuc2 = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.aTextboxuc6 = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.aTextboxuc3 = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.aTextboxuc5 = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.aTextboxuc4 = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.aTextboxuc3 = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.aPanel3 = new Airline_ticket_sales_management.AControls.APanel();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -55,7 +56,6 @@ namespace Airline_ticket_sales_management
             this.pnSeat = new System.Windows.Forms.Panel();
             this.abtnCreateFlightTicket = new Airline_ticket_sales_management.AControls.AButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pnTicketClass = new System.Windows.Forms.Panel();
             this.aPanel1.SuspendLayout();
             this.aPanel3.SuspendLayout();
@@ -77,6 +77,7 @@ namespace Airline_ticket_sales_management
             this.aTextboxuc1.BorderSize = 2;
             this.aTextboxuc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.aTextboxuc1.ForeColor = System.Drawing.Color.Black;
+            this.aTextboxuc1.isFocused = false;
             this.aTextboxuc1.isPlaceholder = true;
             this.aTextboxuc1.Location = new System.Drawing.Point(25, 25);
             this.aTextboxuc1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -102,6 +103,7 @@ namespace Airline_ticket_sales_management
             this.aTextboxuc2.BorderSize = 2;
             this.aTextboxuc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.aTextboxuc2.ForeColor = System.Drawing.Color.Black;
+            this.aTextboxuc2.isFocused = false;
             this.aTextboxuc2.isPlaceholder = true;
             this.aTextboxuc2.Location = new System.Drawing.Point(25, 140);
             this.aTextboxuc2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -141,6 +143,15 @@ namespace Airline_ticket_sales_management
             this.aPanel1.TabIndex = 2;
             this.aPanel1.TextColor = System.Drawing.Color.White;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(25, 85);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 30);
+            this.comboBox1.TabIndex = 8;
+            // 
             // aTextboxuc6
             // 
             this.aTextboxuc6.BackColor = System.Drawing.Color.White;
@@ -150,6 +161,7 @@ namespace Airline_ticket_sales_management
             this.aTextboxuc6.BorderSize = 2;
             this.aTextboxuc6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.aTextboxuc6.ForeColor = System.Drawing.Color.Black;
+            this.aTextboxuc6.isFocused = false;
             this.aTextboxuc6.isPlaceholder = true;
             this.aTextboxuc6.Location = new System.Drawing.Point(25, 380);
             this.aTextboxuc6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -166,6 +178,32 @@ namespace Airline_ticket_sales_management
             this.aTextboxuc6.Texts = "";
             this.aTextboxuc6.UnderlinedStyle = false;
             // 
+            // aTextboxuc3
+            // 
+            this.aTextboxuc3.BackColor = System.Drawing.Color.White;
+            this.aTextboxuc3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aTextboxuc3.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
+            this.aTextboxuc3.BorderRadius = 8;
+            this.aTextboxuc3.BorderSize = 2;
+            this.aTextboxuc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.aTextboxuc3.ForeColor = System.Drawing.Color.Black;
+            this.aTextboxuc3.isFocused = false;
+            this.aTextboxuc3.isPlaceholder = true;
+            this.aTextboxuc3.Location = new System.Drawing.Point(25, 200);
+            this.aTextboxuc3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.aTextboxuc3.Multiline = false;
+            this.aTextboxuc3.Name = "aTextboxuc3";
+            this.aTextboxuc3.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.aTextboxuc3.PasswordChar = false;
+            this.aTextboxuc3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.aTextboxuc3.PlaceholderText = "Họ và tên";
+            this.aTextboxuc3.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.aTextboxuc3.Size = new System.Drawing.Size(200, 35);
+            this.aTextboxuc3.TabIndex = 4;
+            this.aTextboxuc3.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.aTextboxuc3.Texts = "";
+            this.aTextboxuc3.UnderlinedStyle = false;
+            // 
             // aTextboxuc5
             // 
             this.aTextboxuc5.BackColor = System.Drawing.Color.White;
@@ -175,6 +213,7 @@ namespace Airline_ticket_sales_management
             this.aTextboxuc5.BorderSize = 2;
             this.aTextboxuc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.aTextboxuc5.ForeColor = System.Drawing.Color.Black;
+            this.aTextboxuc5.isFocused = false;
             this.aTextboxuc5.isPlaceholder = true;
             this.aTextboxuc5.Location = new System.Drawing.Point(25, 320);
             this.aTextboxuc5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -200,6 +239,7 @@ namespace Airline_ticket_sales_management
             this.aTextboxuc4.BorderSize = 2;
             this.aTextboxuc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.aTextboxuc4.ForeColor = System.Drawing.Color.Black;
+            this.aTextboxuc4.isFocused = false;
             this.aTextboxuc4.isPlaceholder = true;
             this.aTextboxuc4.Location = new System.Drawing.Point(25, 260);
             this.aTextboxuc4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -215,31 +255,6 @@ namespace Airline_ticket_sales_management
             this.aTextboxuc4.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.aTextboxuc4.Texts = "";
             this.aTextboxuc4.UnderlinedStyle = false;
-            // 
-            // aTextboxuc3
-            // 
-            this.aTextboxuc3.BackColor = System.Drawing.Color.White;
-            this.aTextboxuc3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aTextboxuc3.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            this.aTextboxuc3.BorderRadius = 8;
-            this.aTextboxuc3.BorderSize = 2;
-            this.aTextboxuc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.aTextboxuc3.ForeColor = System.Drawing.Color.Black;
-            this.aTextboxuc3.isPlaceholder = true;
-            this.aTextboxuc3.Location = new System.Drawing.Point(25, 200);
-            this.aTextboxuc3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.aTextboxuc3.Multiline = false;
-            this.aTextboxuc3.Name = "aTextboxuc3";
-            this.aTextboxuc3.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.aTextboxuc3.PasswordChar = false;
-            this.aTextboxuc3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.aTextboxuc3.PlaceholderText = "Họ và tên";
-            this.aTextboxuc3.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.aTextboxuc3.Size = new System.Drawing.Size(200, 35);
-            this.aTextboxuc3.TabIndex = 4;
-            this.aTextboxuc3.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.aTextboxuc3.Texts = "";
-            this.aTextboxuc3.UnderlinedStyle = false;
             // 
             // aPanel3
             // 
@@ -407,7 +422,7 @@ namespace Airline_ticket_sales_management
             this.abtnCreateFlightTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnCreateFlightTicket.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.abtnCreateFlightTicket.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnCreateFlightTicket.BorderRadius = 20;
+            this.abtnCreateFlightTicket.BorderRadius = 15;
             this.abtnCreateFlightTicket.BorderSize = 0;
             this.abtnCreateFlightTicket.FlatAppearance.BorderSize = 0;
             this.abtnCreateFlightTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -435,15 +450,6 @@ namespace Airline_ticket_sales_management
             this.label8.Size = new System.Drawing.Size(164, 29);
             this.label8.TabIndex = 7;
             this.label8.Text = "Thông tin vé";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(25, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 30);
-            this.comboBox1.TabIndex = 8;
             // 
             // pnTicketClass
             // 
