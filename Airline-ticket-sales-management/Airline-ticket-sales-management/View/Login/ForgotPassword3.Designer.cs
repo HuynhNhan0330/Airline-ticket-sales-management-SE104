@@ -131,7 +131,7 @@ namespace Airline_ticket_sales_management
             // pibHideViewRePassword
             // 
             this.pibHideViewRePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
-            this.pibHideViewRePassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.hide;
+            this.pibHideViewRePassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.view;
             this.pibHideViewRePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pibHideViewRePassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibHideViewRePassword.Location = new System.Drawing.Point(271, 7);
@@ -189,7 +189,7 @@ namespace Airline_ticket_sales_management
             // pibHideViewPassword
             // 
             this.pibHideViewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(252)))));
-            this.pibHideViewPassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.hide;
+            this.pibHideViewPassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.view;
             this.pibHideViewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pibHideViewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibHideViewPassword.Location = new System.Drawing.Point(271, 7);

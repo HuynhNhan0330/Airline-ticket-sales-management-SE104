@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Airline_ticket_sales_management.DALs
 {
@@ -118,40 +119,36 @@ namespace Airline_ticket_sales_management.DALs
         //    }
         //}
 
-        //public async Task<(bool, List<FlightDTO>, string)> getListFlight()
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            var FlightList = (from flight in context.FLIGHTs
-        //                              join departureAirport in context.AIRPORTs
-        //                              on flight.DepartureAirportCode equals departureAirport.AirportID
-        //                              join arrivalAirport in context.AIRPORTs
-        //                              on flight.ArrivalAirportCode equals arrivalAirport.AirportID
-        //                              select new FlightDTO
-        //                              {
-        //                                  FlightID = flight.FlightID,
-        //                                  PlaneID = flight.PlaneID,
-        //                                  DepartureAirportCode = flight.DepartureAirportCode,
-        //                                  DepartureAirportName = departureAirport.AirportName,
-        //                                  DepartureCityName = departureAirport.CityName,
-        //                                  ArrivalAirportCode = flight.ArrivalAirportCode,
-        //                                  ArrivalAirportName = arrivalAirport.AirportName,
-        //                                  ArrivalCityName = arrivalAirport.CityName,
-        //                                  TicketPrice = flight.TicketPrice,
-        //                                  DepartureDateTime = flight.DepartureDateTime,
-        //                                  FlightDuration = flight.FlightDuration,
-        //                              }).ToListAsync();
+        public async Task<(bool, List<AccountDTO>, string)> getListAccount()
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var accountList = (from ac in context.ACCOUNTs
+                                      join permission in context.PERMISSIONs
+                                      on ac.RoleID equals permission.RoleID
+                                      select new AccountDTO
+                                      {
+                                            AccountID = ac.AccountID,
+                                            Name = ac.Name,
+                                            Email = ac.Email,
+                                            Phone = ac.Phone,
+                                            Password = ac.Password,
+                                            Created = (DateTime)ac.Created,
+                                            RoleID = ac.RoleID,
+                                            RoleName = permission.RoleName,
+                                            PermissionCode = permission.PermissionCode
+                                      }).ToListAsync();
 
-        //            return (true, await FlightList, "Lấy danh sách chuyến bay thành công!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, null, ex.Message);
-        //    }
-        //}
+                    return (true, await accountList, "Lấy danh sách tài khoản thành công!");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, null, ex.Message);
+            }
+        }
 
         //public async Task<(bool, string)> deleteFlight(string flightID)
         //{

@@ -68,7 +68,7 @@
             this.pnMenu.Controls.Add(this.abtnFlight);
             this.pnMenu.Location = new System.Drawing.Point(200, 52);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(1192, 48);
+            this.pnMenu.Size = new System.Drawing.Size(1133, 48);
             this.pnMenu.TabIndex = 3;
             // 
             // abtnSetting
@@ -117,6 +117,7 @@
             this.abtnAccountAndPermission.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(124)))));
             this.abtnAccountAndPermission.ThinknessLine = 5;
             this.abtnAccountAndPermission.UseVisualStyleBackColor = false;
+            this.abtnAccountAndPermission.Click += new System.EventHandler(this.abtnAccountAndPermission_Click);
             // 
             // abtnPlane
             // 

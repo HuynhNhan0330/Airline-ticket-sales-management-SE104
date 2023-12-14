@@ -91,6 +91,7 @@
     <Compile Include="DALs\FlightDAL.cs" />
     <Compile Include="DALs\FlightTicketClassDetailDAL.cs" />
     <Compile Include="DALs\ParametersDAL.cs" />
+    <Compile Include="DALs\PermissionDAL.cs" />
     <Compile Include="DALs\PlaneDAL.cs" />
     <Compile Include="DALs\PreventiveAirportDAL.cs" />
     <Compile Include="DALs\SeatDAL.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="DTOs\FlightDTO.cs" />
     <Compile Include="DTOs\FlightTicketClassDetailDTO.cs" />
     <Compile Include="DTOs\ParametersDTO.cs" />
+    <Compile Include="DTOs\PermissionDTO.cs" />
     <Compile Include="DTOs\PlaneDTO.cs" />
     <Compile Include="DTOs\PlaneTicketClassDetailDTO.cs" />
     <Compile Include="DTOs\SeatDTO.cs" />
@@ -115,6 +117,18 @@
     </Compile>
     <Compile Include="Test\FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\AccountItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\AccountItemUC.Designer.cs">
+      <DependentUpon>AccountItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PermissiontItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PermissiontItemUC.Designer.cs">
+      <DependentUpon>PermissiontItemUC.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\AccountAndPermission\AccountAndPermissionUC.cs">
       <SubType>UserControl</SubType>
@@ -374,6 +388,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test\FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\AccountItemUC.resx">
+      <DependentUpon>AccountItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PermissiontItemUC.resx">
+      <DependentUpon>PermissiontItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\AccountAndPermission\AccountAndPermissionUC.resx">
+      <DependentUpon>AccountAndPermissionUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

@@ -13,7 +13,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace Airline_ticket_sales_management
 {
@@ -175,8 +174,20 @@ namespace Airline_ticket_sales_management
                 loadBody(new FlightTicketUC());
             }
         }
-        #endregion
 
+        private void abtnAccountAndPermission_Click(object sender, EventArgs e)
+        {
+            if (currentButton != abtnAccountAndPermission)
+            {
+                if (currentButton != null)
+                    doDeactivateButton(currentButton);
+
+                currentButton = abtnAccountAndPermission;
+                doActivateButton(currentButton);
+                loadBody(new AccountAndPermissionUC());
+            }
+        }
+        #endregion
 
     }
 }
