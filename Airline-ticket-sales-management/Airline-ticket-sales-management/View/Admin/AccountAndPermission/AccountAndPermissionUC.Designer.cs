@@ -48,20 +48,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.aButton2 = new Airline_ticket_sales_management.AControls.AButton();
-            this.aButton1 = new Airline_ticket_sales_management.AControls.AButton();
-            this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
-            this.cbPermissionName = new System.Windows.Forms.ComboBox();
-            this.aPanel6 = new Airline_ticket_sales_management.AControls.APanel();
-            this.atxbName = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.aPanel4 = new Airline_ticket_sales_management.AControls.APanel();
-            this.atxbPassword = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.pibHideViewPassword = new System.Windows.Forms.PictureBox();
-            this.aPanel2 = new Airline_ticket_sales_management.AControls.APanel();
-            this.atxbEmail = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.aPanel3 = new Airline_ticket_sales_management.AControls.APanel();
-            this.atxbPhone = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.abtnSavePermission = new Airline_ticket_sales_management.AControls.AButton();
+            this.pnEdit = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -73,13 +65,22 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.aButton3 = new Airline_ticket_sales_management.AControls.AButton();
-            this.panel17 = new System.Windows.Forms.Panel();
+            this.abtnSavePermission = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnCancel = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnDelete = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnUpdate = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnCreate = new Airline_ticket_sales_management.AControls.AButton();
+            this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
+            this.cbPermissionName = new System.Windows.Forms.ComboBox();
+            this.aPanel6 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbName = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.aPanel4 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbPassword = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.pibHideViewPassword = new System.Windows.Forms.PictureBox();
+            this.aPanel2 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbEmail = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.aPanel3 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbPhone = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -91,18 +92,18 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnEdit.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.aPanel1.SuspendLayout();
             this.aPanel6.SuspendLayout();
             this.aPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).BeginInit();
             this.aPanel2.SuspendLayout();
             this.aPanel3.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -294,7 +295,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel17);
+            this.panel2.Controls.Add(this.pnEdit);
+            this.panel2.Controls.Add(this.abtnCreate);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label16);
@@ -310,49 +312,291 @@
             this.panel2.Size = new System.Drawing.Size(730, 360);
             this.panel2.TabIndex = 41;
             // 
-            // aButton2
+            // pnEdit
             // 
-            this.aButton2.BackColor = System.Drawing.Color.White;
-            this.aButton2.BackgroundColor = System.Drawing.Color.White;
-            this.aButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
-            this.aButton2.BorderRadius = 10;
-            this.aButton2.BorderSize = 2;
-            this.aButton2.FlatAppearance.BorderSize = 0;
-            this.aButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
-            this.aButton2.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton2.Location = new System.Drawing.Point(270, 0);
-            this.aButton2.Name = "aButton2";
-            this.aButton2.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton2.Size = new System.Drawing.Size(150, 40);
-            this.aButton2.TabIndex = 45;
-            this.aButton2.Text = "Xoá";
-            this.aButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
-            this.aButton2.ThinknessLine = 0;
-            this.aButton2.UseVisualStyleBackColor = false;
+            this.pnEdit.Controls.Add(this.abtnCancel);
+            this.pnEdit.Controls.Add(this.abtnDelete);
+            this.pnEdit.Controls.Add(this.abtnUpdate);
+            this.pnEdit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnEdit.Location = new System.Drawing.Point(0, 320);
+            this.pnEdit.Name = "pnEdit";
+            this.pnEdit.Size = new System.Drawing.Size(730, 40);
+            this.pnEdit.TabIndex = 52;
             // 
-            // aButton1
+            // label18
             // 
-            this.aButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aButton1.BorderRadius = 10;
-            this.aButton1.BorderSize = 0;
-            this.aButton1.FlatAppearance.BorderSize = 0;
-            this.aButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aButton1.ForeColor = System.Drawing.Color.White;
-            this.aButton1.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton1.Location = new System.Drawing.Point(0, 0);
-            this.aButton1.Name = "aButton1";
-            this.aButton1.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton1.Size = new System.Drawing.Size(150, 40);
-            this.aButton1.TabIndex = 44;
-            this.aButton1.Text = "Cập nhật";
-            this.aButton1.TextColor = System.Drawing.Color.White;
-            this.aButton1.ThinknessLine = 0;
-            this.aButton1.UseVisualStyleBackColor = false;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label18.Location = new System.Drawing.Point(15, 260);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(148, 20);
+            this.label18.TabIndex = 50;
+            this.label18.Text = "Nhóm phân quyền:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label17.Location = new System.Drawing.Point(15, 195);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(82, 20);
+            this.label17.TabIndex = 49;
+            this.label17.Text = "Mật khẩu:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label16.Location = new System.Drawing.Point(15, 130);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(111, 20);
+            this.label16.TabIndex = 48;
+            this.label16.Text = "Số điện thoại:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label15.Location = new System.Drawing.Point(15, 70);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 20);
+            this.label15.TabIndex = 47;
+            this.label15.Text = "Email:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label14.Location = new System.Drawing.Point(15, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 20);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Họ và tên:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.label9.Location = new System.Drawing.Point(50, 25);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(444, 29);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "Quyền hạn của các nhóm tài khoản";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.label10.Location = new System.Drawing.Point(50, 360);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(444, 29);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Quyền hạn của các nhóm tài khoản";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.pnListAccount);
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Location = new System.Drawing.Point(50, 395);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(570, 330);
+            this.panel12.TabIndex = 45;
+            // 
+            // pnListAccount
+            // 
+            this.pnListAccount.AutoScroll = true;
+            this.pnListAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnListAccount.Location = new System.Drawing.Point(0, 50);
+            this.pnListAccount.Name = "pnListAccount";
+            this.pnListAccount.Size = new System.Drawing.Size(570, 280);
+            this.pnListAccount.TabIndex = 1;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.panel13.Controls.Add(this.panel16);
+            this.panel13.Controls.Add(this.panel15);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(570, 50);
+            this.panel13.TabIndex = 0;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.label13);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel16.Location = new System.Drawing.Point(370, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(200, 50);
+            this.panel16.TabIndex = 4;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label13.Location = new System.Drawing.Point(49, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(102, 20);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Nhóm quyền";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.label12);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel15.Location = new System.Drawing.Point(220, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(150, 50);
+            this.panel15.TabIndex = 3;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(37, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 20);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Ngày tạo";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.label11);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(220, 50);
+            this.panel14.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label11.Location = new System.Drawing.Point(55, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 20);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Tên tài khoản";
+            // 
+            // abtnSavePermission
+            // 
+            this.abtnSavePermission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnSavePermission.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnSavePermission.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnSavePermission.BorderRadius = 15;
+            this.abtnSavePermission.BorderSize = 0;
+            this.abtnSavePermission.FlatAppearance.BorderSize = 0;
+            this.abtnSavePermission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnSavePermission.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnSavePermission.ForeColor = System.Drawing.Color.White;
+            this.abtnSavePermission.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnSavePermission.Location = new System.Drawing.Point(1300, 25);
+            this.abtnSavePermission.Name = "abtnSavePermission";
+            this.abtnSavePermission.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnSavePermission.Size = new System.Drawing.Size(150, 40);
+            this.abtnSavePermission.TabIndex = 42;
+            this.abtnSavePermission.Text = "Lưu";
+            this.abtnSavePermission.TextColor = System.Drawing.Color.White;
+            this.abtnSavePermission.ThinknessLine = 0;
+            this.abtnSavePermission.UseVisualStyleBackColor = false;
+            this.abtnSavePermission.Click += new System.EventHandler(this.abtnSavePermission_Click);
+            // 
+            // abtnCancel
+            // 
+            this.abtnCancel.BackColor = System.Drawing.Color.Gray;
+            this.abtnCancel.BackgroundColor = System.Drawing.Color.Gray;
+            this.abtnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnCancel.BorderRadius = 10;
+            this.abtnCancel.BorderSize = 0;
+            this.abtnCancel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.abtnCancel.FlatAppearance.BorderSize = 0;
+            this.abtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnCancel.ForeColor = System.Drawing.Color.White;
+            this.abtnCancel.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnCancel.Location = new System.Drawing.Point(530, 0);
+            this.abtnCancel.Name = "abtnCancel";
+            this.abtnCancel.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnCancel.Size = new System.Drawing.Size(200, 40);
+            this.abtnCancel.TabIndex = 51;
+            this.abtnCancel.Text = "Huỷ tác vụ";
+            this.abtnCancel.TextColor = System.Drawing.Color.White;
+            this.abtnCancel.ThinknessLine = 0;
+            this.abtnCancel.UseVisualStyleBackColor = false;
+            this.abtnCancel.Click += new System.EventHandler(this.abtnCancel_Click);
+            // 
+            // abtnDelete
+            // 
+            this.abtnDelete.BackColor = System.Drawing.Color.White;
+            this.abtnDelete.BackgroundColor = System.Drawing.Color.White;
+            this.abtnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
+            this.abtnDelete.BorderRadius = 10;
+            this.abtnDelete.BorderSize = 2;
+            this.abtnDelete.FlatAppearance.BorderSize = 0;
+            this.abtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnDelete.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
+            this.abtnDelete.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnDelete.Location = new System.Drawing.Point(270, 0);
+            this.abtnDelete.Name = "abtnDelete";
+            this.abtnDelete.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnDelete.Size = new System.Drawing.Size(150, 40);
+            this.abtnDelete.TabIndex = 45;
+            this.abtnDelete.Text = "Xoá";
+            this.abtnDelete.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
+            this.abtnDelete.ThinknessLine = 0;
+            this.abtnDelete.UseVisualStyleBackColor = false;
+            this.abtnDelete.Click += new System.EventHandler(this.abtnDelete_Click);
+            // 
+            // abtnUpdate
+            // 
+            this.abtnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnUpdate.BorderRadius = 10;
+            this.abtnUpdate.BorderSize = 0;
+            this.abtnUpdate.FlatAppearance.BorderSize = 0;
+            this.abtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnUpdate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnUpdate.ForeColor = System.Drawing.Color.White;
+            this.abtnUpdate.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnUpdate.Location = new System.Drawing.Point(0, 0);
+            this.abtnUpdate.Name = "abtnUpdate";
+            this.abtnUpdate.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnUpdate.Size = new System.Drawing.Size(150, 40);
+            this.abtnUpdate.TabIndex = 44;
+            this.abtnUpdate.Text = "Cập nhật";
+            this.abtnUpdate.TextColor = System.Drawing.Color.White;
+            this.abtnUpdate.ThinknessLine = 0;
+            this.abtnUpdate.UseVisualStyleBackColor = false;
+            this.abtnUpdate.Click += new System.EventHandler(this.abtnUpdate_Click);
+            // 
+            // abtnCreate
+            // 
+            this.abtnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnCreate.BorderRadius = 10;
+            this.abtnCreate.BorderSize = 0;
+            this.abtnCreate.FlatAppearance.BorderSize = 0;
+            this.abtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnCreate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnCreate.ForeColor = System.Drawing.Color.White;
+            this.abtnCreate.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnCreate.Location = new System.Drawing.Point(0, 320);
+            this.abtnCreate.Name = "abtnCreate";
+            this.abtnCreate.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnCreate.Size = new System.Drawing.Size(730, 40);
+            this.abtnCreate.TabIndex = 54;
+            this.abtnCreate.Text = "Tạo tài khoản";
+            this.abtnCreate.TextColor = System.Drawing.Color.White;
+            this.abtnCreate.ThinknessLine = 0;
+            this.abtnCreate.UseVisualStyleBackColor = false;
+            this.abtnCreate.Click += new System.EventHandler(this.abtnCreate_Click);
             // 
             // aPanel1
             // 
@@ -568,221 +812,6 @@
             this.atxbPhone.Texts = "";
             this.atxbPhone.UnderlinedStyle = false;
             // 
-            // abtnSavePermission
-            // 
-            this.abtnSavePermission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnSavePermission.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnSavePermission.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnSavePermission.BorderRadius = 15;
-            this.abtnSavePermission.BorderSize = 0;
-            this.abtnSavePermission.FlatAppearance.BorderSize = 0;
-            this.abtnSavePermission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnSavePermission.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abtnSavePermission.ForeColor = System.Drawing.Color.White;
-            this.abtnSavePermission.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnSavePermission.Location = new System.Drawing.Point(1300, 25);
-            this.abtnSavePermission.Name = "abtnSavePermission";
-            this.abtnSavePermission.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnSavePermission.Size = new System.Drawing.Size(150, 40);
-            this.abtnSavePermission.TabIndex = 42;
-            this.abtnSavePermission.Text = "Lưu";
-            this.abtnSavePermission.TextColor = System.Drawing.Color.White;
-            this.abtnSavePermission.ThinknessLine = 0;
-            this.abtnSavePermission.UseVisualStyleBackColor = false;
-            this.abtnSavePermission.Click += new System.EventHandler(this.abtnSavePermission_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
-            this.label9.Location = new System.Drawing.Point(50, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(444, 29);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "Quyền hạn của các nhóm tài khoản";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
-            this.label10.Location = new System.Drawing.Point(50, 360);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(444, 29);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "Quyền hạn của các nhóm tài khoản";
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.pnListAccount);
-            this.panel12.Controls.Add(this.panel13);
-            this.panel12.Location = new System.Drawing.Point(50, 395);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(570, 330);
-            this.panel12.TabIndex = 45;
-            // 
-            // pnListAccount
-            // 
-            this.pnListAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnListAccount.Location = new System.Drawing.Point(0, 50);
-            this.pnListAccount.Name = "pnListAccount";
-            this.pnListAccount.Size = new System.Drawing.Size(570, 280);
-            this.pnListAccount.TabIndex = 1;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.panel13.Controls.Add(this.panel16);
-            this.panel13.Controls.Add(this.panel15);
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(570, 50);
-            this.panel13.TabIndex = 0;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.label13);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel16.Location = new System.Drawing.Point(370, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(200, 50);
-            this.panel16.TabIndex = 4;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label13.Location = new System.Drawing.Point(49, 15);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 20);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Nhóm quyền";
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label12);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel15.Location = new System.Drawing.Point(220, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(150, 50);
-            this.panel15.TabIndex = 3;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(37, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 20);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Ngày tạo";
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.label11);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(220, 50);
-            this.panel14.TabIndex = 2;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label11.Location = new System.Drawing.Point(55, 15);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 20);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Tên tài khoản";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label14.Location = new System.Drawing.Point(15, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 20);
-            this.label14.TabIndex = 46;
-            this.label14.Text = "Họ và tên:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label15.Location = new System.Drawing.Point(15, 70);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 20);
-            this.label15.TabIndex = 47;
-            this.label15.Text = "Email:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label16.Location = new System.Drawing.Point(15, 130);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(111, 20);
-            this.label16.TabIndex = 48;
-            this.label16.Text = "Số điện thoại:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label17.Location = new System.Drawing.Point(15, 195);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(82, 20);
-            this.label17.TabIndex = 49;
-            this.label17.Text = "Mật khẩu:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label18.Location = new System.Drawing.Point(15, 260);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(148, 20);
-            this.label18.TabIndex = 50;
-            this.label18.Text = "Nhóm phân quyền:";
-            // 
-            // aButton3
-            // 
-            this.aButton3.BackColor = System.Drawing.Color.Gray;
-            this.aButton3.BackgroundColor = System.Drawing.Color.Gray;
-            this.aButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aButton3.BorderRadius = 10;
-            this.aButton3.BorderSize = 0;
-            this.aButton3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.aButton3.FlatAppearance.BorderSize = 0;
-            this.aButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aButton3.ForeColor = System.Drawing.Color.White;
-            this.aButton3.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton3.Location = new System.Drawing.Point(530, 0);
-            this.aButton3.Name = "aButton3";
-            this.aButton3.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton3.Size = new System.Drawing.Size(200, 40);
-            this.aButton3.TabIndex = 51;
-            this.aButton3.Text = "Huỷ tác vụ";
-            this.aButton3.TextColor = System.Drawing.Color.White;
-            this.aButton3.ThinknessLine = 0;
-            this.aButton3.UseVisualStyleBackColor = false;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.aButton3);
-            this.panel17.Controls.Add(this.aButton2);
-            this.panel17.Controls.Add(this.aButton1);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel17.Location = new System.Drawing.Point(0, 320);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(730, 40);
-            this.panel17.TabIndex = 52;
-            // 
             // AccountAndPermissionUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -818,12 +847,7 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.aPanel1.ResumeLayout(false);
-            this.aPanel6.ResumeLayout(false);
-            this.aPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).EndInit();
-            this.aPanel2.ResumeLayout(false);
-            this.aPanel3.ResumeLayout(false);
+            this.pnEdit.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
@@ -832,7 +856,12 @@
             this.panel15.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel17.ResumeLayout(false);
+            this.aPanel1.ResumeLayout(false);
+            this.aPanel6.ResumeLayout(false);
+            this.aPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).EndInit();
+            this.aPanel2.ResumeLayout(false);
+            this.aPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -853,8 +882,8 @@
         private System.Windows.Forms.Panel panel2;
         private AControls.APanel aPanel1;
         private System.Windows.Forms.ComboBox cbPermissionName;
-        private AControls.AButton aButton1;
-        private AControls.AButton aButton2;
+        private AControls.AButton abtnUpdate;
+        private AControls.AButton abtnDelete;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
@@ -890,7 +919,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private AControls.AButton aButton3;
-        private System.Windows.Forms.Panel panel17;
+        private AControls.AButton abtnCancel;
+        private System.Windows.Forms.Panel pnEdit;
+        private AControls.AButton abtnCreate;
     }
 }

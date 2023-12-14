@@ -1,4 +1,5 @@
 ﻿using Airline_ticket_sales_management.DTOs;
+using Airline_ticket_sales_management.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,7 @@ namespace Airline_ticket_sales_management.Usercontrols
         public AccountItemUC()
         {
             InitializeComponent();
+            setClick(this);
         }
 
         public void render()
@@ -40,6 +42,26 @@ namespace Airline_ticket_sales_management.Usercontrols
             lbPermission.Text = account.RoleName;
             lbPermission.Left = (pnPermission.Width - lbPermission.Width) / 2;
             this.Height = Math.Max(this.Height, lbPermission.Height + 15 * 2);
+        }
+
+        private void AccountItemUC_Click(object sender, EventArgs e)
+        {
+            Control ct = this;
+
+            while (!(ct is AccountAndPermissionUC))
+                ct = ct.Parent;
+
+            AccountAndPermissionUC uc = ct as AccountAndPermissionUC;
+            uc.setTextboxAccount(this.account);
+        }
+
+        private void setClick(Control ctr)
+        {
+            ctr.Click += AccountItemUC_Click;
+
+            if (!(ctr is Label))
+                foreach (Control c in ctr.Controls)
+                    setClick(c);
         }
     }
 }

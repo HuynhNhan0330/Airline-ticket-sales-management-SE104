@@ -42,6 +42,7 @@
             // pnName
             // 
             this.pnName.Controls.Add(this.lbName);
+            this.pnName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnName.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnName.Location = new System.Drawing.Point(0, 0);
             this.pnName.Name = "pnName";
@@ -51,6 +52,7 @@
             // lbName
             // 
             this.lbName.AutoSize = true;
+            this.lbName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbName.Location = new System.Drawing.Point(20, 15);
             this.lbName.MaximumSize = new System.Drawing.Size(190, 0);
@@ -62,6 +64,7 @@
             // pnCreated
             // 
             this.pnCreated.Controls.Add(this.lbCreated);
+            this.pnCreated.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnCreated.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnCreated.Location = new System.Drawing.Point(220, 0);
             this.pnCreated.Name = "pnCreated";
@@ -71,6 +74,7 @@
             // lbCreated
             // 
             this.lbCreated.AutoSize = true;
+            this.lbCreated.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbCreated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbCreated.Location = new System.Drawing.Point(35, 15);
             this.lbCreated.Name = "lbCreated";
@@ -81,6 +85,7 @@
             // pnPermission
             // 
             this.pnPermission.Controls.Add(this.lbPermission);
+            this.pnPermission.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnPermission.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnPermission.Location = new System.Drawing.Point(370, 0);
             this.pnPermission.Name = "pnPermission";
@@ -90,6 +95,7 @@
             // lbPermission
             // 
             this.lbPermission.AutoSize = true;
+            this.lbPermission.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbPermission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbPermission.Location = new System.Drawing.Point(30, 15);
             this.lbPermission.Name = "lbPermission";

@@ -86,38 +86,38 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, string, string)> createFlight(FlightDTO flight)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            string currentMaxCode = await context.FLIGHTs.MaxAsync(fl => fl.FlightID);
-        //            string newCode = Helper.nextCode(currentMaxCode, "FL");
+        public async Task<(bool, string, string)> createAccount(AccountDTO account)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    string currentMaxCode = await context.ACCOUNTs.MaxAsync(ac => ac.AccountID);
+                    string newCode = Helper.nextCode(currentMaxCode, "AC");
 
-        //            FLIGHT newFlight = new FLIGHT
-        //            {
-        //                FlightID = newCode,
-        //                PlaneID = flight.PlaneID,
-        //                DepartureAirportCode = flight.DepartureAirportCode,
-        //                ArrivalAirportCode = flight.ArrivalAirportCode,
-        //                DepartureDateTime = flight.DepartureDateTime,
-        //                FlightDuration = flight.FlightDuration,
-        //                TicketPrice = flight.TicketPrice
-        //            };
+                    ACCOUNT newAccount = new ACCOUNT
+                    {
+                        AccountID = newCode,
+                        Name = account.Name,
+                        Email = account.Email,
+                        Phone = account.Phone,
+                        Password = account.Password,
+                        Created = account.Created,
+                        RoleID = account.RoleID,
+                    };
 
-        //            context.FLIGHTs.Add(newFlight);
+                    context.ACCOUNTs.Add(newAccount);
 
-        //            context.SaveChanges();
+                    context.SaveChanges();
 
-        //            return (true, "Tạo chuyến bay thành công!", newCode);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message, null);
-        //    }
-        //}
+                    return (true, "Tạo tài khoản thành công!", newCode);
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message, null);
+            }
+        }
 
         public async Task<(bool, List<AccountDTO>, string)> getListAccount()
         {
@@ -150,25 +150,25 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, string)> deleteFlight(string flightID)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            FLIGHT flightDelete = context.FLIGHTs.FirstOrDefault(fl => fl.FlightID == flightID);
+        public async Task<(bool, string)> deleteAccount(string accountID)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    ACCOUNT accountDelete = context.ACCOUNTs.FirstOrDefault(ac => ac.AccountID == accountID);
 
-        //            context.FLIGHTs.Remove(flightDelete);
-        //            context.SaveChanges();
+                    context.ACCOUNTs.Remove(accountDelete);
+                    context.SaveChanges();
 
-        //            return (true, "Xoá thành công");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message);
-        //    }
-        //}
+                    return (true, "Xoá thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
 
         public async Task<(bool, string)> updateAccount(AccountDTO account)
         {
