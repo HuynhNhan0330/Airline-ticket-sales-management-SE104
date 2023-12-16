@@ -71,18 +71,30 @@ namespace Airline_ticket_sales_management.Usercontrols
 
         private void PlaneTicketClassItemUC_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(this.type))
+            //Ticket class in plane
+
+            if (this.type == "")
             {
-                return;
+                Control ctrParent = this.Parent;
+                while (!(ctrParent is OperationPlaneUC))
+                    ctrParent = ctrParent.Parent;
+
+                OperationPlaneUC ctrOperationPlaneUC = ctrParent as OperationPlaneUC;
+                ctrOperationPlaneUC.SelectedTicketClass = this.TicketClass;
+                ctrOperationPlaneUC.setCurrentTicketClass();
             }
+            else if (this.type == "Ticket")
+            {
+                Control ctrParent = this.Parent;
+                while (!(ctrParent is CreateFlightTicketUC))
+                    ctrParent = ctrParent.Parent;
 
-            Control ctrParent = this.Parent;
-            while (!(ctrParent is OperationPlaneUC))
-                ctrParent = ctrParent.Parent;
-
-            OperationPlaneUC ctrOperationPlaneUC = ctrParent as OperationPlaneUC;
-            ctrOperationPlaneUC.SelectedTicketClass = this.TicketClass;
-            ctrOperationPlaneUC.setCurrentTicketClass();
+                CreateFlightTicketUC ctrCreateFlightTicket = ctrParent as CreateFlightTicketUC;
+                ctrCreateFlightTicket.ticketClassSelected = this.TicketClass;
+                ctrCreateFlightTicket.setCurrentTicketClass();
+                ctrCreateFlightTicket.setValidSeat();
+                ctrCreateFlightTicket.setPrice();
+            }
         }
 
         private void loadEventClick(EventHandler evh)

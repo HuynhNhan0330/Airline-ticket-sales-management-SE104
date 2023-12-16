@@ -11,5 +11,6 @@ namespace Airline_ticket_sales_management.DTOs
         public string SeatID { get; set; }
         public string PlaneID { get; set; }
         public TicketClassDTO TicketClass { get; set; }
+        public bool isHave { get; set; }
     }
 }

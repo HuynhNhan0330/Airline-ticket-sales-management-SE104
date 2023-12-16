@@ -41,9 +41,9 @@ namespace Airline_ticket_sales_management
             abtn.ForeColor = BaseColor.XanhDam;
         }
 
-        private void abtnCreateFlightTicket_Click(object sender, EventArgs e)
+        public void abtnCreateFlightTicket_Click(object sender, EventArgs e)
         {
-            if (currentAbtn != abtnCreateFlightTicket)
+            //if (currentAbtn != abtnCreateFlightTicket)
             {
                 if (currentAbtn != null)
                 {

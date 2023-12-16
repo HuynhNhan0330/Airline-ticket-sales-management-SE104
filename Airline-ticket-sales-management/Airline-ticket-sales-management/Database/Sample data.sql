@@ -31,7 +31,7 @@ GO
 
 INSERT INTO AIRPORT (AirportID, AirportName, CityName, CountryName)
 VALUES
-	('AP0001', N'Sân bay Quốc tế Tân Sơn Nhất', N'Thành phố Hồ Chí Minh', N'Việt Nam'),
+	('AP0001', N'Sân bay Quốc tế Tân Sơn Nhất', N'Hồ Chí Minh', N'Việt Nam'),
 	('AP0002', N'Sân bay Quốc tế Nội Bài', N'Hà Nội', N'Việt Nam'),
 	('AP0003', N'Sân bay Quốc tế Đà Nẵng', N'Đà Nẵng', N'Việt Nam'),
 	('AP0004', N'Sân bay Cam Ranh', N'Khánh Hòa', N'Việt Nam'),

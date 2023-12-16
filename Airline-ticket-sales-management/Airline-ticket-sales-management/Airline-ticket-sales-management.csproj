@@ -96,6 +96,7 @@
     <Compile Include="DALs\PreventiveAirportDAL.cs" />
     <Compile Include="DALs\SeatDAL.cs" />
     <Compile Include="DALs\TicketClassDAL.cs" />
+    <Compile Include="DALs\TicketDAL.cs" />
     <Compile Include="DTOs\AccountDTO.cs" />
     <Compile Include="DTOs\AirportDTO.cs" />
     <Compile Include="DTOs\FlightDTO.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="DTOs\PlaneTicketClassDetailDTO.cs" />
     <Compile Include="DTOs\SeatDTO.cs" />
     <Compile Include="DTOs\TicketClassDTO.cs" />
+    <Compile Include="DTOs\TicketDTO.cs" />
     <Compile Include="Model\ACCOUNT.cs">
       <DependentUpon>FlightTicketManagement.tt</DependentUpon>
     </Compile>

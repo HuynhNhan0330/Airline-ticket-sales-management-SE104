@@ -109,5 +109,57 @@ namespace Airline_ticket_sales_management.DALs
                 return (false, ex.Message);
             }
         }
+
+        public async Task<(bool, string)> updateFlightTicketClassDetail(string flightID, string ticketClassID)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var flightTicketClassDetailUpdate = context.FLIGHT_TICKET_CLASS_DETAIL.FirstOrDefault(ftcd => ftcd.FlightID == flightID && ftcd.TicketClassID == ticketClassID);
+
+                    if (flightTicketClassDetailUpdate != null)
+                    {
+                        flightTicketClassDetailUpdate.TicketSold += 1;
+                        flightTicketClassDetailUpdate.SeatRemaining -= 1;
+                    }
+
+                    context.SaveChanges();
+
+                    return (true, "Cập nhật thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
+
+        public async Task<FlightTicketClassDetailDTO> findFlightTicketClassDetail(string flightID, string ticketClassID)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var flightTicketClassDetail = context.FLIGHT_TICKET_CLASS_DETAIL.FirstOrDefault(ftcd => ftcd.FlightID == flightID && ftcd.TicketClassID == ticketClassID);
+
+                    if (flightTicketClassDetail == null)
+                        return null;
+
+                    FlightTicketClassDetailDTO flightTicketClassDetailDTO = new FlightTicketClassDetailDTO();
+                    flightTicketClassDetailDTO.FlightID = flightID;
+                    flightTicketClassDetailDTO.TicketClassID = ticketClassID;
+                    flightTicketClassDetailDTO.SeatCapacity = flightTicketClassDetail.SeatCapacity;
+                    flightTicketClassDetailDTO.TicketSold = flightTicketClassDetail.TicketSold;
+                    flightTicketClassDetailDTO.SeatRemaining = flightTicketClassDetail.SeatRemaining;
+
+                    return flightTicketClassDetailDTO;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

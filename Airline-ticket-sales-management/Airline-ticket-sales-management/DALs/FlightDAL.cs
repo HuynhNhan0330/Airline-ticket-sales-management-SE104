@@ -136,5 +136,36 @@ namespace Airline_ticket_sales_management.DALs
                 return (false, ex.Message);
             }
         }
+
+        public async Task <FlightDTO> findFlight(string flightID)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    FLIGHT findFlight = context.FLIGHTs.FirstOrDefault(fl => fl.FlightID == flightID);
+                    
+                    if (findFlight != null)
+                    {
+                        FlightDTO flight = new FlightDTO(); 
+                        flight.FlightID = flightID;
+                        flight.PlaneID = findFlight.PlaneID;
+                        flight.DepartureAirportCode = findFlight.DepartureAirportCode;
+                        flight.ArrivalAirportCode = findFlight.ArrivalAirportCode;
+                        flight.DepartureDateTime = findFlight.DepartureDateTime;
+                        flight.FlightDuration = findFlight.FlightDuration;
+                        flight.TicketPrice = findFlight.TicketPrice;
+
+                        return flight;
+                    }
+
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }
