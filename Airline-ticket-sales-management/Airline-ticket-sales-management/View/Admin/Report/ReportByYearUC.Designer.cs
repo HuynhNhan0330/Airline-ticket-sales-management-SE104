@@ -38,11 +38,11 @@ namespace Airline_ticket_sales_management
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbRevenue = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbFlightCount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -85,7 +85,7 @@ namespace Airline_ticket_sales_management
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.pictureBox3);
-            this.panel9.Controls.Add(this.label9);
+            this.panel9.Controls.Add(this.lbRevenue);
             this.panel9.Controls.Add(this.label10);
             this.panel9.Location = new System.Drawing.Point(850, 0);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -104,16 +104,16 @@ namespace Airline_ticket_sales_management
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // label9
+            // lbRevenue
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(100, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 29);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "100000";
+            this.lbRevenue.AutoSize = true;
+            this.lbRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lbRevenue.ForeColor = System.Drawing.Color.Black;
+            this.lbRevenue.Location = new System.Drawing.Point(100, 36);
+            this.lbRevenue.Name = "lbRevenue";
+            this.lbRevenue.Size = new System.Drawing.Size(97, 29);
+            this.lbRevenue.TabIndex = 1;
+            this.lbRevenue.Text = "100000";
             // 
             // label10
             // 
@@ -130,7 +130,7 @@ namespace Airline_ticket_sales_management
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.lbFlightCount);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -149,16 +149,16 @@ namespace Airline_ticket_sales_management
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
+            // lbFlightCount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(100, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 29);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "100000";
+            this.lbFlightCount.AutoSize = true;
+            this.lbFlightCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lbFlightCount.ForeColor = System.Drawing.Color.Black;
+            this.lbFlightCount.Location = new System.Drawing.Point(100, 36);
+            this.lbFlightCount.Name = "lbFlightCount";
+            this.lbFlightCount.Size = new System.Drawing.Size(97, 29);
+            this.lbFlightCount.TabIndex = 1;
+            this.lbFlightCount.Text = "100000";
             // 
             // label5
             // 
@@ -372,11 +372,11 @@ namespace Airline_ticket_sales_management
         private Panel panel1;
         private Panel panel9;
         private PictureBox pictureBox3;
-        private Label label9;
+        private Label lbRevenue;
         private Label label10;
         private Panel panel7;
         private PictureBox pictureBox1;
-        private Label label6;
+        private Label lbFlightCount;
         private Label label5;
         private Panel pnHeader;
         private Panel panel6;

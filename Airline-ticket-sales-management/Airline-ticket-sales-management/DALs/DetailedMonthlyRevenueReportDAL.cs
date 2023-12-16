@@ -34,7 +34,7 @@ namespace Airline_ticket_sales_management.DALs
                                                          select new DETAILED_MONTHLY_REVENUE_REPORT
                                                          {
                                                              Years = dmrr.Year,
-                                                             Months = dmrr.Year,
+                                                             Months = dmrr.Monthly,
                                                              FlightID = dmrr.FlightID,
                                                              Revenue = dmrr.Revenue,
                                                              TicketSold = dmrr.TicketSold,

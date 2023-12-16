@@ -1,11 +1,14 @@
-﻿using Airline_ticket_sales_management.DTOs;
+﻿using Airline_ticket_sales_management.AControls;
+using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Airline_ticket_sales_management.DALs
 {
@@ -23,22 +26,50 @@ namespace Airline_ticket_sales_management.DALs
             private set => _ins = value;
         }
 
-        public async Task<(bool, string)> createDetailedMonthlyRevenueReport(DetailedAnnualRevenueReportDTO detailMonthlyRevenueReport)
+        public async Task<(bool, string)> createDetailedAnnualRevenueReport(DetailedAnnualRevenueReportDTO detailAnnualRevenueReport)
         {
             try
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    DETAILED_ANNUAL_REVENUE_REPORT newdetailMonthlyRevenueReport = new DETAILED_ANNUAL_REVENUE_REPORT
+                    DETAILED_ANNUAL_REVENUE_REPORT newdetailAnnualRevenueReport = new DETAILED_ANNUAL_REVENUE_REPORT
                     {
-                        Years = detailMonthlyRevenueReport.Year,
-                        Months = detailMonthlyRevenueReport.Month,
-                        Revenue = detailMonthlyRevenueReport.Revenue,
-                        FlightCount = detailMonthlyRevenueReport.FlightCount
+                        Years = detailAnnualRevenueReport.Year,
+                        Months = detailAnnualRevenueReport.Month,
+                        Revenue = detailAnnualRevenueReport.Revenue,
+                        FlightCount = detailAnnualRevenueReport.FlightCount
                     };
 
-                    context.DETAILED_ANNUAL_REVENUE_REPORT.Add(newdetailMonthlyRevenueReport);
+                    context.DETAILED_ANNUAL_REVENUE_REPORT.Add(newdetailAnnualRevenueReport);
 
+                    context.SaveChanges();
+
+                    return (true, "Tạo chi tiết báo cáo năm thành công!");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
+
+        public async Task<(bool, string)> createDetailedAnnualRevenueReport(List<DetailedAnnualRevenueReportDTO> detailedAnnualRevenueReport)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var detailedAnnualRevenueReports = (from darr in detailedAnnualRevenueReport
+                                                         select new DETAILED_ANNUAL_REVENUE_REPORT
+                                                         {
+                                                             Years = darr.Year,
+                                                             Months = darr.Month,
+                                                             Revenue = darr.Revenue,
+                                                             FlightCount = darr.FlightCount,
+                                                             Ratio = darr.Ratio,
+                                                         }).ToList();
+
+                    context.DETAILED_ANNUAL_REVENUE_REPORT.AddRange(detailedAnnualRevenueReports);
                     context.SaveChanges();
 
                     return (true, "Tạo chi tiết báo cáo tháng thành công!");
@@ -50,30 +81,30 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, List<DetailedAnnualRevenueReportDTO>, string)> getListDetailedMonthlyRevenueReport()
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            var DetailedAnnualRevenueReportList = (from darp in context.DETAILED_ANNUAL_REVENUE_REPORT
-        //                                                    select new DetailedAnnualRevenueReportDTO
-        //                                                    {
-        //                                                        Year = darp.Years,
-        //                                                        Month = darp.Months,
-        //                                                        Revenue = darp.Revenue,
-        //                                                        Ratio = darp.Ratio,
-        //                                                        FlightCount = darp.FlightCount
-        //                                                    }).ToListAsync();
+        public async Task<(bool, List<DetailedAnnualRevenueReportDTO>, string)> getListDetailedAnnualRevenueReport(int year)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var DetailedAnnualRevenueReportList = (from darp in context.DETAILED_ANNUAL_REVENUE_REPORT
+                                                           select new DetailedAnnualRevenueReportDTO
+                                                           {
+                                                               Year = darp.Years,
+                                                               Month = darp.Months,
+                                                               Revenue = darp.Revenue,
+                                                               Ratio = darp.Ratio,
+                                                               FlightCount = darp.FlightCount
+                                                           }).ToListAsync();
 
-        //            return (true, await DetailedAnnualRevenueReportList, "Lấy danh sách chi tiết báo cáo năm thành công!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, null, ex.Message);
-        //    }
-        //}
+                    return (true, await DetailedAnnualRevenueReportList, "Lấy danh sách chi tiết báo cáo năm thành công!");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, null, ex.Message);
+            }
+        }
 
         public async Task<DetailedAnnualRevenueReportDTO> find(int year, int month)
         {
@@ -98,6 +129,26 @@ namespace Airline_ticket_sales_management.DALs
             catch (Exception ex) 
             {
                 return null;
+            }
+        }
+
+        public async Task update(List<DetailedAnnualRevenueReportDTO> ListAnnualRevenueReport)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    foreach (var arr in ListAnnualRevenueReport)
+                    {
+                        var detailedAnnualRevenueReport = context.DETAILED_ANNUAL_REVENUE_REPORT.FirstOrDefault(darr => darr.Years == arr.Year && darr.Months == arr.Month);
+                        if (detailedAnnualRevenueReport != null)
+                            detailedAnnualRevenueReport.Ratio = arr.Ratio;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

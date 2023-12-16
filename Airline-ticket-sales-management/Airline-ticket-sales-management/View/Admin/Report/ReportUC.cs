@@ -36,13 +36,14 @@ namespace Airline_ticket_sales_management
                 case 0:
                     loadBody(new ReportByMonthUC());
                     adtpTime.CustomFormat = "MM/yyyy";
-                    adtpTime_ValueChanged(sender, e);
                     break;
                 case 1:
                     loadBody(new ReportByYearUC());
                     adtpTime.CustomFormat = "yyyy";
                     break;
             }
+
+            adtpTime_ValueChanged(sender, e);
         }
 
         private void adtpTime_ValueChanged(object sender, EventArgs e)
@@ -56,6 +57,7 @@ namespace Airline_ticket_sales_management
 
                 // Xử lý trên năm
                 case 1:
+                    loadReportByYear();
                     break;
             }
         }
@@ -63,7 +65,6 @@ namespace Airline_ticket_sales_management
         private async void loadReportByMonth()
         {
             // Xem đã có chi tiết báo cáo năm của tháng này chưa
-
             DetailedAnnualRevenueReportDTO findDetailedAnnualRevenueReport = await DetailedAnnualRevenueReportDAL.Ins.find(adtpTime.Value.Year, adtpTime.Value.Month);
 
             List<DetailedMonthlyRevenueReportDTO> listReportByMonthDetail = null;
@@ -118,7 +119,7 @@ namespace Airline_ticket_sales_management
                     detailedAnnualRevenueReport.Revenue = totalRevenue;
                     detailedAnnualRevenueReport.FlightCount = detailedMonthlyRevenueReports.Count();
 
-                    (bool isCreateDetailedAnnualRevenueReport, string label) = await DetailedAnnualRevenueReportDAL.Ins.createDetailedMonthlyRevenueReport(detailedAnnualRevenueReport);
+                    (bool isCreateDetailedAnnualRevenueReport, string label) = await DetailedAnnualRevenueReportDAL.Ins.createDetailedAnnualRevenueReport(detailedAnnualRevenueReport);
 
                     if (isCreateDetailedAnnualRevenueReport)
                     {
@@ -148,23 +149,87 @@ namespace Airline_ticket_sales_management
             }
         }
 
-        public async void calculateYear(int year)
+        public async Task<List<DetailedAnnualRevenueReportDTO>> calculateYear(int year)
         {
+            List<DetailedAnnualRevenueReportDTO> ListAnnualRevenueReport = new List<DetailedAnnualRevenueReportDTO>();
+
             for (int month = 1; month <= 12; ++month)
             {
                 // Kiểm tra tháng này đã tồn tại chưa
-                //bool isCheck = await DetailedAnnualRevenueReportDAL.Ins.checkExist(year, month);
+                DetailedAnnualRevenueReportDTO findDetailedAnnualRevenueReport = await DetailedAnnualRevenueReportDAL.Ins.find(year, month);
 
-                //// Đã tồn tại thì get báo cáo tháng
-                //if (isCheck)
-                //{
-                    
-                //}
-                //else // Chưa tồn tại thì tính
-                //{
-                //    calculateMonth(month, year);
-                //}
+                // Chưa có tồn tại báo cáo tháng đó
+                if (findDetailedAnnualRevenueReport == null)
+                {
+                    List <DetailedMonthlyRevenueReportDTO> detailedMonthlyRevenueReports = await calculateMonth(month, year);
+
+                    if (detailedMonthlyRevenueReports.Count > 0)
+                    {
+                        DetailedAnnualRevenueReportDTO detailedAnnualRevenueReport = new DetailedAnnualRevenueReportDTO();
+                        detailedAnnualRevenueReport.Year = year;
+                        detailedAnnualRevenueReport.Month = month;
+                        detailedAnnualRevenueReport.Revenue = detailedMonthlyRevenueReports.Sum(dmrr => dmrr.Revenue);
+                        detailedAnnualRevenueReport.FlightCount = detailedMonthlyRevenueReports.Count();
+
+                        findDetailedAnnualRevenueReport = detailedAnnualRevenueReport;
+                    }
+                }
+                
+                if (findDetailedAnnualRevenueReport != null)
+                    ListAnnualRevenueReport.Add(findDetailedAnnualRevenueReport);
             }
+
+            decimal totalRevenue = ListAnnualRevenueReport.Sum(darr => darr.Revenue);
+
+            foreach (var darr in ListAnnualRevenueReport) 
+                darr.Ratio = darr.Revenue * 100 / totalRevenue;
+
+            // Lưu lại báo cáo năm
+            if (year < DateTime.Now.Year)
+            {
+                //Lưu báo cáo năm
+                AnnualRevenueReportDTO annualRevenueReport = new AnnualRevenueReportDTO();
+                annualRevenueReport.Years = year;
+                annualRevenueReport.TotalRevenue = totalRevenue;
+
+                (bool isCreate, string label) = await AnnualRevenueReportDAL.Ins.createAnnualRevenueReport(annualRevenueReport);
+
+                // Cập nhật ratio
+                await DetailedAnnualRevenueReportDAL.Ins.update(ListAnnualRevenueReport);
+            }
+
+            return ListAnnualRevenueReport;
+        }
+
+        private async void loadReportByYear()
+        {
+            // Xem đã có báo cáo năm này chưa
+            AnnualRevenueReportDTO findAnnualRevenueReport = await AnnualRevenueReportDAL.Ins.find(adtpTime.Value.Year);
+
+
+            List<DetailedAnnualRevenueReportDTO> listReportByYearDetail = null;
+
+            // Không tồn tại báo cáo năm
+            if (findAnnualRevenueReport == null)
+            {
+                listReportByYearDetail = await calculateYear(adtpTime.Value.Year);
+            }
+            else
+            {
+                (bool isGet, List<DetailedAnnualRevenueReportDTO> x, string label) = await DetailedAnnualRevenueReportDAL.Ins.getListDetailedAnnualRevenueReport(adtpTime.Value.Year);
+                if (isGet)
+                {
+                    listReportByYearDetail = new List<DetailedAnnualRevenueReportDTO>(x);
+                }
+                else
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm(label, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
+            }
+
+            ReportByYearUC uc = pnBodyReport.Controls[0] as ReportByYearUC;
+            uc.loadData(listReportByYearDetail);
         }
     }
 }

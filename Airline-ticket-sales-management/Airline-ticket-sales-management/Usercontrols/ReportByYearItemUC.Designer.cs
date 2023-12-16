@@ -31,166 +31,166 @@ namespace Airline_ticket_sales_management.Usercontrols
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.pnSTT = new System.Windows.Forms.Panel();
+            this.lbSTT = new System.Windows.Forms.Label();
+            this.pnMonth = new System.Windows.Forms.Panel();
+            this.lbMonth = new System.Windows.Forms.Label();
+            this.pnFlightCount = new System.Windows.Forms.Panel();
+            this.lbFlightCount = new System.Windows.Forms.Label();
+            this.pnRevenue = new System.Windows.Forms.Panel();
+            this.lbRevenue = new System.Windows.Forms.Label();
+            this.pnRatio = new System.Windows.Forms.Panel();
+            this.lbRatio = new System.Windows.Forms.Label();
+            this.pnSTT.SuspendLayout();
+            this.pnMonth.SuspendLayout();
+            this.pnFlightCount.SuspendLayout();
+            this.pnRevenue.SuspendLayout();
+            this.pnRatio.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnSTT
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(100, 40);
-            this.panel1.TabIndex = 1;
+            this.pnSTT.Controls.Add(this.lbSTT);
+            this.pnSTT.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnSTT.Location = new System.Drawing.Point(0, 0);
+            this.pnSTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnSTT.Name = "pnSTT";
+            this.pnSTT.Size = new System.Drawing.Size(100, 40);
+            this.pnSTT.TabIndex = 1;
             // 
-            // label1
+            // lbSTT
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(40, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "1";
+            this.lbSTT.AutoSize = true;
+            this.lbSTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbSTT.ForeColor = System.Drawing.Color.Black;
+            this.lbSTT.Location = new System.Drawing.Point(40, 11);
+            this.lbSTT.Name = "lbSTT";
+            this.lbSTT.Size = new System.Drawing.Size(20, 22);
+            this.lbSTT.TabIndex = 0;
+            this.lbSTT.Text = "1";
             // 
-            // panel2
+            // pnMonth
             // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(100, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(100, 40);
-            this.panel2.TabIndex = 2;
+            this.pnMonth.Controls.Add(this.lbMonth);
+            this.pnMonth.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnMonth.Location = new System.Drawing.Point(100, 0);
+            this.pnMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnMonth.Name = "pnMonth";
+            this.pnMonth.Size = new System.Drawing.Size(100, 40);
+            this.pnMonth.TabIndex = 2;
             // 
-            // label2
+            // lbMonth
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(47, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "2";
+            this.lbMonth.AutoSize = true;
+            this.lbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbMonth.ForeColor = System.Drawing.Color.Black;
+            this.lbMonth.Location = new System.Drawing.Point(47, 11);
+            this.lbMonth.Name = "lbMonth";
+            this.lbMonth.Size = new System.Drawing.Size(20, 22);
+            this.lbMonth.TabIndex = 0;
+            this.lbMonth.Text = "2";
             // 
-            // panel3
+            // pnFlightCount
             // 
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(200, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 40);
-            this.panel3.TabIndex = 3;
+            this.pnFlightCount.Controls.Add(this.lbFlightCount);
+            this.pnFlightCount.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnFlightCount.Location = new System.Drawing.Point(200, 0);
+            this.pnFlightCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnFlightCount.Name = "pnFlightCount";
+            this.pnFlightCount.Size = new System.Drawing.Size(200, 40);
+            this.pnFlightCount.TabIndex = 3;
             // 
-            // label3
+            // lbFlightCount
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(88, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 22);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "1000";
+            this.lbFlightCount.AutoSize = true;
+            this.lbFlightCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbFlightCount.ForeColor = System.Drawing.Color.Black;
+            this.lbFlightCount.Location = new System.Drawing.Point(88, 11);
+            this.lbFlightCount.Name = "lbFlightCount";
+            this.lbFlightCount.Size = new System.Drawing.Size(50, 22);
+            this.lbFlightCount.TabIndex = 0;
+            this.lbFlightCount.Text = "1000";
             // 
-            // panel4
+            // pnRevenue
             // 
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(400, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 40);
-            this.panel4.TabIndex = 4;
+            this.pnRevenue.Controls.Add(this.lbRevenue);
+            this.pnRevenue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnRevenue.Location = new System.Drawing.Point(400, 0);
+            this.pnRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnRevenue.Name = "pnRevenue";
+            this.pnRevenue.Size = new System.Drawing.Size(300, 40);
+            this.pnRevenue.TabIndex = 4;
             // 
-            // label4
+            // lbRevenue
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(125, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 22);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "1000";
+            this.lbRevenue.AutoSize = true;
+            this.lbRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbRevenue.ForeColor = System.Drawing.Color.Black;
+            this.lbRevenue.Location = new System.Drawing.Point(125, 11);
+            this.lbRevenue.Name = "lbRevenue";
+            this.lbRevenue.Size = new System.Drawing.Size(50, 22);
+            this.lbRevenue.TabIndex = 0;
+            this.lbRevenue.Text = "1000";
             // 
-            // panel6
+            // pnRatio
             // 
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(700, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(100, 40);
-            this.panel6.TabIndex = 6;
+            this.pnRatio.Controls.Add(this.lbRatio);
+            this.pnRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRatio.Location = new System.Drawing.Point(700, 0);
+            this.pnRatio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnRatio.Name = "pnRatio";
+            this.pnRatio.Size = new System.Drawing.Size(100, 40);
+            this.pnRatio.TabIndex = 6;
             // 
-            // label6
+            // lbRatio
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(48, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 22);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "10";
+            this.lbRatio.AutoSize = true;
+            this.lbRatio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbRatio.ForeColor = System.Drawing.Color.Black;
+            this.lbRatio.Location = new System.Drawing.Point(48, 11);
+            this.lbRatio.Name = "lbRatio";
+            this.lbRatio.Size = new System.Drawing.Size(30, 22);
+            this.lbRatio.TabIndex = 0;
+            this.lbRatio.Text = "10";
             // 
             // ReportByYearItemUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnRatio);
+            this.Controls.Add(this.pnRevenue);
+            this.Controls.Add(this.pnFlightCount);
+            this.Controls.Add(this.pnMonth);
+            this.Controls.Add(this.pnSTT);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ReportByYearItemUC";
             this.Size = new System.Drawing.Size(800, 40);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.pnSTT.ResumeLayout(false);
+            this.pnSTT.PerformLayout();
+            this.pnMonth.ResumeLayout(false);
+            this.pnMonth.PerformLayout();
+            this.pnFlightCount.ResumeLayout(false);
+            this.pnFlightCount.PerformLayout();
+            this.pnRevenue.ResumeLayout(false);
+            this.pnRevenue.PerformLayout();
+            this.pnRatio.ResumeLayout(false);
+            this.pnRatio.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel panel1;
-        private Label label1;
-        private Panel panel2;
-        private Label label2;
-        private Panel panel3;
-        private Label label3;
-        private Panel panel4;
-        private Label label4;
-        private Panel panel6;
-        private Label label6;
+        private Panel pnSTT;
+        private Label lbSTT;
+        private Panel pnMonth;
+        private Label lbMonth;
+        private Panel pnFlightCount;
+        private Label lbFlightCount;
+        private Panel pnRevenue;
+        private Label lbRevenue;
+        private Panel pnRatio;
+        private Label lbRatio;
     }
 }

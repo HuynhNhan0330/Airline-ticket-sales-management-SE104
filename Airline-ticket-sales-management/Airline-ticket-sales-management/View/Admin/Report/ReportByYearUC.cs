@@ -1,4 +1,6 @@
-﻿using Airline_ticket_sales_management.Usercontrols;
+﻿using Airline_ticket_sales_management.DTOs;
+using Airline_ticket_sales_management.Usercontrols;
+using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +22,24 @@ namespace Airline_ticket_sales_management
 
         private void ReportByYearUC_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 20; ++i)
+            
+        }
+
+        public void loadData(List<DetailedAnnualRevenueReportDTO> detailAnnualRevenueReport)
+        {
+            loadPanel(detailAnnualRevenueReport);
+
+            lbFlightCount.Text = detailAnnualRevenueReport.Sum(darr => darr.FlightCount).ToString();
+            lbRevenue.Text = Helper.FormatVNMoney(detailAnnualRevenueReport.Sum(darr => darr.Revenue));
+        }
+
+        public void loadPanel(List<DetailedAnnualRevenueReportDTO> detailAnnualRevenueReport)
+        {
+            for (int i = 0; i < detailAnnualRevenueReport.Count; ++i)
             {
                 ReportByYearItemUC uc = new ReportByYearItemUC();
+                uc.stt = i + 1;
+                uc.darr = detailAnnualRevenueReport[i];
                 pnReportByYear.Controls.Add(uc);
                 uc.BringToFront();
                 uc.Dock = DockStyle.Top;

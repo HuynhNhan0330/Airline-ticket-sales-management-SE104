@@ -88,6 +88,7 @@
     </Compile>
     <Compile Include="DALs\AccountDAL.cs" />
     <Compile Include="DALs\AirportDAL.cs" />
+    <Compile Include="DALs\AnnualRevenueReportDAL.cs" />
     <Compile Include="DALs\DetailedAnnualRevenueReportDAL.cs" />
     <Compile Include="DALs\DetailedMonthlyRevenueReportDAL.cs" />
     <Compile Include="DALs\FlightDAL.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="DALs\TicketDAL.cs" />
     <Compile Include="DTOs\AccountDTO.cs" />
     <Compile Include="DTOs\AirportDTO.cs" />
+    <Compile Include="DTOs\AnnualRevenueReportDTO.cs" />
     <Compile Include="DTOs\DetailedAnnualRevenueReportDTO.cs" />
     <Compile Include="DTOs\DetailedMonthlyRevenueReportDTO.cs" />
     <Compile Include="DTOs\FlightDTO.cs" />
