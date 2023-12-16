@@ -253,6 +253,10 @@ namespace Airline_ticket_sales_management
 
                 // load lại trang để reset trang
                 uc.abtnCreateFlightTicket_Click(this, EventArgs.Empty);
+                
+                // Giảm chi tiết hạng vé của từng chuyến bay
+                 (bool isUpdate, string label1) = await FlightTicketClassDetailDAL.Ins.updateFlightTicketClassDetail(flight.FlightID, ticketClassSelected.TicketClassID);
+
             }
             else
             {
