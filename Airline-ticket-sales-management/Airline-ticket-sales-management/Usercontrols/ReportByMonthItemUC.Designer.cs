@@ -31,159 +31,167 @@ namespace Airline_ticket_sales_management.Usercontrols
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            label1 = new Label();
-            panel2 = new Panel();
-            label2 = new Label();
-            panel3 = new Panel();
-            label3 = new Label();
-            panel4 = new Panel();
-            label4 = new Label();
-            panel5 = new Panel();
-            label5 = new Label();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
-            SuspendLayout();
+            this.pnSTT = new System.Windows.Forms.Panel();
+            this.lbSTT = new System.Windows.Forms.Label();
+            this.pnFlightName = new System.Windows.Forms.Panel();
+            this.lbFlightName = new System.Windows.Forms.Label();
+            this.pnTicket = new System.Windows.Forms.Panel();
+            this.lbTicket = new System.Windows.Forms.Label();
+            this.pnRevenue = new System.Windows.Forms.Panel();
+            this.lbRevenue = new System.Windows.Forms.Label();
+            this.pnRatio = new System.Windows.Forms.Panel();
+            this.lbRatio = new System.Windows.Forms.Label();
+            this.pnSTT.SuspendLayout();
+            this.pnFlightName.SuspendLayout();
+            this.pnTicket.SuspendLayout();
+            this.pnRevenue.SuspendLayout();
+            this.pnRatio.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // panel1
+            // pnSTT
             // 
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(100, 50);
-            panel1.TabIndex = 0;
+            this.pnSTT.Controls.Add(this.lbSTT);
+            this.pnSTT.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnSTT.Location = new System.Drawing.Point(0, 0);
+            this.pnSTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnSTT.Name = "pnSTT";
+            this.pnSTT.Size = new System.Drawing.Size(100, 40);
+            this.pnSTT.TabIndex = 0;
             // 
-            // label1
+            // lbSTT
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(40, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(20, 22);
-            label1.TabIndex = 0;
-            label1.Text = "1";
+            this.lbSTT.AutoSize = true;
+            this.lbSTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbSTT.ForeColor = System.Drawing.Color.Black;
+            this.lbSTT.Location = new System.Drawing.Point(40, 10);
+            this.lbSTT.Name = "lbSTT";
+            this.lbSTT.Size = new System.Drawing.Size(20, 22);
+            this.lbSTT.TabIndex = 0;
+            this.lbSTT.Text = "1";
             // 
-            // panel2
+            // pnFlightName
             // 
-            panel2.Controls.Add(label2);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(100, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(600, 50);
-            panel2.TabIndex = 1;
+            this.pnFlightName.Controls.Add(this.lbFlightName);
+            this.pnFlightName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnFlightName.Location = new System.Drawing.Point(100, 0);
+            this.pnFlightName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnFlightName.Name = "pnFlightName";
+            this.pnFlightName.Size = new System.Drawing.Size(600, 40);
+            this.pnFlightName.TabIndex = 1;
             // 
-            // label2
+            // lbFlightName
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(202, 14);
-            label2.Name = "label2";
-            label2.Size = new Size(195, 22);
-            label2.TabIndex = 1;
-            label2.Text = "Đà Nẵng - Hồ Chí Minh";
+            this.lbFlightName.AutoSize = true;
+            this.lbFlightName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbFlightName.ForeColor = System.Drawing.Color.Black;
+            this.lbFlightName.Location = new System.Drawing.Point(202, 10);
+            this.lbFlightName.MaximumSize = new System.Drawing.Size(580, 0);
+            this.lbFlightName.Name = "lbFlightName";
+            this.lbFlightName.Size = new System.Drawing.Size(195, 22);
+            this.lbFlightName.TabIndex = 1;
+            this.lbFlightName.Text = "Đà Nẵng - Hồ Chí Minh";
             // 
-            // panel3
+            // pnTicket
             // 
-            panel3.Controls.Add(label3);
-            panel3.Dock = DockStyle.Left;
-            panel3.Location = new Point(700, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(300, 50);
-            panel3.TabIndex = 2;
+            this.pnTicket.Controls.Add(this.lbTicket);
+            this.pnTicket.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnTicket.Location = new System.Drawing.Point(700, 0);
+            this.pnTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnTicket.Name = "pnTicket";
+            this.pnTicket.Size = new System.Drawing.Size(300, 40);
+            this.pnTicket.TabIndex = 2;
             // 
-            // label3
+            // lbTicket
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(125, 14);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 22);
-            label3.TabIndex = 1;
-            label3.Text = "1000";
+            this.lbTicket.AutoSize = true;
+            this.lbTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbTicket.ForeColor = System.Drawing.Color.Black;
+            this.lbTicket.Location = new System.Drawing.Point(125, 10);
+            this.lbTicket.Name = "lbTicket";
+            this.lbTicket.Size = new System.Drawing.Size(50, 22);
+            this.lbTicket.TabIndex = 1;
+            this.lbTicket.Text = "1000";
             // 
-            // panel4
+            // pnRevenue
             // 
-            panel4.Controls.Add(label4);
-            panel4.Dock = DockStyle.Left;
-            panel4.Location = new Point(1000, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(300, 50);
-            panel4.TabIndex = 3;
+            this.pnRevenue.Controls.Add(this.lbRevenue);
+            this.pnRevenue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnRevenue.Location = new System.Drawing.Point(1000, 0);
+            this.pnRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnRevenue.Name = "pnRevenue";
+            this.pnRevenue.Size = new System.Drawing.Size(300, 40);
+            this.pnRevenue.TabIndex = 3;
             // 
-            // label4
+            // lbRevenue
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(120, 14);
-            label4.Name = "label4";
-            label4.Size = new Size(60, 22);
-            label4.TabIndex = 1;
-            label4.Text = "20000";
+            this.lbRevenue.AutoSize = true;
+            this.lbRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbRevenue.ForeColor = System.Drawing.Color.Black;
+            this.lbRevenue.Location = new System.Drawing.Point(120, 10);
+            this.lbRevenue.Name = "lbRevenue";
+            this.lbRevenue.Size = new System.Drawing.Size(60, 22);
+            this.lbRevenue.TabIndex = 1;
+            this.lbRevenue.Text = "20000";
             // 
-            // panel5
+            // pnRatio
             // 
-            panel5.Controls.Add(label5);
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(1300, 0);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(100, 50);
-            panel5.TabIndex = 4;
+            this.pnRatio.Controls.Add(this.lbRatio);
+            this.pnRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRatio.Location = new System.Drawing.Point(1300, 0);
+            this.pnRatio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnRatio.Name = "pnRatio";
+            this.pnRatio.Size = new System.Drawing.Size(100, 40);
+            this.pnRatio.TabIndex = 4;
             // 
-            // label5
+            // lbRatio
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(35, 14);
-            label5.Name = "label5";
-            label5.Size = new Size(30, 22);
-            label5.TabIndex = 1;
-            label5.Text = "10";
+            this.lbRatio.AutoSize = true;
+            this.lbRatio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbRatio.ForeColor = System.Drawing.Color.Black;
+            this.lbRatio.Location = new System.Drawing.Point(35, 10);
+            this.lbRatio.Name = "lbRatio";
+            this.lbRatio.Size = new System.Drawing.Size(30, 22);
+            this.lbRatio.TabIndex = 1;
+            this.lbRatio.Text = "10";
             // 
             // ReportByMonthItemUC
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Name = "ReportByMonthItemUC";
-            Size = new Size(1400, 50);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pnRatio);
+            this.Controls.Add(this.pnRevenue);
+            this.Controls.Add(this.pnTicket);
+            this.Controls.Add(this.pnFlightName);
+            this.Controls.Add(this.pnSTT);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "ReportByMonthItemUC";
+            this.Size = new System.Drawing.Size(1400, 40);
+            this.pnSTT.ResumeLayout(false);
+            this.pnSTT.PerformLayout();
+            this.pnFlightName.ResumeLayout(false);
+            this.pnFlightName.PerformLayout();
+            this.pnTicket.ResumeLayout(false);
+            this.pnTicket.PerformLayout();
+            this.pnRevenue.ResumeLayout(false);
+            this.pnRevenue.PerformLayout();
+            this.pnRatio.ResumeLayout(false);
+            this.pnRatio.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private Panel panel1;
-        private Label label1;
-        private Panel panel2;
-        private Panel panel3;
-        private Panel panel4;
-        private Panel panel5;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
+        private Panel pnSTT;
+        private Label lbSTT;
+        private Panel pnFlightName;
+        private Panel pnTicket;
+        private Panel pnRevenue;
+        private Panel pnRatio;
+        private Label lbFlightName;
+        private Label lbTicket;
+        private Label lbRevenue;
+        private Label lbRatio;
     }
 }

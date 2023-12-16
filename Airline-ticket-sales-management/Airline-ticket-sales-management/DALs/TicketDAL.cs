@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -81,6 +82,39 @@ namespace Airline_ticket_sales_management.DALs
             catch (Exception ex)
             {
                 return false;
+            }
+        }
+
+        public async Task<(bool, List<TicketDTO>, string label)> getTicketByMonth(int month, int year)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var TicketList = (from ticket in context.FLIGHT_TICKET
+                                      join flight in context.FLIGHTs
+                                      on ticket.FlightID equals flight.FlightID
+                                      where ticket.FlightStatus != "Đã huỷ" && flight.DepartureDateTime.Month == month && flight.DepartureDateTime.Month == year
+                                      select new TicketDTO
+                                      {
+                                          TicketID = ticket.FlightTicketID,
+                                          FlightID = flight.FlightID,
+                                          TicketClassID = ticket.TicketClassID,
+                                          Email = ticket.Email,
+                                          PhoneNumber = ticket.PhoneNumber,
+                                          FullName = ticket.FullName,
+                                          FlightStatus = ticket.FlightStatus,
+                                          IDCard = ticket.IDCard,
+                                          Price = ticket.Price,
+                                          SeatID = ticket.SeatID
+                                      }).ToListAsync();
+                
+                    return (true, await TicketList, "Lấy danh sách vé theo tháng thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, null, ex.Message);
             }
         }
 
