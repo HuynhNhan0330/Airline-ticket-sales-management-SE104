@@ -32,6 +32,8 @@ namespace Airline_ticket_sales_management
 
         private void loadPanel(List<DetailedMonthlyRevenueReportDTO> detailedMonthlyRevenueReports)
         {
+            pnReportByMonth.Controls.Clear();
+
             for (int i = 0; i < detailedMonthlyRevenueReports.Count; ++i)
             {
                 DetailedMonthlyRevenueReportDTO dmrp = detailedMonthlyRevenueReports[i];

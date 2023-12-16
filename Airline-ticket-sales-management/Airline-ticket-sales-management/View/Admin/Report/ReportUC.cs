@@ -109,7 +109,7 @@ namespace Airline_ticket_sales_management
 
                 // Kiểm tra điều kiên phù hợp sẽ lưu lên cơ sở dữ liệu của mình
                 // Trên bảng chi tiết báo cáo tháng (Detailed Monthly Revenue Report)
-                if (month < DateTime.Now.Month && year <= DateTime.Now.Year)
+                if (month < DateTime.Now.Month && year <= DateTime.Now.Year && detailedMonthlyRevenueReports.Count > 0)
                 {
                     // Tạo chi tiết báo cáo theo năm
                     DetailedAnnualRevenueReportDTO detailedAnnualRevenueReport = new DetailedAnnualRevenueReportDTO();
