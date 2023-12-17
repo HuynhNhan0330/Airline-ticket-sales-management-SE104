@@ -226,6 +226,7 @@ namespace Airline_ticket_sales_management
             this.atbSeatCount.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atbSeatCount.Texts = "";
             this.atbSeatCount.UnderlinedStyle = false;
+            this.atbSeatCount._KeyDown += new System.EventHandler(this.atbSeatCount__KeyDown);
             // 
             // abtnCreatePlane
             // 
@@ -437,6 +438,7 @@ namespace Airline_ticket_sales_management
             this.atbPlaneName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atbPlaneName.Texts = "";
             this.atbPlaneName.UnderlinedStyle = false;
+            this.atbPlaneName._KeyDown += new System.EventHandler(this.atbPlaneName__KeyDown);
             // 
             // OperationPlaneUC
             // 

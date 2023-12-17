@@ -387,5 +387,15 @@ namespace Airline_ticket_sales_management
                 ms.ShowDialog();
             }
         }
+
+        private void atbPlaneName__KeyDown(object sender, EventArgs e)
+        {
+            Helper.enterOnlyLetter(e);
+        }
+
+        private void atbSeatCount__KeyDown(object sender, EventArgs e)
+        {
+            Helper.enterOnlyNumber(e);
+        }
     }
 }

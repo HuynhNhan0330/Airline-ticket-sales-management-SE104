@@ -423,6 +423,7 @@ namespace Airline_ticket_sales_management
             this.atxbPhone.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbPhone.Texts = "";
             this.atxbPhone.UnderlinedStyle = false;
+            this.atxbPhone._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // atxbIDCard
             // 
@@ -449,6 +450,7 @@ namespace Airline_ticket_sales_management
             this.atxbIDCard.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbIDCard.Texts = "";
             this.atxbIDCard.UnderlinedStyle = false;
+            this.atxbIDCard._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // atxbFlightID
             // 

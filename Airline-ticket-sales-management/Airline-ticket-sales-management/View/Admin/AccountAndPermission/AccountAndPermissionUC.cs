@@ -3,6 +3,7 @@ using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Model;
 using Airline_ticket_sales_management.Usercontrols;
+using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -355,6 +356,16 @@ namespace Airline_ticket_sales_management
                     break;
                 }
             }
+        }
+
+        private void atxbPhone__KeyDown(object sender, EventArgs e)
+        {
+            Helper.enterOnlyNumber(e);
+        }
+
+        private void atxbName__KeyDown(object sender, EventArgs e)
+        {
+            Helper.enterOnlyLetter(e);
         }
     }
 }

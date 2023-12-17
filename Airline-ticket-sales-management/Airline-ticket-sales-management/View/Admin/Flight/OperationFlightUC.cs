@@ -4,6 +4,7 @@ using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Model;
 using Airline_ticket_sales_management.Service;
 using Airline_ticket_sales_management.Usercontrols;
+using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -472,6 +473,11 @@ namespace Airline_ticket_sales_management
                 }
 
             }
+        }
+
+        private void KeyDownOnlyNumber(object sender, EventArgs e)
+        {
+            Helper.enterOnlyNumber(e);
         }
     }
 }

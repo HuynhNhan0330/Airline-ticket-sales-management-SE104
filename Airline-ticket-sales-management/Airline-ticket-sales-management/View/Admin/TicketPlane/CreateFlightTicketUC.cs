@@ -200,6 +200,21 @@ namespace Airline_ticket_sales_management
                 AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu email không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
+            else if (!Helper.checkCardID(atxbIDCard.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu CMND/CCCD không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+            else if (!Helper.checkPhone(atxbPhone.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+            else if (!Helper.checkEmail(atxbEmail.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
             else if (this.flight == null)
             {
                 AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu mã chuyến bay không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -319,6 +334,11 @@ namespace Airline_ticket_sales_management
                 atxbPrice.isPlaceholder = false;
                 atxbPrice.setForeColor();
             }
+        }
+
+        private void KeyDownOnlyNumber(object sender, EventArgs e)
+        {
+            Helper.enterOnlyNumber(e);
         }
     }
 }

@@ -101,6 +101,7 @@ namespace Airline_ticket_sales_management
             this.atxbMinute.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbMinute.Texts = "";
             this.atxbMinute.UnderlinedStyle = false;
+            this.atxbMinute._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // atxbHour
             // 
@@ -128,6 +129,7 @@ namespace Airline_ticket_sales_management
             this.atxbHour.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbHour.Texts = "";
             this.atxbHour.UnderlinedStyle = false;
+            this.atxbHour._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // abtnRemovePreventiveAirport
             // 
@@ -309,6 +311,7 @@ namespace Airline_ticket_sales_management
             this.atxbTicketPrice.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbTicketPrice.Texts = "";
             this.atxbTicketPrice.UnderlinedStyle = false;
+            this.atxbTicketPrice._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // atxbFlightDuration
             // 
@@ -336,6 +339,7 @@ namespace Airline_ticket_sales_management
             this.atxbFlightDuration.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbFlightDuration.Texts = "";
             this.atxbFlightDuration.UnderlinedStyle = false;
+            this.atxbFlightDuration._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // adtpDepartureDateTime
             // 

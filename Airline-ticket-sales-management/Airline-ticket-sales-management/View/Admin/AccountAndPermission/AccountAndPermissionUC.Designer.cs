@@ -667,6 +667,7 @@
             this.atxbName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbName.Texts = "";
             this.atxbName.UnderlinedStyle = false;
+            this.atxbName._KeyDown += new System.EventHandler(this.atxbName__KeyDown);
             // 
             // aPanel4
             // 
@@ -811,6 +812,7 @@
             this.atxbPhone.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbPhone.Texts = "";
             this.atxbPhone.UnderlinedStyle = false;
+            this.atxbPhone._KeyDown += new System.EventHandler(this.atxbPhone__KeyDown);
             // 
             // AccountAndPermissionUC
             // 

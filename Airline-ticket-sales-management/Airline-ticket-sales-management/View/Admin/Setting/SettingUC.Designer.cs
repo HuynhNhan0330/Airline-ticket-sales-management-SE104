@@ -188,6 +188,7 @@ namespace Airline_ticket_sales_management
             this.atbLatestBookingCancellationTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
             this.atbLatestBookingCancellationTime.Texts = "";
             this.atbLatestBookingCancellationTime.UnderlinedStyle = false;
+            this.atbLatestBookingCancellationTime._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // label21
             // 
@@ -246,6 +247,7 @@ namespace Airline_ticket_sales_management
             this.atbMaximumStopoverTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
             this.atbMaximumStopoverTime.Texts = "";
             this.atbMaximumStopoverTime.UnderlinedStyle = false;
+            this.atbMaximumStopoverTime._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // label19
             // 
@@ -304,6 +306,7 @@ namespace Airline_ticket_sales_management
             this.atbMinimumFlightTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
             this.atbMinimumFlightTime.Texts = "";
             this.atbMinimumFlightTime.UnderlinedStyle = false;
+            this.atbMinimumFlightTime._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // label3
             // 
@@ -362,6 +365,7 @@ namespace Airline_ticket_sales_management
             this.atbMinimumStopoverTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
             this.atbMinimumStopoverTime.Texts = "";
             this.atbMinimumStopoverTime.UnderlinedStyle = false;
+            this.atbMinimumStopoverTime._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // label17
             // 
@@ -446,6 +450,7 @@ namespace Airline_ticket_sales_management
             this.atbMaxPreventiveAirports.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
             this.atbMaxPreventiveAirports.Texts = "";
             this.atbMaxPreventiveAirports.UnderlinedStyle = false;
+            this.atbMaxPreventiveAirports._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // label5
             // 
@@ -504,6 +509,7 @@ namespace Airline_ticket_sales_management
             this.atbEarliestBookingTime.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Center;
             this.atbEarliestBookingTime.Texts = "";
             this.atbEarliestBookingTime.UnderlinedStyle = false;
+            this.atbEarliestBookingTime._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // label6
             // 
@@ -646,6 +652,7 @@ namespace Airline_ticket_sales_management
             this.atxbCountryName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbCountryName.Texts = "";
             this.atxbCountryName.UnderlinedStyle = false;
+            this.atxbCountryName._KeyDown += new System.EventHandler(this.KeyDownOnlyLetter);
             // 
             // atxbAirportName
             // 
@@ -672,6 +679,7 @@ namespace Airline_ticket_sales_management
             this.atxbAirportName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbAirportName.Texts = "";
             this.atxbAirportName.UnderlinedStyle = false;
+            this.atxbAirportName._KeyDown += new System.EventHandler(this.KeyDownOnlyLetter);
             // 
             // atxbCityName
             // 
@@ -698,6 +706,7 @@ namespace Airline_ticket_sales_management
             this.atxbCityName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbCityName.Texts = "";
             this.atxbCityName.UnderlinedStyle = false;
+            this.atxbCityName._KeyDown += new System.EventHandler(this.KeyDownOnlyLetter);
             // 
             // panel10
             // 
@@ -964,6 +973,7 @@ namespace Airline_ticket_sales_management
             this.atxbPricePercentage.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbPricePercentage.Texts = "";
             this.atxbPricePercentage.UnderlinedStyle = false;
+            this.atxbPricePercentage._KeyDown += new System.EventHandler(this.KeyDownOnlyNumber);
             // 
             // atxbTicketClassName
             // 
@@ -990,6 +1000,7 @@ namespace Airline_ticket_sales_management
             this.atxbTicketClassName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
             this.atxbTicketClassName.Texts = "";
             this.atxbTicketClassName.UnderlinedStyle = false;
+            this.atxbTicketClassName._KeyDown += new System.EventHandler(this.KeyDownOnlyLetter);
             // 
             // pnTableTicketClass
             // 

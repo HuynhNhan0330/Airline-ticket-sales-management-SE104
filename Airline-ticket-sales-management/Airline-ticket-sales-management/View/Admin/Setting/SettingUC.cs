@@ -3,6 +3,7 @@ using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Model;
 using Airline_ticket_sales_management.Usercontrols;
+using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -481,5 +482,15 @@ namespace Airline_ticket_sales_management
             pnOperationEditAirport.Visible = false;
         }
         #endregion
+
+        private void KeyDownOnlyNumber(object sender, EventArgs e)
+        {
+            Helper.enterOnlyNumber(e);
+        }
+
+        private void KeyDownOnlyLetter(object sender, EventArgs e)
+        {
+            Helper.enterOnlyLetter(e);
+        }
     }
 }

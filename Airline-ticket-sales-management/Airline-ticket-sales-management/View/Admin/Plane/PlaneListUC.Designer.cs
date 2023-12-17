@@ -174,6 +174,7 @@ namespace Airline_ticket_sales_management
             this.atxbSearch.Texts = "";
             this.atxbSearch.UnderlinedStyle = false;
             this.atxbSearch._TextChanged += new System.EventHandler(this.atxbSearch__TextChanged);
+            this.atxbSearch._KeyDown += new System.EventHandler(this.atxbSearch__KeyDown);
             // 
             // PlaneListUC
             // 

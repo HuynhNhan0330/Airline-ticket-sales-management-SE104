@@ -2,6 +2,7 @@
 using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Usercontrols;
+using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -85,6 +86,10 @@ namespace Airline_ticket_sales_management
             }
 
             loadPanelListPlane();
+        }
+
+        private void atxbSearch__KeyDown(object sender, EventArgs e)
+        {
         }
     }
 }
