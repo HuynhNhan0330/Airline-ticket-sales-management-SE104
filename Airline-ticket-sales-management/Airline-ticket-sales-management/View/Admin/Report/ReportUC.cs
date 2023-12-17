@@ -106,7 +106,7 @@ namespace Airline_ticket_sales_management
 
                 // Tính tỉ lệ cho chi tiết báo cáo tháng
                 foreach (DetailedMonthlyRevenueReportDTO dmrr in detailedMonthlyRevenueReports)
-                    dmrr.Ratio = dmrr.Revenue * 100 / totalRevenue;
+                    dmrr.Ratio = Math.Round(dmrr.Revenue * 100 / totalRevenue, 2);
 
                 // Kiểm tra điều kiên phù hợp sẽ lưu lên cơ sở dữ liệu của mình
                 // Trên bảng chi tiết báo cáo tháng (Detailed Monthly Revenue Report)
@@ -182,7 +182,7 @@ namespace Airline_ticket_sales_management
             decimal totalRevenue = ListAnnualRevenueReport.Sum(darr => darr.Revenue);
 
             foreach (var darr in ListAnnualRevenueReport) 
-                darr.Ratio = darr.Revenue * 100 / totalRevenue;
+                darr.Ratio = Math.Round(darr.Revenue * 100 / totalRevenue, 2);
 
             // Lưu lại báo cáo năm
             if (year < DateTime.Now.Year)

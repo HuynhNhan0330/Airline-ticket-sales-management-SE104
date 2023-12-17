@@ -60,12 +60,19 @@ namespace Airline_ticket_sales_management.DALs
                 using (var context = new FlightTicketManagementEntities())
                 {
                     var DetailedMonthlyRevenueReportList = (from dmrp in context.DETAILED_MONTHLY_REVENUE_REPORT
+                                                            join flight in context.FLIGHTs
+                                                            on dmrp.FlightID equals flight.FlightID
+                                                            join departureAirport in context.AIRPORTs
+                                                            on flight.DepartureAirportCode equals departureAirport.AirportID
+                                                            join arrivalAirport in context.AIRPORTs
+                                                            on flight.ArrivalAirportCode equals arrivalAirport.AirportID
                                                             where dmrp.Months == month && dmrp.Years == year
                                                            select new DetailedMonthlyRevenueReportDTO
                                                            {
                                                                Year = dmrp.Years,
                                                                Monthly = dmrp.Months,
                                                                FlightID = dmrp.FlightID,
+                                                               FlightName = departureAirport.AirportName + " - " + arrivalAirport.AirportName,
                                                                Revenue = dmrp.Revenue,
                                                                Ratio = dmrp.Ratio,
                                                                TicketSold = dmrp.TicketSold,

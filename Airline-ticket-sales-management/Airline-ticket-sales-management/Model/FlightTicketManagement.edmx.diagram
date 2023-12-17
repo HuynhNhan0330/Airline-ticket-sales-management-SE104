@@ -4,11 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e37923e93f774b518299ad1d966fbd21" Name="Diagram1" ZoomLevel="78">
+      <Diagram DiagramId="e37923e93f774b518299ad1d966fbd21" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="FlightTicketManagementModel.AIRPORT" Width="1.5" PointX="0.75" PointY="7.625" />
-        <EntityTypeShape EntityType="FlightTicketManagementModel.ANNUAL_REVENUE_REPORT" Width="1.5" PointX="0.75" PointY="12" />
-        <EntityTypeShape EntityType="FlightTicketManagementModel.DETAILED_ANNUAL_REVENUE_REPORT" Width="1.5" PointX="3" PointY="11.625" />
-        <EntityTypeShape EntityType="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT" Width="1.5" PointX="5.25" PointY="11.5" />
         <EntityTypeShape EntityType="FlightTicketManagementModel.FLIGHT" Width="1.5" PointX="3" PointY="7" />
         <EntityTypeShape EntityType="FlightTicketManagementModel.FLIGHT_DETAIL" Width="1.5" PointX="5.25" PointY="3.75" />
         <EntityTypeShape EntityType="FlightTicketManagementModel.FLIGHT_TICKET" Width="1.5" PointX="8.25" PointY="7.125" />
@@ -20,9 +17,6 @@
         <AssociationConnector Association="FlightTicketManagementModel.FK__FLIGHT__ArrivalA__5165187F" />
         <AssociationConnector Association="FlightTicketManagementModel.FK__FLIGHT__Departur__5070F446" />
         <AssociationConnector Association="FlightTicketManagementModel.FK__FLIGHT_DE__Preve__4E88ABD4" />
-        <AssociationConnector Association="FlightTicketManagementModel.FK__DETAILED___Years__59063A47" />
-        <AssociationConnector Association="FlightTicketManagementModel.FK__DETAILED_MONTHLY__5812160E" />
-        <AssociationConnector Association="FlightTicketManagementModel.FK__DETAILED___Fligh__571DF1D5" />
         <AssociationConnector Association="FlightTicketManagementModel.FK__FLIGHT__PlaneID__52593CB8" />
         <AssociationConnector Association="FlightTicketManagementModel.FK__FLIGHT_DE__Fligh__4F7CD00D" />
         <AssociationConnector Association="FlightTicketManagementModel.FK__FLIGHT_TI__Fligh__4CA06362" />
@@ -34,6 +28,10 @@
         <EntityTypeShape EntityType="FlightTicketManagementModel.ACCOUNT" Width="1.5" PointX="12.625" PointY="1" />
         <EntityTypeShape EntityType="FlightTicketManagementModel.PERMISSION" Width="1.5" PointX="10.375" PointY="1.375" />
         <AssociationConnector Association="FlightTicketManagementModel.FK__ACCOUNT__RoleID__74AE54BC" />
+        <EntityTypeShape EntityType="FlightTicketManagementModel.ANNUAL_REVENUE_REPORT" Width="1.5" PointX="10.125" PointY="11.625" />
+        <EntityTypeShape EntityType="FlightTicketManagementModel.DETAILED_ANNUAL_REVENUE_REPORT" Width="1.5" PointX="8" PointY="11.625" />
+        <EntityTypeShape EntityType="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT" Width="1.5" PointX="5.625" PointY="11.625" />
+        <AssociationConnector Association="FlightTicketManagementModel.FK__DETAILED___Fligh__628FA481" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

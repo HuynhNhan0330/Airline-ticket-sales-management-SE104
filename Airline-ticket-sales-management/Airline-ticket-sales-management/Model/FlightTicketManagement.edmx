@@ -151,7 +151,7 @@
           <Property Name="TicketClassName" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="PricePercentage" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__ACCOUNT__RoleID__74AE54BC">
+        <Association Name="FK__ACCOUNT__RoleID__5070F446">
           <End Role="PERMISSION" Type="Self.PERMISSION" Multiplicity="1" />
           <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="*" />
           <ReferentialConstraint>
@@ -163,7 +163,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DETAILED___Fligh__571DF1D5">
+        <Association Name="FK__DETAILED___Fligh__628FA481">
           <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="1" />
           <End Role="DETAILED_MONTHLY_REVENUE_REPORT" Type="Self.DETAILED_MONTHLY_REVENUE_REPORT" Multiplicity="*" />
           <ReferentialConstraint>
@@ -175,33 +175,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DETAILED___Years__59063A47">
-          <End Role="ANNUAL_REVENUE_REPORT" Type="Self.ANNUAL_REVENUE_REPORT" Multiplicity="1" />
-          <End Role="DETAILED_ANNUAL_REVENUE_REPORT" Type="Self.DETAILED_ANNUAL_REVENUE_REPORT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ANNUAL_REVENUE_REPORT">
-              <PropertyRef Name="Years" />
-            </Principal>
-            <Dependent Role="DETAILED_ANNUAL_REVENUE_REPORT">
-              <PropertyRef Name="Years" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__DETAILED_MONTHLY__5812160E">
-          <End Role="DETAILED_ANNUAL_REVENUE_REPORT" Type="Self.DETAILED_ANNUAL_REVENUE_REPORT" Multiplicity="1" />
-          <End Role="DETAILED_MONTHLY_REVENUE_REPORT" Type="Self.DETAILED_MONTHLY_REVENUE_REPORT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="DETAILED_ANNUAL_REVENUE_REPORT">
-              <PropertyRef Name="Years" />
-              <PropertyRef Name="Months" />
-            </Principal>
-            <Dependent Role="DETAILED_MONTHLY_REVENUE_REPORT">
-              <PropertyRef Name="Years" />
-              <PropertyRef Name="Months" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__FLIGHT__ArrivalA__5165187F">
+        <Association Name="FK__FLIGHT__ArrivalA__5629CD9C">
           <End Role="AIRPORT" Type="Self.AIRPORT" Multiplicity="1" />
           <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="*" />
           <ReferentialConstraint>
@@ -213,7 +187,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FLIGHT__Departur__5070F446">
+        <Association Name="FK__FLIGHT__Departur__5535A963">
           <End Role="AIRPORT" Type="Self.AIRPORT" Multiplicity="1" />
           <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="*" />
           <ReferentialConstraint>
@@ -225,7 +199,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FLIGHT__PlaneID__52593CB8">
+        <Association Name="FK__FLIGHT__PlaneID__571DF1D5">
           <End Role="PLANE" Type="Self.PLANE" Multiplicity="1" />
           <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="*" />
           <ReferentialConstraint>
@@ -237,7 +211,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FLIGHT_DE__Fligh__4F7CD00D">
+        <Association Name="FK__FLIGHT_DE__Fligh__5441852A">
           <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="1" />
           <End Role="FLIGHT_DETAIL" Type="Self.FLIGHT_DETAIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -249,7 +223,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FLIGHT_DE__Preve__4E88ABD4">
+        <Association Name="FK__FLIGHT_DE__Preve__534D60F1">
           <End Role="AIRPORT" Type="Self.AIRPORT" Multiplicity="1" />
           <End Role="FLIGHT_DETAIL" Type="Self.FLIGHT_DETAIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -261,7 +235,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FLIGHT_TI__Fligh__4CA06362">
+        <Association Name="FK__FLIGHT_TI__Fligh__5165187F">
           <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="1" />
           <End Role="FLIGHT_TICKET" Type="Self.FLIGHT_TICKET" Multiplicity="*" />
           <ReferentialConstraint>
@@ -273,7 +247,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FLIGHT_TI__Fligh__5629CD9C">
+        <Association Name="FK__FLIGHT_TI__Fligh__5AEE82B9">
           <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="1" />
           <End Role="FLIGHT_TICKET_CLASS_DETAIL" Type="Self.FLIGHT_TICKET_CLASS_DETAIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -285,7 +259,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FLIGHT_TI__Ticke__4D94879B">
+        <Association Name="FK__FLIGHT_TI__Ticke__52593CB8">
           <End Role="TICKET_CLASS" Type="Self.TICKET_CLASS" Multiplicity="1" />
           <End Role="FLIGHT_TICKET" Type="Self.FLIGHT_TICKET" Multiplicity="*" />
           <ReferentialConstraint>
@@ -297,7 +271,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FLIGHT_TI__Ticke__5535A963">
+        <Association Name="FK__FLIGHT_TI__Ticke__59FA5E80">
           <End Role="TICKET_CLASS" Type="Self.TICKET_CLASS" Multiplicity="1" />
           <End Role="FLIGHT_TICKET_CLASS_DETAIL" Type="Self.FLIGHT_TICKET_CLASS_DETAIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -309,7 +283,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SEAT__PlaneID__534D60F1">
+        <Association Name="FK__SEAT__PlaneID__5812160E">
           <End Role="PLANE" Type="Self.PLANE" Multiplicity="1" />
           <End Role="SEAT" Type="Self.SEAT" Multiplicity="*" />
           <ReferentialConstraint>
@@ -321,7 +295,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SEAT__TicketClas__5441852A">
+        <Association Name="FK__SEAT__TicketClas__59063A47">
           <End Role="TICKET_CLASS" Type="Self.TICKET_CLASS" Multiplicity="1" />
           <End Role="SEAT" Type="Self.SEAT" Multiplicity="*" />
           <ReferentialConstraint>
@@ -348,63 +322,55 @@
           <EntitySet Name="PLANE" EntityType="Self.PLANE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SEAT" EntityType="Self.SEAT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TICKET_CLASS" EntityType="Self.TICKET_CLASS" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__ACCOUNT__RoleID__74AE54BC" Association="Self.FK__ACCOUNT__RoleID__74AE54BC">
+          <AssociationSet Name="FK__ACCOUNT__RoleID__5070F446" Association="Self.FK__ACCOUNT__RoleID__5070F446">
             <End Role="PERMISSION" EntitySet="PERMISSION" />
             <End Role="ACCOUNT" EntitySet="ACCOUNT" />
           </AssociationSet>
-          <AssociationSet Name="FK__DETAILED___Fligh__571DF1D5" Association="Self.FK__DETAILED___Fligh__571DF1D5">
+          <AssociationSet Name="FK__DETAILED___Fligh__628FA481" Association="Self.FK__DETAILED___Fligh__628FA481">
             <End Role="FLIGHT" EntitySet="FLIGHT" />
             <End Role="DETAILED_MONTHLY_REVENUE_REPORT" EntitySet="DETAILED_MONTHLY_REVENUE_REPORT" />
           </AssociationSet>
-          <AssociationSet Name="FK__DETAILED___Years__59063A47" Association="Self.FK__DETAILED___Years__59063A47">
-            <End Role="ANNUAL_REVENUE_REPORT" EntitySet="ANNUAL_REVENUE_REPORT" />
-            <End Role="DETAILED_ANNUAL_REVENUE_REPORT" EntitySet="DETAILED_ANNUAL_REVENUE_REPORT" />
-          </AssociationSet>
-          <AssociationSet Name="FK__DETAILED_MONTHLY__5812160E" Association="Self.FK__DETAILED_MONTHLY__5812160E">
-            <End Role="DETAILED_ANNUAL_REVENUE_REPORT" EntitySet="DETAILED_ANNUAL_REVENUE_REPORT" />
-            <End Role="DETAILED_MONTHLY_REVENUE_REPORT" EntitySet="DETAILED_MONTHLY_REVENUE_REPORT" />
-          </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT__ArrivalA__5165187F" Association="Self.FK__FLIGHT__ArrivalA__5165187F">
+          <AssociationSet Name="FK__FLIGHT__ArrivalA__5629CD9C" Association="Self.FK__FLIGHT__ArrivalA__5629CD9C">
             <End Role="AIRPORT" EntitySet="AIRPORT" />
             <End Role="FLIGHT" EntitySet="FLIGHT" />
           </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT__Departur__5070F446" Association="Self.FK__FLIGHT__Departur__5070F446">
+          <AssociationSet Name="FK__FLIGHT__Departur__5535A963" Association="Self.FK__FLIGHT__Departur__5535A963">
             <End Role="AIRPORT" EntitySet="AIRPORT" />
             <End Role="FLIGHT" EntitySet="FLIGHT" />
           </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT__PlaneID__52593CB8" Association="Self.FK__FLIGHT__PlaneID__52593CB8">
+          <AssociationSet Name="FK__FLIGHT__PlaneID__571DF1D5" Association="Self.FK__FLIGHT__PlaneID__571DF1D5">
             <End Role="PLANE" EntitySet="PLANE" />
             <End Role="FLIGHT" EntitySet="FLIGHT" />
           </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT_DE__Fligh__4F7CD00D" Association="Self.FK__FLIGHT_DE__Fligh__4F7CD00D">
+          <AssociationSet Name="FK__FLIGHT_DE__Fligh__5441852A" Association="Self.FK__FLIGHT_DE__Fligh__5441852A">
             <End Role="FLIGHT" EntitySet="FLIGHT" />
             <End Role="FLIGHT_DETAIL" EntitySet="FLIGHT_DETAIL" />
           </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT_DE__Preve__4E88ABD4" Association="Self.FK__FLIGHT_DE__Preve__4E88ABD4">
+          <AssociationSet Name="FK__FLIGHT_DE__Preve__534D60F1" Association="Self.FK__FLIGHT_DE__Preve__534D60F1">
             <End Role="AIRPORT" EntitySet="AIRPORT" />
             <End Role="FLIGHT_DETAIL" EntitySet="FLIGHT_DETAIL" />
           </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT_TI__Fligh__4CA06362" Association="Self.FK__FLIGHT_TI__Fligh__4CA06362">
+          <AssociationSet Name="FK__FLIGHT_TI__Fligh__5165187F" Association="Self.FK__FLIGHT_TI__Fligh__5165187F">
             <End Role="FLIGHT" EntitySet="FLIGHT" />
             <End Role="FLIGHT_TICKET" EntitySet="FLIGHT_TICKET" />
           </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT_TI__Fligh__5629CD9C" Association="Self.FK__FLIGHT_TI__Fligh__5629CD9C">
+          <AssociationSet Name="FK__FLIGHT_TI__Fligh__5AEE82B9" Association="Self.FK__FLIGHT_TI__Fligh__5AEE82B9">
             <End Role="FLIGHT" EntitySet="FLIGHT" />
             <End Role="FLIGHT_TICKET_CLASS_DETAIL" EntitySet="FLIGHT_TICKET_CLASS_DETAIL" />
           </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT_TI__Ticke__4D94879B" Association="Self.FK__FLIGHT_TI__Ticke__4D94879B">
+          <AssociationSet Name="FK__FLIGHT_TI__Ticke__52593CB8" Association="Self.FK__FLIGHT_TI__Ticke__52593CB8">
             <End Role="TICKET_CLASS" EntitySet="TICKET_CLASS" />
             <End Role="FLIGHT_TICKET" EntitySet="FLIGHT_TICKET" />
           </AssociationSet>
-          <AssociationSet Name="FK__FLIGHT_TI__Ticke__5535A963" Association="Self.FK__FLIGHT_TI__Ticke__5535A963">
+          <AssociationSet Name="FK__FLIGHT_TI__Ticke__59FA5E80" Association="Self.FK__FLIGHT_TI__Ticke__59FA5E80">
             <End Role="TICKET_CLASS" EntitySet="TICKET_CLASS" />
             <End Role="FLIGHT_TICKET_CLASS_DETAIL" EntitySet="FLIGHT_TICKET_CLASS_DETAIL" />
           </AssociationSet>
-          <AssociationSet Name="FK__SEAT__PlaneID__534D60F1" Association="Self.FK__SEAT__PlaneID__534D60F1">
+          <AssociationSet Name="FK__SEAT__PlaneID__5812160E" Association="Self.FK__SEAT__PlaneID__5812160E">
             <End Role="PLANE" EntitySet="PLANE" />
             <End Role="SEAT" EntitySet="SEAT" />
           </AssociationSet>
-          <AssociationSet Name="FK__SEAT__TicketClas__5441852A" Association="Self.FK__SEAT__TicketClas__5441852A">
+          <AssociationSet Name="FK__SEAT__TicketClas__59063A47" Association="Self.FK__SEAT__TicketClas__59063A47">
             <End Role="TICKET_CLASS" EntitySet="TICKET_CLASS" />
             <End Role="SEAT" EntitySet="SEAT" />
           </AssociationSet>
@@ -415,9 +381,6 @@
       <Schema Namespace="FlightTicketManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="FlightTicketManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AIRPORTs" EntityType="FlightTicketManagementModel.AIRPORT" />
-          <EntitySet Name="ANNUAL_REVENUE_REPORT" EntityType="FlightTicketManagementModel.ANNUAL_REVENUE_REPORT" />
-          <EntitySet Name="DETAILED_ANNUAL_REVENUE_REPORT" EntityType="FlightTicketManagementModel.DETAILED_ANNUAL_REVENUE_REPORT" />
-          <EntitySet Name="DETAILED_MONTHLY_REVENUE_REPORT" EntityType="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT" />
           <EntitySet Name="FLIGHTs" EntityType="FlightTicketManagementModel.FLIGHT" />
           <EntitySet Name="FLIGHT_DETAIL" EntityType="FlightTicketManagementModel.FLIGHT_DETAIL" />
           <EntitySet Name="FLIGHT_TICKET" EntityType="FlightTicketManagementModel.FLIGHT_TICKET" />
@@ -437,18 +400,6 @@
           <AssociationSet Name="FK__FLIGHT_DE__Preve__4E88ABD4" Association="FlightTicketManagementModel.FK__FLIGHT_DE__Preve__4E88ABD4">
             <End Role="AIRPORT" EntitySet="AIRPORTs" />
             <End Role="FLIGHT_DETAIL" EntitySet="FLIGHT_DETAIL" />
-          </AssociationSet>
-          <AssociationSet Name="FK__DETAILED___Years__59063A47" Association="FlightTicketManagementModel.FK__DETAILED___Years__59063A47">
-            <End Role="ANNUAL_REVENUE_REPORT" EntitySet="ANNUAL_REVENUE_REPORT" />
-            <End Role="DETAILED_ANNUAL_REVENUE_REPORT" EntitySet="DETAILED_ANNUAL_REVENUE_REPORT" />
-          </AssociationSet>
-          <AssociationSet Name="FK__DETAILED_MONTHLY__5812160E" Association="FlightTicketManagementModel.FK__DETAILED_MONTHLY__5812160E">
-            <End Role="DETAILED_ANNUAL_REVENUE_REPORT" EntitySet="DETAILED_ANNUAL_REVENUE_REPORT" />
-            <End Role="DETAILED_MONTHLY_REVENUE_REPORT" EntitySet="DETAILED_MONTHLY_REVENUE_REPORT" />
-          </AssociationSet>
-          <AssociationSet Name="FK__DETAILED___Fligh__571DF1D5" Association="FlightTicketManagementModel.FK__DETAILED___Fligh__571DF1D5">
-            <End Role="FLIGHT" EntitySet="FLIGHTs" />
-            <End Role="DETAILED_MONTHLY_REVENUE_REPORT" EntitySet="DETAILED_MONTHLY_REVENUE_REPORT" />
           </AssociationSet>
           <AssociationSet Name="FK__FLIGHT__PlaneID__52593CB8" Association="FlightTicketManagementModel.FK__FLIGHT__PlaneID__52593CB8">
             <End Role="PLANE" EntitySet="PLANEs" />
@@ -488,6 +439,13 @@
             <End Role="PERMISSION" EntitySet="PERMISSIONs" />
             <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
           </AssociationSet>
+          <EntitySet Name="ANNUAL_REVENUE_REPORT" EntityType="FlightTicketManagementModel.ANNUAL_REVENUE_REPORT" />
+          <EntitySet Name="DETAILED_ANNUAL_REVENUE_REPORT" EntityType="FlightTicketManagementModel.DETAILED_ANNUAL_REVENUE_REPORT" />
+          <EntitySet Name="DETAILED_MONTHLY_REVENUE_REPORT" EntityType="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT" />
+          <AssociationSet Name="FK__DETAILED___Fligh__628FA481" Association="FlightTicketManagementModel.FK__DETAILED___Fligh__628FA481">
+            <End Role="FLIGHT" EntitySet="FLIGHTs" />
+            <End Role="DETAILED_MONTHLY_REVENUE_REPORT" EntitySet="DETAILED_MONTHLY_REVENUE_REPORT" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="AIRPORT">
           <Key>
@@ -500,42 +458,6 @@
           <NavigationProperty Name="FLIGHTs" Relationship="FlightTicketManagementModel.FK__FLIGHT__ArrivalA__5165187F" FromRole="AIRPORT" ToRole="FLIGHT" />
           <NavigationProperty Name="FLIGHTs1" Relationship="FlightTicketManagementModel.FK__FLIGHT__Departur__5070F446" FromRole="AIRPORT" ToRole="FLIGHT" />
           <NavigationProperty Name="FLIGHT_DETAIL" Relationship="FlightTicketManagementModel.FK__FLIGHT_DE__Preve__4E88ABD4" FromRole="AIRPORT" ToRole="FLIGHT_DETAIL" />
-        </EntityType>
-        <EntityType Name="ANNUAL_REVENUE_REPORT">
-          <Key>
-            <PropertyRef Name="Years" />
-          </Key>
-          <Property Name="Years" Type="Int32" Nullable="false" />
-          <Property Name="TotalRevenue" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <NavigationProperty Name="DETAILED_ANNUAL_REVENUE_REPORT" Relationship="FlightTicketManagementModel.FK__DETAILED___Years__59063A47" FromRole="ANNUAL_REVENUE_REPORT" ToRole="DETAILED_ANNUAL_REVENUE_REPORT" />
-        </EntityType>
-        <EntityType Name="DETAILED_ANNUAL_REVENUE_REPORT">
-          <Key>
-            <PropertyRef Name="Years" />
-            <PropertyRef Name="Months" />
-          </Key>
-          <Property Name="Years" Type="Int32" Nullable="false" />
-          <Property Name="Months" Type="Int32" Nullable="false" />
-          <Property Name="FlightCount" Type="Int32" Nullable="false" />
-          <Property Name="Revenue" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="Ratio" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <NavigationProperty Name="ANNUAL_REVENUE_REPORT" Relationship="FlightTicketManagementModel.FK__DETAILED___Years__59063A47" FromRole="DETAILED_ANNUAL_REVENUE_REPORT" ToRole="ANNUAL_REVENUE_REPORT" />
-          <NavigationProperty Name="DETAILED_MONTHLY_REVENUE_REPORT" Relationship="FlightTicketManagementModel.FK__DETAILED_MONTHLY__5812160E" FromRole="DETAILED_ANNUAL_REVENUE_REPORT" ToRole="DETAILED_MONTHLY_REVENUE_REPORT" />
-        </EntityType>
-        <EntityType Name="DETAILED_MONTHLY_REVENUE_REPORT">
-          <Key>
-            <PropertyRef Name="Years" />
-            <PropertyRef Name="Months" />
-            <PropertyRef Name="FlightID" />
-          </Key>
-          <Property Name="Years" Type="Int32" Nullable="false" />
-          <Property Name="Months" Type="Int32" Nullable="false" />
-          <Property Name="FlightID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="TicketSold" Type="Int32" Nullable="false" />
-          <Property Name="Revenue" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="Ratio" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <NavigationProperty Name="DETAILED_ANNUAL_REVENUE_REPORT" Relationship="FlightTicketManagementModel.FK__DETAILED_MONTHLY__5812160E" FromRole="DETAILED_MONTHLY_REVENUE_REPORT" ToRole="DETAILED_ANNUAL_REVENUE_REPORT" />
-          <NavigationProperty Name="FLIGHT" Relationship="FlightTicketManagementModel.FK__DETAILED___Fligh__571DF1D5" FromRole="DETAILED_MONTHLY_REVENUE_REPORT" ToRole="FLIGHT" />
         </EntityType>
         <EntityType Name="FLIGHT">
           <Key>
@@ -550,11 +472,11 @@
           <Property Name="FlightDuration" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AIRPORT" Relationship="FlightTicketManagementModel.FK__FLIGHT__ArrivalA__5165187F" FromRole="FLIGHT" ToRole="AIRPORT" />
           <NavigationProperty Name="AIRPORT1" Relationship="FlightTicketManagementModel.FK__FLIGHT__Departur__5070F446" FromRole="FLIGHT" ToRole="AIRPORT" />
-          <NavigationProperty Name="DETAILED_MONTHLY_REVENUE_REPORT" Relationship="FlightTicketManagementModel.FK__DETAILED___Fligh__571DF1D5" FromRole="FLIGHT" ToRole="DETAILED_MONTHLY_REVENUE_REPORT" />
           <NavigationProperty Name="PLANE" Relationship="FlightTicketManagementModel.FK__FLIGHT__PlaneID__52593CB8" FromRole="FLIGHT" ToRole="PLANE" />
           <NavigationProperty Name="FLIGHT_DETAIL" Relationship="FlightTicketManagementModel.FK__FLIGHT_DE__Fligh__4F7CD00D" FromRole="FLIGHT" ToRole="FLIGHT_DETAIL" />
           <NavigationProperty Name="FLIGHT_TICKET" Relationship="FlightTicketManagementModel.FK__FLIGHT_TI__Fligh__4CA06362" FromRole="FLIGHT" ToRole="FLIGHT_TICKET" />
           <NavigationProperty Name="FLIGHT_TICKET_CLASS_DETAIL" Relationship="FlightTicketManagementModel.FK__FLIGHT_TI__Fligh__5629CD9C" FromRole="FLIGHT" ToRole="FLIGHT_TICKET_CLASS_DETAIL" />
+          <NavigationProperty Name="DETAILED_MONTHLY_REVENUE_REPORT" Relationship="FlightTicketManagementModel.FK__DETAILED___Fligh__628FA481" FromRole="FLIGHT" ToRole="DETAILED_MONTHLY_REVENUE_REPORT" />
         </EntityType>
         <EntityType Name="FLIGHT_DETAIL">
           <Key>
@@ -676,44 +598,6 @@
             </Principal>
             <Dependent Role="FLIGHT_DETAIL">
               <PropertyRef Name="PreventiveAirportID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__DETAILED___Years__59063A47">
-          <End Type="FlightTicketManagementModel.ANNUAL_REVENUE_REPORT" Role="ANNUAL_REVENUE_REPORT" Multiplicity="1" />
-          <End Type="FlightTicketManagementModel.DETAILED_ANNUAL_REVENUE_REPORT" Role="DETAILED_ANNUAL_REVENUE_REPORT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ANNUAL_REVENUE_REPORT">
-              <PropertyRef Name="Years" />
-            </Principal>
-            <Dependent Role="DETAILED_ANNUAL_REVENUE_REPORT">
-              <PropertyRef Name="Years" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__DETAILED_MONTHLY__5812160E">
-          <End Type="FlightTicketManagementModel.DETAILED_ANNUAL_REVENUE_REPORT" Role="DETAILED_ANNUAL_REVENUE_REPORT" Multiplicity="1" />
-          <End Type="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT" Role="DETAILED_MONTHLY_REVENUE_REPORT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="DETAILED_ANNUAL_REVENUE_REPORT">
-              <PropertyRef Name="Years" />
-              <PropertyRef Name="Months" />
-            </Principal>
-            <Dependent Role="DETAILED_MONTHLY_REVENUE_REPORT">
-              <PropertyRef Name="Years" />
-              <PropertyRef Name="Months" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__DETAILED___Fligh__571DF1D5">
-          <End Type="FlightTicketManagementModel.FLIGHT" Role="FLIGHT" Multiplicity="1" />
-          <End Type="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT" Role="DETAILED_MONTHLY_REVENUE_REPORT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="FLIGHT">
-              <PropertyRef Name="FlightID" />
-            </Principal>
-            <Dependent Role="DETAILED_MONTHLY_REVENUE_REPORT">
-              <PropertyRef Name="FlightID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -847,6 +731,50 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ANNUAL_REVENUE_REPORT">
+          <Key>
+            <PropertyRef Name="Years" />
+          </Key>
+          <Property Name="Years" Type="Int32" Nullable="false" />
+          <Property Name="TotalRevenue" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="DETAILED_ANNUAL_REVENUE_REPORT">
+          <Key>
+            <PropertyRef Name="Years" />
+            <PropertyRef Name="Months" />
+          </Key>
+          <Property Name="Years" Type="Int32" Nullable="false" />
+          <Property Name="Months" Type="Int32" Nullable="false" />
+          <Property Name="FlightCount" Type="Int32" Nullable="false" />
+          <Property Name="Revenue" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Ratio" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="DETAILED_MONTHLY_REVENUE_REPORT">
+          <Key>
+            <PropertyRef Name="Years" />
+            <PropertyRef Name="Months" />
+            <PropertyRef Name="FlightID" />
+          </Key>
+          <Property Name="Years" Type="Int32" Nullable="false" />
+          <Property Name="Months" Type="Int32" Nullable="false" />
+          <Property Name="FlightID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TicketSold" Type="Int32" Nullable="false" />
+          <Property Name="Revenue" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Ratio" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <NavigationProperty Name="FLIGHT" Relationship="FlightTicketManagementModel.FK__DETAILED___Fligh__628FA481" FromRole="DETAILED_MONTHLY_REVENUE_REPORT" ToRole="FLIGHT" />
+        </EntityType>
+        <Association Name="FK__DETAILED___Fligh__628FA481">
+          <End Type="FlightTicketManagementModel.FLIGHT" Role="FLIGHT" Multiplicity="1" />
+          <End Type="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT" Role="DETAILED_MONTHLY_REVENUE_REPORT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FLIGHT">
+              <PropertyRef Name="FlightID" />
+            </Principal>
+            <Dependent Role="DETAILED_MONTHLY_REVENUE_REPORT">
+              <PropertyRef Name="FlightID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -860,37 +788,6 @@
                 <ScalarProperty Name="CityName" ColumnName="CityName" />
                 <ScalarProperty Name="AirportName" ColumnName="AirportName" />
                 <ScalarProperty Name="AirportID" ColumnName="AirportID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ANNUAL_REVENUE_REPORT">
-            <EntityTypeMapping TypeName="FlightTicketManagementModel.ANNUAL_REVENUE_REPORT">
-              <MappingFragment StoreEntitySet="ANNUAL_REVENUE_REPORT">
-                <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
-                <ScalarProperty Name="Years" ColumnName="Years" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DETAILED_ANNUAL_REVENUE_REPORT">
-            <EntityTypeMapping TypeName="FlightTicketManagementModel.DETAILED_ANNUAL_REVENUE_REPORT">
-              <MappingFragment StoreEntitySet="DETAILED_ANNUAL_REVENUE_REPORT">
-                <ScalarProperty Name="Ratio" ColumnName="Ratio" />
-                <ScalarProperty Name="Revenue" ColumnName="Revenue" />
-                <ScalarProperty Name="FlightCount" ColumnName="FlightCount" />
-                <ScalarProperty Name="Months" ColumnName="Months" />
-                <ScalarProperty Name="Years" ColumnName="Years" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DETAILED_MONTHLY_REVENUE_REPORT">
-            <EntityTypeMapping TypeName="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT">
-              <MappingFragment StoreEntitySet="DETAILED_MONTHLY_REVENUE_REPORT">
-                <ScalarProperty Name="Ratio" ColumnName="Ratio" />
-                <ScalarProperty Name="Revenue" ColumnName="Revenue" />
-                <ScalarProperty Name="TicketSold" ColumnName="TicketSold" />
-                <ScalarProperty Name="FlightID" ColumnName="FlightID" />
-                <ScalarProperty Name="Months" ColumnName="Months" />
-                <ScalarProperty Name="Years" ColumnName="Years" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1004,6 +901,37 @@
                 <ScalarProperty Name="PermissionCode" ColumnName="PermissionCode" />
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
                 <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ANNUAL_REVENUE_REPORT">
+            <EntityTypeMapping TypeName="FlightTicketManagementModel.ANNUAL_REVENUE_REPORT">
+              <MappingFragment StoreEntitySet="ANNUAL_REVENUE_REPORT">
+                <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
+                <ScalarProperty Name="Years" ColumnName="Years" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETAILED_ANNUAL_REVENUE_REPORT">
+            <EntityTypeMapping TypeName="FlightTicketManagementModel.DETAILED_ANNUAL_REVENUE_REPORT">
+              <MappingFragment StoreEntitySet="DETAILED_ANNUAL_REVENUE_REPORT">
+                <ScalarProperty Name="Ratio" ColumnName="Ratio" />
+                <ScalarProperty Name="Revenue" ColumnName="Revenue" />
+                <ScalarProperty Name="FlightCount" ColumnName="FlightCount" />
+                <ScalarProperty Name="Months" ColumnName="Months" />
+                <ScalarProperty Name="Years" ColumnName="Years" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETAILED_MONTHLY_REVENUE_REPORT">
+            <EntityTypeMapping TypeName="FlightTicketManagementModel.DETAILED_MONTHLY_REVENUE_REPORT">
+              <MappingFragment StoreEntitySet="DETAILED_MONTHLY_REVENUE_REPORT">
+                <ScalarProperty Name="Ratio" ColumnName="Ratio" />
+                <ScalarProperty Name="Revenue" ColumnName="Revenue" />
+                <ScalarProperty Name="TicketSold" ColumnName="TicketSold" />
+                <ScalarProperty Name="FlightID" ColumnName="FlightID" />
+                <ScalarProperty Name="Months" ColumnName="Months" />
+                <ScalarProperty Name="Years" ColumnName="Years" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -248,10 +248,39 @@ INSERT INTO FLIGHT (FlightID, PlaneID, DepartureAirportCode, ArrivalAirportCode,
 	('FL0065', 'PE0002', 'AP0006', 'AP0004', 1640275, '11/11/2023 12:00:00', 46),
 	('FL0066', 'PE0003', 'AP0005', 'AP0004', 1789792, '12/11/2023 12:00:00', 45)
 GO
-SELECT * FROM FLIGHT
---Tạo giá trị cho "Chi Tiết Hạng Vé Chuyến Bay"
 
---Tạo giá trị cho "Vé chuyến bay"
+--Tạo giá trị cho "Chi Tiết Hạng Vé Chuyến Bay"
+DECLARE @i INT = 1;
+WHILE @i <= 132
+BEGIN
+    DECLARE @flightID NVARCHAR(50) = 'FL' + RIGHT('0000' + CAST((@i + 1) / 2 AS NVARCHAR(50)), 4);
+    DECLARE @ticketClassID NVARCHAR(50) = CASE WHEN @i % 2 = 0 THEN 'TC0002' ELSE 'TC0001' END;
+    
+	DECLARE @price DECIMAL(10, 2);
+	SELECT @price = 
+		CASE WHEN @i % 2 = 0 THEN 105 * TicketPrice / 100 
+		ELSE TicketPrice
+	END
+	FROM FLIGHT
+	WHERE FlightID = @flightID
+
+	DECLARE @seatCapacity INT;
+	SELECT @seatCapacity = SeatCount
+	FROM PLANE p
+	INNER JOIN FLIGHT f on p.PlaneID = f.PlaneID
+	WHERE f.FlightID = @flightID
+
+	DECLARE @ticketSold INT = CASE WHEN @i % 2 = 0 THEN 2 ELSE 0 END
+	DECLARE @seatRemaining INT = @seatCapacity - @ticketSold
+
+    INSERT INTO FLIGHT_TICKET_CLASS_DETAIL (FlightID, TicketClassID, Fare, SeatCapacity, TicketSold, SeatRemaining)
+    VALUES (@flightID, @ticketClassID, @price, @seatCapacity, @ticketSold, @seatRemaining);
+
+    SET @i = @i + 1;
+END
+SELECT * FROM FLIGHT_TICKET_CLASS_DETAIL
+-- Tạo giá trị cho "Vé chuyến bay"
+
 -- Khởi tạo danh sách tên
 DECLARE @names TABLE (ID INT IDENTITY(1,1), FullName NVARCHAR(50));
 INSERT INTO @names (FullName) VALUES (N'Huỳnh Mai Cao Nhân'), (N'Đỗ Nguyễn Anh Khoa'), (N'Nguyễn Phúc Khang'), (N'Lý Nam Kháng'), (N'Trần Văn Toán');
@@ -281,6 +310,3 @@ BEGIN
 
     SET @i = @i + 1;
 END
-
-SELECT * FROM FLIGHT_TICKET
-DELETE FROM FLIGHT_TICKET

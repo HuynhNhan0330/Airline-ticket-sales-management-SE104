@@ -21,7 +21,6 @@ namespace Airline_ticket_sales_management.Model
         public decimal Revenue { get; set; }
         public decimal Ratio { get; set; }
     
-        public virtual DETAILED_ANNUAL_REVENUE_REPORT DETAILED_ANNUAL_REVENUE_REPORT { get; set; }
         public virtual FLIGHT FLIGHT { get; set; }
     }
 }

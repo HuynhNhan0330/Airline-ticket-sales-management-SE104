@@ -26,9 +26,6 @@ namespace Airline_ticket_sales_management.Model
         }
     
         public virtual DbSet<AIRPORT> AIRPORTs { get; set; }
-        public virtual DbSet<ANNUAL_REVENUE_REPORT> ANNUAL_REVENUE_REPORT { get; set; }
-        public virtual DbSet<DETAILED_ANNUAL_REVENUE_REPORT> DETAILED_ANNUAL_REVENUE_REPORT { get; set; }
-        public virtual DbSet<DETAILED_MONTHLY_REVENUE_REPORT> DETAILED_MONTHLY_REVENUE_REPORT { get; set; }
         public virtual DbSet<FLIGHT> FLIGHTs { get; set; }
         public virtual DbSet<FLIGHT_DETAIL> FLIGHT_DETAIL { get; set; }
         public virtual DbSet<FLIGHT_TICKET> FLIGHT_TICKET { get; set; }
@@ -39,5 +36,8 @@ namespace Airline_ticket_sales_management.Model
         public virtual DbSet<TICKET_CLASS> TICKET_CLASS { get; set; }
         public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
         public virtual DbSet<PERMISSION> PERMISSIONs { get; set; }
+        public virtual DbSet<ANNUAL_REVENUE_REPORT> ANNUAL_REVENUE_REPORT { get; set; }
+        public virtual DbSet<DETAILED_ANNUAL_REVENUE_REPORT> DETAILED_ANNUAL_REVENUE_REPORT { get; set; }
+        public virtual DbSet<DETAILED_MONTHLY_REVENUE_REPORT> DETAILED_MONTHLY_REVENUE_REPORT { get; set; }
     }
 }

@@ -14,16 +14,7 @@ namespace Airline_ticket_sales_management.Model
     
     public partial class ANNUAL_REVENUE_REPORT
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ANNUAL_REVENUE_REPORT()
-        {
-            this.DETAILED_ANNUAL_REVENUE_REPORT = new HashSet<DETAILED_ANNUAL_REVENUE_REPORT>();
-        }
-    
         public int Years { get; set; }
         public decimal TotalRevenue { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DETAILED_ANNUAL_REVENUE_REPORT> DETAILED_ANNUAL_REVENUE_REPORT { get; set; }
     }
 }

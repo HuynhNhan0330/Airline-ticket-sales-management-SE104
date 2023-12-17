@@ -142,9 +142,9 @@ alter table FLIGHT_TICKET_CLASS_DETAIL add foreign key (FlightID) references FLI
 
 alter table DETAILED_MONTHLY_REVENUE_REPORT add foreign key (FlightID) references FLIGHT(FlightID);
 
-ALTER TABLE DETAILED_MONTHLY_REVENUE_REPORT 
-ADD FOREIGN KEY (Years, Months) 
-REFERENCES DETAILED_ANNUAL_REVENUE_REPORT(Years, Months);
+--ALTER TABLE DETAILED_MONTHLY_REVENUE_REPORT 
+--ADD FOREIGN KEY (Years, Months) 
+--REFERENCES DETAILED_ANNUAL_REVENUE_REPORT(Years, Months);
 
-alter table  DETAILED_ANNUAL_REVENUE_REPORT add foreign key (Years) references ANNUAL_REVENUE_REPORT(Years);
+--alter table  DETAILED_ANNUAL_REVENUE_REPORT add foreign key (Years) references ANNUAL_REVENUE_REPORT(Years);
 

@@ -56,7 +56,7 @@ namespace Airline_ticket_sales_management
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb1 = new System.Windows.Forms.Label();
             this.pnReportByYear = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartReportByYear = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -68,7 +68,7 @@ namespace Airline_ticket_sales_management
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReportByYear)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -293,50 +293,36 @@ namespace Airline_ticket_sales_management
             this.pnReportByYear.Size = new System.Drawing.Size(800, 505);
             this.pnReportByYear.TabIndex = 6;
             // 
-            // chart1
+            // chartReportByYear
             // 
-            chartArea1.AxisX.IsMarginVisible = false;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisX.LineWidth = 0;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.LineWidth = 0;
-            chartArea1.AxisX.MajorTickMark.Size = 3F;
-            chartArea1.AxisY.LabelStyle.Format = "{0}VNĐ";
-            chartArea1.AxisY.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.LineWidth = 0;
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            this.chartReportByYear.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(900, 120);
-            this.chart1.Name = "chart1";
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            series1.BorderWidth = 3;
+            this.chartReportByYear.Legends.Add(legend1);
+            this.chartReportByYear.Location = new System.Drawing.Point(900, 120);
+            this.chartReportByYear.Name = "chartReportByYear";
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(203)))), ((int)(((byte)(227)))));
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
             series1.Legend = "Legend1";
-            series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(184)))));
-            series1.MarkerSize = 10;
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(550, 545);
-            this.chart1.TabIndex = 7;
-            this.chart1.Text = "chart1";
-            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.chartReportByYear.Series.Add(series1);
+            this.chartReportByYear.Size = new System.Drawing.Size(550, 545);
+            this.chartReportByYear.TabIndex = 7;
+            this.chartReportByYear.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             title1.Name = "Title1";
-            title1.Text = "Doanh thu năm";
-            this.chart1.Titles.Add(title1);
+            title1.Text = "Biểu đồ tròn doanh thu năm";
+            this.chartReportByYear.Titles.Add(title1);
             // 
             // ReportByYearUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chartReportByYear);
             this.Controls.Add(this.pnReportByYear);
             this.Controls.Add(this.pnHeader);
             this.Controls.Add(this.panel1);
@@ -362,7 +348,7 @@ namespace Airline_ticket_sales_management
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReportByYear)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -390,6 +376,6 @@ namespace Airline_ticket_sales_management
         private Panel pnReportByYear;
         private Panel panel10;
         private Label label11;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartReportByYear;
     }
 }

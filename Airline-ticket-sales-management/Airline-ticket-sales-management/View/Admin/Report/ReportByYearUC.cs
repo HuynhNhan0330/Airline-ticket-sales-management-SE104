@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Airline_ticket_sales_management
 {
@@ -31,6 +32,8 @@ namespace Airline_ticket_sales_management
 
             lbFlightCount.Text = detailAnnualRevenueReport.Sum(darr => darr.FlightCount).ToString();
             lbRevenue.Text = Helper.FormatVNMoney(detailAnnualRevenueReport.Sum(darr => darr.Revenue));
+
+            loadChart(detailAnnualRevenueReport);
         }
 
         public void loadPanel(List<DetailedAnnualRevenueReportDTO> detailAnnualRevenueReport)
@@ -51,6 +54,15 @@ namespace Airline_ticket_sales_management
                 pn.BringToFront();
                 pn.Dock = DockStyle.Top;
             }
+        }
+
+        public void loadChart(List<DetailedAnnualRevenueReportDTO> detailAnnualRevenueReport)
+        {
+            chartReportByYear.DataSource = detailAnnualRevenueReport;
+            chartReportByYear.Series[0].XValueMember = "Month";
+            chartReportByYear.Series[0].YValueMembers = "Ratio";
+            chartReportByYear.DataBind();
+            chartReportByYear.Update();
         }
     }
 }
