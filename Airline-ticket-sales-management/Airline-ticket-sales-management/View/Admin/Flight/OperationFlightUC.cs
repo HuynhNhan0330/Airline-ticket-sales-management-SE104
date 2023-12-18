@@ -181,6 +181,11 @@ namespace Airline_ticket_sales_management
                 atxbTicketPrice.Focus();
                 ms.ShowDialog();
             }
+            else if (flight.DepartureAirportName == flight.ArrivalAirportName)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Sân bay đi và sân bay đến không được trùng nhau", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
             else
             {
                 flight.TicketPrice = decimal.Parse(atxbTicketPrice.Texts.Trim());

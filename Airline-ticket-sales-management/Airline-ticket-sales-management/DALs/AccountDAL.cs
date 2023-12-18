@@ -33,6 +33,8 @@ namespace Airline_ticket_sales_management.DALs
                 {
                     AccountDTO account = (from ac in context.ACCOUNTs
                                           where (ac.Phone == username || ac.Email == username) && ac.Password == password
+                                          join role in context.PERMISSIONs
+                                          on ac.RoleID equals role.RoleID
                                           select new AccountDTO
                                           {
                                               AccountID = ac.AccountID,
@@ -42,6 +44,7 @@ namespace Airline_ticket_sales_management.DALs
                                               Password = ac.Password,
                                               Created = DateTime.Now,
                                               RoleID = ac.RoleID,
+                                              RoleName = role.RoleName
                                           }).FirstOrDefault();
 
                     if (account == null)

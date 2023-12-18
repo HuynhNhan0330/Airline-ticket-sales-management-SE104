@@ -297,6 +297,7 @@ namespace Airline_ticket_sales_management.Usercontrols
             this.abtnBookTicket.TextColor = System.Drawing.Color.White;
             this.abtnBookTicket.ThinknessLine = 0;
             this.abtnBookTicket.UseVisualStyleBackColor = false;
+            this.abtnBookTicket.Click += new System.EventHandler(this.abtnBookTicket_Click);
             // 
             // FlightItemUC
             // 

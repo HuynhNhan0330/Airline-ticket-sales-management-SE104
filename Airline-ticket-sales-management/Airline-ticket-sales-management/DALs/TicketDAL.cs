@@ -118,29 +118,22 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, List<AirportDTO>, string)> getListAirport()
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            var AirportList = (from airport in context.AIRPORTs
-        //                               select new AirportDTO
-        //                               {
-        //                                   AirportID = airport.AirportID,
-        //                                   AirportName = airport.AirportName,
-        //                                   CityName = airport.CityName,
-        //                                   CountryName = airport.CountryName,
-        //                               }).ToListAsync();
+        public bool checkFlightHasTicket(string fligthID)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var ticket = context.FLIGHT_TICKET.FirstOrDefault(tk => tk.FlightID == fligthID);
 
-        //            return (true, await AirportList, "Lấy danh sách sân bay thành công!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, null, ex.Message);
-        //    }
-        //}
+                    return ticket != null;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
         //public async Task<(bool, string)> updateAirport(AirportDTO airport)
         //{

@@ -50,6 +50,9 @@ namespace Airline_ticket_sales_management
             loadAccount();
             loadPermission();
             pnEdit.Visible = false;
+
+            if (Helper.getAccountAdmin().RoleName != "Siêu quản trị")
+                abtnSavePermission.Visible = false;
         }
 
         private void setCombobox()
@@ -198,6 +201,16 @@ namespace Airline_ticket_sales_management
                 AMessageBoxFrm ms = new AMessageBoxFrm("Dữ liệu mật khẩu không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
+            else if (!Helper.checkEmail(atxbEmail.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Email chưa đúng định dạng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+            else if (!Helper.checkPhone(atxbPhone.Texts.Trim()))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Số điện thoại chưa đúng định dạng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
             else
             {
                 AccountDTO account = new AccountDTO();
@@ -208,7 +221,14 @@ namespace Airline_ticket_sales_management
                 account.RoleID = (cbPermissionName.SelectedItem as PermissionDTO).RoleID;
                 account.RoleName = cbPermissionName.Text;
                 account.Created = DateTime.Now;
-                createAccount(account);
+
+                if (account.RoleName == "Siêu quản trị" && Helper.getAccountAdmin().RoleName != "Siêu quản trị")
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm("Không đủ quyền để tạo tài khoản có quyền siêu quản trị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
+                else
+                    createAccount(account);
             }
         }
 

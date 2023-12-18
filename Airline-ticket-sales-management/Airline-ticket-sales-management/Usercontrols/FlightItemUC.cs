@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -109,6 +110,16 @@ namespace Airline_ticket_sales_management.Usercontrols
 
         private void pibEdit_Click(object sender, EventArgs e)
         {
+            // Chỉ sửa khi chưa có ai đặt vé
+
+            if (TicketDAL.Ins.checkFlightHasTicket(flight.FlightID))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Chuyến bay đã có người đặt vé", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+
+                return;
+            }
+
             Control uc = this;
 
             while (!(uc is FlightUC))
@@ -122,6 +133,16 @@ namespace Airline_ticket_sales_management.Usercontrols
 
         private void pibDelete_Click(object sender, EventArgs e)
         {
+            // Chỉ xoá khi chưa có ai đặt vé
+
+            if (TicketDAL.Ins.checkFlightHasTicket(flight.FlightID))
+            {
+                AMessageBoxFrm ms1 = new AMessageBoxFrm("Chuyến bay đã có người đặt vé", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms1.ShowDialog();
+
+                return;
+            }
+
             AMessageBoxFrm ms = new AMessageBoxFrm("Xác nhận xoá", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ms.ShowDialog() == DialogResult.Yes)
                 deleteFlight();
@@ -148,6 +169,12 @@ namespace Airline_ticket_sales_management.Usercontrols
                 AMessageBoxFrm ms = new AMessageBoxFrm(label, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
+        }
+
+        private void abtnBookTicket_Click(object sender, EventArgs e)
+        {
+            FormAdminHome form = Application.OpenForms.OfType<FormAdminHome>().FirstOrDefault();
+            form.goToTicket(flight);
         }
     }
 }

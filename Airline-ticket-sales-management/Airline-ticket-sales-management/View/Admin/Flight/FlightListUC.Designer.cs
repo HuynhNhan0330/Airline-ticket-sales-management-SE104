@@ -52,7 +52,7 @@ namespace Airline_ticket_sales_management
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.abtnSearchFlight = new Airline_ticket_sales_management.AControls.AButton();
-            this.aDateTimePicker1 = new Airline_ticket_sales_management.AControls.ADateTimePicker();
+            this.adtpTime = new Airline_ticket_sales_management.AControls.ADateTimePicker();
             this.cbDepatureAirport = new System.Windows.Forms.ComboBox();
             this.cbArrivalAirport = new System.Windows.Forms.ComboBox();
             this.pnHeader.SuspendLayout();
@@ -297,21 +297,21 @@ namespace Airline_ticket_sales_management
             this.abtnSearchFlight.UseVisualStyleBackColor = false;
             this.abtnSearchFlight.Click += new System.EventHandler(this.abtnSearchFlight_Click);
             // 
-            // aDateTimePicker1
+            // adtpTime
             // 
-            this.aDateTimePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aDateTimePicker1.BorderSize = 2;
-            this.aDateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.aDateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.aDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.aDateTimePicker1.Location = new System.Drawing.Point(50, 25);
-            this.aDateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.aDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 30);
-            this.aDateTimePicker1.Name = "aDateTimePicker1";
-            this.aDateTimePicker1.Size = new System.Drawing.Size(200, 30);
-            this.aDateTimePicker1.SkinColor = System.Drawing.Color.White;
-            this.aDateTimePicker1.TabIndex = 6;
-            this.aDateTimePicker1.TextColor = System.Drawing.Color.Black;
+            this.adtpTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.adtpTime.BorderSize = 2;
+            this.adtpTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adtpTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.adtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.adtpTime.Location = new System.Drawing.Point(50, 25);
+            this.adtpTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.adtpTime.MinimumSize = new System.Drawing.Size(4, 30);
+            this.adtpTime.Name = "adtpTime";
+            this.adtpTime.Size = new System.Drawing.Size(200, 30);
+            this.adtpTime.SkinColor = System.Drawing.Color.White;
+            this.adtpTime.TabIndex = 6;
+            this.adtpTime.TextColor = System.Drawing.Color.Black;
             // 
             // cbDepatureAirport
             // 
@@ -340,7 +340,7 @@ namespace Airline_ticket_sales_management
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
             this.Controls.Add(this.cbArrivalAirport);
             this.Controls.Add(this.cbDepatureAirport);
-            this.Controls.Add(this.aDateTimePicker1);
+            this.Controls.Add(this.adtpTime);
             this.Controls.Add(this.pnHeader);
             this.Controls.Add(this.pnFlightList);
             this.Controls.Add(this.abtnSearchFlight);
@@ -393,7 +393,7 @@ namespace Airline_ticket_sales_management
         private Label label4;
         private Label label3;
         private Label label2;
-        private AControls.ADateTimePicker aDateTimePicker1;
+        private AControls.ADateTimePicker adtpTime;
         private ComboBox cbDepatureAirport;
         private ComboBox cbArrivalAirport;
     }

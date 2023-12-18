@@ -89,16 +89,24 @@ namespace Airline_ticket_sales_management
 
         private void abtnSearchFlight_Click(object sender, EventArgs e)
         {
-            pnFlightList.Controls.Clear();
-            flights.Clear();
-            
-            foreach (FlightDTO flight in _flights)
+            if (cbDepatureAirport.Text == cbArrivalAirport.Text)
             {
-                if (flight.DepartureCityName == cbDepatureAirport.Text && flight.ArrivalCityName == cbArrivalAirport.Text)
-                    flights.Add(flight);
+                AMessageBoxFrm ms = new AMessageBoxFrm("Thông tin nơi đi và nơi đến không được trùng nhau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
             }
+            else
+            {
+                pnFlightList.Controls.Clear();
+                flights.Clear();
 
-            loadListFlight();
+                foreach (FlightDTO flight in _flights)
+                {
+                    if (flight.DepartureCityName == cbDepatureAirport.Text && flight.ArrivalCityName == cbArrivalAirport.Text && flight.DepartureDateTime.Date == adtpTime.Value.Date)
+                        flights.Add(flight);
+                }
+
+                loadListFlight();
+            }
         }
     }
 }

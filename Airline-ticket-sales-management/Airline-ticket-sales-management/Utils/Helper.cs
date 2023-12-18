@@ -1,4 +1,5 @@
 ﻿using Airline_ticket_sales_management.AControls;
+using Airline_ticket_sales_management.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -78,6 +79,12 @@ namespace Airline_ticket_sales_management.Utils
         public static bool checkCardID(string cardID)
         {
             return Regex.IsMatch(cardID, @"^\d{9}$|^\d{12}$");
+        }
+
+        public static AccountDTO getAccountAdmin()
+        {
+            FormAdminHome form = Application.OpenForms.OfType<FormAdminHome>().FirstOrDefault();
+            return form.account;
         }
     }
 }

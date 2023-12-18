@@ -1,4 +1,5 @@
 ﻿using Airline_ticket_sales_management.AControls;
+using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,13 @@ namespace Airline_ticket_sales_management
         {
             InitializeComponent();
             loadBody(new CreateFlightTicketUC());
+            currentAbtn = abtnCreateFlightTicket;
+        }
+
+        public FlightTicketUC(FlightDTO flight)
+        {
+            InitializeComponent();
+            loadBody(new CreateFlightTicketUC(flight));
             currentAbtn = abtnCreateFlightTicket;
         }
 

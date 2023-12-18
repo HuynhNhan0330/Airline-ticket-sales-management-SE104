@@ -46,11 +46,22 @@ namespace Airline_ticket_sales_management
         public CreateFlightTicketUC()
         {
             InitializeComponent();
+            loadTicketClass();
+        }
+
+        public CreateFlightTicketUC(FlightDTO flight)
+        {
+            InitializeComponent();
+            loadTicketClass();
+            this.flight = flight;
+            atxbFlightID.Texts = flight.FlightID;
+            atxbFlightID.isPlaceholder = false;
+            atxbFlightID.setForeColor();
+            loadSeat();
         }
 
         private void CreateFlightTicketUC_Load(object sender, EventArgs e)
         {
-            loadTicketClass();
             setComplete();
         }
 

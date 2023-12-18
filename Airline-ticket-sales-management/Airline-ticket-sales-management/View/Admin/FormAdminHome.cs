@@ -1,24 +1,26 @@
 ﻿using Airline_ticket_sales_management.AControls;
 using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
-using Airline_ticket_sales_management.Model;
 using Airline_ticket_sales_management.Utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Airline_ticket_sales_management
 {
     public partial class FormAdminHome : Form
     {
-        private AccountDTO account;
+        private AccountDTO _account = new AccountDTO();
+        public AccountDTO account
+        {
+            get { return _account; }
+            set
+            {
+                _account = value;
+            }
+        }
+
         private AButton currentButton = null;
         private UserControl oldBody = null;
 
@@ -189,5 +191,15 @@ namespace Airline_ticket_sales_management
         }
         #endregion
 
+
+        public void goToTicket(FlightDTO flight)
+        {
+            if (currentButton != null)
+                doDeactivateButton(currentButton);
+
+            currentButton = abtnFlightTicket;
+            doActivateButton(currentButton);
+            loadBody(new FlightTicketUC(flight));
+        }
     }
 }

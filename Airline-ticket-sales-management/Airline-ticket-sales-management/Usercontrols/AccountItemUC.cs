@@ -1,5 +1,7 @@
-﻿using Airline_ticket_sales_management.DTOs;
+﻿using Airline_ticket_sales_management.AControls;
+using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Model;
+using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +48,14 @@ namespace Airline_ticket_sales_management.Usercontrols
 
         private void AccountItemUC_Click(object sender, EventArgs e)
         {
+            if (account.RoleName == "Siêu quản trị" && Helper.getAccountAdmin().RoleName != "Siêu quản trị")
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Không đủ quyền truy cập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+
+                return;
+            }
+
             Control ct = this;
 
             while (!(ct is AccountAndPermissionUC))
