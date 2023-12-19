@@ -124,7 +124,7 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    var ticket = context.FLIGHT_TICKET.FirstOrDefault(tk => tk.FlightID == fligthID);
+                    var ticket = context.FLIGHT_TICKET.FirstOrDefault(tk => tk.FlightID == fligthID && tk.FlightStatus != "Đã huỷ");
 
                     return ticket != null;
                 }
@@ -135,30 +135,61 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        //public async Task<(bool, string)> updateAirport(AirportDTO airport)
-        //{
-        //    try
-        //    {
-        //        using (var context = new FlightTicketManagementEntities())
-        //        {
-        //            AIRPORT findAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportName == airport.AirportName && ap.AirportID != airport.AirportID);
-        //            if (findAirport != null)
-        //                return (false, "Tên sân bay đã tồn tại");
+        public async Task<(bool, List<TicketDTO>, string)> getListTicket()
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    var TicketList = (from ticket in context.FLIGHT_TICKET
+                                      join flight in context.FLIGHTs
+                                      on ticket.FlightID equals flight.FlightID
+                                      join ticketClass in context.TICKET_CLASS
+                                      on ticket.TicketClassID equals ticketClass.TicketClassID
+                                      where ticket.FlightStatus != "Đã huỷ"
+                                      select new TicketDTO
+                                      {
+                                          TicketID = ticket.FlightTicketID,
+                                          FlightID = flight.FlightID,
+                                          TicketClassID = ticket.TicketClassID,
+                                          Email = ticket.Email,
+                                          PhoneNumber = ticket.PhoneNumber,
+                                          FullName = ticket.FullName,
+                                          FlightStatus = ticket.FlightStatus,
+                                          IDCard = ticket.IDCard,
+                                          Price = ticket.Price,
+                                          SeatID = ticket.SeatID,
+                                          DepartureDateTime = flight.DepartureDateTime,
+                                          TicketClassName = ticketClass.TicketClassName
+                                      }).ToListAsync();
 
-        //            AIRPORT currentAirport = context.AIRPORTs.FirstOrDefault(ap => ap.AirportID == airport.AirportID);
-        //            currentAirport.AirportName = airport.AirportName;
-        //            currentAirport.CityName = airport.CityName;
-        //            currentAirport.CountryName = airport.CountryName;
+                    return (true, await TicketList, "Lấy danh sách vé thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, null, ex.Message);
+            }
+        }
 
-        //            context.SaveChanges();
+        public async Task<(bool, string)> cancelTicket(TicketDTO ticket)
+        {
+            try
+            {
+                using (var context = new FlightTicketManagementEntities())
+                {
+                    FLIGHT_TICKET currentTicket = context.FLIGHT_TICKET.FirstOrDefault(tk => tk.FlightTicketID == ticket.TicketID);
+                    currentTicket.FlightStatus = "Đã huỷ";
 
-        //            return (true, "Cập nhật thành công");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, ex.Message);
-        //    }
-        //}
+                    context.SaveChanges();
+
+                    return (true, "Cập nhật thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex.Message);
+            }
+        }
     }
 }

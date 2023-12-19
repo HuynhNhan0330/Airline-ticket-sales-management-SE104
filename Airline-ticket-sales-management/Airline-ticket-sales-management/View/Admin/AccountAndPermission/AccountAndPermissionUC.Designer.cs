@@ -49,11 +49,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnEdit = new System.Windows.Forms.Panel();
+            this.abtnCancel = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnDelete = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnUpdate = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnCreate = new Airline_ticket_sales_management.AControls.AButton();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
+            this.cbPermissionName = new System.Windows.Forms.ComboBox();
+            this.aPanel6 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbName = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.aPanel4 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbPassword = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.pibHideViewPassword = new System.Windows.Forms.PictureBox();
+            this.aPanel2 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbEmail = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.aPanel3 = new Airline_ticket_sales_management.AControls.APanel();
+            this.atxbPhone = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -66,21 +81,6 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.abtnSavePermission = new Airline_ticket_sales_management.AControls.AButton();
-            this.abtnCancel = new Airline_ticket_sales_management.AControls.AButton();
-            this.abtnDelete = new Airline_ticket_sales_management.AControls.AButton();
-            this.abtnUpdate = new Airline_ticket_sales_management.AControls.AButton();
-            this.abtnCreate = new Airline_ticket_sales_management.AControls.AButton();
-            this.aPanel1 = new Airline_ticket_sales_management.AControls.APanel();
-            this.cbPermissionName = new System.Windows.Forms.ComboBox();
-            this.aPanel6 = new Airline_ticket_sales_management.AControls.APanel();
-            this.atxbName = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.aPanel4 = new Airline_ticket_sales_management.AControls.APanel();
-            this.atxbPassword = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.pibHideViewPassword = new System.Windows.Forms.PictureBox();
-            this.aPanel2 = new Airline_ticket_sales_management.AControls.APanel();
-            this.atxbEmail = new Airline_ticket_sales_management.AControls.ATextboxUC();
-            this.aPanel3 = new Airline_ticket_sales_management.AControls.APanel();
-            this.atxbPhone = new Airline_ticket_sales_management.AControls.ATextboxUC();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -93,17 +93,17 @@
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnEdit.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.aPanel1.SuspendLayout();
             this.aPanel6.SuspendLayout();
             this.aPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).BeginInit();
             this.aPanel2.SuspendLayout();
             this.aPanel3.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -323,6 +323,99 @@
             this.pnEdit.Size = new System.Drawing.Size(730, 40);
             this.pnEdit.TabIndex = 52;
             // 
+            // abtnCancel
+            // 
+            this.abtnCancel.BackColor = System.Drawing.Color.Gray;
+            this.abtnCancel.BackgroundColor = System.Drawing.Color.Gray;
+            this.abtnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnCancel.BorderRadius = 10;
+            this.abtnCancel.BorderSize = 0;
+            this.abtnCancel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.abtnCancel.FlatAppearance.BorderSize = 0;
+            this.abtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnCancel.ForeColor = System.Drawing.Color.White;
+            this.abtnCancel.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnCancel.Location = new System.Drawing.Point(530, 0);
+            this.abtnCancel.Name = "abtnCancel";
+            this.abtnCancel.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnCancel.Size = new System.Drawing.Size(200, 40);
+            this.abtnCancel.TabIndex = 51;
+            this.abtnCancel.Text = "Huỷ tác vụ";
+            this.abtnCancel.TextColor = System.Drawing.Color.White;
+            this.abtnCancel.ThinknessLine = 0;
+            this.abtnCancel.UseVisualStyleBackColor = false;
+            this.abtnCancel.Click += new System.EventHandler(this.abtnCancel_Click);
+            // 
+            // abtnDelete
+            // 
+            this.abtnDelete.BackColor = System.Drawing.Color.White;
+            this.abtnDelete.BackgroundColor = System.Drawing.Color.White;
+            this.abtnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
+            this.abtnDelete.BorderRadius = 10;
+            this.abtnDelete.BorderSize = 2;
+            this.abtnDelete.FlatAppearance.BorderSize = 0;
+            this.abtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnDelete.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
+            this.abtnDelete.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnDelete.Location = new System.Drawing.Point(270, 0);
+            this.abtnDelete.Name = "abtnDelete";
+            this.abtnDelete.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnDelete.Size = new System.Drawing.Size(150, 40);
+            this.abtnDelete.TabIndex = 45;
+            this.abtnDelete.Text = "Xoá";
+            this.abtnDelete.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
+            this.abtnDelete.ThinknessLine = 0;
+            this.abtnDelete.UseVisualStyleBackColor = false;
+            this.abtnDelete.Click += new System.EventHandler(this.abtnDelete_Click);
+            // 
+            // abtnUpdate
+            // 
+            this.abtnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnUpdate.BorderRadius = 10;
+            this.abtnUpdate.BorderSize = 0;
+            this.abtnUpdate.FlatAppearance.BorderSize = 0;
+            this.abtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnUpdate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnUpdate.ForeColor = System.Drawing.Color.White;
+            this.abtnUpdate.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnUpdate.Location = new System.Drawing.Point(0, 0);
+            this.abtnUpdate.Name = "abtnUpdate";
+            this.abtnUpdate.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnUpdate.Size = new System.Drawing.Size(150, 40);
+            this.abtnUpdate.TabIndex = 44;
+            this.abtnUpdate.Text = "Cập nhật";
+            this.abtnUpdate.TextColor = System.Drawing.Color.White;
+            this.abtnUpdate.ThinknessLine = 0;
+            this.abtnUpdate.UseVisualStyleBackColor = false;
+            this.abtnUpdate.Click += new System.EventHandler(this.abtnUpdate_Click);
+            // 
+            // abtnCreate
+            // 
+            this.abtnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.abtnCreate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnCreate.BorderRadius = 10;
+            this.abtnCreate.BorderSize = 0;
+            this.abtnCreate.FlatAppearance.BorderSize = 0;
+            this.abtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnCreate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abtnCreate.ForeColor = System.Drawing.Color.White;
+            this.abtnCreate.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnCreate.Location = new System.Drawing.Point(0, 320);
+            this.abtnCreate.Name = "abtnCreate";
+            this.abtnCreate.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnCreate.Size = new System.Drawing.Size(730, 40);
+            this.abtnCreate.TabIndex = 54;
+            this.abtnCreate.Text = "Tạo tài khoản";
+            this.abtnCreate.TextColor = System.Drawing.Color.White;
+            this.abtnCreate.ThinknessLine = 0;
+            this.abtnCreate.UseVisualStyleBackColor = false;
+            this.abtnCreate.Click += new System.EventHandler(this.abtnCreate_Click);
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -372,6 +465,222 @@
             this.label14.Size = new System.Drawing.Size(86, 20);
             this.label14.TabIndex = 46;
             this.label14.Text = "Họ và tên:";
+            // 
+            // aPanel1
+            // 
+            this.aPanel1.BackColor = System.Drawing.Color.White;
+            this.aPanel1.BackgroundColor = System.Drawing.Color.White;
+            this.aPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aPanel1.BorderRadius = 10;
+            this.aPanel1.BorderSize = 2;
+            this.aPanel1.Controls.Add(this.cbPermissionName);
+            this.aPanel1.ForeColor = System.Drawing.Color.White;
+            this.aPanel1.Location = new System.Drawing.Point(280, 260);
+            this.aPanel1.Name = "aPanel1";
+            this.aPanel1.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel1.Size = new System.Drawing.Size(450, 38);
+            this.aPanel1.TabIndex = 43;
+            this.aPanel1.TextColor = System.Drawing.Color.White;
+            // 
+            // cbPermissionName
+            // 
+            this.cbPermissionName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPermissionName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbPermissionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbPermissionName.FormattingEnabled = true;
+            this.cbPermissionName.Location = new System.Drawing.Point(19, 5);
+            this.cbPermissionName.Name = "cbPermissionName";
+            this.cbPermissionName.Size = new System.Drawing.Size(417, 28);
+            this.cbPermissionName.TabIndex = 42;
+            // 
+            // aPanel6
+            // 
+            this.aPanel6.BackColor = System.Drawing.Color.White;
+            this.aPanel6.BackgroundColor = System.Drawing.Color.White;
+            this.aPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aPanel6.BorderRadius = 10;
+            this.aPanel6.BorderSize = 2;
+            this.aPanel6.Controls.Add(this.atxbName);
+            this.aPanel6.ForeColor = System.Drawing.Color.White;
+            this.aPanel6.Location = new System.Drawing.Point(280, 10);
+            this.aPanel6.Name = "aPanel6";
+            this.aPanel6.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel6.Size = new System.Drawing.Size(450, 43);
+            this.aPanel6.TabIndex = 37;
+            this.aPanel6.TextColor = System.Drawing.Color.White;
+            // 
+            // atxbName
+            // 
+            this.atxbName.BackColor = System.Drawing.Color.White;
+            this.atxbName.BorderColor = System.Drawing.Color.White;
+            this.atxbName.BorderFocusColor = System.Drawing.Color.White;
+            this.atxbName.BorderRadius = 0;
+            this.atxbName.BorderSize = 2;
+            this.atxbName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atxbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbName.ForeColor = System.Drawing.Color.Black;
+            this.atxbName.isFocused = false;
+            this.atxbName.isPlaceholder = true;
+            this.atxbName.Location = new System.Drawing.Point(19, 5);
+            this.atxbName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbName.Multiline = false;
+            this.atxbName.Name = "atxbName";
+            this.atxbName.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbName.PasswordChar = false;
+            this.atxbName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbName.PlaceholderText = "Nhập họ và tên của tài khoản";
+            this.atxbName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbName.Size = new System.Drawing.Size(417, 33);
+            this.atxbName.TabIndex = 22;
+            this.atxbName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbName.Texts = "";
+            this.atxbName.UnderlinedStyle = false;
+            this.atxbName._KeyDown += new System.EventHandler(this.atxbName__KeyDown);
+            // 
+            // aPanel4
+            // 
+            this.aPanel4.BackColor = System.Drawing.Color.White;
+            this.aPanel4.BackgroundColor = System.Drawing.Color.White;
+            this.aPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aPanel4.BorderRadius = 10;
+            this.aPanel4.BorderSize = 2;
+            this.aPanel4.Controls.Add(this.atxbPassword);
+            this.aPanel4.Controls.Add(this.pibHideViewPassword);
+            this.aPanel4.ForeColor = System.Drawing.Color.White;
+            this.aPanel4.Location = new System.Drawing.Point(280, 190);
+            this.aPanel4.Name = "aPanel4";
+            this.aPanel4.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel4.Size = new System.Drawing.Size(450, 43);
+            this.aPanel4.TabIndex = 40;
+            this.aPanel4.TextColor = System.Drawing.Color.White;
+            // 
+            // atxbPassword
+            // 
+            this.atxbPassword.BackColor = System.Drawing.Color.White;
+            this.atxbPassword.BorderColor = System.Drawing.Color.Transparent;
+            this.atxbPassword.BorderFocusColor = System.Drawing.Color.White;
+            this.atxbPassword.BorderRadius = 0;
+            this.atxbPassword.BorderSize = 2;
+            this.atxbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atxbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbPassword.ForeColor = System.Drawing.Color.Black;
+            this.atxbPassword.isFocused = false;
+            this.atxbPassword.isPlaceholder = true;
+            this.atxbPassword.Location = new System.Drawing.Point(19, 5);
+            this.atxbPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbPassword.Multiline = false;
+            this.atxbPassword.Name = "atxbPassword";
+            this.atxbPassword.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbPassword.PasswordChar = true;
+            this.atxbPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbPassword.PlaceholderText = "Nhập mật khẩu của tài khoản";
+            this.atxbPassword.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbPassword.Size = new System.Drawing.Size(390, 33);
+            this.atxbPassword.TabIndex = 29;
+            this.atxbPassword.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbPassword.Texts = "";
+            this.atxbPassword.UnderlinedStyle = false;
+            // 
+            // pibHideViewPassword
+            // 
+            this.pibHideViewPassword.BackColor = System.Drawing.Color.White;
+            this.pibHideViewPassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.view;
+            this.pibHideViewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pibHideViewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibHideViewPassword.Location = new System.Drawing.Point(421, 10);
+            this.pibHideViewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pibHideViewPassword.Name = "pibHideViewPassword";
+            this.pibHideViewPassword.Size = new System.Drawing.Size(22, 22);
+            this.pibHideViewPassword.TabIndex = 25;
+            this.pibHideViewPassword.TabStop = false;
+            this.pibHideViewPassword.Click += new System.EventHandler(this.pibHideViewPassword_Click);
+            // 
+            // aPanel2
+            // 
+            this.aPanel2.BackColor = System.Drawing.Color.White;
+            this.aPanel2.BackgroundColor = System.Drawing.Color.White;
+            this.aPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aPanel2.BorderRadius = 10;
+            this.aPanel2.BorderSize = 2;
+            this.aPanel2.Controls.Add(this.atxbEmail);
+            this.aPanel2.ForeColor = System.Drawing.Color.White;
+            this.aPanel2.Location = new System.Drawing.Point(280, 70);
+            this.aPanel2.Name = "aPanel2";
+            this.aPanel2.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel2.Size = new System.Drawing.Size(450, 43);
+            this.aPanel2.TabIndex = 38;
+            this.aPanel2.TextColor = System.Drawing.Color.White;
+            // 
+            // atxbEmail
+            // 
+            this.atxbEmail.BackColor = System.Drawing.Color.White;
+            this.atxbEmail.BorderColor = System.Drawing.Color.White;
+            this.atxbEmail.BorderFocusColor = System.Drawing.Color.White;
+            this.atxbEmail.BorderRadius = 0;
+            this.atxbEmail.BorderSize = 2;
+            this.atxbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atxbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbEmail.ForeColor = System.Drawing.Color.Black;
+            this.atxbEmail.isFocused = false;
+            this.atxbEmail.isPlaceholder = true;
+            this.atxbEmail.Location = new System.Drawing.Point(19, 5);
+            this.atxbEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbEmail.Multiline = false;
+            this.atxbEmail.Name = "atxbEmail";
+            this.atxbEmail.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbEmail.PasswordChar = false;
+            this.atxbEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbEmail.PlaceholderText = "Nhập email của tài khoản";
+            this.atxbEmail.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbEmail.Size = new System.Drawing.Size(417, 33);
+            this.atxbEmail.TabIndex = 22;
+            this.atxbEmail.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbEmail.Texts = "";
+            this.atxbEmail.UnderlinedStyle = false;
+            // 
+            // aPanel3
+            // 
+            this.aPanel3.BackColor = System.Drawing.Color.White;
+            this.aPanel3.BackgroundColor = System.Drawing.Color.White;
+            this.aPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.aPanel3.BorderRadius = 10;
+            this.aPanel3.BorderSize = 2;
+            this.aPanel3.Controls.Add(this.atxbPhone);
+            this.aPanel3.ForeColor = System.Drawing.Color.White;
+            this.aPanel3.Location = new System.Drawing.Point(280, 130);
+            this.aPanel3.Name = "aPanel3";
+            this.aPanel3.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
+            this.aPanel3.Size = new System.Drawing.Size(450, 43);
+            this.aPanel3.TabIndex = 39;
+            this.aPanel3.TextColor = System.Drawing.Color.White;
+            // 
+            // atxbPhone
+            // 
+            this.atxbPhone.BackColor = System.Drawing.Color.White;
+            this.atxbPhone.BorderColor = System.Drawing.Color.White;
+            this.atxbPhone.BorderFocusColor = System.Drawing.Color.White;
+            this.atxbPhone.BorderRadius = 0;
+            this.atxbPhone.BorderSize = 2;
+            this.atxbPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.atxbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.atxbPhone.ForeColor = System.Drawing.Color.Black;
+            this.atxbPhone.isFocused = false;
+            this.atxbPhone.isPlaceholder = true;
+            this.atxbPhone.Location = new System.Drawing.Point(19, 5);
+            this.atxbPhone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.atxbPhone.Multiline = false;
+            this.atxbPhone.Name = "atxbPhone";
+            this.atxbPhone.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.atxbPhone.PasswordChar = false;
+            this.atxbPhone.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.atxbPhone.PlaceholderText = "Nhập số điện thoại của tài khoản";
+            this.atxbPhone.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
+            this.atxbPhone.Size = new System.Drawing.Size(417, 33);
+            this.atxbPhone.TabIndex = 22;
+            this.atxbPhone.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
+            this.atxbPhone.Texts = "";
+            this.atxbPhone.UnderlinedStyle = false;
+            this.atxbPhone._KeyDown += new System.EventHandler(this.atxbPhone__KeyDown);
             // 
             // label9
             // 
@@ -505,315 +814,6 @@
             this.abtnSavePermission.UseVisualStyleBackColor = false;
             this.abtnSavePermission.Click += new System.EventHandler(this.abtnSavePermission_Click);
             // 
-            // abtnCancel
-            // 
-            this.abtnCancel.BackColor = System.Drawing.Color.Gray;
-            this.abtnCancel.BackgroundColor = System.Drawing.Color.Gray;
-            this.abtnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnCancel.BorderRadius = 10;
-            this.abtnCancel.BorderSize = 0;
-            this.abtnCancel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.abtnCancel.FlatAppearance.BorderSize = 0;
-            this.abtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abtnCancel.ForeColor = System.Drawing.Color.White;
-            this.abtnCancel.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnCancel.Location = new System.Drawing.Point(530, 0);
-            this.abtnCancel.Name = "abtnCancel";
-            this.abtnCancel.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnCancel.Size = new System.Drawing.Size(200, 40);
-            this.abtnCancel.TabIndex = 51;
-            this.abtnCancel.Text = "Huỷ tác vụ";
-            this.abtnCancel.TextColor = System.Drawing.Color.White;
-            this.abtnCancel.ThinknessLine = 0;
-            this.abtnCancel.UseVisualStyleBackColor = false;
-            this.abtnCancel.Click += new System.EventHandler(this.abtnCancel_Click);
-            // 
-            // abtnDelete
-            // 
-            this.abtnDelete.BackColor = System.Drawing.Color.White;
-            this.abtnDelete.BackgroundColor = System.Drawing.Color.White;
-            this.abtnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
-            this.abtnDelete.BorderRadius = 10;
-            this.abtnDelete.BorderSize = 2;
-            this.abtnDelete.FlatAppearance.BorderSize = 0;
-            this.abtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnDelete.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abtnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
-            this.abtnDelete.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnDelete.Location = new System.Drawing.Point(270, 0);
-            this.abtnDelete.Name = "abtnDelete";
-            this.abtnDelete.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnDelete.Size = new System.Drawing.Size(150, 40);
-            this.abtnDelete.TabIndex = 45;
-            this.abtnDelete.Text = "Xoá";
-            this.abtnDelete.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(2)))), ((int)(((byte)(79)))));
-            this.abtnDelete.ThinknessLine = 0;
-            this.abtnDelete.UseVisualStyleBackColor = false;
-            this.abtnDelete.Click += new System.EventHandler(this.abtnDelete_Click);
-            // 
-            // abtnUpdate
-            // 
-            this.abtnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnUpdate.BorderRadius = 10;
-            this.abtnUpdate.BorderSize = 0;
-            this.abtnUpdate.FlatAppearance.BorderSize = 0;
-            this.abtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnUpdate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abtnUpdate.ForeColor = System.Drawing.Color.White;
-            this.abtnUpdate.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnUpdate.Location = new System.Drawing.Point(0, 0);
-            this.abtnUpdate.Name = "abtnUpdate";
-            this.abtnUpdate.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnUpdate.Size = new System.Drawing.Size(150, 40);
-            this.abtnUpdate.TabIndex = 44;
-            this.abtnUpdate.Text = "Cập nhật";
-            this.abtnUpdate.TextColor = System.Drawing.Color.White;
-            this.abtnUpdate.ThinknessLine = 0;
-            this.abtnUpdate.UseVisualStyleBackColor = false;
-            this.abtnUpdate.Click += new System.EventHandler(this.abtnUpdate_Click);
-            // 
-            // abtnCreate
-            // 
-            this.abtnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnCreate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.abtnCreate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.abtnCreate.BorderRadius = 10;
-            this.abtnCreate.BorderSize = 0;
-            this.abtnCreate.FlatAppearance.BorderSize = 0;
-            this.abtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.abtnCreate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abtnCreate.ForeColor = System.Drawing.Color.White;
-            this.abtnCreate.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.abtnCreate.Location = new System.Drawing.Point(0, 320);
-            this.abtnCreate.Name = "abtnCreate";
-            this.abtnCreate.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.abtnCreate.Size = new System.Drawing.Size(730, 40);
-            this.abtnCreate.TabIndex = 54;
-            this.abtnCreate.Text = "Tạo tài khoản";
-            this.abtnCreate.TextColor = System.Drawing.Color.White;
-            this.abtnCreate.ThinknessLine = 0;
-            this.abtnCreate.UseVisualStyleBackColor = false;
-            this.abtnCreate.Click += new System.EventHandler(this.abtnCreate_Click);
-            // 
-            // aPanel1
-            // 
-            this.aPanel1.BackColor = System.Drawing.Color.White;
-            this.aPanel1.BackgroundColor = System.Drawing.Color.White;
-            this.aPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aPanel1.BorderRadius = 10;
-            this.aPanel1.BorderSize = 2;
-            this.aPanel1.Controls.Add(this.cbPermissionName);
-            this.aPanel1.ForeColor = System.Drawing.Color.White;
-            this.aPanel1.Location = new System.Drawing.Point(280, 260);
-            this.aPanel1.Name = "aPanel1";
-            this.aPanel1.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
-            this.aPanel1.Size = new System.Drawing.Size(450, 38);
-            this.aPanel1.TabIndex = 43;
-            this.aPanel1.TextColor = System.Drawing.Color.White;
-            // 
-            // cbPermissionName
-            // 
-            this.cbPermissionName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPermissionName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbPermissionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbPermissionName.FormattingEnabled = true;
-            this.cbPermissionName.Location = new System.Drawing.Point(19, 5);
-            this.cbPermissionName.Name = "cbPermissionName";
-            this.cbPermissionName.Size = new System.Drawing.Size(417, 28);
-            this.cbPermissionName.TabIndex = 42;
-            // 
-            // aPanel6
-            // 
-            this.aPanel6.BackColor = System.Drawing.Color.White;
-            this.aPanel6.BackgroundColor = System.Drawing.Color.White;
-            this.aPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aPanel6.BorderRadius = 10;
-            this.aPanel6.BorderSize = 2;
-            this.aPanel6.Controls.Add(this.atxbName);
-            this.aPanel6.ForeColor = System.Drawing.Color.White;
-            this.aPanel6.Location = new System.Drawing.Point(280, 10);
-            this.aPanel6.Name = "aPanel6";
-            this.aPanel6.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
-            this.aPanel6.Size = new System.Drawing.Size(450, 43);
-            this.aPanel6.TabIndex = 37;
-            this.aPanel6.TextColor = System.Drawing.Color.White;
-            // 
-            // atxbName
-            // 
-            this.atxbName.BackColor = System.Drawing.Color.White;
-            this.atxbName.BorderColor = System.Drawing.Color.White;
-            this.atxbName.BorderFocusColor = System.Drawing.Color.White;
-            this.atxbName.BorderRadius = 0;
-            this.atxbName.BorderSize = 2;
-            this.atxbName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atxbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atxbName.ForeColor = System.Drawing.Color.Black;
-            this.atxbName.isFocused = false;
-            this.atxbName.isPlaceholder = true;
-            this.atxbName.Location = new System.Drawing.Point(19, 5);
-            this.atxbName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atxbName.Multiline = false;
-            this.atxbName.Name = "atxbName";
-            this.atxbName.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atxbName.PasswordChar = false;
-            this.atxbName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atxbName.PlaceholderText = "Nhập họ và tên của tài khoản";
-            this.atxbName.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atxbName.Size = new System.Drawing.Size(417, 33);
-            this.atxbName.TabIndex = 22;
-            this.atxbName.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.atxbName.Texts = "";
-            this.atxbName.UnderlinedStyle = false;
-            this.atxbName._KeyDown += new System.EventHandler(this.atxbName__KeyDown);
-            // 
-            // aPanel4
-            // 
-            this.aPanel4.BackColor = System.Drawing.Color.White;
-            this.aPanel4.BackgroundColor = System.Drawing.Color.White;
-            this.aPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aPanel4.BorderRadius = 10;
-            this.aPanel4.BorderSize = 2;
-            this.aPanel4.Controls.Add(this.atxbPassword);
-            this.aPanel4.Controls.Add(this.pibHideViewPassword);
-            this.aPanel4.ForeColor = System.Drawing.Color.White;
-            this.aPanel4.Location = new System.Drawing.Point(280, 190);
-            this.aPanel4.Name = "aPanel4";
-            this.aPanel4.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
-            this.aPanel4.Size = new System.Drawing.Size(450, 43);
-            this.aPanel4.TabIndex = 40;
-            this.aPanel4.TextColor = System.Drawing.Color.White;
-            // 
-            // atxbPassword
-            // 
-            this.atxbPassword.BackColor = System.Drawing.Color.White;
-            this.atxbPassword.BorderColor = System.Drawing.Color.Transparent;
-            this.atxbPassword.BorderFocusColor = System.Drawing.Color.White;
-            this.atxbPassword.BorderRadius = 0;
-            this.atxbPassword.BorderSize = 2;
-            this.atxbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atxbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atxbPassword.ForeColor = System.Drawing.Color.Black;
-            this.atxbPassword.isFocused = false;
-            this.atxbPassword.isPlaceholder = true;
-            this.atxbPassword.Location = new System.Drawing.Point(19, 5);
-            this.atxbPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atxbPassword.Multiline = false;
-            this.atxbPassword.Name = "atxbPassword";
-            this.atxbPassword.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atxbPassword.PasswordChar = true;
-            this.atxbPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atxbPassword.PlaceholderText = "Mật khẩu của tài khoản";
-            this.atxbPassword.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atxbPassword.Size = new System.Drawing.Size(390, 33);
-            this.atxbPassword.TabIndex = 29;
-            this.atxbPassword.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.atxbPassword.Texts = "";
-            this.atxbPassword.UnderlinedStyle = false;
-            // 
-            // pibHideViewPassword
-            // 
-            this.pibHideViewPassword.BackColor = System.Drawing.Color.White;
-            this.pibHideViewPassword.BackgroundImage = global::Airline_ticket_sales_management.Properties.Resources.view;
-            this.pibHideViewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pibHideViewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pibHideViewPassword.Location = new System.Drawing.Point(421, 10);
-            this.pibHideViewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pibHideViewPassword.Name = "pibHideViewPassword";
-            this.pibHideViewPassword.Size = new System.Drawing.Size(22, 22);
-            this.pibHideViewPassword.TabIndex = 25;
-            this.pibHideViewPassword.TabStop = false;
-            this.pibHideViewPassword.Click += new System.EventHandler(this.pibHideViewPassword_Click);
-            // 
-            // aPanel2
-            // 
-            this.aPanel2.BackColor = System.Drawing.Color.White;
-            this.aPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.aPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aPanel2.BorderRadius = 10;
-            this.aPanel2.BorderSize = 2;
-            this.aPanel2.Controls.Add(this.atxbEmail);
-            this.aPanel2.ForeColor = System.Drawing.Color.White;
-            this.aPanel2.Location = new System.Drawing.Point(280, 70);
-            this.aPanel2.Name = "aPanel2";
-            this.aPanel2.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
-            this.aPanel2.Size = new System.Drawing.Size(450, 43);
-            this.aPanel2.TabIndex = 38;
-            this.aPanel2.TextColor = System.Drawing.Color.White;
-            // 
-            // atxbEmail
-            // 
-            this.atxbEmail.BackColor = System.Drawing.Color.White;
-            this.atxbEmail.BorderColor = System.Drawing.Color.White;
-            this.atxbEmail.BorderFocusColor = System.Drawing.Color.White;
-            this.atxbEmail.BorderRadius = 0;
-            this.atxbEmail.BorderSize = 2;
-            this.atxbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atxbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atxbEmail.ForeColor = System.Drawing.Color.Black;
-            this.atxbEmail.isFocused = false;
-            this.atxbEmail.isPlaceholder = true;
-            this.atxbEmail.Location = new System.Drawing.Point(19, 5);
-            this.atxbEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atxbEmail.Multiline = false;
-            this.atxbEmail.Name = "atxbEmail";
-            this.atxbEmail.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atxbEmail.PasswordChar = false;
-            this.atxbEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atxbEmail.PlaceholderText = "Nhập email của tài khoản";
-            this.atxbEmail.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atxbEmail.Size = new System.Drawing.Size(417, 33);
-            this.atxbEmail.TabIndex = 22;
-            this.atxbEmail.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.atxbEmail.Texts = "";
-            this.atxbEmail.UnderlinedStyle = false;
-            // 
-            // aPanel3
-            // 
-            this.aPanel3.BackColor = System.Drawing.Color.White;
-            this.aPanel3.BackgroundColor = System.Drawing.Color.White;
-            this.aPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.aPanel3.BorderRadius = 10;
-            this.aPanel3.BorderSize = 2;
-            this.aPanel3.Controls.Add(this.atxbPhone);
-            this.aPanel3.ForeColor = System.Drawing.Color.White;
-            this.aPanel3.Location = new System.Drawing.Point(280, 130);
-            this.aPanel3.Name = "aPanel3";
-            this.aPanel3.RoundType = Airline_ticket_sales_management.AControls.APanel.RoundStyles.Full;
-            this.aPanel3.Size = new System.Drawing.Size(450, 43);
-            this.aPanel3.TabIndex = 39;
-            this.aPanel3.TextColor = System.Drawing.Color.White;
-            // 
-            // atxbPhone
-            // 
-            this.atxbPhone.BackColor = System.Drawing.Color.White;
-            this.atxbPhone.BorderColor = System.Drawing.Color.White;
-            this.atxbPhone.BorderFocusColor = System.Drawing.Color.White;
-            this.atxbPhone.BorderRadius = 0;
-            this.atxbPhone.BorderSize = 2;
-            this.atxbPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.atxbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.atxbPhone.ForeColor = System.Drawing.Color.Black;
-            this.atxbPhone.isFocused = false;
-            this.atxbPhone.isPlaceholder = true;
-            this.atxbPhone.Location = new System.Drawing.Point(19, 5);
-            this.atxbPhone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.atxbPhone.Multiline = false;
-            this.atxbPhone.Name = "atxbPhone";
-            this.atxbPhone.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.atxbPhone.PasswordChar = false;
-            this.atxbPhone.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.atxbPhone.PlaceholderText = "Số điện thoại của tài khoản";
-            this.atxbPhone.RoundType = Airline_ticket_sales_management.AControls.ATextboxUC.RoundStyles.Full;
-            this.atxbPhone.Size = new System.Drawing.Size(417, 33);
-            this.atxbPhone.TabIndex = 22;
-            this.atxbPhone.textAlign = Airline_ticket_sales_management.AControls.ATextboxUC.TextAlign.Left;
-            this.atxbPhone.Texts = "";
-            this.atxbPhone.UnderlinedStyle = false;
-            this.atxbPhone._KeyDown += new System.EventHandler(this.atxbPhone__KeyDown);
-            // 
             // AccountAndPermissionUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -850,6 +850,12 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnEdit.ResumeLayout(false);
+            this.aPanel1.ResumeLayout(false);
+            this.aPanel6.ResumeLayout(false);
+            this.aPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).EndInit();
+            this.aPanel2.ResumeLayout(false);
+            this.aPanel3.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
@@ -858,12 +864,6 @@
             this.panel15.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.aPanel1.ResumeLayout(false);
-            this.aPanel6.ResumeLayout(false);
-            this.aPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pibHideViewPassword)).EndInit();
-            this.aPanel2.ResumeLayout(false);
-            this.aPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

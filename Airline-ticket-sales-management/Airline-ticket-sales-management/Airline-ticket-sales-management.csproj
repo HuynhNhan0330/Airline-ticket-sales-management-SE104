@@ -257,6 +257,12 @@
     <Compile Include="Usercontrols\PermissiontItemUC.Designer.cs">
       <DependentUpon>PermissiontItemUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrols\TicketItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\TicketItemUC.Designer.cs">
+      <DependentUpon>TicketItemUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\AccountAndPermission\AccountAndPermissionUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -522,6 +528,9 @@
     <EmbeddedResource Include="Usercontrols\PermissiontItemUC.resx">
       <DependentUpon>PermissiontItemUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\TicketItemUC.resx">
+      <DependentUpon>TicketItemUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Admin\AccountAndPermission\AccountAndPermissionUC.resx">
       <DependentUpon>AccountAndPermissionUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -710,6 +719,7 @@
       <DependentUpon>FlightTicketManagement.edmx</DependentUpon>
       <LastGenOutput>FlightTicketManagement.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\cancel-ticket.png" />
     <None Include="Resources\return.png" />
     <None Include="Resources\flight.jpg" />
     <None Include="Resources\TicketIcon.png" />

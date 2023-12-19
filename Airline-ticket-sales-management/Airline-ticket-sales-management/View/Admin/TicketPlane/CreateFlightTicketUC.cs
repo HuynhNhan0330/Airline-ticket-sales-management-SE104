@@ -241,8 +241,13 @@ namespace Airline_ticket_sales_management
                 AMessageBoxFrm ms = new AMessageBoxFrm("Vui lòng chọn chỗ ngồi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
-            else
+            else if (DateTime.Now.AddDays(ParametersDTO.Ins.EarliestBookingTime) > flight.DepartureDateTime)
             {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Hiện tại đã trễ để đặt vé chuyến bay này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
+            else
+                    {
                 TicketDTO ticket = new TicketDTO();
                 ticket.FlightID = flight.FlightID;
                 ticket.FullName = atxbFullName.Texts;

@@ -110,7 +110,7 @@ namespace Airline_ticket_sales_management.DALs
             }
         }
 
-        public async Task<(bool, string)> updateFlightTicketClassDetail(string flightID, string ticketClassID)
+        public async Task<(bool, string)> updateFlightTicketClassDetail(string flightID, string ticketClassID, int type = 0)
         {
             try
             {
@@ -120,8 +120,18 @@ namespace Airline_ticket_sales_management.DALs
 
                     if (flightTicketClassDetailUpdate != null)
                     {
-                        flightTicketClassDetailUpdate.TicketSold += 1;
-                        flightTicketClassDetailUpdate.SeatRemaining -= 1;
+                        switch (type)
+                        {
+                            case 0:
+                                flightTicketClassDetailUpdate.TicketSold += 1;
+                                flightTicketClassDetailUpdate.SeatRemaining -= 1;
+                                break;
+                            case 1:
+                                flightTicketClassDetailUpdate.TicketSold -= 1;
+                                flightTicketClassDetailUpdate.SeatRemaining += 1;
+                                break;
+                        }
+                        
                     }
 
                     context.SaveChanges();

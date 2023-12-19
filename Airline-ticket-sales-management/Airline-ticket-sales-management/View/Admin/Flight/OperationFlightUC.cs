@@ -186,6 +186,11 @@ namespace Airline_ticket_sales_management
                 AMessageBoxFrm ms = new AMessageBoxFrm("Sân bay đi và sân bay đến không được trùng nhau", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
+            else if (int.Parse(atxbFlightDuration.Texts.Trim()) < ParametersDTO.Ins.MinimumFlightTime)
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Thời gian bay ít nhất bằng " + ParametersDTO.Ins.MinimumFlightTime, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
             else
             {
                 flight.TicketPrice = decimal.Parse(atxbTicketPrice.Texts.Trim());

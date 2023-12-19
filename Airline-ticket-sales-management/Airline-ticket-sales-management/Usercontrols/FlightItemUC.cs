@@ -2,11 +2,13 @@
 using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
 using Airline_ticket_sales_management.Service;
+using SixLabors.ImageSharp.Formats;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -173,8 +175,16 @@ namespace Airline_ticket_sales_management.Usercontrols
 
         private void abtnBookTicket_Click(object sender, EventArgs e)
         {
-            FormAdminHome form = Application.OpenForms.OfType<FormAdminHome>().FirstOrDefault();
-            form.goToTicket(flight);
+            if (DateTime.Now.AddDays(ParametersDTO.Ins.EarliestBookingTime) <= flight.DepartureDateTime)
+            {
+                FormAdminHome form = Application.OpenForms.OfType<FormAdminHome>().FirstOrDefault();
+                form.goToTicket(flight);
+            }
+            else
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Hiện tại đã trễ để đặt vé chuyến bay này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }
         }
     }
 }

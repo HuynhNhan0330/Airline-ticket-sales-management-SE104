@@ -93,6 +93,16 @@ namespace Airline_ticket_sales_management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_ticket {
+            get {
+                object obj = ResourceManager.GetObject("cancel-ticket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatIcon {
             get {
                 object obj = ResourceManager.GetObject("ChatIcon", resourceCulture);
