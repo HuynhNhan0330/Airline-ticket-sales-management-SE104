@@ -1,6 +1,8 @@
 ﻿using Airline_ticket_sales_management.AControls;
 using Airline_ticket_sales_management.DALs;
 using Airline_ticket_sales_management.DTOs;
+using Airline_ticket_sales_management.Utils;
+using MiniExcelLibs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -230,6 +232,53 @@ namespace Airline_ticket_sales_management
 
             ReportByYearUC uc = pnBodyReport.Controls[0] as ReportByYearUC;
             uc.loadData(listReportByYearDetail);
+        }
+
+        private void abtnExportExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel Files|*.xlsx;*.xlsm";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string PATH_EXPORT = saveFileDialog.FileName;
+
+                if (cbTypeReport.SelectedIndex == 0)
+                {
+                    string PATH_TEMPLATE = @"../../Excel/TemplateReportByMonth.xlsx";
+
+                    ReportByMonthUC uc = pnBodyReport.Controls[0] as ReportByMonthUC;
+
+                    var value = new
+                    {
+                        reportType = "Báo cáo tháng " + adtpTime.Value.Month + "/" + adtpTime.Value.Year,
+                        reportTime = DateTime.Now.ToString("dd/MM/yyyy"),
+                        nameUser = Helper.getAccountAdmin().Name,
+                        totalRevenue = uc.totalRevenue,
+                        data = uc.detailedMonthlyRevenueReports.ToArray()
+                    };
+                    
+                    MiniExcel.SaveAsByTemplate(PATH_EXPORT, PATH_TEMPLATE, value);
+                    Process.Start(PATH_EXPORT);
+                }
+                else
+                {
+                    string PATH_TEMPLATE = @"../../Excel/TemplateReportByYear.xlsx";
+
+                    ReportByYearUC uc = pnBodyReport.Controls[0] as ReportByYearUC;
+
+                    var value = new
+                    {
+                        reportType = "Báo cáo năm " + adtpTime.Value.Year,
+                        reportTime = DateTime.Now.ToString("dd/MM/yyyy"),
+                        nameUser = Helper.getAccountAdmin().Name,
+                        totalRevenue = uc.totalRevenue,
+                        data = uc.detailAnnualRevenueReport.ToArray()
+                    };
+
+                    MiniExcel.SaveAsByTemplate(PATH_EXPORT, PATH_TEMPLATE, value);
+                    Process.Start(PATH_EXPORT);
+                }
+            }
         }
     }
 }

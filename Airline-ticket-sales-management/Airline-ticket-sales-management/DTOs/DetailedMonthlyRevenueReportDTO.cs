@@ -9,6 +9,7 @@ namespace Airline_ticket_sales_management.DTOs
 {
     public class DetailedMonthlyRevenueReportDTO
     {
+        public int STT { get; set; }
         public int Year { get; set; }
         public int Monthly { get; set; }
         public string FlightID {  get; set; }

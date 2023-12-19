@@ -3,6 +3,7 @@ using Airline_ticket_sales_management.Usercontrols;
 using Airline_ticket_sales_management.Utils;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -11,6 +12,26 @@ namespace Airline_ticket_sales_management
 {
     public partial class ReportByMonthUC: UserControl
     {
+        private List<DetailedMonthlyRevenueReportDTO> _detailedMonthlyRevenueReports;
+        public List<DetailedMonthlyRevenueReportDTO> detailedMonthlyRevenueReports
+        {
+            get { return _detailedMonthlyRevenueReports; }
+            set
+            {
+                _detailedMonthlyRevenueReports = value;
+            }
+        }
+
+        private decimal _totalRevenue;
+        public decimal totalRevenue
+        {
+            get { return _totalRevenue; }
+            set
+            {
+                _totalRevenue = value;  
+            }
+        }
+
         public ReportByMonthUC()
         {
             InitializeComponent();
@@ -18,11 +39,14 @@ namespace Airline_ticket_sales_management
 
         public void loadData(List<DetailedMonthlyRevenueReportDTO> detailedMonthlyRevenueReports)
         {
-            loadPanel(detailedMonthlyRevenueReports);
+            this.detailedMonthlyRevenueReports = new List<DetailedMonthlyRevenueReportDTO>(detailedMonthlyRevenueReports);
+
+            loadPanel();
 
             lbFlightCount.Text = detailedMonthlyRevenueReports.Count.ToString();
             lbTicket.Text = detailedMonthlyRevenueReports.Sum(dmrr => dmrr.TicketSold).ToString();
-            lbRevenue.Text = Helper.FormatVNMoney(detailedMonthlyRevenueReports.Sum(dmrr => dmrr.Revenue));
+            totalRevenue = detailedMonthlyRevenueReports.Sum(dmrr => dmrr.Revenue);
+            lbRevenue.Text = Helper.FormatVNMoney(totalRevenue);
         }
 
         private void ReportByMonthUC_Load(object sender, EventArgs e)
@@ -30,13 +54,14 @@ namespace Airline_ticket_sales_management
 
         }
 
-        private void loadPanel(List<DetailedMonthlyRevenueReportDTO> detailedMonthlyRevenueReports)
+        private void loadPanel()
         {
             pnReportByMonth.Controls.Clear();
 
             for (int i = 0; i < detailedMonthlyRevenueReports.Count; ++i)
             {
                 DetailedMonthlyRevenueReportDTO dmrp = detailedMonthlyRevenueReports[i];
+                detailedMonthlyRevenueReports[i].STT = i + 1;
                 ReportByMonthItemUC uc = new ReportByMonthItemUC();
                 uc.stt = i + 1;
                 uc.dmrr = dmrp;

@@ -34,7 +34,7 @@ namespace Airline_ticket_sales_management
             {
                 _flights = new ObservableCollection<FlightDTO>(flights);
                 this.flights = new ObservableCollection<FlightDTO>(flights);
-                loadListFlight();
+                //loadListFlight();
             }
             else
             {

@@ -33,7 +33,7 @@ namespace Airline_ticket_sales_management
         {
             this.pnBodyReport = new System.Windows.Forms.Panel();
             this.cbTypeReport = new System.Windows.Forms.ComboBox();
-            this.aButton1 = new Airline_ticket_sales_management.AControls.AButton();
+            this.abtnExportExcel = new Airline_ticket_sales_management.AControls.AButton();
             this.adtpTime = new Airline_ticket_sales_management.AControls.ADateTimePicker();
             this.SuspendLayout();
             // 
@@ -58,28 +58,29 @@ namespace Airline_ticket_sales_management
             this.cbTypeReport.TabIndex = 5;
             this.cbTypeReport.SelectedIndexChanged += new System.EventHandler(this.cbTypeReport_SelectedIndexChanged);
             // 
-            // aButton1
+            // abtnExportExcel
             // 
-            this.aButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(124)))), ((int)(((byte)(68)))));
-            this.aButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(124)))), ((int)(((byte)(68)))));
-            this.aButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.aButton1.BorderRadius = 10;
-            this.aButton1.BorderSize = 0;
-            this.aButton1.FlatAppearance.BorderSize = 0;
-            this.aButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aButton1.Font = new System.Drawing.Font("Arial", 12F);
-            this.aButton1.ForeColor = System.Drawing.Color.White;
-            this.aButton1.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
-            this.aButton1.Location = new System.Drawing.Point(1250, 24);
-            this.aButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.aButton1.Name = "aButton1";
-            this.aButton1.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
-            this.aButton1.Size = new System.Drawing.Size(200, 32);
-            this.aButton1.TabIndex = 4;
-            this.aButton1.Text = "Xuất excel";
-            this.aButton1.TextColor = System.Drawing.Color.White;
-            this.aButton1.ThinknessLine = 0;
-            this.aButton1.UseVisualStyleBackColor = false;
+            this.abtnExportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(124)))), ((int)(((byte)(68)))));
+            this.abtnExportExcel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(124)))), ((int)(((byte)(68)))));
+            this.abtnExportExcel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.abtnExportExcel.BorderRadius = 10;
+            this.abtnExportExcel.BorderSize = 0;
+            this.abtnExportExcel.FlatAppearance.BorderSize = 0;
+            this.abtnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abtnExportExcel.Font = new System.Drawing.Font("Arial", 12F);
+            this.abtnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.abtnExportExcel.LineType = Airline_ticket_sales_management.AControls.AButton.LineStyles.None;
+            this.abtnExportExcel.Location = new System.Drawing.Point(1250, 24);
+            this.abtnExportExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.abtnExportExcel.Name = "abtnExportExcel";
+            this.abtnExportExcel.RoundType = Airline_ticket_sales_management.AControls.AButton.RoundStyles.Full;
+            this.abtnExportExcel.Size = new System.Drawing.Size(200, 32);
+            this.abtnExportExcel.TabIndex = 4;
+            this.abtnExportExcel.Text = "Xuất excel";
+            this.abtnExportExcel.TextColor = System.Drawing.Color.White;
+            this.abtnExportExcel.ThinknessLine = 0;
+            this.abtnExportExcel.UseVisualStyleBackColor = false;
+            this.abtnExportExcel.Click += new System.EventHandler(this.abtnExportExcel_Click);
             // 
             // adtpTime
             // 
@@ -104,7 +105,7 @@ namespace Airline_ticket_sales_management
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
             this.Controls.Add(this.cbTypeReport);
-            this.Controls.Add(this.aButton1);
+            this.Controls.Add(this.abtnExportExcel);
             this.Controls.Add(this.pnBodyReport);
             this.Controls.Add(this.adtpTime);
             this.Name = "ReportUC";
@@ -116,7 +117,7 @@ namespace Airline_ticket_sales_management
         #endregion
         private AControls.ADateTimePicker adtpTime;
         private Panel pnBodyReport;
-        private AControls.AButton aButton1;
+        private AControls.AButton abtnExportExcel;
         private ComboBox cbTypeReport;
     }
 }

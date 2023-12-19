@@ -16,6 +16,26 @@ namespace Airline_ticket_sales_management
 {
     public partial class ReportByYearUC : UserControl
     {
+        private List<DetailedAnnualRevenueReportDTO> _detailAnnualRevenueReport;
+        public List<DetailedAnnualRevenueReportDTO> detailAnnualRevenueReport
+        {
+            get { return _detailAnnualRevenueReport; }
+            set 
+            { 
+                _detailAnnualRevenueReport = value; 
+            }
+        }
+
+        private decimal _totalRevenue;
+        public decimal totalRevenue
+        {
+            get { return _totalRevenue; }
+            set
+            {
+                _totalRevenue = value;
+            }
+        }
+
         public ReportByYearUC()
         {
             InitializeComponent();
@@ -28,20 +48,23 @@ namespace Airline_ticket_sales_management
 
         public void loadData(List<DetailedAnnualRevenueReportDTO> detailAnnualRevenueReport)
         {
-            loadPanel(detailAnnualRevenueReport);
+            this.detailAnnualRevenueReport = new List<DetailedAnnualRevenueReportDTO>(detailAnnualRevenueReport);
+            loadPanel();
 
             lbFlightCount.Text = detailAnnualRevenueReport.Sum(darr => darr.FlightCount).ToString();
-            lbRevenue.Text = Helper.FormatVNMoney(detailAnnualRevenueReport.Sum(darr => darr.Revenue));
+            totalRevenue = detailAnnualRevenueReport.Sum(darr => darr.Revenue);
+            lbRevenue.Text = Helper.FormatVNMoney(totalRevenue);
 
-            loadChart(detailAnnualRevenueReport);
+            loadChart();
         }
 
-        public void loadPanel(List<DetailedAnnualRevenueReportDTO> detailAnnualRevenueReport)
+        public void loadPanel()
         {
             pnReportByYear.Controls.Clear();
 
             for (int i = 0; i < detailAnnualRevenueReport.Count; ++i)
             {
+                detailAnnualRevenueReport[i].STT = i + 1;
                 ReportByYearItemUC uc = new ReportByYearItemUC();
                 uc.stt = i + 1;
                 uc.darr = detailAnnualRevenueReport[i];
@@ -58,7 +81,7 @@ namespace Airline_ticket_sales_management
             }
         }
 
-        public void loadChart(List<DetailedAnnualRevenueReportDTO> detailAnnualRevenueReport)
+        public void loadChart()
         {
             chartReportByYear.DataSource = detailAnnualRevenueReport;
             chartReportByYear.Series[0].XValueMember = "Month";
