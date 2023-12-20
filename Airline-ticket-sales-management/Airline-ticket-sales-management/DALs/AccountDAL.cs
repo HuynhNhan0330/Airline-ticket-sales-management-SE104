@@ -95,6 +95,16 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
+                    var checkAccountByEmail = context.ACCOUNTs.FirstOrDefault(ac => ac.Email == account.Email);
+
+                    if (checkAccountByEmail != null)
+                        return (false, "Email đã tồn tại", null);
+
+                    var checkAccountByPhone = context.ACCOUNTs.FirstOrDefault(ac => ac.Phone == account.Phone);
+
+                    if (checkAccountByPhone != null)
+                        return (false, "Số điện thoại đã tồn tại", null);
+
                     string currentMaxCode = await context.ACCOUNTs.MaxAsync(ac => ac.AccountID);
                     string newCode = Helper.nextCode(currentMaxCode, "AC");
 
@@ -179,6 +189,16 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
+                    var checkAccountByEmail = context.ACCOUNTs.FirstOrDefault(ac => ac.Email == account.Email);
+
+                    if (checkAccountByEmail != null)
+                        return (false, "Email đã tồn tại");
+
+                    var checkAccountByPhone = context.ACCOUNTs.FirstOrDefault(ac => ac.Phone == account.Phone);
+
+                    if (checkAccountByPhone != null)
+                        return (false, "Số điện thoại đã tồn tại");
+
                     ACCOUNT currentAccount = context.ACCOUNTs.FirstOrDefault(ac => ac.AccountID == account.AccountID);
                     currentAccount.Name = account.Name;
                     currentAccount.Password = account.Password;
