@@ -95,12 +95,12 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    var checkAccountByEmail = context.ACCOUNTs.FirstOrDefault(ac => ac.Email == account.Email);
+                    var checkAccountByEmail = context.ACCOUNTs.FirstOrDefault(ac => ac.Email == account.Email && ac.AccountID != account.AccountID);
 
                     if (checkAccountByEmail != null)
                         return (false, "Email đã tồn tại", null);
 
-                    var checkAccountByPhone = context.ACCOUNTs.FirstOrDefault(ac => ac.Phone == account.Phone);
+                    var checkAccountByPhone = context.ACCOUNTs.FirstOrDefault(ac => ac.Phone == account.Phone && ac.AccountID != account.AccountID);
 
                     if (checkAccountByPhone != null)
                         return (false, "Số điện thoại đã tồn tại", null);
@@ -189,12 +189,12 @@ namespace Airline_ticket_sales_management.DALs
             {
                 using (var context = new FlightTicketManagementEntities())
                 {
-                    var checkAccountByEmail = context.ACCOUNTs.FirstOrDefault(ac => ac.Email == account.Email);
+                    var checkAccountByEmail = context.ACCOUNTs.FirstOrDefault(ac => ac.Email == account.Email && ac.AccountID != account.AccountID);
 
                     if (checkAccountByEmail != null)
                         return (false, "Email đã tồn tại");
 
-                    var checkAccountByPhone = context.ACCOUNTs.FirstOrDefault(ac => ac.Phone == account.Phone);
+                    var checkAccountByPhone = context.ACCOUNTs.FirstOrDefault(ac => ac.Phone == account.Phone && ac.AccountID != account.AccountID);
 
                     if (checkAccountByPhone != null)
                         return (false, "Số điện thoại đã tồn tại");
