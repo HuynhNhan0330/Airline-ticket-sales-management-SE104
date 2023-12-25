@@ -278,7 +278,7 @@ BEGIN
 
     SET @i = @i + 1;
 END
-SELECT * FROM FLIGHT_TICKET_CLASS_DETAIL
+
 -- Tạo giá trị cho "Vé chuyến bay"
 
 -- Khởi tạo danh sách tên
