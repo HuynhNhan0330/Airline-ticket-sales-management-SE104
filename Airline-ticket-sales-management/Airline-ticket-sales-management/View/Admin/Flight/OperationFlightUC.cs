@@ -186,6 +186,11 @@ namespace Airline_ticket_sales_management
                 AMessageBoxFrm ms = new AMessageBoxFrm("Sân bay đi và sân bay đến không được trùng nhau", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
             }
+            else if (!(int.Parse(atxbHour.Texts.Trim()) < 24 && int.Parse(atxbHour.Texts.Trim()) >= 0 && int.Parse(atxbMinute.Texts.Trim()) < 60 && int.Parse(atxbMinute.Texts.Trim()) >= 0))
+            {
+                AMessageBoxFrm ms = new AMessageBoxFrm("Thời gian bay không phù hợp", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ms.ShowDialog();
+            }    
             else if (int.Parse(atxbFlightDuration.Texts.Trim()) < ParametersDTO.Ins.MinimumFlightTime)
             {
                 AMessageBoxFrm ms = new AMessageBoxFrm("Thời gian bay ít nhất bằng " + ParametersDTO.Ins.MinimumFlightTime, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -204,7 +209,7 @@ namespace Airline_ticket_sales_management
                     adtpDepartureDateTime.Value.Day,
                     hour, minute, 0);
 
-                createFlight(flight);
+                //createFlight(flight);
             }
         }
 
