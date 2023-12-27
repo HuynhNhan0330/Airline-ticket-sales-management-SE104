@@ -48,11 +48,10 @@ namespace Airline_ticket_sales_management.Usercontrols
 
         private void AccountItemUC_Click(object sender, EventArgs e)
         {
-            if (account.RoleName == "Siêu quản trị" && Helper.getAccountAdmin().RoleName != "Siêu quản trị")
+            if (account.RoleID[5] <= Helper.getAccountAdmin().RoleID[5])
             {
                 AMessageBoxFrm ms = new AMessageBoxFrm("Không đủ quyền truy cập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ms.ShowDialog();
-
                 return;
             }
 

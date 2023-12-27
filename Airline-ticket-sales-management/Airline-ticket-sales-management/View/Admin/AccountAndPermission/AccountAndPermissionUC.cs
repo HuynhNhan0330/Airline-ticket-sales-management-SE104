@@ -222,13 +222,14 @@ namespace Airline_ticket_sales_management
                 account.RoleName = cbPermissionName.Text;
                 account.Created = DateTime.Now;
 
-                if (account.RoleName == "Siêu quản trị" && Helper.getAccountAdmin().RoleName != "Siêu quản trị")
+
+                if (account.RoleID[5] > Helper.getAccountAdmin().RoleID[5])
+                    createAccount(account);
+                else
                 {
-                    AMessageBoxFrm ms = new AMessageBoxFrm("Không đủ quyền để tạo tài khoản có quyền siêu quản trị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    AMessageBoxFrm ms = new AMessageBoxFrm("Không đủ quyền để tạo tài khoản có vai trò này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ms.ShowDialog();
                 }
-                else
-                    createAccount(account);
             }
         }
 
@@ -344,7 +345,15 @@ namespace Airline_ticket_sales_management
                 account.RoleID = (cbPermissionName.SelectedItem as PermissionDTO).RoleID;
                 account.RoleName = cbPermissionName.Text;
                 account.Created = DateTime.Now;
-                updateAccount(account);
+                
+                if (account.RoleID[5] > Helper.getAccountAdmin().RoleID[5])
+                    updateAccount(account);
+                else
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm("Không đủ quyền để tạo tài khoản có vai trò này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
+
             }
         }
         
