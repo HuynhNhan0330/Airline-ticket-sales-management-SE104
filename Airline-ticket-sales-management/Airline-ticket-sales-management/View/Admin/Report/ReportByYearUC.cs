@@ -26,6 +26,8 @@ namespace Airline_ticket_sales_management
             }
         }
 
+        private bool isSort = false;
+
         private decimal _totalRevenue;
         public decimal totalRevenue
         {
@@ -88,6 +90,18 @@ namespace Airline_ticket_sales_management
             chartReportByYear.Series[0].YValueMembers = "Ratio";
             chartReportByYear.DataBind();
             chartReportByYear.Update();
+        }
+
+        private void lbRe_Click(object sender, EventArgs e)
+        {
+            if (isSort)
+                detailAnnualRevenueReport = detailAnnualRevenueReport.OrderByDescending(darr => darr.Revenue).ToList();
+
+            else
+                detailAnnualRevenueReport = detailAnnualRevenueReport.OrderBy(darr => darr.Revenue).ToList();
+
+            isSort = !isSort;
+            loadPanel();
         }
     }
 }

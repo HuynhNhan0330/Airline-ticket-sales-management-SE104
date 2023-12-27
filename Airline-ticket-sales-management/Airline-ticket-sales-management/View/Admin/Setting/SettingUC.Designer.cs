@@ -731,6 +731,7 @@ namespace Airline_ticket_sales_management
             // 
             // panel11
             // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.panel11.Controls.Add(this.panel8);
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel13);
@@ -1025,6 +1026,7 @@ namespace Airline_ticket_sales_management
             // 
             // panel17
             // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.panel17.Controls.Add(this.panel15);
             this.panel17.Controls.Add(this.panel19);
             this.panel17.Controls.Add(this.panel20);

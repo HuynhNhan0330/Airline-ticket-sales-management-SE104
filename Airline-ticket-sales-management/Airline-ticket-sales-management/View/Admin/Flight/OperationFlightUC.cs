@@ -209,7 +209,7 @@ namespace Airline_ticket_sales_management
                     adtpDepartureDateTime.Value.Day,
                     hour, minute, 0);
 
-                //createFlight(flight);
+                createFlight(flight);
             }
         }
 

@@ -35,7 +35,7 @@ namespace Airline_ticket_sales_management
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbRe = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,6 +56,7 @@ namespace Airline_ticket_sales_management
             this.lbFlightCount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnReportByMonth = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnHeader.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -73,12 +74,13 @@ namespace Airline_ticket_sales_management
             // 
             // pnHeader
             // 
+            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.pnHeader.Controls.Add(this.panel6);
             this.pnHeader.Controls.Add(this.panel4);
             this.pnHeader.Controls.Add(this.panel5);
             this.pnHeader.Controls.Add(this.panel3);
             this.pnHeader.Controls.Add(this.panel2);
-            this.pnHeader.Location = new System.Drawing.Point(50, 120);
+            this.pnHeader.Location = new System.Drawing.Point(50, 170);
             this.pnHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnHeader.Name = "pnHeader";
             this.pnHeader.Size = new System.Drawing.Size(1400, 40);
@@ -106,7 +108,7 @@ namespace Airline_ticket_sales_management
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lbRe);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(1000, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -114,15 +116,17 @@ namespace Airline_ticket_sales_management
             this.panel4.Size = new System.Drawing.Size(300, 40);
             this.panel4.TabIndex = 4;
             // 
-            // label2
+            // lbRe
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label2.Location = new System.Drawing.Point(103, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Doanh thu";
+            this.lbRe.AutoSize = true;
+            this.lbRe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbRe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbRe.Location = new System.Drawing.Point(103, 11);
+            this.lbRe.Name = "lbRe";
+            this.lbRe.Size = new System.Drawing.Size(93, 22);
+            this.lbRe.TabIndex = 0;
+            this.lbRe.Text = "Doanh thu";
+            this.lbRe.Click += new System.EventHandler(this.lbRe_Click);
             // 
             // panel5
             // 
@@ -333,17 +337,29 @@ namespace Airline_ticket_sales_management
             // pnReportByMonth
             // 
             this.pnReportByMonth.AutoScroll = true;
-            this.pnReportByMonth.Location = new System.Drawing.Point(50, 160);
+            this.pnReportByMonth.Location = new System.Drawing.Point(50, 210);
             this.pnReportByMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnReportByMonth.Name = "pnReportByMonth";
-            this.pnReportByMonth.Size = new System.Drawing.Size(1400, 505);
+            this.pnReportByMonth.Size = new System.Drawing.Size(1400, 455);
             this.pnReportByMonth.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.label9.Location = new System.Drawing.Point(588, 120);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(324, 29);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Danh sách báo cáo tháng";
             // 
             // ReportByMonthUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.pnReportByMonth);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnHeader);
@@ -373,6 +389,7 @@ namespace Airline_ticket_sales_management
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -384,7 +401,7 @@ namespace Airline_ticket_sales_management
         private Panel panel2;
         private Label lb1;
         private Panel panel4;
-        private Label label2;
+        private Label lbRe;
         private Panel panel5;
         private Label label3;
         private Panel panel6;
@@ -403,5 +420,6 @@ namespace Airline_ticket_sales_management
         private Label lbTicket;
         private Label label8;
         private Panel pnReportByMonth;
+        private Label label9;
     }
 }

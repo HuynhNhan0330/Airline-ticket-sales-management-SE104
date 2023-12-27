@@ -33,42 +33,42 @@ namespace Airline_ticket_sales_management
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbSearchType = new System.Windows.Forms.ComboBox();
-            this.pnListTicket = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnTicketID = new System.Windows.Forms.Panel();
-            this.lbTicketID = new System.Windows.Forms.Label();
-            this.pnFlightID = new System.Windows.Forms.Panel();
-            this.lbFlightID = new System.Windows.Forms.Label();
-            this.pnName = new System.Windows.Forms.Panel();
-            this.lbName = new System.Windows.Forms.Label();
-            this.pnCardID = new System.Windows.Forms.Panel();
-            this.lbCardID = new System.Windows.Forms.Label();
-            this.pnPhone = new System.Windows.Forms.Panel();
-            this.lbPhone = new System.Windows.Forms.Label();
-            this.pnEmail = new System.Windows.Forms.Panel();
-            this.lbEmail = new System.Windows.Forms.Label();
-            this.pnSeat = new System.Windows.Forms.Panel();
-            this.lbSeat = new System.Windows.Forms.Label();
-            this.pnClassTicketName = new System.Windows.Forms.Panel();
-            this.lbClassTicketName = new System.Windows.Forms.Label();
-            this.pnPrice = new System.Windows.Forms.Panel();
-            this.lbPrice = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.abtnSearch = new Airline_ticket_sales_management.AControls.AButton();
             this.atxbKey = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.pnListTicket = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnPrice = new System.Windows.Forms.Panel();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.pnClassTicketName = new System.Windows.Forms.Panel();
+            this.lbClassTicketName = new System.Windows.Forms.Label();
+            this.pnSeat = new System.Windows.Forms.Panel();
+            this.lbSeat = new System.Windows.Forms.Label();
+            this.pnEmail = new System.Windows.Forms.Panel();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.pnPhone = new System.Windows.Forms.Panel();
+            this.lbPhone = new System.Windows.Forms.Label();
+            this.pnCardID = new System.Windows.Forms.Panel();
+            this.lbCardID = new System.Windows.Forms.Label();
+            this.pnName = new System.Windows.Forms.Panel();
+            this.lbName = new System.Windows.Forms.Label();
+            this.pnFlightID = new System.Windows.Forms.Panel();
+            this.lbFlightID = new System.Windows.Forms.Label();
+            this.pnTicketID = new System.Windows.Forms.Panel();
+            this.lbTicketID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.pnTicketID.SuspendLayout();
-            this.pnFlightID.SuspendLayout();
-            this.pnName.SuspendLayout();
-            this.pnCardID.SuspendLayout();
-            this.pnPhone.SuspendLayout();
-            this.pnEmail.SuspendLayout();
-            this.pnSeat.SuspendLayout();
-            this.pnClassTicketName.SuspendLayout();
-            this.pnPrice.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pnPrice.SuspendLayout();
+            this.pnClassTicketName.SuspendLayout();
+            this.pnSeat.SuspendLayout();
+            this.pnEmail.SuspendLayout();
+            this.pnPhone.SuspendLayout();
+            this.pnCardID.SuspendLayout();
+            this.pnName.SuspendLayout();
+            this.pnFlightID.SuspendLayout();
+            this.pnTicketID.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,229 +95,6 @@ namespace Airline_ticket_sales_management
             this.cbSearchType.Name = "cbSearchType";
             this.cbSearchType.Size = new System.Drawing.Size(300, 30);
             this.cbSearchType.TabIndex = 3;
-            // 
-            // pnListTicket
-            // 
-            this.pnListTicket.AutoScroll = true;
-            this.pnListTicket.Location = new System.Drawing.Point(50, 130);
-            this.pnListTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnListTicket.Name = "pnListTicket";
-            this.pnListTicket.Size = new System.Drawing.Size(1400, 500);
-            this.pnListTicket.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.pnPrice);
-            this.panel2.Controls.Add(this.pnClassTicketName);
-            this.panel2.Controls.Add(this.pnSeat);
-            this.panel2.Controls.Add(this.pnEmail);
-            this.panel2.Controls.Add(this.pnPhone);
-            this.panel2.Controls.Add(this.pnCardID);
-            this.panel2.Controls.Add(this.pnName);
-            this.panel2.Controls.Add(this.pnFlightID);
-            this.panel2.Controls.Add(this.pnTicketID);
-            this.panel2.Location = new System.Drawing.Point(50, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1400, 50);
-            this.panel2.TabIndex = 5;
-            // 
-            // pnTicketID
-            // 
-            this.pnTicketID.Controls.Add(this.lbTicketID);
-            this.pnTicketID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnTicketID.Location = new System.Drawing.Point(0, 0);
-            this.pnTicketID.Name = "pnTicketID";
-            this.pnTicketID.Size = new System.Drawing.Size(100, 50);
-            this.pnTicketID.TabIndex = 2;
-            // 
-            // lbTicketID
-            // 
-            this.lbTicketID.AutoSize = true;
-            this.lbTicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbTicketID.Location = new System.Drawing.Point(23, 15);
-            this.lbTicketID.Name = "lbTicketID";
-            this.lbTicketID.Size = new System.Drawing.Size(54, 20);
-            this.lbTicketID.TabIndex = 0;
-            this.lbTicketID.Text = "Mã vé";
-            // 
-            // pnFlightID
-            // 
-            this.pnFlightID.Controls.Add(this.lbFlightID);
-            this.pnFlightID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnFlightID.Location = new System.Drawing.Point(100, 0);
-            this.pnFlightID.Name = "pnFlightID";
-            this.pnFlightID.Size = new System.Drawing.Size(100, 50);
-            this.pnFlightID.TabIndex = 3;
-            // 
-            // lbFlightID
-            // 
-            this.lbFlightID.AutoSize = true;
-            this.lbFlightID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbFlightID.Location = new System.Drawing.Point(3, 5);
-            this.lbFlightID.MaximumSize = new System.Drawing.Size(120, 0);
-            this.lbFlightID.Name = "lbFlightID";
-            this.lbFlightID.Size = new System.Drawing.Size(95, 40);
-            this.lbFlightID.TabIndex = 0;
-            this.lbFlightID.Text = "Mã chuyến bay";
-            this.lbFlightID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnName
-            // 
-            this.pnName.Controls.Add(this.lbName);
-            this.pnName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnName.Location = new System.Drawing.Point(200, 0);
-            this.pnName.Name = "pnName";
-            this.pnName.Size = new System.Drawing.Size(198, 50);
-            this.pnName.TabIndex = 4;
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbName.Location = new System.Drawing.Point(58, 15);
-            this.lbName.MaximumSize = new System.Drawing.Size(190, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(81, 20);
-            this.lbName.TabIndex = 0;
-            this.lbName.Text = "Họ và tên";
-            // 
-            // pnCardID
-            // 
-            this.pnCardID.Controls.Add(this.lbCardID);
-            this.pnCardID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnCardID.Location = new System.Drawing.Point(398, 0);
-            this.pnCardID.Name = "pnCardID";
-            this.pnCardID.Size = new System.Drawing.Size(150, 50);
-            this.pnCardID.TabIndex = 5;
-            // 
-            // lbCardID
-            // 
-            this.lbCardID.AutoSize = true;
-            this.lbCardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbCardID.Location = new System.Drawing.Point(18, 15);
-            this.lbCardID.Name = "lbCardID";
-            this.lbCardID.Size = new System.Drawing.Size(114, 20);
-            this.lbCardID.TabIndex = 0;
-            this.lbCardID.Text = "CMND/CCCD";
-            // 
-            // pnPhone
-            // 
-            this.pnPhone.Controls.Add(this.lbPhone);
-            this.pnPhone.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnPhone.Location = new System.Drawing.Point(548, 0);
-            this.pnPhone.Name = "pnPhone";
-            this.pnPhone.Size = new System.Drawing.Size(130, 50);
-            this.pnPhone.TabIndex = 6;
-            // 
-            // lbPhone
-            // 
-            this.lbPhone.AutoSize = true;
-            this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbPhone.Location = new System.Drawing.Point(12, 15);
-            this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(106, 20);
-            this.lbPhone.TabIndex = 0;
-            this.lbPhone.Text = "Số điện thoại";
-            // 
-            // pnEmail
-            // 
-            this.pnEmail.Controls.Add(this.lbEmail);
-            this.pnEmail.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnEmail.Location = new System.Drawing.Point(678, 0);
-            this.pnEmail.Name = "pnEmail";
-            this.pnEmail.Size = new System.Drawing.Size(198, 50);
-            this.pnEmail.TabIndex = 7;
-            // 
-            // lbEmail
-            // 
-            this.lbEmail.AutoSize = true;
-            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbEmail.Location = new System.Drawing.Point(73, 15);
-            this.lbEmail.MaximumSize = new System.Drawing.Size(180, 0);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(51, 20);
-            this.lbEmail.TabIndex = 0;
-            this.lbEmail.Text = "Email";
-            // 
-            // pnSeat
-            // 
-            this.pnSeat.Controls.Add(this.lbSeat);
-            this.pnSeat.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnSeat.Location = new System.Drawing.Point(876, 0);
-            this.pnSeat.Name = "pnSeat";
-            this.pnSeat.Size = new System.Drawing.Size(60, 50);
-            this.pnSeat.TabIndex = 8;
-            // 
-            // lbSeat
-            // 
-            this.lbSeat.AutoSize = true;
-            this.lbSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbSeat.Location = new System.Drawing.Point(10, 15);
-            this.lbSeat.Name = "lbSeat";
-            this.lbSeat.Size = new System.Drawing.Size(40, 20);
-            this.lbSeat.TabIndex = 0;
-            this.lbSeat.Text = "Ghế";
-            // 
-            // pnClassTicketName
-            // 
-            this.pnClassTicketName.Controls.Add(this.lbClassTicketName);
-            this.pnClassTicketName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnClassTicketName.Location = new System.Drawing.Point(936, 0);
-            this.pnClassTicketName.Name = "pnClassTicketName";
-            this.pnClassTicketName.Size = new System.Drawing.Size(150, 50);
-            this.pnClassTicketName.TabIndex = 9;
-            // 
-            // lbClassTicketName
-            // 
-            this.lbClassTicketName.AutoSize = true;
-            this.lbClassTicketName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbClassTicketName.Location = new System.Drawing.Point(39, 15);
-            this.lbClassTicketName.MaximumSize = new System.Drawing.Size(170, 0);
-            this.lbClassTicketName.Name = "lbClassTicketName";
-            this.lbClassTicketName.Size = new System.Drawing.Size(71, 20);
-            this.lbClassTicketName.TabIndex = 0;
-            this.lbClassTicketName.Text = "Hạng vé";
-            // 
-            // pnPrice
-            // 
-            this.pnPrice.Controls.Add(this.lbPrice);
-            this.pnPrice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnPrice.Location = new System.Drawing.Point(1086, 0);
-            this.pnPrice.Name = "pnPrice";
-            this.pnPrice.Size = new System.Drawing.Size(200, 50);
-            this.pnPrice.TabIndex = 10;
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbPrice.Location = new System.Drawing.Point(66, 15);
-            this.lbPrice.MaximumSize = new System.Drawing.Size(180, 0);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(67, 20);
-            this.lbPrice.TabIndex = 0;
-            this.lbPrice.Text = "Giá tiền";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(1286, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(114, 50);
-            this.panel3.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(20, 15);
-            this.label1.MaximumSize = new System.Drawing.Size(180, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thao tác";
             // 
             // abtnSearch
             // 
@@ -369,6 +146,230 @@ namespace Airline_ticket_sales_management
             this.atxbKey.Texts = "";
             this.atxbKey.UnderlinedStyle = false;
             // 
+            // pnListTicket
+            // 
+            this.pnListTicket.AutoScroll = true;
+            this.pnListTicket.Location = new System.Drawing.Point(50, 130);
+            this.pnListTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnListTicket.Name = "pnListTicket";
+            this.pnListTicket.Size = new System.Drawing.Size(1400, 500);
+            this.pnListTicket.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.pnPrice);
+            this.panel2.Controls.Add(this.pnClassTicketName);
+            this.panel2.Controls.Add(this.pnSeat);
+            this.panel2.Controls.Add(this.pnEmail);
+            this.panel2.Controls.Add(this.pnPhone);
+            this.panel2.Controls.Add(this.pnCardID);
+            this.panel2.Controls.Add(this.pnName);
+            this.panel2.Controls.Add(this.pnFlightID);
+            this.panel2.Controls.Add(this.pnTicketID);
+            this.panel2.Location = new System.Drawing.Point(50, 80);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1400, 50);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(1286, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(114, 50);
+            this.panel3.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(20, 15);
+            this.label1.MaximumSize = new System.Drawing.Size(180, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thao tác";
+            // 
+            // pnPrice
+            // 
+            this.pnPrice.Controls.Add(this.lbPrice);
+            this.pnPrice.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnPrice.Location = new System.Drawing.Point(1086, 0);
+            this.pnPrice.Name = "pnPrice";
+            this.pnPrice.Size = new System.Drawing.Size(200, 50);
+            this.pnPrice.TabIndex = 10;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbPrice.Location = new System.Drawing.Point(66, 15);
+            this.lbPrice.MaximumSize = new System.Drawing.Size(180, 0);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(67, 20);
+            this.lbPrice.TabIndex = 0;
+            this.lbPrice.Text = "Giá tiền";
+            // 
+            // pnClassTicketName
+            // 
+            this.pnClassTicketName.Controls.Add(this.lbClassTicketName);
+            this.pnClassTicketName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnClassTicketName.Location = new System.Drawing.Point(936, 0);
+            this.pnClassTicketName.Name = "pnClassTicketName";
+            this.pnClassTicketName.Size = new System.Drawing.Size(150, 50);
+            this.pnClassTicketName.TabIndex = 9;
+            // 
+            // lbClassTicketName
+            // 
+            this.lbClassTicketName.AutoSize = true;
+            this.lbClassTicketName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbClassTicketName.Location = new System.Drawing.Point(39, 15);
+            this.lbClassTicketName.MaximumSize = new System.Drawing.Size(170, 0);
+            this.lbClassTicketName.Name = "lbClassTicketName";
+            this.lbClassTicketName.Size = new System.Drawing.Size(71, 20);
+            this.lbClassTicketName.TabIndex = 0;
+            this.lbClassTicketName.Text = "Hạng vé";
+            // 
+            // pnSeat
+            // 
+            this.pnSeat.Controls.Add(this.lbSeat);
+            this.pnSeat.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnSeat.Location = new System.Drawing.Point(876, 0);
+            this.pnSeat.Name = "pnSeat";
+            this.pnSeat.Size = new System.Drawing.Size(60, 50);
+            this.pnSeat.TabIndex = 8;
+            // 
+            // lbSeat
+            // 
+            this.lbSeat.AutoSize = true;
+            this.lbSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbSeat.Location = new System.Drawing.Point(10, 15);
+            this.lbSeat.Name = "lbSeat";
+            this.lbSeat.Size = new System.Drawing.Size(40, 20);
+            this.lbSeat.TabIndex = 0;
+            this.lbSeat.Text = "Ghế";
+            // 
+            // pnEmail
+            // 
+            this.pnEmail.Controls.Add(this.lbEmail);
+            this.pnEmail.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnEmail.Location = new System.Drawing.Point(678, 0);
+            this.pnEmail.Name = "pnEmail";
+            this.pnEmail.Size = new System.Drawing.Size(198, 50);
+            this.pnEmail.TabIndex = 7;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbEmail.Location = new System.Drawing.Point(73, 15);
+            this.lbEmail.MaximumSize = new System.Drawing.Size(180, 0);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(51, 20);
+            this.lbEmail.TabIndex = 0;
+            this.lbEmail.Text = "Email";
+            // 
+            // pnPhone
+            // 
+            this.pnPhone.Controls.Add(this.lbPhone);
+            this.pnPhone.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnPhone.Location = new System.Drawing.Point(548, 0);
+            this.pnPhone.Name = "pnPhone";
+            this.pnPhone.Size = new System.Drawing.Size(130, 50);
+            this.pnPhone.TabIndex = 6;
+            // 
+            // lbPhone
+            // 
+            this.lbPhone.AutoSize = true;
+            this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbPhone.Location = new System.Drawing.Point(12, 15);
+            this.lbPhone.Name = "lbPhone";
+            this.lbPhone.Size = new System.Drawing.Size(106, 20);
+            this.lbPhone.TabIndex = 0;
+            this.lbPhone.Text = "Số điện thoại";
+            // 
+            // pnCardID
+            // 
+            this.pnCardID.Controls.Add(this.lbCardID);
+            this.pnCardID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnCardID.Location = new System.Drawing.Point(398, 0);
+            this.pnCardID.Name = "pnCardID";
+            this.pnCardID.Size = new System.Drawing.Size(150, 50);
+            this.pnCardID.TabIndex = 5;
+            // 
+            // lbCardID
+            // 
+            this.lbCardID.AutoSize = true;
+            this.lbCardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbCardID.Location = new System.Drawing.Point(18, 15);
+            this.lbCardID.Name = "lbCardID";
+            this.lbCardID.Size = new System.Drawing.Size(114, 20);
+            this.lbCardID.TabIndex = 0;
+            this.lbCardID.Text = "CMND/CCCD";
+            // 
+            // pnName
+            // 
+            this.pnName.Controls.Add(this.lbName);
+            this.pnName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnName.Location = new System.Drawing.Point(200, 0);
+            this.pnName.Name = "pnName";
+            this.pnName.Size = new System.Drawing.Size(198, 50);
+            this.pnName.TabIndex = 4;
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbName.Location = new System.Drawing.Point(58, 15);
+            this.lbName.MaximumSize = new System.Drawing.Size(190, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(81, 20);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Họ và tên";
+            // 
+            // pnFlightID
+            // 
+            this.pnFlightID.Controls.Add(this.lbFlightID);
+            this.pnFlightID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnFlightID.Location = new System.Drawing.Point(100, 0);
+            this.pnFlightID.Name = "pnFlightID";
+            this.pnFlightID.Size = new System.Drawing.Size(100, 50);
+            this.pnFlightID.TabIndex = 3;
+            // 
+            // lbFlightID
+            // 
+            this.lbFlightID.AutoSize = true;
+            this.lbFlightID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbFlightID.Location = new System.Drawing.Point(3, 5);
+            this.lbFlightID.MaximumSize = new System.Drawing.Size(120, 0);
+            this.lbFlightID.Name = "lbFlightID";
+            this.lbFlightID.Size = new System.Drawing.Size(90, 40);
+            this.lbFlightID.TabIndex = 0;
+            this.lbFlightID.Text = "Mã chuyến bay";
+            this.lbFlightID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnTicketID
+            // 
+            this.pnTicketID.Controls.Add(this.lbTicketID);
+            this.pnTicketID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnTicketID.Location = new System.Drawing.Point(0, 0);
+            this.pnTicketID.Name = "pnTicketID";
+            this.pnTicketID.Size = new System.Drawing.Size(100, 50);
+            this.pnTicketID.TabIndex = 2;
+            // 
+            // lbTicketID
+            // 
+            this.lbTicketID.AutoSize = true;
+            this.lbTicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbTicketID.Location = new System.Drawing.Point(23, 15);
+            this.lbTicketID.Name = "lbTicketID";
+            this.lbTicketID.Size = new System.Drawing.Size(54, 20);
+            this.lbTicketID.TabIndex = 0;
+            this.lbTicketID.Text = "Mã vé";
+            // 
             // SearchFlightTicketUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,26 +384,26 @@ namespace Airline_ticket_sales_management
             this.Load += new System.EventHandler(this.SearchFlightTicketUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.pnTicketID.ResumeLayout(false);
-            this.pnTicketID.PerformLayout();
-            this.pnFlightID.ResumeLayout(false);
-            this.pnFlightID.PerformLayout();
-            this.pnName.ResumeLayout(false);
-            this.pnName.PerformLayout();
-            this.pnCardID.ResumeLayout(false);
-            this.pnCardID.PerformLayout();
-            this.pnPhone.ResumeLayout(false);
-            this.pnPhone.PerformLayout();
-            this.pnEmail.ResumeLayout(false);
-            this.pnEmail.PerformLayout();
-            this.pnSeat.ResumeLayout(false);
-            this.pnSeat.PerformLayout();
-            this.pnClassTicketName.ResumeLayout(false);
-            this.pnClassTicketName.PerformLayout();
-            this.pnPrice.ResumeLayout(false);
-            this.pnPrice.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.pnPrice.ResumeLayout(false);
+            this.pnPrice.PerformLayout();
+            this.pnClassTicketName.ResumeLayout(false);
+            this.pnClassTicketName.PerformLayout();
+            this.pnSeat.ResumeLayout(false);
+            this.pnSeat.PerformLayout();
+            this.pnEmail.ResumeLayout(false);
+            this.pnEmail.PerformLayout();
+            this.pnPhone.ResumeLayout(false);
+            this.pnPhone.PerformLayout();
+            this.pnCardID.ResumeLayout(false);
+            this.pnCardID.PerformLayout();
+            this.pnName.ResumeLayout(false);
+            this.pnName.PerformLayout();
+            this.pnFlightID.ResumeLayout(false);
+            this.pnFlightID.PerformLayout();
+            this.pnTicketID.ResumeLayout(false);
+            this.pnTicketID.PerformLayout();
             this.ResumeLayout(false);
 
         }

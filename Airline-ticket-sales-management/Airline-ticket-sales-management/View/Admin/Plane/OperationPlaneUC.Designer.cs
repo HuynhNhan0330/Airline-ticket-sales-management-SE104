@@ -59,6 +59,7 @@ namespace Airline_ticket_sales_management
             this.label2 = new System.Windows.Forms.Label();
             this.pnSeat = new System.Windows.Forms.Panel();
             this.atbPlaneName = new Airline_ticket_sales_management.AControls.ATextboxUC();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnCurrentTicketClass.SuspendLayout();
             this.pnEdit.SuspendLayout();
             this.aPanel1.SuspendLayout();
@@ -272,6 +273,7 @@ namespace Airline_ticket_sales_management
             // 
             // pnHeader
             // 
+            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.pnHeader.Controls.Add(this.panel7);
             this.pnHeader.Controls.Add(this.panel6);
             this.pnHeader.Controls.Add(this.panel5);
@@ -440,11 +442,23 @@ namespace Airline_ticket_sales_management
             this.atbPlaneName.UnderlinedStyle = false;
             this.atbPlaneName._KeyDown += new System.EventHandler(this.atbPlaneName__KeyDown);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.label9.Location = new System.Drawing.Point(30, 25);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(239, 29);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Thông tin máy bay";
+            // 
             // OperationPlaneUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.pnEdit);
             this.Controls.Add(this.pnTicketClassDetail);
             this.Controls.Add(this.label8);
@@ -511,5 +525,6 @@ namespace Airline_ticket_sales_management
         private Panel pnEdit;
         private AControls.AButton abtnCancel;
         private AControls.AButton abtnUpdatePlane;
+        private Label label9;
     }
 }

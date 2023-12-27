@@ -48,7 +48,7 @@ namespace Airline_ticket_sales_management
             this.panel10 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbRe = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -57,6 +57,7 @@ namespace Airline_ticket_sales_management
             this.lb1 = new System.Windows.Forms.Label();
             this.pnReportByYear = new System.Windows.Forms.Panel();
             this.chartReportByYear = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -173,12 +174,13 @@ namespace Airline_ticket_sales_management
             // 
             // pnHeader
             // 
+            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.pnHeader.Controls.Add(this.panel10);
             this.pnHeader.Controls.Add(this.panel6);
             this.pnHeader.Controls.Add(this.panel5);
             this.pnHeader.Controls.Add(this.panel3);
             this.pnHeader.Controls.Add(this.panel2);
-            this.pnHeader.Location = new System.Drawing.Point(50, 120);
+            this.pnHeader.Location = new System.Drawing.Point(50, 172);
             this.pnHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnHeader.Name = "pnHeader";
             this.pnHeader.Size = new System.Drawing.Size(800, 40);
@@ -206,7 +208,7 @@ namespace Airline_ticket_sales_management
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.lbRe);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(400, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -214,15 +216,17 @@ namespace Airline_ticket_sales_management
             this.panel6.Size = new System.Drawing.Size(300, 40);
             this.panel6.TabIndex = 5;
             // 
-            // label2
+            // lbRe
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label2.Location = new System.Drawing.Point(103, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Doanh thu";
+            this.lbRe.AutoSize = true;
+            this.lbRe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbRe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lbRe.Location = new System.Drawing.Point(103, 11);
+            this.lbRe.Name = "lbRe";
+            this.lbRe.Size = new System.Drawing.Size(93, 22);
+            this.lbRe.TabIndex = 0;
+            this.lbRe.Text = "Doanh thu";
+            this.lbRe.Click += new System.EventHandler(this.lbRe_Click);
             // 
             // panel5
             // 
@@ -287,10 +291,10 @@ namespace Airline_ticket_sales_management
             // pnReportByYear
             // 
             this.pnReportByYear.AutoScroll = true;
-            this.pnReportByYear.Location = new System.Drawing.Point(50, 160);
+            this.pnReportByYear.Location = new System.Drawing.Point(50, 212);
             this.pnReportByYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnReportByYear.Name = "pnReportByYear";
-            this.pnReportByYear.Size = new System.Drawing.Size(800, 505);
+            this.pnReportByYear.Size = new System.Drawing.Size(800, 455);
             this.pnReportByYear.TabIndex = 6;
             // 
             // chartReportByYear
@@ -317,11 +321,23 @@ namespace Airline_ticket_sales_management
             title1.Text = "Biểu đồ tròn doanh thu năm";
             this.chartReportByYear.Titles.Add(title1);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(2)))), ((int)(((byte)(39)))));
+            this.label9.Location = new System.Drawing.Point(269, 120);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(309, 29);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Danh sách báo cáo năm";
+            // 
             // ReportByYearUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.chartReportByYear);
             this.Controls.Add(this.pnReportByYear);
             this.Controls.Add(this.pnHeader);
@@ -350,6 +366,7 @@ namespace Airline_ticket_sales_management
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReportByYear)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -366,7 +383,7 @@ namespace Airline_ticket_sales_management
         private Label label5;
         private Panel pnHeader;
         private Panel panel6;
-        private Label label2;
+        private Label lbRe;
         private Panel panel5;
         private Label label3;
         private Panel panel3;
@@ -377,5 +394,6 @@ namespace Airline_ticket_sales_management
         private Panel panel10;
         private Label label11;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartReportByYear;
+        private Label label9;
     }
 }

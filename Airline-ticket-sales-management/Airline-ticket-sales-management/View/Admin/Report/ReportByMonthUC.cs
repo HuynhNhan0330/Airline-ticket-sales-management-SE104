@@ -21,6 +21,8 @@ namespace Airline_ticket_sales_management
                 _detailedMonthlyRevenueReports = value;
             }
         }
+        private bool isSort = false;
+
 
         private decimal _totalRevenue;
         public decimal totalRevenue
@@ -76,6 +78,18 @@ namespace Airline_ticket_sales_management
                 pn.BringToFront();
                 pn.Dock = DockStyle.Top;
             }
+        }
+
+        private void lbRe_Click(object sender, EventArgs e)
+        {
+            if (isSort)
+                detailedMonthlyRevenueReports = detailedMonthlyRevenueReports.OrderByDescending(darr => darr.Revenue).ToList();
+
+            else
+                detailedMonthlyRevenueReports = detailedMonthlyRevenueReports.OrderBy(darr => darr.Revenue).ToList();
+
+            isSort = !isSort;
+            loadPanel();
         }
     }
 }
