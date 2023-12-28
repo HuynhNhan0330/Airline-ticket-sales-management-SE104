@@ -273,7 +273,7 @@ namespace Airline_ticket_sales_management
             // 
             // pnHeader
             // 
-            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.pnHeader.BackColor = System.Drawing.Color.Transparent;
             this.pnHeader.Controls.Add(this.panel7);
             this.pnHeader.Controls.Add(this.panel6);
             this.pnHeader.Controls.Add(this.panel5);
