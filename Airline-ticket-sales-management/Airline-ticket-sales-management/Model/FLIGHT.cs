@@ -17,10 +17,10 @@ namespace Airline_ticket_sales_management.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FLIGHT()
         {
+            this.DETAILED_MONTHLY_REVENUE_REPORT = new HashSet<DETAILED_MONTHLY_REVENUE_REPORT>();
             this.FLIGHT_DETAIL = new HashSet<FLIGHT_DETAIL>();
             this.FLIGHT_TICKET = new HashSet<FLIGHT_TICKET>();
             this.FLIGHT_TICKET_CLASS_DETAIL = new HashSet<FLIGHT_TICKET_CLASS_DETAIL>();
-            this.DETAILED_MONTHLY_REVENUE_REPORT = new HashSet<DETAILED_MONTHLY_REVENUE_REPORT>();
         }
     
         public string FlightID { get; set; }
@@ -33,6 +33,8 @@ namespace Airline_ticket_sales_management.Model
     
         public virtual AIRPORT AIRPORT { get; set; }
         public virtual AIRPORT AIRPORT1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DETAILED_MONTHLY_REVENUE_REPORT> DETAILED_MONTHLY_REVENUE_REPORT { get; set; }
         public virtual PLANE PLANE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FLIGHT_DETAIL> FLIGHT_DETAIL { get; set; }
@@ -40,7 +42,5 @@ namespace Airline_ticket_sales_management.Model
         public virtual ICollection<FLIGHT_TICKET> FLIGHT_TICKET { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FLIGHT_TICKET_CLASS_DETAIL> FLIGHT_TICKET_CLASS_DETAIL { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DETAILED_MONTHLY_REVENUE_REPORT> DETAILED_MONTHLY_REVENUE_REPORT { get; set; }
     }
 }

@@ -209,7 +209,13 @@ namespace Airline_ticket_sales_management
                     adtpDepartureDateTime.Value.Day,
                     hour, minute, 0);
 
-                createFlight(flight);
+                if (flight.DepartureDateTime < DateTime.Now)
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm("Thời gian bay nhỏ hơn thời gian hiện tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
+                else
+                    createFlight(flight);
             }
         }
 
@@ -454,7 +460,14 @@ namespace Airline_ticket_sales_management
                     hour, minute, 0);
 
                 flight.FlightID = this.flight.FlightID;
-                updateFlight(flight);
+
+                if (flight.DepartureDateTime < DateTime.Now)
+                {
+                    AMessageBoxFrm ms = new AMessageBoxFrm("Thời gian bay nhỏ hơn thời gian hiện tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ms.ShowDialog();
+                }
+                else
+                    updateFlight(flight);
             }
         }
 
