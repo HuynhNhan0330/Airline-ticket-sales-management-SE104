@@ -36,7 +36,7 @@
 * Trong bối cảnh kinh tế - xã hội phát triển, tốc độ đô thị hóa diễn ra nhanh chóng, đời sống dân sinh được cải thiện, quy mô dân số của Việt Nam ngày càng lớn do di dân từ các địa phương lân cận đến làm việc, sinh sống. Kéo theo đó là nhu cầu đi lại ngày càng cao. Tại Việt Nam, do tốc độ phát triển kinh tế và du lịch đang phục hồi tốt sau đại dịch COVID–19 nên có tiền đề rất tốt để phát triển lĩnh vực hàng không.
 * Hiện nước ta có rất nhiều hãng hàng không nội địa được nhiều hành khách lựa chọn. Hiện có 4 hãng hàng không nội địa hoạt động mạnh như: Vietnam Airlines, Vietjet Air, Jetstar Pacific, Bamboo Airways. Trước kia chỉ có hãng hàng không Vietnam Airlines hoạt động với giá vé rất cao. Vì thế, các phương tiện tàu hoả, xe khách đường dài vẫn là lựa chọn ưu tiên khi di chuyển, du lịch hoặc công tác của đại đa số. Tuy nhiên, với sự phát triển mạnh mẽ của đường hàng không và các hãng hàng không thì du khách có thể thoải mái di chuyển đi du lịch bằng máy bay với tấm vé giá rẻ.
 * Cùng với sự phát triển của lĩnh vực hàng không thì nhu cầu mua vé máy bay của con người ngày càng cao. Để có thể đáp ứng nhu cầu hiện đại hóa quy trình nhằm tiết kiệm chi phí cùng với tạo sự thuận tiện cho người sử dụng cũng như chủ doanh nghiệp thì một phần mềm quản lý việc bán vé chuyến bay là điều không thể thiếu.
-* Trong phạm vi đề tài trên, dựa vào hiểu biết và kỹ năng của các thành viên, nhóm chúng em đã quyết định chọn đối tượng quản lý việc bán vé chuyến bay để tiến hành nghiên cứu
+* Trong phạm vi đề tài trên, dựa vào hiểu biết và kỹ năng của các thành viên, nhóm chúng em đã quyết định chọn đối tượng quản lý việc bán vé chuyến bay để tiến hành nghiên cứu.
 
 <!-- MÔ TẢ -->
 <div id="Mota"></div>
