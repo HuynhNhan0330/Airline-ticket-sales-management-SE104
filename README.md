@@ -103,7 +103,7 @@
 * [Lý Nam Kháng](https://github.com/lynamkhang) - 21522191
     * Vai trò: UI/UX designer, database engineer, tester
 
-* [Trần Văn Toán]() - 21522689
+* [Trần Văn Toán](https://github.com/toanlamdata) - 21522689
     * Vai trò: Database engineer, tester
 
 <!-- NGƯỜI HƯỚNG DẪN -->
