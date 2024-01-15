@@ -1,7 +1,7 @@
 ﻿<div id="Top"></div>
 
 # QUẢN LÝ BÁN VÉ MÁY BAY
-Được thục hiện bởi nhóm sinh viên của trường đại học Công nghệ thông tin - Hồ Chí minh (UIT)
+Được thục hiện bởi nhóm sinh viên của trường đại học Công nghệ thông tin - Hồ Chí minh (UIT).
 
 ## Mục lục
 
